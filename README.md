@@ -29,3 +29,9 @@ Regaladores Pensativos: La plataforma también se adapta a aquellos que buscan r
 Usuarios Digitales Sofisticados: La inclusión de un carrito de compras y la posibilidad de crear una cuenta de usuario proporciona una experiencia de compra online avanzada, atrayendo a usuarios digitales que valoran la comodidad y la personalización.
 
 En conjunto, RetroFilms no solo se centra en la venta de películas clásicas, sino que también se esfuerza por construir una comunidad donde los usuarios pueden compartir su entusiasmo, contribuir con reseñas y descubrir nuevas joyas cinematográficas. Esta diversidad en el público objetivo refleja la universalidad y atemporalidad del arte cinematográfico clásico.
+
+GRUPO DE TRABAJO
+
+Laura: 29 años, soy una persona considerada, atenta al detalle, organizada y disciplinada, siempre dispuesta a ayudar y a compartir con quienes me rodean, con la mejor disposición.
+Eduardo: 29 años me considero colaborador, receptivo , amigable y dispuesto a hacer cualquier reto y tipo de trabajo.
+Maximo: 22 años, destaco por mi capacidad para encontrar soluciones originales. Soy una persona dinámica, dispuesta a asumir nuevos desafíos y explorar diferentes áreas, como en este caso.
