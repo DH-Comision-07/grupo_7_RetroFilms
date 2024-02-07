@@ -35,3 +35,13 @@ GRUPO DE TRABAJO
 Laura: 29 años, soy una persona considerada, atenta al detalle, organizada y disciplinada, siempre dispuesta a ayudar y a compartir con quienes me rodean, con la mejor disposición.
 Eduardo: 29 años me considero colaborador, receptivo , amigable y dispuesto a hacer cualquier reto y tipo de trabajo.
 Maximo: 22 años, destaco por mi capacidad para encontrar soluciones originales. Soy una persona dinámica, dispuesta a asumir nuevos desafíos y explorar diferentes áreas, como en este caso.
+
+
+INSPIRACIONES
+
+Pelispedia : In the Know (2024) ‣ PELISPEDIA → Inspiración para el footer y la pagina de detalle del producto
+Cuevana: Cuevana 3 ⚜️ Series y Peliculas Gratis de Cuevana Pro → Inspiracion para la pagina de inicio
+Amazon: Amazon.com en espanol. Gasta menos. Sonríe más. → inspiracion para la pagina de log in y formulario de registro
+Twitch : Twitch → Slider pagina home
+Exito: https://tienda.exito.com/checkout-io/?orderFormId=43fd586cf4d646558bbcddd5bcb516cc#/ → Inspiracion para el carrito de compras
+Disclaimer: A pesar de no ser una pagina relacionada con nuestro producto, necesitabamos una pagina con carrito para añadirlo a nuestro site, pues las anteriores plataformas de streaming no cuentan con uno.
