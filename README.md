@@ -39,10 +39,10 @@ Maximo: 22 años, destaco por mi capacidad para encontrar soluciones originales.
 
 INSPIRACIONES
 
-* Pelispedia : In the Know (2024) ‣ PELISPEDIA → Inspiración para el footer y la pagina de detalle del producto
-* Cuevana: Cuevana 3 ⚜️ Series y Peliculas Gratis de Cuevana Pro → Inspiracion para la pagina de inicio
-* Amazon: Amazon.com en espanol. Gasta menos. Sonríe más. → inspiracion para la pagina de log in, formulario de registro, y para las opiniones de los usuarios en la seccion "detalle del producto"
+* Pelispedia : [In the Know (2024) ‣ PELISPEDIA](https://ww1.pelispedia.asia/) → Inspiración para el footer y la pagina de detalle del producto
+* Cuevana: [Cuevana 3 ⚜️](https://w3wv.cuevana.biz/) Series y Peliculas Gratis de Cuevana Pro → Inspiracion para la pagina de inicio
+* Amazon: [Amazon.com en espanol. Gasta menos. Sonríe más.](https://www.amazon.com/-/es/ref=nav_logo) → inspiracion para la pagina de log in, formulario de registro, y para las opiniones de los usuarios en la seccion "detalle del producto"
 * IMDB: https://www.imdb.com. Uso de seccion "imagenes" y "actores de las peliculas" en la pagina "detalle del producto"
-* Twitch : Twitch → Slider pagina home
+* Twitch : [Twitch](https://www.twitch.tv/) → Slider pagina home
 * Exito: https://tienda.exito.com/checkout-io/?orderFormId=43fd586cf4d646558bbcddd5bcb516cc#/ → Inspiracion para el carrito de compras
 Disclaimer: A pesar de no ser una pagina relacionada con nuestro producto, necesitabamos una pagina con carrito para añadirlo a nuestro site, pues las anteriores plataformas de streaming no cuentan con uno.
