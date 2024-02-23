@@ -4,8 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RetroFilms-Inicio</title>
+    <link rel="stylesheet" href="styleLogin.css">
 </head>
 <body>
-    <p></p>
+    <div class="formulario">
+        <h1>Inicio de Sesion</h1>
+        <form action="/login" method="post">
+            <div class="usuario">
+                <label>Usuario:</label>
+                <input type="text">
+            </div>
+            <div class="contraseña">
+                <label>Contraseña:</label>
+                <input type="password">
+            </div>
+            <div class="recordar">¿Olvido su contraseña?
+            </div>
+            <div>
+                <button type="submit">Ingresar</button>
+            </div>
+            <div>
+                <label>¿Eres Nuevo?</label>
+                <button type="submit">Crear Cuenta</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
