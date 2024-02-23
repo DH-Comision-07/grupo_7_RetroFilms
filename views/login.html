@@ -8,25 +8,39 @@
 </head>
 <body>
     <div class="formulario">
-        <h1>Inicio de Sesion</h1>
+        
         <form action="/login" method="post">
+
             <div class="usuario">
-                <label>Usuario:</label>
+                <label>Usuario</label>
+            <br>
                 <input type="text">
             </div>
+
             <div class="contraseña">
-                <label>Contraseña:</label>
+                <label>Contraseña</label>
+            <br>
                 <input type="password">
             </div>
-            <div class="recordar">¿Olvido su contraseña?
-            </div>
-            <div>
+
+            <div
+                class="ingresar">
                 <button type="submit">Ingresar</button>
             </div>
-            <div>
-                <label>¿Eres Nuevo?</label>
-                <button type="submit">Crear Cuenta</button>
+
+            <div
+                class="recordar">¿Olvido su contraseña?
             </div>
+            <div
+                class="recuperarContraseña">
+                <button type="submit">Reestablecer Contraseña</button>
+            </div>
+            <div
+            class="crearCuenta">
+            <label>¿Eres Nuevo?</label>
+            <br>
+            <button type="submit">Crear Cuenta</button>
+        </div>
         </form>
     </div>
 </body>

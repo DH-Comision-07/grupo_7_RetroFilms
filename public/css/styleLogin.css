@@ -1,0 +1,60 @@
+body {
+    font-family: a;
+    background: linear-gradient(10deg, #002540, #E0EBF3);
+    height: 100vh;
+}
+
+.formulario{
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    width: 500px;
+    background: #E0EBF3;
+    border-radius: 20px;
+}
+
+.formulario h1{
+    font-family: a;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 5px solid lightblue;
+}
+
+.formulario form{
+    position: relative;
+    border-bottom: 2px solid lightblue;
+    margin: 30px;
+}
+
+form .usuario{
+
+    position: relative;;
+    margin: 30px 0;
+}
+
+.usuario input{
+    position: absolute;
+    background-color: lightblue;
+    font-size: 14px;
+    min-height: 20px;
+}
+
+.contraseña input{
+    background-color: lightblue;
+    font-size: 14px;
+    min-height: 20px;
+}
+
+.ingresar button{
+    padding: 10px 20px; /* Ajusta el relleno según el tamaño deseado */
+  font-size: 16px; /* Tamaño de fuente */
+  border: none; /* Elimina el borde */
+  background-color: #007bff; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  border-radius: 5px; /* Borde redondeado */
+  cursor: pointer; 
+}
+
+.crearCuenta button{
+
+}
