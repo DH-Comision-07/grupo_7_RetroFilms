@@ -20,7 +20,7 @@ form {
     width: 50vw;
     margin: auto;
     padding :20px ;
-    border: 2px solid #ccc ;
+    border: 2px solid #02263F;
     border-radius: 2%;
 }
 
@@ -28,19 +28,26 @@ label , p{
     margin-bottom :5px ;
 }
 
-input[type=text], input[type=password], input[type=tel], input[type=file], input[type=file] input[type=checkbox] {
+input[type=text], input[type=password], input[type=tel], input[type=file], input[type=file] {
     width :100% ;
     padding :10px ;
     margin-top: 10px ;
     margin-bottom: 10px;
+    
 }
-
 
 
 button{
     margin-top: 10px;
     padding :10px 20px;
-    background-color:#333 ;
-    color:white;
+    background-color: #02263F ;
+    color:#FFFFFF;
+    border: 1px solid #02263F;
+    border-radius: 5%;
+    transition: all 450ms;
 }
 
+button:hover{
+    background-color: #1e3b4d;
+    border-color: #1e3b4d;
+}
