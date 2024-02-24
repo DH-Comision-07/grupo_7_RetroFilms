@@ -8,6 +8,10 @@ body, html {
     padding: 0;
 }
 
+header, body {
+    background-color: white
+}
+
 .header__img {
     display: flex;
     align-items: center;
@@ -23,6 +27,7 @@ form {
     padding :20px ;
     border: 2px solid #02263F;
     border-radius: 2%;
+    background-color: #E0EBF3;
 }
 
 label , p{
