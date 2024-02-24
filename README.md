@@ -48,6 +48,7 @@ INSPIRACIONES
 Disclaimer: A pesar de no ser una pagina relacionada con nuestro producto, necesitabamos una pagina con carrito para añadirlo a nuestro site, pues las anteriores plataformas de streaming no cuentan con uno.
 
 WORKFLOW
+
 La organizacion del trabajo es llevada a cabo principalmente a traves de Trello. En este caso, el tablero utilizado para el segundo sprint es el siguiente:
 https://trello.com/b/jb9teJfe/dh-sprint-2
 
