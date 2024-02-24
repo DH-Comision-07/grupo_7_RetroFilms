@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
-    <link rel="stylesheet" href="css/formularioRegistro.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registro</title>
+        <link rel="stylesheet" href="css/formularioRegistro.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
 
-<div class="container">
-    <div class="header"></div>
+    <header class="header">
+        <img src="\img\Logo-RetroFilms.png"  alt="Logo-RetroFilms">
+    </header>
+    
+    <body>
 
-        <form action="#" method="post">
-            <label for="nombre">Tu nombre
-                <input type="text" id="nombre" name="nombre" placeholder="Nombres y Apellidos">
-            </label>
+        <div class="container">
+            <div class="header"></div>
 
-            <label for="telefono">Numero de telefono movil
-                <input type="tel" id ="telefono" name ="telefono" placeholder ="xxx-xxx-xxx">
-            </label>
+                <form action="#" method="post">
+                    <label for="nombre">Tu nombre
+                        <input type="text"  name="nombre" placeholder="Nombres y Apellidos">
+                    </label>
 
-            <label for ="password">Contraseña
-              <input type ="password"id = "password"name = "password"placeholder = "xxxx">
-            </label>
-            
-            <label for = "repite-password">Repite la contraseña
-                <input type = "password"id = "repite-password" name = "repite-password"
-                placeholder= "xxxx">
-            </label>
+                    <label for="telefono">Numero de telefono movil
+                        <input type="tel" name ="telefono" placeholder ="xxx-xxx-xxx">
+                    </label>
 
-            <button type=submit> Continuar </button>
+                    <label for ="password">Contraseña
+                    <input type ="password" name = "password" placeholder = "xxxx">
+                    </label>
+                    
+                    <label for = "repite-password">Repite la contraseña
+                        <input type = "password" name = "repite-password"
+                        placeholder= "xxxx">
+                    </label>
 
-            <label>
-                <input type=checkbox>Acepta condiciones y restricciones 
-            </label>
+                    <button type=submit> Continuar </button>
 
-            <p class="yacuenta">¿Ya tienes cuenta? </p>
-            <a href="#">Log in </a>
-        </form>
-  </div>
+                    <label>
+                        <input type=checkbox>Acepta condiciones y restricciones 
+                    </label>
 
-  </body>
-  </html>
+                    <p class="yacuenta">¿Ya tienes cuenta? </p>
+                    <a href="#">Log in </a>
+                </form>
+        </div>
+
+    </body>
+</html>
