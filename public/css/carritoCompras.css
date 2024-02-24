@@ -1,0 +1,96 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing : border-box;
+}
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header{
+    background-color: #002540;
+}
+
+.logo {
+    display: flex;
+    height: 50%;
+    width: 50%;
+}
+
+.iconos-proceso{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.fa-solid{
+    border: 1px solid #E2725B;
+    background-color: #FFF;
+    border-radius: 50%;
+    padding: 5px;
+    color: #E2725B;
+}
+
+.iconos-contexto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    align-self: flex-end;
+    font-weight: 500;
+    margin: 10px;
+    text-align: center;
+    width: 100%;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.vendido{
+    text-align: left;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 300;
+    border-top: 1px #002540 solid;
+    margin-left: 13px;
+    margin-right: 13px;
+}
+
+.producto{
+    margin-left: 13px;
+    margin-right: 13px;
+    background-color: #ebebeb;
+    border-radius: 10px;
+    display: flex;
+}
+
+.imagen-producto{
+    width: 20%;
+    height: 20%;
+    margin-left: 10px;
+}
+
+.fa-circle-xmark{
+   position: absolute;
+    margin-left: 5px;
+}
+.nombre-producto{
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 78px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.precio-producto{
+    margin-top: 10px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+
+
+
