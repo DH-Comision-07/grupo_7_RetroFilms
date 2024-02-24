@@ -1,35 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
 body, html {
     margin: 0;
     padding: 0;
-  }
-  
-  .container {
-    max-width: 500px;
+}
+
+.container {
+    width: 50vw;
     margin: auto;
-  }
-  
-  .header {
-     height:150px ;
-     border-bottom :1px solid #ccc ;
-  }
-  
-  form {
-     padding :20px ;
-  }
-  
-   label , p{
-     margin-bottom :5px ;
-  }
-  
-   input[type=text], input[type=password], input[type=tel]{
-     width :100% ;
-     padding :10px ;
-     margin-bottom :20px ;
-  }
-  
-   button{
-     padding :10px20 px;
-     background-color:#333 ;
-     color:white;
-  }
+}
+
+.header__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: 0px auto;
+    padding: 1%;
+}
+
+form {
+    padding :20px ;
+    border: 2px solid #ccc ;
+    border-radius: 2%;
+}
+
+label , p{
+    margin-bottom :5px ;
+}
+
+input[type=text], input[type=password], input[type=tel]{
+    width :100% ;
+    padding :10px ;
+    margin-bottom :20px ;
+}
+
+button{
+    padding :10px 20px;
+    background-color:#333 ;
+    color:white;
+}
 

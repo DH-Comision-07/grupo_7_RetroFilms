@@ -13,41 +13,41 @@
     </head>
 
     <header class="header">
-        <img src="\img\Logo-RetroFilms.png"  alt="Logo-RetroFilms">
+        <img src="\img\Logo-RetroFilms.png"  alt="Logo-RetroFilms" class="header__img">
     </header>
     
     <body>
 
         <div class="container">
-            <div class="header"></div>
+            
+            <form action="#" method="post">
+                <label for="nombre">Tu nombre
+                    <input type="text"  name="nombre" placeholder="Nombres y Apellidos">
+                </label>
 
-                <form action="#" method="post">
-                    <label for="nombre">Tu nombre
-                        <input type="text"  name="nombre" placeholder="Nombres y Apellidos">
-                    </label>
+                <label for="telefono">Numero de telefono movil
+                    <input type="tel" name ="telefono" placeholder ="xxx-xxx-xxx">
+                </label>
 
-                    <label for="telefono">Numero de telefono movil
-                        <input type="tel" name ="telefono" placeholder ="xxx-xxx-xxx">
-                    </label>
-
-                    <label for ="password">Contraseña
+                <label for ="password">Contraseña
                     <input type ="password" name = "password" placeholder = "xxxx">
-                    </label>
-                    
-                    <label for = "repite-password">Repite la contraseña
-                        <input type = "password" name = "repite-password"
-                        placeholder= "xxxx">
-                    </label>
+                </label>
+                
+                <label for = "repite-password">Repite la contraseña
+                    <input type = "password" name = "repite-password"
+                    placeholder= "xxxx">
+                </label>
 
-                    <button type=submit> Continuar </button>
+                <button type=submit> Continuar </button>
 
-                    <label>
-                        <input type=checkbox>Acepta condiciones y restricciones 
-                    </label>
+                <label>
+                    <input type=checkbox>Acepta condiciones y restricciones 
+                </label>
 
-                    <p class="yacuenta">¿Ya tienes cuenta? </p>
-                    <a href="#">Log in </a>
-                </form>
+                <p class="yacuenta">¿Ya tienes cuenta? </p>
+                <a href="#">Log in </a>
+            </form>
+            
         </div>
 
     </body>
