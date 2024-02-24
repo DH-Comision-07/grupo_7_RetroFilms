@@ -29,11 +29,11 @@ header{
 }
 
 .fa-solid{
-    border: 1px solid #E2725B;
+    border: 1px solid #2E856E;
     background-color: #FFF;
     border-radius: 50%;
     padding: 5px;
-    color: #E2725B;
+    color: #2E856E;
 }
 
 .iconos-contexto{
@@ -89,6 +89,28 @@ h1{
 .precio-producto{
     margin-top: 10px;
     font-family: "Bebas Neue", sans-serif;
+    margin: 0;
+}
+.add-delete{
+    display: flex;
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.16);
+    width: 100px;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 120px;
+    position: relative;
+    bottom:20px;
+}
+.fa-trash{
+    color: grey;
+    border: none;
+}
+.fa-circle-plus{
+    border: none;
 }
 
 
