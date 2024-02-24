@@ -7,11 +7,6 @@ body, html {
     padding: 0;
 }
 
-.container {
-    width: 50vw;
-    margin: auto;
-}
-
 .header__img {
     display: flex;
     align-items: center;
@@ -22,6 +17,8 @@ body, html {
 }
 
 form {
+    width: 50vw;
+    margin: auto;
     padding :20px ;
     border: 2px solid #ccc ;
     border-radius: 2%;
