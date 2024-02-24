@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: "Noto Serif", serif;
 }
 
 body, html {
@@ -50,4 +51,8 @@ button{
 button:hover{
     background-color: #1e3b4d;
     border-color: #1e3b4d;
+}
+
+.login {
+    font-size: 18px;
 }
