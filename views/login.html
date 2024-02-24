@@ -5,48 +5,42 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>RetroFilms-Inicio</title>
         <link rel="stylesheet" href="/public/css/styleLogin.css">
-    <div >
-        <img src="" alt="" class="logo">
-    </div>
 </head>
 <body>
-    <div class="formulario">
-        <form action="/login" method="post">
+    <div class="container">
+        <img src="" alt="" class="logo">
+        <div class="formulario">
+            <form action="/login" method="post">
+                <div class="usuario">
+                    <label for="username">Usuario</label>
+                    <br>
+                    <input type="text" id="username" name="username">
+                </div>
 
-            <div class="usuario">
-                <label>Usuario</label>
-            <br>
-                <input type="text">
-            </div>
+                <div class="contraseña">
+                    <label for="password">Contraseña</label>
+                    <br>
+                    <input type="password" id="password" name="password">
+                </div>
+                <label>
+                    <input type="checkbox" id="remember" name="remember">
+                    Recordarme
+                </label>
+                <div class="ingresar">
+                    <button type="submit">Ingresar</button>
+                </div>
 
-            <div class="contraseña">
-                <label>Contraseña</label>
-            <br>
-                <input type="password">
-            </div>
-            <label>
-                <input type="checkbox" id="remember" name="remember">
-                Recordarme
-              </label>
-            <div
-                class="ingresar">
-                <button type="submit">Ingresar</button>
-            </div>
-
-            <div
-                class="recordar">¿Olvido su contraseña?
-            </div>
-            <div
-                class="recuperarContraseña">
-                <button type="submit">Reestablecer Contraseña</button>
-            </div>
-            <div
-            class="crearCuenta">
-            <label>¿Eres Nuevo?</label>
-            <br>
-            <button type="submit">Crear Cuenta</button>
+                <div class="recordar">¿Olvidó su contraseña?</div>
+                <div class="recuperarContraseña">
+                    <button type="button">Restablecer Contraseña</button>
+                </div>
+                <div class="crearCuenta">
+                    <label>¿Eres Nuevo?</label>
+                    <br>
+                    <button type="button">Crear Cuenta</button>
+                </div>
+            </form>
         </div>
-        </form>
     </div>
 </body>
 </html>

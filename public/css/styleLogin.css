@@ -1,86 +1,62 @@
 body {
-    font-family: a;
+    font-family: Arial, sans-serif;
     background: linear-gradient(10deg, #002540, #E0EBF3);
-    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
 }
 
-.formulario{
-    position: absolute;
-    top: 20%;
-    left: 35%;
-    width: 500px;
+.container {
+    width: 100%;
+    max-width: 400px; 
+    padding: 20px;
+}
+
+.logo {
+    width: 100%;
+    max-width: 200px;
+    display: block;
+    margin: 0 auto 20px; 
+}
+
+.formulario {
     background: #E0EBF3;
     border-radius: 20px;
+    padding: 20px;
+    width: 100%; 
 }
 
-.formulario h1{
-    font-family: a;
-    text-align: center;
-    padding-bottom: 10px;
-    border-bottom: 5px solid lightblue;
-}
-
-.formulario form{
-    position: relative;
-    border-bottom: 2px solid lightblue;
-    margin: 30px;
-    text-align: center;
-}
-
-form .usuario{
-
-    position: relative;;
-    margin: 10px 0;
-}
-
-.usuario input{
+.usuario input,
+.contraseña input {
     width: 100%;
-    position: relative;
     background-color: lightblue;
     font-size: 14px;
     min-height: 20px;
-    margin: 2px;
-}
-
-.contraseña input{
-    width: 100%;
-    position: relative;
-    background-color: lightblue;
-    font-size: 14px;
-    min-height: 20px;
-    margin: 2px;
-}
-
-.ingresar button{
+    margin: 2px 0;
     padding: 5px;
+    box-sizing: border-box;
+}
+
+.ingresar button,
+.crearCuenta button,
+.recuperarContraseña button {
+    width: 100%;
+    padding: 10px;
     font-size: 16px;
     border: none;
-    background-color: #007bff;
+    background-color: #B88442;
     color: #fff;
     border-radius: 2px;
-    cursor: pointer; 
-    width: 100%;
-    margin: 8px 0px;
-}
-
-.crearCuenta button{
-    width: 100%;
-    border-radius: 2px;
-    margin: 6px 0px;
     cursor: pointer;
+    margin: 8px 0;
 }
 
-.recuperarContraseña button{
-    width: 100%;
-    border-radius: 4px;
-    margin: 6px 0px;
-    cursor: pointer;
-}
-
-.logo{
-    width: 200px;
-    display: block;
-    width: 10%;
-    height: 0%;
-    padding: 10px 400px;
+@media screen and (min-width: 768px) {
+    .formulario {
+        width: 500px;
+        margin: 20px auto;
+    }
 }
