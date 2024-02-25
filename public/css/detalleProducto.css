@@ -18,6 +18,7 @@ body{
     font-size: 24px;
     font-weight: 1000;
     text-align: center;
+    text-decoration: underline;
     margin: 10px;
 }
 /* -------------------Encabezado---------------------------------*/
@@ -57,11 +58,13 @@ body{
 #site-search{
     width: 50vw;
     padding: 8px;
+    border-radius: 10px;
     
 }
 .lupa{
     padding: 8px;
     color:#996935;
+    border-radius: 20px;
     
 }
 .fa-solid.fa-basket-shopping{
@@ -70,6 +73,9 @@ body{
     border-radius: 10%;
     color:#996935;
     
+}
+.carrito-compras{
+    border-radius: 15px;
 }
 .menu-principal{
     display:flex;
@@ -144,7 +150,7 @@ body{
     font-family: 'Bebas Neue';
     width: 120px;
     border:none;
-    border-radius: 10%;
+    border-radius: 10px;
     background-color: #02b0ff;
     color:#ffffff;
 }   
@@ -155,7 +161,7 @@ body{
     margin-left: 150px;
     padding: 7px;
     border:none;
-    border-radius: 10%;
+    border-radius: 10px;
     background-color: #02b0ff;
     color:#ffffff;
     font-family: 'Bebas Neue';
@@ -167,7 +173,7 @@ body{
     margin-left: 15px;
     padding: 7px;
     border:none;
-    border-radius: 10%;
+    border-radius: 10px;
     background-color: #02b0ff;
     color:#ffffff;
     font-family: 'Bebas Neue';
