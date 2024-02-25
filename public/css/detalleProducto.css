@@ -15,11 +15,21 @@ body{
 }
 .titulo{
     font-family:'Bebas Neue';   
-    font-size: 24px;
-    font-weight: 1000;
+    font-size: 28px;
+    font-weight: 800;
     text-align: center;
     text-decoration: underline;
     margin: 10px;
+    color: #B88442
+}
+
+.titulo-peli{
+    font-family:'Bebas Neue';   
+    font-size: 24px;
+    font-weight: 1000;
+    text-align: center;
+    margin: 10px;
+    color: #B88442;
 }
 /* -------------------Encabezado---------------------------------*/
 .encabezado{
@@ -197,6 +207,7 @@ body{
     margin: 0px;
     padding:5px;
     align-content:center;
+    justify-content: center;
 }
 
 .carril-imagenes img{
@@ -399,6 +410,13 @@ footer{
 }
 
 @media (min-width: 1000px){
+    .titulo-peli{
+        font-family:'Bebas Neue';   
+        font-size: 50px;
+        font-weight: 1000;
+        text-align: center;
+        margin: 10px;
+    }
     .carril-imagenes{
         margin-left: 30px;
     }
