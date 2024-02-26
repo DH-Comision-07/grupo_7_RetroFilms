@@ -163,7 +163,10 @@ body{
     border-radius: 10px;
     background-color: #02b0ff;
     color:#ffffff;
-}   
+}  
+.botones:hover{
+    color:indigo;
+} 
 
 
 .boton-poster{  
@@ -177,6 +180,9 @@ body{
     font-family: 'Bebas Neue';
     width: 80px;
 }
+.boton-poster:hover{
+    color:indigo;
+}
 
 .boton-volver{
     text-align: center;
@@ -188,6 +194,10 @@ body{
     color:#ffffff;
     font-family: 'Bebas Neue';
     width: 80px;
+}
+
+.boton-volver:hover{
+    color:indigo;
 }
 /*------ Carril Imagenes ------------*/
 
