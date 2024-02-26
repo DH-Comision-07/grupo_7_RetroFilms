@@ -20,31 +20,31 @@
   
         <form action="#" method="post">
             <label for="nombre">Tu nombre
-                <input type="text"  name="nombre" placeholder="Nombres y Apellidos">
+                <input type="text"  name="nombre" placeholder="Nombres y Apellidos" required pattern="[^\d+$]+" title="Solo se permiten letras y numeros">
             </label>
 
             <label for="userName">Nombre de Usuario
-                <input type="text"  name="userName" placeholder="User name">
+                <input type="text"  name="userName" placeholder="User name" required pattern="[^\d+$]+" title="Solo se permiten letras y numeros">
             </label>
 
             <label for="telefono">Numero de telefono movil
-                <input type="tel" name ="telefono" placeholder ="xxx-xxx-xxx">
+                <input type="tel" name ="telefono" placeholder ="xxx-xxx-xxx" required pattern="[\d+]+" title="Solo se permiten numeros">
             </label>
 
             <label for="fotoPerfil">Foto de perfil
-                <input type="file" name ="profilePic" accept=".jpg">
+                <input type="file" name ="profilePic" accept=".jpg" class="fotoPerfil">
             </label>
 
             <label for ="password">Contraseña
-                <input type ="password" name = "password" placeholder = "xxxx">
+                <input type ="password" name = "password" placeholder = "xxxx" required pattern="[^\d+$]+" title="Solo se permiten letras y numeros">
             </label>
             
             <label for = "repite-password">Repite la contraseña
-                <input type = "password" name = "repite-password" placeholder= "xxxx">
+                <input type = "password" name = "repite-password" placeholder= "xxxx" required pattern="[^\d+$]+" title="Solo se permiten letras y numeros">
             </label>
 
             <label for="checkbox">
-                <input type=checkbox name = "checkbox">Acepta condiciones y restricciones 
+                <input type=checkbox name = "checkbox" required pattern="[^\d+$]+" title="Solo se permiten letras y numeros">Acepta condiciones y restricciones 
             </label>
 
             <br>
