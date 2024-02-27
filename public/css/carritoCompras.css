@@ -39,17 +39,26 @@ header{
     margin-top: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-left: 15px;
     margin-right: 15px;
 }
 
+.fa-cart-shopping { animation: bounce 2s infinite;}
+
+@keyframes bounce {
+    0% {transform: translateY(0);}
+    40% {transform: translateY(-20px);}
+    60% {transform: translateY(-10px);}   
+}
+
+
 .fa-solid{
-    border: 1px solid #f78524;
+    border: 1px solid #996935;
     background-color: #FFF;
     border-radius: 50%;
     padding: 5px;
-    color: #f78524;
+    color: #996935;
 }
 
 .iconos-contexto{
@@ -190,8 +199,8 @@ button{
     position: relative;
     width: 90%;
     border-radius: 7px;
-    border:solid 3px #002540;
-    color: #002540;
+    border:solid 3px #02b0ff;
+    color: #02b0ff;
     font-style: italic; 
     font-weight: 300;   
     font-family: 'Noto Serif', sans-serif;
@@ -234,7 +243,7 @@ button{
 .pagar{
     color: white;
     border: none;
-    background-color: #f78524;
+    background-color: #02b0ff;
     width: 94%;
     margin-top: 13px;
     margin-left: 13px;
@@ -246,7 +255,7 @@ button{
 
 .seguir-comprando{
     color: white;
-    border: 3px solid #002540;
+    border: 3px solid #02b0ff;
     width: 94%;
     margin-top: 13px;
     margin-left: 13px;
@@ -277,18 +286,21 @@ a{
 .copyright{
     text-align: center;
     font-style: italic; 
-    font-weight: 300;   
+    font-weight: 400;   
     font-family: 'Noto Serif', sans-serif;
+    color:#996935;
 
 }
 
 .terminos{
     text-decoration: underline;
+    color:#996935;
+    font-weight: 400;  
 }
 
 h5{
     font-style: italic; 
-    font-weight: 300;   
+    font-weight: bold;   
     font-family: 'Noto Serif', sans-serif;
 }
 
@@ -310,9 +322,13 @@ h5{
 }
 .nombre-pelicula p{
     font-style: italic; 
-    font-weight: 300;   
+    font-weight: 400;   
     font-family: 'Noto Serif', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
+}
+
+footer{
+    background-color: #002540;
 }
 
 
