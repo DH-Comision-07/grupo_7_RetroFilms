@@ -16,13 +16,13 @@ header, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 60vw;
     margin: 0px auto;
     padding: 1%;
 }
 
 form {
-    width: 50vw;
+    width: 75vw;
     margin: auto;
     padding :20px ;
     border: 2px solid #02263F;
@@ -72,5 +72,5 @@ button:hover{
 }
 
 .login {
-    font-size: 18px;
+    font-size: 100%;
 }
