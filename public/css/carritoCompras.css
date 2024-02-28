@@ -91,7 +91,6 @@ h1{
     background-color: #ebebeb;
     border-radius: 10px;
     display: flex;
-    position: relative;
     width: 0 100%;
 }
 
@@ -137,7 +136,7 @@ h1{
     font-family: "Bebas Neue", sans-serif;
     margin: 0;
     position: relative;
-    top:25vh;
+    top:23vh;
     right:2vw;
     align-items: center;
 }
@@ -146,6 +145,7 @@ h1{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    position: relative;
 }
 
 
@@ -186,8 +186,7 @@ input{
     position: relative;
     width: 100%;
     border-radius: 7px;
-    padding: 13px 9px;
-    font-style: italic; 
+    padding: 13px 9px; 
     font-weight: 300;   
     font-family: 'Noto Serif', sans-serif;
 }
@@ -200,8 +199,7 @@ button{
     width: 90%;
     border-radius: 7px;
     border:solid 3px #02b0ff;
-    color: #02b0ff;
-    font-style: italic; 
+    color: #02b0ff; 
     font-weight: 300;   
     font-family: 'Noto Serif', sans-serif;
 }
@@ -220,8 +218,7 @@ button{
     align-items: center;
     width: 100%;
     position: relative;
-    font-style: italic; 
-    font-weight: 300;   
+    font-weight: 400;   
     font-family: 'Noto Serif', sans-serif;
    
 }
@@ -234,9 +231,8 @@ button{
     font-size: 14x;
     align-items: center;
     width: 100%;
-    position: relative;
-    font-style: italic; 
-    font-weight: 300;   
+    position: relative; 
+    font-weight: 400;   
     font-family: 'Noto Serif', sans-serif;
 }
 
@@ -248,8 +244,7 @@ button{
     margin-top: 13px;
     margin-left: 13px;
     margin-right: 13px;
-    font-style: italic; 
-    font-weight: 300;   
+    font-weight: 400;   
     font-family: 'Noto Serif', sans-serif;
 }
 
@@ -260,8 +255,7 @@ button{
     margin-top: 13px;
     margin-left: 13px;
     margin-right: 13px;
-    font-style: italic; 
-    font-weight: 300;   
+    font-weight: 400;   
     font-family: 'Noto Serif', sans-serif;
 }
 
@@ -285,21 +279,24 @@ a{
     
 .copyright{
     text-align: center;
-    font-style: italic; 
     font-weight: 400;   
     font-family: 'Noto Serif', sans-serif;
     color:#996935;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 
 }
 
 .terminos{
+    margin-top: 10px;
     text-decoration: underline;
     color:#996935;
     font-weight: 400;  
+    padding-bottom: 10px;
 }
 
 h5{
-    font-style: italic; 
+     
     font-weight: bold;   
     font-family: 'Noto Serif', sans-serif;
 }
@@ -371,9 +368,11 @@ footer{
 @media (min-width:1200px){
 
     .add-delete{
-        position: relative;
         left: 25vw;
         width: 20%;
+        position: relative;
+        top: 200px;
+      
     }
     .seguir-comprando{
         width: 98%;
