@@ -1,5 +1,5 @@
 * {
-    font-family: "Noto Serif", serif;
+    font-family: "Noto Serif";
 }
 
 body {
@@ -43,6 +43,7 @@ header, body {
     margin: 0 0 5px;
     padding: 5px;
     box-sizing: border-box;
+    border-radius: 10px;
 }
 
 .ingresar button,
