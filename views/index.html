@@ -8,11 +8,14 @@
   <script src="https://kit.fontawesome.com/ef41563829.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <title>RetroFilms</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="/public/css/styles/styles.css" />
@@ -20,15 +23,18 @@
 </head>
 
 <body>
+  <a href="#" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
   <header>
     <div class="containerHedar1">
       <nav class="navbar">
         <a href="#">
           <img src="/public/imagenes/logo_retroFilms1.png" alt="Logoderetrofilms" class="logo" />
         </a>
-        <a href="#">Inicio</a>
-        <a href="#">Generos</a>
-        <a href="#">Películas</a>
+        <a class="menuItem" href="#">Inicio</a>
+        <a class="menuItem" href="#">Generos</a>
+        <a class="menuItem" href="#">Películas</a>
 
         <div class="search-bar">
           <input type="text" placeholder="Buscar" />
@@ -37,17 +43,18 @@
           </button>
         </div>
 
-        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-        <a href="#">Iniciar Sesion</a>
-        <a href="#">Registrarse</a>
-        
+        <a href="#" class="menuItem"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a class="menuItem" href="#">Iniciar Sesion</a>
+        <a class="menuItem" href="#">Registrarse</a>
+        <i class="fa-solid fa-bars"></i>
       </nav>
 
     </div>
   </header>
 
-  <main>
-    <section>
+  <main class="mainBody">
+    <div class="carousel">
+    <section >
       <img src="/public/imagenes/mago de oz.jpg" alt="" >
       <img src="/public/imagenes/back-to-the-future.jpg" alt="" >
       <img src="/public/imagenes/Grease.jpg" alt="" >
@@ -62,47 +69,44 @@
 
 
     </section>
-
+  </div>
     <div class="content-tabs">
       <div>Últimas</div>
       <div>Estrenos</div>
       <div>Más Vistas</div>
     </div>
     <div class="main-content">
+
+     
       <div class="movie-grid">
-        <div class="movie"><img src="/public/imagenes/elPadrino.jpg" alt="" width="300px" height="350px"></div>
-        <div class="movie"><img src="/public/imagenes/breakFast_at_Tiffanys.jpg" alt="" width="300px" height="350px">
+        <div class="movie"><img src="/public/imagenes/elPadrino.jpg" alt=""></div>
+        <div class="movie"><img src="/public/imagenes/breakFast_at_Tiffanys.jpg" alt="">
         </div>
-        <div class="movie"><img src="/public/imagenes/amores_perros.jpg" alt="" width="300px" height="350px"></div>
-        <div class="movie"><img src="/public/imagenes/Ben-hurd.webp" alt="" width="300px" height="350px"></div>
-        <div class="movie"><img src="/public/imagenes/gone_with_the_wind.jpg" alt="" width="300px" height="350px"></div>
-        <div class="movie"><img src="/public/imagenes/La_dolce_vita.jpg" alt="" width="300px" height="350px"></div>
-        <div class="movie"><img src="/public/imagenes/metropolis.jpg" alt="" width="300px" height="350px"></div>
-        <div class="movie"><img src="/public/imagenes/Seven_Samurai_poster.jpg" alt="" width="300px" height="350px"></div>
-        <div class="movie"><img src="/public/imagenes/tiempos_modernos.jpg" alt="" width="300px" height="350px"></div>
-        <div class="movie"><img src="/public\imagenes\Cinema_Paradiso.jpg" alt="" width="300px" height="350px"></div>
-        <div class="movie"><img src="/public\imagenes\Fitzcarraldo_Web.jpg" alt="" width="300px" height="350px"></div>
-        <div class="movie"><img src="/public\imagenes\La tumba_de_las_liciernagas..webp" alt="" width="300px" height="350px"></div>
-        <div class="movie"><img src="/public\imagenes\MiVecino_TOTORO.webp" alt="" width="300px" height="350px"></div>
-        <div class="movie"><img src="/public\imagenes\Robocop.jpg" alt="" width="300px" height="350px"></div>
-        <div class="movie"><img src="/public\imagenes\Ciudano_KANE.jpg" alt="" width="300px" height="350px"></div>
-        <div class="movie"><img src="/public\imagenes\El_gran_dictador-348479670-large.jpg" alt="" width="300px" height="350px"></div>
+        <div class="movie"><img src="/public/imagenes/amores_perros.jpg" alt=""></div>
+        <div class="movie"><img src="/public/imagenes/Ben-hurd.webp" alt=""></div>
+        <div class="movie"><img src="/public/imagenes/gone_with_the_wind.jpg" alt=""></div>
+        <div class="movie"><img src="/public/imagenes/La_dolce_vita.jpg" alt=""></div>
+        <div class="movie"><img src="/public/imagenes/metropolis.jpg" alt=""></div>
+        <div class="movie"><img src="/public/imagenes/Seven_Samurai_poster.jpg" alt=""></div>
+        <div class="movie"><img src="/public/imagenes/tiempos_modernos.jpg" alt=""></div>
+        <div class="movie"><img src="/public\imagenes\Cinema_Paradiso.jpg" alt=""></div>
+        <div class="movie"><img src="/public\imagenes\Fitzcarraldo_Web.jpg" alt=""></div>
+        <div class="movie"><img src="/public\imagenes\La tumba_de_las_liciernagas..webp" alt=""></div>
+        <div class="movie"><img src="/public\imagenes\MiVecino_TOTORO.webp" alt=""></div>
+        <div class="movie"><img src="/public\imagenes\Robocop.jpg" alt=""></div>
+        <div class="movie"><img src="/public\imagenes\Ciudano_KANE.jpg" alt=""></div>
+        <div class="movie"><img src="/public\imagenes\El_gran_dictador-348479670-large.jpg" alt=""></div>
+        <div class="movie"><img src="/public\imagenes\61dOQvYDC5L._AC_UF894,1000_QL80_.jpg" alt=""></div>
+        <div class="movie"><img src="/public\imagenes\Top_gun.webp" alt=""></div>
       </div>
 
-      <div class="tops">
-        <div>Top Estrenos</div>
-      </div>
+      
       <div class="top-estrenos">
-        <div class="topmovie">#1 <img src="/public/imagenes/star wars.webp" alt="" width="200px" height="250px"></div>
-        <div class="topmovie">#2 <img src="/public/imagenes/Volver_al_Futuro_III_Poster.webp" alt="" width="200px" height="250px"></div>
-        <div class="topmovie">#3 <img src="/public/imagenes/Historia sin fin.jpg" alt="" width="200x" height="250px"></div>
+        <div class="topmovie"> Top número 1<img src="/public\imagenes\star wars.webp" alt="" ></div>
+        <div class="topmovie"> Top número 2 <img src="/public/imagenes/Volver_al_Futuro_III_Poster.webp" alt="" ></div>
+        <div class="topmovie"> Top número 3 <img src="/public/imagenes/Historia sin fin.jpg" alt="" ></div>
       </div>
     </div>
-    
-
-    <a href="#" class="back-to-top">
-      <i class="fas fa-arrow-up"></i>
-    </a>
 
   </main>
 
@@ -110,7 +114,7 @@
     <div class="containerFooter">
       <div class="navFooter">
         <a href="#">
-          <img src="/public\imagenes\logo_retroFilms1.png" alt="" class="logo">
+          <img src="\public\imagenes\logo_retroFilms1.png" alt="" class="logo">
         </a>
         <p>Aviso Legal: <i class="fa-solid fa-copyright"></i> 2024 RetroFilms, todos los derechos reservados.</p>
         <p><i class="fa-solid fa-face-smile-hearts"></i>Hay más de 10,000 películas disponibles.</p>
@@ -125,6 +129,7 @@
     
     </div>
   </footer>
+
 </body>
 
 </html>
