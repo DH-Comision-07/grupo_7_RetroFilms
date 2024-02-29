@@ -12,7 +12,7 @@ app.get("/detalleProducto", function(req, res){
 
 app.use(express.static(publicPath));
 
-app.listen(3060, () => {
+app.listen(3030, () => {
 console.log("servidor corriendo en puerto 3060");
 });
 
