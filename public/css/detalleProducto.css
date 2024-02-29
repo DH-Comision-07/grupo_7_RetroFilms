@@ -74,7 +74,8 @@ body{
 .lupa{
     padding: 8px;
     color:#996935;
-    border-radius: 20px;
+    border-radius: 10px;
+    background-color: #02b0ff;
     
 }
 .fa-solid.fa-basket-shopping{
@@ -82,6 +83,7 @@ body{
     border:none;
     border-radius: 10%;
     color:#996935;
+    background-color: #02b0ff;
     
 }
 .carrito-compras{
@@ -420,6 +422,9 @@ footer{
 }
 
 @media (min-width: 1000px){
+    .menu{
+        display:none;
+    }
     .titulo-peli{
         font-family:'Bebas Neue';   
         font-size: 50px;
@@ -449,7 +454,7 @@ footer{
     }
     .logo-footer{
         width: 40%;
-        margin-left: 430px;
+        margin-left: 500px;
         margin-top: 0;
         margin-bottom: 20px;
     }
