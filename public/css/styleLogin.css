@@ -1,41 +1,46 @@
+* {
+    font-family: "Noto Serif", serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(10deg, #002540, #E0EBF3);
-    margin: 0;
-    padding: 0;
+    font-size:16px;
+    font-weight: 200;
+    font-family: 'Noto Serif';
+    color:#0000; 
+}
+
+header, body {
+    background-color: white
+}
+
+.header__img {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh; 
-}
-
-.container {
-    width: 100%;
-    max-width: 400px; 
-    padding: 20px;
-}
-
-.logo {
-    width: 100%;
-    max-width: 200px;
-    display: block;
-    margin: 0 auto 20px; 
+    justify-content: center;
+    width: 35vw;
+    margin: 0px auto 0px;
+    padding: 0%;
+    height: 300px;
 }
 
 .formulario {
-    background: #E0EBF3;
-    border-radius: 20px;
-    padding: 20px;
-    width: 100%; 
+    width: 70vw;
+    margin: auto ;
+    padding : 30px ;
+    border: 2px solid #02263F;
+    border-radius: 2%;
+    background-color: #E0EBF3;
+    color: black;
 }
 
 .usuario input,
 .contraseña input {
     width: 100%;
-    background-color: lightblue;
+    background-color: #fff;
+    color:black;
     font-size: 14px;
     min-height: 20px;
-    margin: 2px 0;
+    margin: 0 0 5px;
     padding: 5px;
     box-sizing: border-box;
 }
@@ -47,9 +52,9 @@ body {
     padding: 10px;
     font-size: 16px;
     border: none;
-    background-color: #B88442;
+    background-color: #02b0ff;
     color: #fff;
-    border-radius: 2px;
+    border-radius: 10px;
     cursor: pointer;
     margin: 8px 0;
 }
@@ -57,6 +62,6 @@ body {
 @media screen and (min-width: 768px) {
     .formulario {
         width: 500px;
-        margin: 20px auto;
+        margin: 0px auto;
     }
 }
