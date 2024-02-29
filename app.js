@@ -20,3 +20,10 @@ app.get("/carritoCompras", function(req, res){
     res.sendFile(path.resolve(__dirname, "./views/carritoCompras.html"))
 })
 
+app.get("/register", function(req, res){
+    res.sendFile(path.resolve(__dirname, "./views/formularioRegistro.html"))
+})
+
+app.post("/register", function(req, res){
+    res.send("Se registró con exito")
+})
