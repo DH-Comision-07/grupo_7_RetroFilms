@@ -1,0 +1,460 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size:16px;
+    font-weight: 200;
+    font-family: 'Noto Serif';
+    color:#ffffff; 
+    background: linear-gradient(to right, #002540 10%, #150e23 80%);
+   
+    
+}
+.titulo{
+    font-family:'Bebas Neue';   
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: underline;
+    margin: 10px;
+    color: #B88442
+}
+
+.titulo-peli{
+    font-family:'Bebas Neue';   
+    font-size: 24px;
+    font-weight: 1000;
+    text-align: center;
+    margin: 10px;
+    color: #B88442;
+}
+/* -------------------Encabezado---------------------------------*/
+.encabezado{
+    background-color: #002540;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin: 0px;
+    border-bottom:3px solid #02b0ff;
+
+    
+}
+.logo{
+    width: 40%;
+    margin: 20px;
+    margin-top:30px;
+    padding: 5px;
+    
+}
+
+.menu{
+    padding: 7px;
+    color:#996935;
+
+}
+
+.buscador{
+    border:none;
+    border-radius:10%;
+    padding:20px;
+    
+}
+
+#site-search{
+    width: 50vw;
+    padding: 8px;
+    border-radius: 10px;
+    
+}
+.lupa{
+    padding: 8px;
+    color:#996935;
+    border-radius: 20px;
+    
+}
+.fa-solid.fa-basket-shopping{
+    padding:10px;
+    border:none;
+    border-radius: 10%;
+    color:#996935;
+    
+}
+.carrito-compras{
+    border-radius: 15px;
+}
+.menu-principal{
+    display:flex;
+    justify-content: space-between;
+}
+
+.menu-principal ul{
+    display:flex;
+    list-style: none;
+    margin:0;
+    padding: 0;  
+    border-bottom: 3px solid #02b0ff;
+    
+    
+}
+
+.menu-principal li a{
+    text-decoration:none;
+    color: #ffffff;
+    display: inline-block;
+    margin: 10px;
+    padding:5px;
+
+}
+
+
+
+/* -------------------body---------------------------------*/
+
+
+
+.bt-poster{
+    display:block;
+    width: 180px;
+    margin-left:85px;
+    align-content: center;
+}
+.caja-descripcion-pelicula{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align:justify;
+    margin: 5px;
+
+}
+.detalle-peli{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    margin:0px;
+    padding: 10px;
+    
+}
+.detalle-peli a{
+    margin:5px;
+}
+
+
+
+.descripcion-peli{
+    margin: 10px;
+}
+
+.botones{
+    align-self: center;
+    flex-direction: row;
+    margin: 10px;
+    margin-top:25px;
+    padding: 7px;
+    font-family: 'Bebas Neue';
+    width: 120px;
+    border:none;
+    border-radius: 10px;
+    background-color: #02b0ff;
+    color:#ffffff;
+}  
+.botones:hover{
+    color:indigo;
+} 
+
+
+.boton-poster{  
+    text-align: center;
+    margin-left: 150px;
+    padding: 7px;
+    border:none;
+    border-radius: 10px;
+    background-color: #02b0ff;
+    color:#ffffff;
+    font-family: 'Bebas Neue';
+    width: 80px;
+}
+.boton-poster:hover{
+    color:indigo;
+}
+
+.boton-volver{
+    text-align: center;
+    margin-left: 15px;
+    padding: 7px;
+    border:none;
+    border-radius: 10px;
+    background-color: #02b0ff;
+    color:#ffffff;
+    font-family: 'Bebas Neue';
+    width: 80px;
+}
+
+.boton-volver:hover{
+    color:indigo;
+}
+/*------ Carril Imagenes ------------*/
+
+.carril-imagenes {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+    align-items: center;
+    margin:auto;
+}
+
+.carril-imagenes ul{
+    display: flex;
+    flex-wrap: wrap;
+    text-decoration:none;
+    list-style: none;
+    margin: 0px;
+    padding:5px;
+    align-content:center;
+    justify-content: center;
+}
+
+.carril-imagenes img{
+    width: 300px;
+    height: 250px;
+    border-radius: 10%;
+    margin: 10px;
+}
+
+/* --------------Reparto------------------*/
+
+.reparto-principal{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.actor{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow:hidden;
+}
+
+/* -----------------------También te puede gustar ----------------------*/
+
+.tambien-puede-gustar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.tambien-puede-gustar img{
+    max-width: 350px;
+    margin: 0px;
+    max-height: 280px;
+}
+
+/* ------------------------------Reviews ------------------------------------*/
+
+.reviews{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.usuario{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px;
+    
+    
+}
+.usuario img{
+    max-width: 100px;
+    max-height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.caja-comentario{
+    border: 1px dotted indigo;
+    border-radius: 10%;
+    max-width: 70vw;
+    margin:10px;
+}
+
+/*----------------------------------Footer---------------------------------*/
+footer{
+    background-color: #002540;
+    border-top:3px solid #02b0ff;
+}
+
+.redes{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 0px;
+    margin: 5px;
+}
+.redes div{
+    margin: 10px;
+    
+}
+
+.redes i{
+    color:#996935; 
+}
+
+.logo-footer{
+    width: 40%;
+    margin-left: 105px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.Copyright{
+    font-family: 'Noto Serif';
+    font-weight: 400;
+    text-align:center;
+    color:#996935;
+}
+
+/* ---------------------- MediaQueries ------------------------------------*/
+@media (min-width: 361px){
+    .menu-principal{
+        display:none;
+    }
+  
+}
+@media(max-width:400px){    
+    .back, .front{  
+        display:none;
+    }
+    .menu-principal{
+        display:none;
+    }
+}
+
+@media (min-width: 500px){
+    .menu{
+        display:none;
+    }
+    .logo{
+        width: 28vw;
+    }
+    #site-search{
+        width: 40vw;
+    }
+    .tambien-puede-gustar img{
+        margin: 5px;
+    }
+}
+
+@media (min-width: 768px){
+    .menu-principal{
+        display:block;
+    }
+    .menu{
+        display:none;
+    }
+    .menu-principal ul{
+        display:flex;
+        justify-content: flex-end;
+        font-family:'Bebas Neue';   
+        font-size: 24px;
+        font-weight: 1000;
+        color: #ffffff;
+    }
+    .pelicula-seleccionada{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .bt-poster{
+        width: 30vw;
+    }   
+    .caja-descripcion-pelicula{
+        justify-content: flex-start;
+    }
+    .titulo-pelicula{
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .carril-imagenes{
+        margin-left: 30px;
+    }
+    .reparto-principal{ 
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        margin:auto;
+        margin-left: 10px;
+        text-align: center;
+    }
+
+    .tambien-puede-gustar img{
+        margin: 10px;
+    }
+    .redes div{
+        margin: 25px;
+        width: 40px;
+        
+    }
+    .logo-footer{
+        width: 40%;
+        margin-left: 220px;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 1000px){
+    .titulo-peli{
+        font-family:'Bebas Neue';   
+        font-size: 50px;
+        font-weight: 1000;
+        text-align: center;
+        margin: 10px;
+    }
+    .carril-imagenes{
+        margin-left: 30px;
+    }
+    .reparto-principal{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        margin:auto;
+        margin-left: 10px;
+        text-align: center;
+    }
+    .tambien-puede-gustar img{
+        margin: 15px;
+    }
+    .redes div{
+        margin: 25px;
+        width: 40px;
+        
+    }
+    .logo-footer{
+        width: 40%;
+        margin-left: 430px;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    .vistas:hover, .anio:hover, .calif:hover, .genero:hover{
+        color: blueviolet ;
+    }
+}
+

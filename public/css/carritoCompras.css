@@ -1,0 +1,384 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing : border-box;
+}
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+}
+
+
+header{
+    background-color: #002540;
+    width: 100%;
+}
+
+.logo {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    height: 50%;
+    width: 50%;
+}
+
+.iconos-proceso{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.fa-cart-shopping { animation: bounce 2s infinite;}
+
+@keyframes bounce {
+    0% {transform: translateY(0);}
+    40% {transform: translateY(-20px);}
+    60% {transform: translateY(-10px);}   
+}
+
+
+.fa-solid{
+    border: 1px solid #996935;
+    background-color: #FFF;
+    border-radius: 50%;
+    padding: 5px;
+    color: #996935;
+}
+
+.iconos-contexto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-weight: 500;
+    margin: 10px;
+    text-align: center;
+    width: 100%;
+    font-family: "Bebas Neue", sans-serif;
+    
+}
+
+.vendido{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 300;
+    border-top: 1px #002540 solid;
+    margin-left: 13px;
+    margin-right: 13px;
+    display: flex;
+}
+
+.producto{
+    margin-left: 13px;
+    margin-right: 13px;
+    background-color: #ebebeb;
+    border-radius: 10px;
+    display: flex;
+    width: 0 100%;
+}
+
+
+
+.imagen-producto{
+    max-width: 200px;
+    max-height: 250px;
+    margin-left: 10px;
+}
+
+.fa-circle-xmark{
+   position: absolute;
+    margin-left: 5px;
+}
+.nombre-producto{
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 78px;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.precio-producto{
+    margin-top: 10px;
+    font-family: "Bebas Neue", sans-serif;
+    margin: 0;
+}
+.add-delete{
+    display: flex;
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.16);
+    width: 30%;
+    justify-content: center;
+    margin-left: 0;
+    height: 30%;
+    bottom:20px;
+    font-family: "Bebas Neue", sans-serif;
+    margin: 0;
+    position: relative;
+    top:23vh;
+    right:2vw;
+    align-items: center;
+}
+.iconos-add-delete{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+
+.fa-trash{
+    color: grey;
+    border: none;
+}
+.fa-circle-plus{
+    border: none;
+}
+
+.total-productos{
+    text-align: left;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 300;
+    border-bottom: 1px #002540 solid;
+    margin-left: 13px;
+    margin-right: 13px;
+    display: flex;
+}
+
+.cupon-descuento{
+    padding: 13px;
+    border-radius: 7px;
+    margin-bottom: 13px;
+    margin-top: 17px;
+    display: flex;
+    background-color: #ebebeb;
+    margin-left: 13px;
+    margin-right: 13px;
+}
+
+input{
+    font-size: 20px;
+    font-weight: 500;
+    height: 46px;
+    outline: none;
+    position: relative;
+    width: 100%;
+    border-radius: 7px;
+    padding: 13px 9px; 
+    font-weight: 300;   
+    font-family: 'Noto Serif', sans-serif;
+}
+
+button{
+    font-size: 14px;
+    height: 46px;
+    margin-left: 10px;
+    position: relative;
+    width: 90%;
+    border-radius: 7px;
+    border:solid 3px #02b0ff;
+    color: #02b0ff; 
+    font-weight: 300;   
+    font-family: 'Noto Serif', sans-serif;
+}
+
+.subtotal-total{
+    border: 1px #ebebeb solid;
+    margin-left: 13px;
+    margin-right: 13px;
+    border-radius: 7px;
+}
+.subtotal{
+    display: flex;
+    padding: 13px;
+    justify-content: space-between;
+    font-size: 14px;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    font-weight: 400;   
+    font-family: 'Noto Serif', sans-serif;
+   
+}
+
+.total{
+    background-color: #ebebeb;
+    display: flex;
+    padding: 13px;
+    justify-content: space-between;
+    font-size: 14x;
+    align-items: center;
+    width: 100%;
+    position: relative; 
+    font-weight: 400;   
+    font-family: 'Noto Serif', sans-serif;
+}
+
+.pagar{
+    color: white;
+    border: none;
+    background-color: #02b0ff;
+    width: 94%;
+    margin-top: 13px;
+    margin-left: 13px;
+    margin-right: 13px;
+    font-weight: 400;   
+    font-family: 'Noto Serif', sans-serif;
+}
+
+.seguir-comprando{
+    color: white;
+    border: 3px solid #02b0ff;
+    width: 94%;
+    margin-top: 13px;
+    margin-left: 13px;
+    margin-right: 13px;
+    font-weight: 400;   
+    font-family: 'Noto Serif', sans-serif;
+}
+
+a{
+
+    text-decoration: none;
+    color: black;
+    
+}
+
+.vaciar-carrito{
+    border: none;
+    background-color: white;
+    text-align: right;
+    text-decoration: underline;
+    color: black;
+    font-style: italic; 
+    font-weight: 300;   
+    font-family: 'Noto Serif', sans-serif;
+}
+    
+.copyright{
+    text-align: center;
+    font-weight: 400;   
+    font-family: 'Noto Serif', sans-serif;
+    color:#996935;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+
+}
+
+.terminos{
+    margin-top: 10px;
+    text-decoration: underline;
+    color:#996935;
+    font-weight: 400;  
+    padding-bottom: 10px;
+}
+
+h5{
+     
+    font-weight: bold;   
+    font-family: 'Noto Serif', sans-serif;
+}
+
+
+.fa-shield-halved{
+    border: none;
+    color: white;
+    padding: 0;
+    background-color: #002540;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.nombre-pelicula{
+    font-size: 18px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: justify;
+}
+.nombre-pelicula p{
+    font-style: italic; 
+    font-weight: 400;   
+    font-family: 'Noto Serif', sans-serif;
+    font-size: 20px;
+}
+
+footer{
+    background-color: #002540;
+}
+
+
+@media (min-width:769px) {
+
+    .seguir-comprando{
+        width: 97%;
+    
+    }
+    .pagar{
+       width: 97%;
+     
+    }
+    .text-producto{
+        text-align: left;
+    }
+    .nombre-pelicula{
+        margin-top: 5px;
+        margin-left: 5px;
+        font-size: 30px;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: justify;
+    }
+    .nombre-pelicula p{
+        font-style: italic; 
+        font-weight: 300;   
+        font-family: 'Noto Serif', sans-serif;
+        font-size: 25px;
+    }
+    .imagen-producto{
+        width: 40%;
+        height: 50%;
+        margin-left: 10px;
+    }
+   
+}
+
+@media (min-width:1200px){
+
+    .add-delete{
+        left: 25vw;
+        width: 20%;
+        position: relative;
+        top: 200px;
+      
+    }
+    .seguir-comprando{
+        width: 98%;
+    }
+    .pagar{
+       width: 98%;
+    }
+    
+}
