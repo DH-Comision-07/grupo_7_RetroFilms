@@ -37,7 +37,7 @@ GRUPO DE TRABAJO
 * Maximo: 22 años, destaco por mi capacidad para encontrar soluciones originales. Soy una persona dinámica, dispuesta a asumir nuevos desafíos y explorar diferentes áreas, como en este caso.
 * Santiago: tengo 18 años, estoy haciendo el curso de Desarrollo de Paginas Web en DH y en unos meses comienzo a estudiar Ingenieria en Sistemas en la Facultad.
 Me considero agradable, detallista y organizado
-* Miguel:
+* Miguel: ando en los 28 años de edad, me considero una persona dedicada y con ánimos de cambio, movida y aprendiendo cosas nuevas, buscando mantener un buen humor. 
 * Axel: 
 
 
