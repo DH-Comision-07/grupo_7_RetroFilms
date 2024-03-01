@@ -54,8 +54,10 @@ Disclaimer: A pesar de no ser una pagina relacionada con nuestro producto, neces
 WORKFLOW
 
 La organizacion del trabajo es llevada a cabo principalmente a traves de Trello. 
+
 *El tablero utilizado para el segundo sprint es el siguiente:
 https://trello.com/b/jb9teJfe/dh-sprint-2
+
 *El tablero utilizado para el tercer sprint es el siguiente:
 https://trello.com/b/SbivMsjy/dh-sprint-3
 
