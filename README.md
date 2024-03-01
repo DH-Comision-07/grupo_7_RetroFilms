@@ -38,8 +38,7 @@ GRUPO DE TRABAJO
 * Santiago: tengo 18 años, estoy haciendo el curso de Desarrollo de Paginas Web en DH y en unos meses comienzo a estudiar Ingenieria en Sistemas en la Facultad.
 Me considero agradable, detallista y organizado
 * Miguel: ando en los 28 años de edad, me considero una persona dedicada y con ánimos de cambio, movida y aprendiendo cosas nuevas, buscando mantener un buen humor. 
-* Axel: 
-
+* Axel: 20 años, me considero organizado, tal vez me destaco más en lo que es backend, he echo cursos de html, css, js, react, MySQL (base de datos), etc, entusiasta en lo que es programación yelectrónica, y lo relacionado a ellas, me gusta aprender y tener nuevos desafios por afrontar.
 
 INSPIRACIONES
 
