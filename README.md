@@ -35,6 +35,10 @@ GRUPO DE TRABAJO
 * Laura: 29 años, soy una persona considerada, atenta al detalle, organizada y disciplinada, siempre dispuesta a ayudar y a compartir con quienes me rodean, con la mejor disposición.
 * Eduardo: 29 años me considero colaborador, receptivo , amigable y dispuesto a hacer cualquier reto y tipo de trabajo.
 * Maximo: 22 años, destaco por mi capacidad para encontrar soluciones originales. Soy una persona dinámica, dispuesta a asumir nuevos desafíos y explorar diferentes áreas, como en este caso.
+* Santiago: tengo 18 años, estoy haciendo el curso de Desarrollo de Paginas Web en DH y en unos meses comienzo a estudiar Ingenieria en Sistemas en la Facultad.
+Me considero agradable, detallista y organizado
+* Miguel:
+* Axel: 
 
 
 INSPIRACIONES
@@ -49,6 +53,9 @@ Disclaimer: A pesar de no ser una pagina relacionada con nuestro producto, neces
 
 WORKFLOW
 
-La organizacion del trabajo es llevada a cabo principalmente a traves de Trello. En este caso, el tablero utilizado para el segundo sprint es el siguiente:
+La organizacion del trabajo es llevada a cabo principalmente a traves de Trello. 
+En este caso, el tablero utilizado para el segundo sprint es el siguiente:
 https://trello.com/b/jb9teJfe/dh-sprint-2
+el tablero utilizado para el tercer sprint es el siguiente:
+https://trello.com/b/SbivMsjy/dh-sprint-3
 
