@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const detalleProductoController = require('../controllers/detalleProductoController')
+const productoController = require('../controllers/productoController')
 
-router.get('/', detalleProductoController.getAll);
-router.get('/:id', detalleProductoController.getOne);
+router.get('/detalleProducto', productoController.detalleProducto);
+router.get('/carritoCompras', productoController.carritoCompras);
 
 /* app.get("/detalleProducto", function(req, res){
     res.sendFile(path.resolve(__dirname, "./views/detalleProducto.html"))
