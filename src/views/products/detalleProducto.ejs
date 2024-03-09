@@ -20,28 +20,7 @@
 </head>
 <body>
     <header>
-        <section class ="encabezado">
-            <div>
-                <img class="logo" src="/img/Logo/RetroFilms-Recorte.png" alt="">
-            </div>
-            <nav>
-                <button class = "menu" type ="button"><i class="fa-solid fa-ellipsis"></i></button>
-            </nav>
-            <nav class="buscador">
-                <input type="text" id="site-search" placeholder="Busca tu pelicula favorita ">
-                <button class="lupa" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
-             </nav>
-             <nav>
-                <button class = "carrito-compras"><i class="fa-solid fa-basket-shopping"></i></button>
-             </nav>
-        </section>
-        <section class ="menu-principal">
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Generos</a></li>
-                <li><a href="#">Peliculas</a></li>
-            </ul>
-        </section>
+        <%-include('../partials/header') %>
     </header>
     <br>
     <section class ="contenedor-total">
@@ -176,17 +155,7 @@
 </section>
 <br>
     <footer>
-        <article class ="redes">
-            
-                <div><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
-                <div><a href="#"><i class="fa-brands fa-facebook"></i></a></div>
-                <div><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></div>
-                <div><a href="#"><i class="fa-brands fa-youtube"></i></a></div>
-         </article>   
-            <br>
-            <img class="logo-footer" src="img\Logo\RetroFilms-Recorte.png" alt="">
-            <br>
-        <div class="Copyright">Copyright © 2023-2024 RetroFilms S.R.L.</div>
+        <%-include('../partials/footer')%>
     </footer>
 </body>
       
