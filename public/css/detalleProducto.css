@@ -10,7 +10,7 @@ body{
     font-family: 'Noto Serif';
     color:#ffffff; 
     background: linear-gradient(to right, #002540 10%, #150e23 80%);
-   
+  
     
 }
 .titulo{
@@ -150,7 +150,7 @@ body{
 
 
 .descripcion-peli{
-    margin: 10px;
+    margin: 2vw;
 }
 
 .botones{
@@ -295,7 +295,7 @@ body{
 /*----------------------------------Footer---------------------------------*/
 footer{
     background-color: #002540;
-    border-top:3px solid #02b0ff;
+    border-top:1px solid #02b0ff;
 }
 
 .redes{
@@ -315,12 +315,6 @@ footer{
     color:#996935; 
 }
 
-.logo-footer{
-    width: 40%;
-    margin-left: 180px;
-    margin-top: 0;
-    margin-bottom: 20px;
-}
 
 .Copyright{
     font-family: 'Noto Serif';
@@ -331,6 +325,9 @@ footer{
 
 /* ---------------------- MediaQueries ------------------------------------*/
 @media (min-width: 361px){
+    header{
+        width:95%;
+    }
     .menu-principal{
         display:none;
     }

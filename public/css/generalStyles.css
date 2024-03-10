@@ -4,7 +4,6 @@
 
 body {
     font-family: "Bebas Neue", sans-serif;
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,7 +29,7 @@ header{
 
 
 .logo {
-    width: 200px;
+    width: 30vw;
 }
 
 
@@ -106,24 +105,238 @@ header{
   .containerFooter {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: #002540;
+    color: #996935;
     width: 100vw;
-    padding: 50px;
+    padding: 0.5rem 1rem;
     border-top: 2px solid #02b0ff;
 
 }
-
-.navFooter {
-    display: flex;
+.navFooter{
+    display:flex;
     justify-content: space-between;
     align-items: center;
-    color: #996935;
-    padding: 0.5rem 1rem;
-    width: 80%;
-    
 }
 
 .iconosFooter {
-    font-size: 35px;
+    width: 20%;
     color:#B88442;
+}
+
+@media screen and (min-width: 1091px) and (max-width: 1379px) {
+ 
+    .movie {
+        width: 220px;
+       
+        height: 300px;
+       
+    }
+    
+    
+    .topmovie {
+        width: 240px;
+    }
+   
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1090px) {
+ 
+    .movie {
+        width: 200px;
+       
+        height: 260px;
+       
+    }
+    
+    
+    .topmovie {
+        width: 260px;
+    }
+   
+}
+
+@media screen and (min-width: 769px) and (max-width: 999px) {
+
+    .containerHedar1 {
+        width: 100%;
+        padding: 20px;
+    }
+    .logo {
+        width: 100px;
+    }
+    .navbar {
+        width: 100%;
+        height: 100px;
+        font-size: 16px;
+    }
+
+    .movie-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    
+    }
+
+  
+    .movie {
+        width: 240px;
+       
+        height: 300px;
+       
+    }
+    
+    
+    .topmovie {
+        width: 200px;
+    }
+    .iconosFooter {
+        font-size: 35px;
+        color:#B88442;
+    }
+}
+
+@media screen and (min-width: 350px) and (max-width: 768px) {
+
+    .containerHedar1 {
+        width: 100%;
+        padding: 20px;
+    }
+    .logo {
+        width: 40vw;
+        
+    }
+    .navbar {
+        display: flex;
+        gap: 10px;
+    }
+
+    .movie-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 50%;
+    
+    }
+    .movie {
+        width: 90%;
+        max-width: 250px;   
+        height: 200px;
+        max-height: 600px;
+       
+    }
+    
+    
+    .topmovie {
+    
+        width: 100%;
+    }
+
+    .menuItem{
+        display: none;
+    }
+
+    .top-estrenos {
+        width: 40%;
+        flex-direction: column;
+        flex: 1;
+        display: flex;
+        gap: 20px;
+        color: #996935;
+        font-size: 20px;
+        align-items: end;
+        
+    
+    
+        img{
+            width: 100%;
+        }
+    }
+    .iconosFooter {
+        width: 40%;
+        color:#B88442;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 349px) {
+
+    .containerHedar1 {
+        width: 70%;
+        padding: 10px;
+    }
+    .logo {
+        width: 100px;
+    }
+    .navbar {
+        display: flex;
+        gap: 15px;
+    }
+
+    .movie-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 50%;
+    
+    }
+    .movie {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        max-width: 300px;   
+        height: 260px;
+        max-height: 600px;
+        background-color: none;
+       
+    }
+    
+    
+    .topmovie {
+    
+        width: 100%;
+    }
+
+    .menuItem{
+        display: none;
+    }
+
+    .top-estrenos {
+        width: 40%;
+        flex-direction: column;
+        flex: 1;
+        display: flex;
+        gap: 20px;
+        color: #996935;
+        font-size: 20px;
+        align-items: end;
+        
+    
+    
+        img{
+            width: 80%;
+        }
+    }
+   
+    .containerHedar1 {
+        border-bottom: none;
+    }
+    
+    .content-tabs div {
+        padding: none;
+        border-bottom: 5px solid #FF7000;
+        font-size: 13px;
+}
+.containerFooter {
+    display: flex;
+    align-items: center;
+    background-color: #002540;;
+    padding: 50px;
+    border-top: none
+
+}
+
+.containerFooter p{
+    display: none;
+}
+.iconosFooter {
+    font-size: 20px;
+    color:#B88442;
+}
 }
