@@ -1,5 +1,11 @@
 * {
+    box-sizing: border-box;
     font-family: "Noto Serif";
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
 }
 
 body {
@@ -13,14 +19,18 @@ header, body {
     background-color: white
 }
 
+.container {
+    margin: 5.4% 5.4%;
+}
+
 .header__img {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50vw;
+    width: 30vw;
     margin: 0px auto 0px;
     padding: 0%;
-    height: 250px;
+    height: 20%;
 }
 
 .formulario {

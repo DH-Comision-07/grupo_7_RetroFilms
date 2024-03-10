@@ -16,14 +16,15 @@ header, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60vw;
+    width: 40vw;
     margin: 0px auto;
     padding: 1%;
 }
 
 form {
     width: 75vw;
-    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
     padding :20px ;
     border: 2px solid #02263F;
     border-radius: 2%;
