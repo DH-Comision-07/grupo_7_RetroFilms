@@ -4,7 +4,7 @@ const producto = {
         {
             id: nextProductId++,
             name: 'El Padrino',
-            image: 'IMAGENES/carpetadeimgenes/elPadrino.jpg',
+            image: 'img/Home/movieGrid/elPadrino.jpg',
             price: 4.99,
             description: 'Un clásico del cine criminal dirigido por Francis Ford Coppola.',
           },
@@ -120,6 +120,15 @@ const producto = {
             price: 5.99,
             description: 'Una clásica película de acción protagonizada por Tom Cruise como piloto de combate.',
           },
-        ]
+        ],
+
+        getAll: function () {
+          return this.products;
+        },
+
+        getOneBy: function (id) {
+          return this.products.find(product => product.id == id);
+        }
 }
-  
+
+module.exports = producto;
