@@ -19,11 +19,11 @@ header, body {
     background-color: white
 }
 
-.container {
+.contenedor {
     margin: 5.4% 5.4%;
 }
 
-.header__img {
+.headerImg {
     display: flex;
     align-items: center;
     justify-content: center;

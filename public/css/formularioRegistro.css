@@ -12,7 +12,7 @@ header, body {
     background-color: white
 }
 
-.header__img {
+.headerImg {
     display: flex;
     align-items: center;
     justify-content: center;

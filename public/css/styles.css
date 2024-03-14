@@ -19,7 +19,7 @@ header{
     width: 100%;
 } 
 
-.containerHedar1 {
+.contenedorHeader1 {
     align-items: center;
     background-color: #002540;
     width: 100%;
@@ -27,7 +27,7 @@ header{
     border-bottom: 2px solid #02b0ff;
 }
 
-.containerFooter {
+.contenedorFooter {
     display: flex;
     align-items: center;
     background-color: #002540;
@@ -64,7 +64,7 @@ header{
 }
 
 
-.search-bar  {
+.barraBuscadora  {
     color: #996935;
     text-decoration: none;
     padding: 0, 5rem 1rem;
@@ -74,7 +74,7 @@ header{
     }
 }
 
-.search-bar button {
+.barraBuscadora button {
     color: rgb(0, 0, 0);
     text-decoration: underline;
     padding: 0.5rem 1rem;
@@ -92,7 +92,7 @@ header{
     background-color: #555;
 }
 
-.search-bar {
+.barraBuscadora {
     display: flex;
     align-items: center;
     background-color: #fff;
@@ -101,7 +101,7 @@ header{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  .search-bar input[type="text"] {
+  .barraBuscadora input[type="text"] {
     flex-grow: 1;
     padding: 5px;
     border: none;
@@ -133,7 +133,7 @@ header{
     cursor: pointer;
 }
 
-.content-tabs {
+.tabsContenido {
     display: flex;
     justify-content: space-around;
     background-image: linear-gradient(150deg, #5990b8, #150e23);
@@ -141,13 +141,13 @@ header{
     color: white;
 }
 
-.content-tabs div {
+.tabsContenido div {
     padding: 1rem;
     border-bottom: 5px solid #FF7000;
     font-size: 20px;
 }
 
-.main-content {
+.contenidoMain {
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -157,7 +157,7 @@ header{
 
   }
 
-.movie-grid {
+.cuadriculaPeliculas {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
@@ -170,7 +170,7 @@ header{
 
 }
 
-.movie {
+.pelicula {
     width: 300px;
     background-color: #ddd;
     height: 350px;
@@ -178,7 +178,7 @@ header{
 }
 
 
-.top-estrenos {
+.topEstrenos {
     width: 20%;
     flex-direction: column;
     flex: 1;
@@ -195,7 +195,7 @@ header{
     }
 }
 
-.topmovie {
+.peliculaEstreno {
     background-color: #ddd;
     padding: 10px;
     border-radius: 10px;
@@ -213,7 +213,7 @@ section{
     width: 90%;
     height: 350px;
 }
-.carousel{
+.carrusel{
     width: 100vw;
     display: flex;
     padding-left: 15px;
@@ -229,7 +229,7 @@ section img{
     transition: .5s ease;
 }
 
-.mainBody{
+.bodyPrincipal{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -275,7 +275,7 @@ section img:hover{
 
   @media screen and (min-width: 1091px) and (max-width: 1379px) {
  
-    .movie {
+    .pelicula {
         width: 220px;
        
         height: 300px;
@@ -283,7 +283,7 @@ section img:hover{
     }
     
     
-    .topmovie {
+    .peliculaEstreno {
         width: 240px;
     }
    
@@ -291,7 +291,7 @@ section img:hover{
 
 @media screen and (min-width: 1000px) and (max-width: 1090px) {
  
-    .movie {
+    .pelicula {
         width: 200px;
        
         height: 260px;
@@ -299,7 +299,7 @@ section img:hover{
     }
     
     
-    .topmovie {
+    .peliculaEstreno {
         width: 260px;
     }
    
@@ -307,7 +307,7 @@ section img:hover{
 
 @media screen and (min-width: 769px) and (max-width: 999px) {
 
-    .containerHedar1 {
+    .contenedorHeader1 {
         width: 100%;
         padding: 20px;
     }
@@ -320,14 +320,14 @@ section img:hover{
         font-size: 16px;
     }
 
-    .movie-grid {
+    .cuadriculaPeliculas {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     
     }
 
   
-    .movie {
+    .pelicula {
         width: 240px;
        
         height: 300px;
@@ -335,7 +335,7 @@ section img:hover{
     }
     
     
-    .topmovie {
+    .peliculaEstreno {
         width: 200px;
     }
     .iconosFooter {
@@ -346,7 +346,7 @@ section img:hover{
 
 @media screen and (min-width: 350px) and (max-width: 768px) {
 
-    .containerHedar1 {
+    .contenedorHeader1 {
         width: 100%;
         padding: 20px;
     }
@@ -358,13 +358,13 @@ section img:hover{
         gap: 10px;
     }
 
-    .movie-grid {
+    .cuadriculaPeliculas {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         width: 50%;
     
     }
-    .movie {
+    .pelicula {
         width: 90%;
         max-width: 250px;   
         height: 200px;
@@ -373,16 +373,16 @@ section img:hover{
     }
     
     
-    .topmovie {
+    .peliculaEstreno {
     
         width: 100%;
     }
 
-    .menuItem{
+    .articuloMenu{
         display: none;
     }
 
-    .top-estrenos {
+    .topEstrenos {
         width: 40%;
         flex-direction: column;
         flex: 1;
@@ -406,7 +406,7 @@ section img:hover{
 
 @media screen and (min-width: 200px) and (max-width: 349px) {
 
-    .containerHedar1 {
+    .contenedorHeader1 {
         width: 70%;
         padding: 10px;
     }
@@ -418,13 +418,13 @@ section img:hover{
         gap: 15px;
     }
 
-    .movie-grid {
+    .cuadriculaPeliculas {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         width: 50%;
     
     }
-    .movie {
+    .pelicula {
         display: flex;
         flex-direction: column;
         width: 90%;
@@ -436,16 +436,16 @@ section img:hover{
     }
     
     
-    .topmovie {
+    .peliculaEstreno {
     
         width: 100%;
     }
 
-    .menuItem{
+    .articuloMenu{
         display: none;
     }
 
-    .top-estrenos {
+    .topEstrenos {
         width: 40%;
         flex-direction: column;
         flex: 1;
@@ -462,16 +462,16 @@ section img:hover{
         }
     }
    
-    .containerHedar1 {
+    .contenedorHeader1 {
         border-bottom: none;
     }
     
-    .content-tabs div {
+    .tabsContenido div {
         padding: none;
         border-bottom: 5px solid #FF7000;
         font-size: 13px;
 }
-.containerFooter {
+.contenedorFooter {
     display: flex;
     align-items: center;
     background-color: #002540;;
@@ -480,7 +480,7 @@ section img:hover{
 
 }
 
-.containerFooter p{
+.contenedorFooter p{
     display: none;
 }
 .iconosFooter {

@@ -19,7 +19,7 @@ header{
     background-image: linear-gradient(150deg, #002540, #150e23);
 }
 
-.containerHedar1 {
+.contenedorHeader1 {
     align-items: center;
     background-color: #002540;
     width: 100%;
@@ -45,7 +45,7 @@ header{
 }
 
 
-.search-bar  {
+.barraBuscadora  {
     color: #996935;
     text-decoration: none;
     padding: 0, 5rem 1rem;
@@ -55,7 +55,7 @@ header{
     }
 }
 
-.search-bar button {
+.barraBuscadora button {
     color: rgb(0, 0, 0);
     text-decoration: underline;
     padding: 0.5rem 1rem;
@@ -73,7 +73,7 @@ header{
     background-color: #555;
 }
 
-.search-bar {
+.barraBuscadora {
     display: flex;
     align-items: center;
     background-color: #fff;
@@ -82,7 +82,7 @@ header{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  .search-bar input[type="text"] {
+  .barraBuscadora input[type="text"] {
     flex-grow: 1;
     padding: 5px;
     border: none;
@@ -102,7 +102,7 @@ header{
     background-color: #0062cc;
   }
 
-  .containerFooter {
+  .contenedorFooter {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -120,13 +120,13 @@ header{
 }
 
 .iconosFooter {
-    width: 20%;
+    font-size: 30px;
     color:#B88442;
 }
 
 @media screen and (min-width: 1091px) and (max-width: 1379px) {
  
-    .movie {
+    .pelicula {
         width: 220px;
        
         height: 300px;
@@ -134,15 +134,20 @@ header{
     }
     
     
-    .topmovie {
+    .peliculaEstreno {
         width: 240px;
+    }
+
+    .iconosFooter {
+        width: 40%;
+        color:#B88442;
     }
    
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1090px) {
  
-    .movie {
+    .pelicula {
         width: 200px;
        
         height: 260px;
@@ -150,15 +155,20 @@ header{
     }
     
     
-    .topmovie {
+    .peliculaEstreno {
         width: 260px;
+    }
+
+    .iconosFooter {
+        width: 40%;
+        color:#B88442;
     }
    
 }
 
 @media screen and (min-width: 769px) and (max-width: 999px) {
 
-    .containerHedar1 {
+    .contenedorHeader1 {
         width: 100%;
         padding: 20px;
     }
@@ -171,14 +181,14 @@ header{
         font-size: 16px;
     }
 
-    .movie-grid {
+    .cuadriculaPeliculas {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     
     }
 
   
-    .movie {
+    .pelicula {
         width: 240px;
        
         height: 300px;
@@ -186,18 +196,18 @@ header{
     }
     
     
-    .topmovie {
+    .peliculaEstreno {
         width: 200px;
     }
     .iconosFooter {
-        font-size: 35px;
+        width: 40%;
         color:#B88442;
     }
 }
 
 @media screen and (min-width: 350px) and (max-width: 768px) {
 
-    .containerHedar1 {
+    .contenedorHeader1 {
         width: 100%;
         padding: 20px;
     }
@@ -210,13 +220,13 @@ header{
         gap: 10px;
     }
 
-    .movie-grid {
+    .cuadriculaPeliculas{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         width: 50%;
     
     }
-    .movie {
+    .pelicula {
         width: 90%;
         max-width: 250px;   
         height: 200px;
@@ -225,16 +235,16 @@ header{
     }
     
     
-    .topmovie {
+    .peliculaEstreno {
     
         width: 100%;
     }
 
-    .menuItem{
+    .articuloMenu{
         display: none;
     }
 
-    .top-estrenos {
+    .topEstrenos {
         width: 40%;
         flex-direction: column;
         flex: 1;
@@ -258,7 +268,7 @@ header{
 
 @media screen and (min-width: 200px) and (max-width: 349px) {
 
-    .containerHedar1 {
+    .contenedorHeader1 {
         width: 70%;
         padding: 10px;
     }
@@ -270,13 +280,13 @@ header{
         gap: 15px;
     }
 
-    .movie-grid {
+    .cuadriculaPeliculas {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         width: 50%;
     
     }
-    .movie {
+    .pelicula {
         display: flex;
         flex-direction: column;
         width: 90%;
@@ -288,16 +298,16 @@ header{
     }
     
     
-    .topmovie {
+    .peliculaEstreno {
     
         width: 100%;
     }
 
-    .menuItem{
+    .articuloMenu{
         display: none;
     }
 
-    .top-estrenos {
+    .topEstrenos {
         width: 40%;
         flex-direction: column;
         flex: 1;
@@ -314,16 +324,16 @@ header{
         }
     }
    
-    .containerHedar1 {
+    .contenedorHeader1 {
         border-bottom: none;
     }
     
-    .content-tabs div {
+    .tabsContenido div {
         padding: none;
         border-bottom: 5px solid #FF7000;
         font-size: 13px;
 }
-.containerFooter {
+.contenedorFooter {
     display: flex;
     align-items: center;
     background-color: #002540;;
@@ -332,11 +342,11 @@ header{
 
 }
 
-.containerFooter p{
+.contenedorFooter p{
     display: none;
 }
 .iconosFooter {
-    font-size: 20px;
+    width: 40%;
     color:#B88442;
 }
 }

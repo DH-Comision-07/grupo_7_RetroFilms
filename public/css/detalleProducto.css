@@ -23,7 +23,7 @@ body{
     color: #B88442
 }
 
-.titulo-peli{
+.tituloPeli{
     font-family:'Bebas Neue';   
     font-size: 24px;
     font-weight: 1000;
@@ -86,15 +86,15 @@ body{
     background-color: #02b0ff;
     
 }
-.carrito-compras{
+.carritoCompras{
     border-radius: 15px;
 }
-.menu-principal{
+.menuPrincipal{
     display:flex;
     justify-content: space-between;
 }
 
-.menu-principal ul{
+.menuPrincipal ul{
     display:flex;
     list-style: none;
     margin:0;
@@ -104,7 +104,7 @@ body{
     
 }
 
-.menu-principal li a{
+.menuPrincipal li a{
     text-decoration:none;
     color: #ffffff;
     display: inline-block;
@@ -119,13 +119,13 @@ body{
 
 
 
-.bt-poster{
+.btPoster{
     display:block;
     width: 180px;
     margin-left:85px;
     align-content: center;
 }
-.caja-descripcion-pelicula{
+.cajaDescripcionPelicula{
     display:flex;
     justify-content: center;
     align-items: center;
@@ -134,7 +134,7 @@ body{
     margin: 5px;
 
 }
-.detalle-peli{
+.detallePeli{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
@@ -143,13 +143,13 @@ body{
     padding: 10px;
     
 }
-.detalle-peli a{
+.detallePeli a{
     margin:5px;
 }
 
 
 
-.descripcion-peli{
+.descripcionPeli{
     margin: 2vw;
 }
 
@@ -171,7 +171,7 @@ body{
 } 
 
 
-.boton-poster{  
+.botonPoster{  
     text-align: center;
     margin-left: 150px;
     padding: 7px;
@@ -182,11 +182,11 @@ body{
     font-family: 'Bebas Neue';
     width: 80px;
 }
-.boton-poster:hover{
+.botonPoster:hover{
     color:indigo;
 }
 
-.boton-volver{
+.botonVolver{
     text-align: center;
     margin-left: 15px;
     padding: 7px;
@@ -198,12 +198,12 @@ body{
     width: 80px;
 }
 
-.boton-volver:hover{
+.botonVolver:hover{
     color:indigo;
 }
 /*------ Carril Imagenes ------------*/
 
-.carril-imagenes {
+.carrilImagenes {
     display:flex;
     flex-wrap: wrap;
     justify-content: center;    
@@ -211,7 +211,7 @@ body{
     margin:auto;
 }
 
-.carril-imagenes ul{
+.carrilImagenes ul{
     display: flex;
     flex-wrap: wrap;
     text-decoration:none;
@@ -222,7 +222,7 @@ body{
     justify-content: center;
 }
 
-.carril-imagenes img{
+.carrilImagenes img{
     width: 300px;
     height: 250px;
     border-radius: 10%;
@@ -231,7 +231,7 @@ body{
 
 /* --------------Reparto------------------*/
 
-.reparto-principal{
+.repartoPrincipal{
     display:grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
@@ -250,14 +250,14 @@ body{
 
 /* -----------------------También te puede gustar ----------------------*/
 
-.tambien-puede-gustar{
+.tambienPuedeGustar{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
 }
-.tambien-puede-gustar img{
+.tambienPuedeGustar img{
     max-width: 350px;
     margin: 0px;
     max-height: 280px;
@@ -265,7 +265,7 @@ body{
 
 /* ------------------------------Reviews ------------------------------------*/
 
-.reviews{
+.resenias{
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -285,7 +285,7 @@ body{
     border-radius: 50%;
     overflow: hidden;
 }
-.caja-comentario{
+.cajaComentario{
     border: 1px dotted indigo;
     border-radius: 10%;
     max-width: 70vw;
@@ -328,16 +328,16 @@ footer{
     header{
         width:95%;
     }
-    .menu-principal{
+    .menuPrincipal{
         display:none;
     }
   
 }
 @media(max-width:400px){    
-    .back, .front{  
+    .atras, .adelante{  
         display:none;
     }
-    .menu-principal{
+    .menuPrincipal{
         display:none;
     }
 }
@@ -352,19 +352,19 @@ footer{
     #site-search{
         width: 40vw;
     }
-    .tambien-puede-gustar img{
+    .tambienPuedeGustar img{
         margin: 5px;
     }
 }
 
 @media (min-width: 768px){
-    .menu-principal{
+    .menuPrincipal{
         display:block;
     }
     .menu{
         display:none;
     }
-    .menu-principal ul{
+    .menuPrincipal ul{
         display:flex;
         justify-content: flex-end;
         font-family:'Bebas Neue';   
@@ -372,27 +372,27 @@ footer{
         font-weight: 1000;
         color: #ffffff;
     }
-    .pelicula-seleccionada{
+    .peliculaSeleccionada{
         display:flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    .bt-poster{
+    .btPoster{
         width: 30vw;
     }   
-    .caja-descripcion-pelicula{
+    .cajaDescripcionPelicula{
         justify-content: flex-start;
     }
-    .titulo-pelicula{
+    .tituloPelicula{
         justify-content: flex-start;
         align-items: center;
     }
 
-    .carril-imagenes{
+    .carrilImagenes{
         margin-left: 30px;
     }
-    .reparto-principal{ 
+    .repartoPrincipal{ 
         display:grid;
         grid-template-columns: 1fr 1fr 1fr;
         justify-content: center;
@@ -402,7 +402,7 @@ footer{
         text-align: center;
     }
 
-    .tambien-puede-gustar img{
+    .tambienPuedeGustar img{
         margin: 10px;
     }
     .redes div{
@@ -410,7 +410,7 @@ footer{
         width: 40px;
         
     }
-    .logo-footer{
+    .logoFooter{
         width: 40%;
         margin-left: 220px;
         margin-top: 0;
@@ -422,17 +422,17 @@ footer{
     .menu{
         display:none;
     }
-    .titulo-peli{
+    .tituloPeli{
         font-family:'Bebas Neue';   
         font-size: 50px;
         font-weight: 1000;
         text-align: center;
         margin: 10px;
     }
-    .carril-imagenes{
+    .carrilImagenes{
         margin-left: 30px;
     }
-    .reparto-principal{
+    .repartoPrincipal{
         display:grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         justify-content: center;
@@ -441,7 +441,7 @@ footer{
         margin-left: 10px;
         text-align: center;
     }
-    .tambien-puede-gustar img{
+    .tambienPuedeGustar img{
         margin: 15px;
     }
     .redes div{
@@ -449,7 +449,7 @@ footer{
         width: 40px;
         
     }
-    .logo-footer{
+    .logoFooter{
         width: 40%;
         margin-left: 500px;
         margin-top: 0;
