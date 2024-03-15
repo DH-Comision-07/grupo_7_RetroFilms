@@ -42,9 +42,22 @@ header{
     justify-content: space-around;
     margin-left: 15px;
     margin-right: 15px;
+    
 }
 
-.fa-cart-shopping { animation: bounce 2s infinite;}
+.carrito { animation: bounce 2s infinite; border: 2px solid #996935;
+    background-color: #FFF;
+    border-radius: 50%;
+    padding: 5px;
+    color: #996935;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Ancho del contenedor */
+    height: 40px;
+    text-align: center;}
+
+
 
 @keyframes bounce {
     0% {transform: translateY(0);}
@@ -53,12 +66,19 @@ header{
 }
 
 
-.fa-solid{
-    border: 1px solid #996935;
+
+.otrosIconos{
+    border: 2px solid #996935;
     background-color: #FFF;
     border-radius: 50%;
     padding: 5px;
     color: #996935;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Ancho del contenedor */
+    height: 40px;
 }
 
 .iconos-contexto{
@@ -296,7 +316,7 @@ a{
 }
 
 h5{
-     
+    text-align: center;
     font-weight: bold;   
     font-family: 'Noto Serif', sans-serif;
 }
@@ -327,6 +347,7 @@ h5{
 footer{
     background-color: #002540;
 }
+
 
 
 @media (min-width:769px) {
@@ -368,8 +389,7 @@ footer{
 @media (min-width:1200px){
 
     .add-delete{
-        left: 25vw;
-        width: 20%;
+        width: 10vw;
         position: relative;
         top: 200px;
       

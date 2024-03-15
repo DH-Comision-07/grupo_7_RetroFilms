@@ -4,7 +4,6 @@
 
 body {
     font-family: "Bebas Neue", sans-serif;
-    background-image: linear-gradient(150deg, #002540, #150e23);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,7 +16,8 @@ body {
   
 header{
     width: 100%;
-} 
+    background-image: linear-gradient(150deg, #002540, #150e23);
+}
 
 .contenedorHeader1 {
     align-items: center;
@@ -27,28 +27,9 @@ header{
     border-bottom: 2px solid #02b0ff;
 }
 
-.contenedorFooter {
-    display: flex;
-    align-items: center;
-    background-color: #002540;
-    width: 100vw;
-    padding: 50px;
-    border-top: 2px solid #02b0ff;
-
-}
 
 .logo {
-    width: 200px;
-}
-
-.navFooter {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #996935;
-    padding: 0.5rem 1rem;
-    width: 80%;
-    
+    width: 20vw;
 }
 
 
@@ -121,159 +102,29 @@ header{
     background-color: #0062cc;
   }
 
-.view-movie {
-    position: absolute;
-    bottom: 20px;
-    left: 35%;
-    transform: translateX(-50%);
-    padding: 1rem;
-    background-color: #008CBA;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-.tabsContenido {
+  .contenedorFooter {
     display: flex;
-    justify-content: space-around;
-    background-image: linear-gradient(150deg, #5990b8, #150e23);
-    width: 100%;
-    color: white;
-}
-
-.tabsContenido div {
-    padding: 1rem;
-    border-bottom: 5px solid #FF7000;
-    font-size: 20px;
-}
-
-.contenidoMain {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    margin-top:24px;
-    width: 90%;
-    justify-content: center;
-
-  }
-
-.cuadriculaPeliculas {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 15px;
-    margin-top:0px;
-    width: 70%;
-
-    img{
-        width: 100%;
-    }
-
-}
-
-.pelicula {
-    width: 300px;
-    background-color: #ddd;
-    height: 350px;
-    overflow-y: hidden;
-}
-
-
-.topEstrenos {
-    width: 20%;
-    flex-direction: column;
-    flex: 1;
-    display: flex;
-    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #002540;
     color: #996935;
-    font-size: 20px;
-    align-items: end;
-    
+    width: 100vw;
+    padding: 0.5rem 1rem;
+    border-top: 2px solid #02b0ff;
 
-
-    img{
-        width: 100%;
-    }
 }
-
-.peliculaEstreno {
-    background-color: #ddd;
-    padding: 10px;
-    border-radius: 10px;
-    border:  2px solid #02b0ff;
-    width: 400px;
+.navFooter{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .iconosFooter {
-    font-size: 40px;
+    font-size: 30px;
     color:#B88442;
 }
 
-section{
-    display: flex;
-    width: 90%;
-    height: 350px;
-}
-.carrusel{
-    width: 100vw;
-    display: flex;
-    padding-left: 15px;
-    padding-right: 15px;
-    justify-content: center;
-}
-
-section img{
-    width: 0px;
-    flex-grow: 1;
-    object-fit: cover;
-    opacity: .8;
-    transition: .5s ease;
-}
-
-.bodyPrincipal{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 30px;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-section img:hover{
-    cursor: crosshair;
-    width: 100px;
-    opacity: 1;
-    filter: contrast(120%);
-} 
-
-.back-to-top {
-    position: fixed;
-    bottom: 15%;
-    right: 20px;
-    background-color: #ffffff;
-    color: black;
-    border: none;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    opacity: 0.5;
-    transition: opacity 0.3s ease;
-    z-index:100
-  }
-  
-  .back-to-top:hover {
-    opacity: 1;
-  }
-  
-  .back-to-top:focus {
-    outline: none;
-  }
-
-
-  @media screen and (min-width: 1091px) and (max-width: 1379px) {
+@media screen and (min-width: 1091px) and (max-width: 1379px) {
  
     .pelicula {
         width: 220px;
@@ -285,6 +136,11 @@ section img:hover{
     
     .peliculaEstreno {
         width: 240px;
+    }
+
+    .iconosFooter {
+        width: 40%;
+        color:#B88442;
     }
    
 }
@@ -301,6 +157,11 @@ section img:hover{
     
     .peliculaEstreno {
         width: 260px;
+    }
+
+    .iconosFooter {
+        width: 40%;
+        color:#B88442;
     }
    
 }
@@ -339,7 +200,7 @@ section img:hover{
         width: 200px;
     }
     .iconosFooter {
-        font-size: 35px;
+        width: 40%;
         color:#B88442;
     }
 }
@@ -351,14 +212,15 @@ section img:hover{
         padding: 20px;
     }
     .logo {
-        width: 100px;
+        width: 40vw;
+        
     }
     .navbar {
         display: flex;
         gap: 10px;
     }
 
-    .cuadriculaPeliculas {
+    .cuadriculaPeliculas{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         width: 50%;
@@ -399,7 +261,7 @@ section img:hover{
         }
     }
     .iconosFooter {
-        font-size: 30px;
+        width: 40%;
         color:#B88442;
     }
 }
@@ -484,7 +346,7 @@ section img:hover{
     display: none;
 }
 .iconosFooter {
-    font-size: 20px;
+    width: 40%;
     color:#B88442;
 }
 }
