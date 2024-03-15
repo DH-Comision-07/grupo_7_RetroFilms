@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Registro</title>
-        <link rel="stylesheet" href="css/formularioRegistro.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/formularioRegistro.css">
+        <%-include('../partials/head') %>
+
     </head>
 
     <header class="header">
-        <a href="/"><img src="IMAGENES/carpetadeimgenes/logo_retroFilms1.png"  alt="Logo-RetroFilms" class="header__img"></a>
+        <a href="/"><img src="/img/Logo/RetroFilms-Recorte-SinFondo.png"  alt="Logo-RetroFilms" class="headerImg"></a>
     </header>
     
     <body>
@@ -58,4 +53,8 @@
         </form>
 
     </body>
+
+    <footer>
+        <%-include('../partials/footer') %>
+    </footer>
 </html>

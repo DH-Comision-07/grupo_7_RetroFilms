@@ -3,48 +3,33 @@
     font-family: "Noto Serif";
 }
 
-html {
-    width: 100vw;
-    height: 100vh;
-}
-
 body {
-    font-size:16px;
+    font-size:17px;
     font-weight: 200;
     font-family: 'Noto Serif';
     color:#0000; 
 }
 
-header, body {
-    background-color: white
-}
 
-.contenedor {
-    margin: 5.4% 5.4%;
-}
-
-.headerImg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30vw;
-    margin: 0px auto 0px;
-    padding: 0%;
-    height: 20%;
-}
-
-.formulario {
-    width: 70vw;
-    margin: auto ;
-    padding : 30px ;
+form {
+    width: 45%;
+    margin: auto;
+    padding: 30px;
     border: 2px solid #02263F;
     border-radius: 2%;
     background-color: #E0EBF3;
     color: black;
+    margin-top: 0px
 }
 
-.usuario input,
-.contraseña input {
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
     width: 100%;
     background-color: #fff;
     color:black;
@@ -56,9 +41,7 @@ header, body {
     border-radius: 10px;
 }
 
-.ingresar button,
-.crearCuenta button,
-.recuperarContraseña button {
+button {
     width: 100%;
     padding: 10px;
     font-size: 16px;
@@ -70,9 +53,6 @@ header, body {
     margin: 8px 0;
 }
 
-@media screen and (min-width: 768px) {
-    .formulario {
-        width: 500px;
-        margin: 0px auto;
-    }
+button:hover {
+    background-color: #02263F;
 }

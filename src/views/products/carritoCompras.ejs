@@ -15,28 +15,32 @@
 </head>
 <body>
 <header>
-    <div class="main-header">
-        <img src="IMAGENES/carpetadeimgenes/images/Captura_de_Pantalla_2024-02-17_a_la(s)_7.29.36_p._m..png" class="logo">
-        <p>Tu compra es 100% Segura!</p>
-        <i class="fa-solid fa-shield-halved"></i>
-    </div>
+    <%-include('../partials/header') %>
 </header>
 <main>
     <div class="iconos-proceso">
         <div class="icono-contexto">
+        <div class="carrito">
         <i class="fa-solid fa-cart-shopping"></i>
+        </div>
         <h5>carrito</h5>
         </div>
         <div class="icono-contexto">
+        <div class="otrosIconos">
         <i class="fa-solid fa-user"></i>
+        </div>
         <h5>datos</h5>
         </div>
         <div class="icono-contexto">
+        <div class="otrosIconos">
         <i class="fa-solid fa-truck"></i>
+        </div>
         <h5>entrega</h5>
         </div>
         <div class="icono-contexto">
+        <div class="otrosIconos">
         <i class="fa-solid fa-dollar-sign"></i>
+        </div>
         <h5>pago</h5>
         </div>
     </div>
@@ -46,7 +50,7 @@
     </div>
     <div class="producto">
         <i class="fa-regular fa-circle-xmark"></i>
-        <img src="IMAGENES/carpetadeimgenes/imagesDP/Breakfast-at-tiffanys/Posters/Breakfast_at_Tiffany's_(1961_poster).jpeg" class="imagen-producto">
+        <img src="\img\DetalleProducto\Breakfast-at-tiffanys\Posters\Breakfast_at_Tiffany's_(1961_poster).jpeg" class="imagen-producto">
         <div class="nombre-pelicula">
             <p class="titulo">Breakfast at Tiffany's (film)</p><br>
             <p>Audrey Hepburn</p><br>
@@ -93,10 +97,7 @@
 </div>
 </main>
 <footer>
-    <div class="copyright">
-        <span>©︎ 2024 retrofilms, todos los derechos reservados</span><br>
-            <span class="terminos">Ver terminos y condiciones</span>
-        </div>
+    <%-include('../partials/footer') %>
 </footer>
 </body>
 </html>

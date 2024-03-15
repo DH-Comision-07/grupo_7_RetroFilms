@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>RetroFilms-Inicio</title>
+        <link rel="stylesheet" href="/css/styleLogin.css">
+        <%-include('../partials/head') %>
+    </head>
+
+    <header class="header">
+        <img src="/img/Logo/RetroFilms-Recorte-SinFondo.png"  alt="LogoRetroFilms" class="headerImg">
+    </header>
+    <body>
+        </header>
+        <div class="contenedor">
+            <img src="" alt="" class="logo">
+            <div class="formulario">
+                <form action="/login" method="post">
+                    <div class="usuario">
+                        <label for="username">Usuario</label>
+                        <br>
+                        <input type="text" id="username" name="username">
+                    </div>
+
+                    <div class="contraseña">
+                        <label for="password">Contraseña</label>
+                        <br>
+                        <input type="password" id="password" name="password">
+                    </div>
+                    <label>
+                        <input type="checkbox" id="remember" name="remember">
+                        Recordarme
+                    </label>
+                    <div class="ingresar">
+                        <button type="submit">Ingresar</button>
+                    </div>
+
+                    <div class="recordar">¿Olvidó su contraseña?</div>
+                    <div class="recuperarContraseña">
+                        <button type="button">Restablecer Contraseña</button>
+                    </div>
+                    <div class="crearCuenta">
+                        <label>¿Eres Nuevo?</label>
+                        <br>
+                        <button type="button">Crear Cuenta</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+
+    <footer>
+        <%-include('../partials/footer') %>
+    </footer>
+
+</html>
