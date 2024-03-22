@@ -3,9 +3,14 @@
         {
             "id": 1,
             "name": "El Padrino",
-            "image": "elPadrino.jpg",
-            "price": 4.99,
-            "description": "Un clásico del cine criminal dirigido por Francis Ford Coppola."
+            "image": "El-Padrino-02.webp",
+            "price": 5.82,
+            "description": "Un hijo que busca un camino diferente al de su familia, que es una las grandes familias de la mafia italiana, se ve en la necesidad de tomar las riendas para cuidar de la familia.",
+            "genero": "Drama y Crimen",
+            "anio": 1972,
+            "imagenPelicula":["El-Padrino-00.jpeg, El-Padrino-01.jpg, El-Padrino-02.webp, El-Padrino-00.jpg"],
+            "imagenReparto": ["Al-Pacino.webp, Diane-Keaton.webp, Marlon-Brando.png y Robert-De-Niro.jpg"],
+            "actorReparto": ["Al Pacino, Marlon Brandon, Diane Keaton y Robert De Niro"]
         },
         {
             "id": 2,
@@ -23,16 +28,26 @@
         {
             "id": 3,
             "name": "Amores Perros",
-            "image": "amores_perros.jpg",
-            "price": 2.99,
-            "description": "Un thriller dramático mexicano dirigido por Alejandro González Iñárritu."
+            "image": "",
+            "price": 4.11,
+            "description":"Octavio, un joven adolescente enamorado de su cuñada, ha transformado a su perro Cofi en una mortífera arma con la que desea escapar de su miseria amorosa.",
+            "genero": "Drama y suspenso",
+            "anio": 2000,
+            "imagenPelicula": ["Amores-Perros-01.jpg, Amores-Perros-02.jpg, Amores-Perros-03.jpg, Amores-Perros-04.jpg, Amores-Perros-05.webq"],
+            "imagenReparto": ["Emilio-Echevarria.jpg, Gael-Garcia-Bernal.webq, Gerardo-Campbell.webq, Vanessa-Bauche.jpg"],
+            "actorReparto": ["Gael García Bernal, Vanessa Bauche, Emilio Echevarria, Gerardo Campbell"]
         },
         {
             "id": 4,
             "name": "Ben-Hur",
-            "image": "Ben-hurd.webp",
+            "image": "Ben-Hur_01.webp",
             "price": 5.49,
-            "description": "Una épica película histórica dirigida por William Wyler."
+            "description": "Un hombre que lo perdió todo tiene una oportunidad regresar a su hogar para recuperar lo que se le despojo, en el contexto de la gran Roma Imperial",
+            "genero":"Épico Dramatico Histórico Romántico",
+            "anio": 1959,
+            "imagenPelicula": ["Ben-Hur_01.webq, Ben-Hur_02.jpg, Ben-Hur_03.jpg, Ben-Hur_04.jpg"],
+            "imagenReparto": ["Charlton-Heston.jpg, Haya_Harareet.jpg, Jack-Hawkins.webq, Stephen-Boyd.jpg"],
+            "actorReparto": ["Charlton Heston, Stephen Boyd, Jack Hawkins y Haya Harareet"]
         },
         {
             "id": 5,
@@ -124,7 +139,33 @@
             "image": "Top_gun.webp",
             "price": 5.99,
             "description": "Una clásica película de acción protagonizada por Tom Cruise como piloto de combate."
+        },
+        {
+            "id": 18,
+            "name": "El bueno, el feo y el malo",
+            "image": "El_bueno_el_feo_y_el_malo_01.jpg",
+            "price": 5.82,
+            "description": "Tres hombres violentos pelean por una caja que alberga 200 000 dólares, la cual fue escondida durante la Guerra Civil. Dado que ninguno puede encontrar la tumba donde está el botín sin la ayuda de los otros dos, deben colaborar, pese a odiarse.",
+            "genero": "spaghetti western",
+            "anio": 1962,
+            "imagenPelicula":["El_bueno_el_feo_y_el_malo_01.jpg, El_bueno_el_malo_el_feo_02.jpg, El_bueno_el_malo_el_feo_03.webp, El_bueno_el_malo_el_feo_04.jpg"],
+            "imagenReparto":["Clint-Eastwood.jpg, Lee Van Cleef.jpg, Eli-Wallach.webp, Rada Rassimov.jpg"],
+            "actorReparto":["Clint Eastwood, Eli Wallach, Lee Van Cleef, Roda Rassimov"]
+
+        },
+        {
+            "id": 19,
+            "name": "La Historia Interminable",
+            "image": "La_Historia_Interminable_01.webp",
+            "price": 19.12,
+            "description": "Un niño que pasa por un gran dolor descubre un mundo fantástico que está en peligro a través de un libro misterioso, que lo llevará a un gran viaje para enfrentar sus miedos.",
+            "genero":"Fantasía",
+            "anio":1984,
+            "imagenPelicula":["La_Historia_Interminable_01.webp, La_Historia_Interminable_02.webp, La_Historia_Interminable_03.jpg, La_Historia_Interminable_04.jpeg"],
+            "imagenReparto":["Noah-Hathaway.jpg, Barret-Oliver.jpg, Gerald-McRaney.jpg, Tami-Stronach.jpg"],
+            "actorReparto":["Noah Hathaway, Barret Oliver, Tami Stronach y Generald McRaney"]
         }
+        
     ]
 }
 
