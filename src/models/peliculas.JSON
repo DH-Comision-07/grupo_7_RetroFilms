@@ -191,8 +191,67 @@
             "imagenPelicula":["metalJacket1.jpeg","metalJacket2.jpeg","metalJacket3.jpeg","metalJacket4.jpeg"],
             "imagenReparto":["adam_baldwin.jpeg","arliss_howard.jpeg","dorian_harewood.jpeg","matthew_modine.jpeg","r_lee_ermey.jpeg","vincent_d_onofrio.jpeg"],
             "actorReparto":["Adam Baldwin","Arliss Howard","Dorian Harewood","Matthew Modine","R Lee Ermey", "Vincent D Onofrio"]
+        },
+        {
+            "id": 21,
+            "name": "It",
+            "image": "it.webp",
+            "price": 10.50,
+            "description": "Un tranquilo y pequeño pueblo de Maine está siendo aterrorizado por una fuerza malévola oculta tras la máscara de un payaso, y que tan sólo se la conoce como It. Tras sus primeras víctimas, una pandilla formada por siete amigos de la infancia dedicen volver a reunirse para atacar el mal y destruirlo, intentando librar así del terror a su pueblo natal.",
+            "genero":["Fantasia","Terror"],
+            "anio":1990,
+            "imagenPelicula":["it1.jpg","it2.webp","it3.jpg","it4.jpg"],
+            "imagenReparto":["Dennis_Christopher.jpg","Harry_Anderson.jpg","Richard_Thomas.jpg","Tim_Reid.jpg","Richard_Masur.jpg"],
+            "actorReparto":["Dennis Christopher","Harry Anderson", "Richard Thomas","Tim Reid","Richard Masur"]
+        },
+        {
+            "id": 22,
+            "name": "Superman",
+            "image": "Superman.jpg",
+            "price": 14.99,
+            "description": "expulsado desde el moribundo planeta Krypton por su padre científico Jor-El, Kal-El llega a la Tierra y es acogido por los Kent. Después de la muerte de su padre adoptivo, Kal-El (llamado Clark) descubre sus orígenes y asume el papel de Superman. Al viajar a Metrópolis, Superman conoce a su interés amoroso Lois Lane y pronto se encuentra luchando contra Lex Luthor, un genio criminal que planea abandonar California.",
+            "genero":["Fantasia","Aventura","Accion"], 
+            "anio": 1978,
+            "imagenPelicula":["Superman1.jpg","Superman2.jpg","Superman3.jpg","Superman4.jpg"],
+            "imagenReparto":["christopher_reeve.jpg", "gene_hackman.jpg", "margot_kidder.jpg", "marlon_brando.jpg", "ned_beatty.jpg"],
+            "actorReparto":["Christopher Reeve", "Gene Hackman", "Margot Kidder", "Marlon Brando", "Ned Beatty"]
+        },
+        {
+            "id": 23,
+            "name": "Scarface",
+            "image": "Scarface.jpg",
+            "price": 19.99,
+            "description": "Al Pacino interpreta a Tony Montana, cuya inteligencia, agallas y ambición lo ayudan a pasar de un lavavajillas a la cima de un imperio criminal, pero cuya eventual paranoia y deseo incestuoso por su hermana pequeña (Mary Elizabeth Mastrantonio) resultan su perdición. Michelle Pfeiffer interpreta a la esposa trofeo de Tony, abandonada y adicta a la coca, y Steven Bauer es su amigo preocupado. F. Murray Abraham, Robert Loggia y Paul Shenar son algunos de los sórdidos socios comerciales y asesinos potenciales de Tony.",
+            "genero":["Mafia","Crimen","Accion"], 
+            "anio":1983,
+            "imagenPelicula":["Scarface1.jpg", "Scarface2.jpg", "Scarface3.jpg", "Scarface4.jpg"],
+            "imagenReparto":["al_pacino.jpg", "mary_elizabeth_mastrantonio.jpg","michelle_pfeiffer.jpg", "robert_loggia.jpg", "steven_bauer.jpg"],
+            "actorReparto":["Al Pacino", "Mary Elizabeth Mastrantonio", "michelle pfeiffer", "Robert loggia","Steven Bauer"]
+        },
+        {
+            "id": 24,
+            "name": "El planeta de los simios",
+            "image": "planet_of_the_apes.jpg",
+            "price": 9.99,
+            "description": "Temas sociológicos complejos recorren este clásico de ciencia ficción, sobre tres astronautas abandonados en un planeta futurista donde los simios gobiernan y los humanos son esclavos... El trío, atónito, descubre que estos simios altamente intelectuales pueden caminar erguidos y hablar. Incluso han establecido un sistema de clases y una estructura política. Los astronautas de repente se encuentran parte de una especie devaluada, atrapada y aprisionada por los simios. Pero uno, Taylor, logra escapar y, ayudado por un par de chimpancés compasivos, escapa a una sección de tierra deshabitada. Sin embargo, durante el viaje, Taylor hace un descubrimiento sorprendente e inquietante sobre el planeta y se da cuenta de que ha cerrado el círculo.",
+            "genero":"Aventura",
+            "anio":1968,
+            "imagenPelicula":["planet_of_the_apes1.jpg","planet_of_the_apes2.jpg","planet_of_the_apes3.jpg","planet_of_the_apes4.jpg"],
+            "imagenReparto":["charlton_heston.jpg","james_whitmore.jpg","kim_hunter.jpg","maurice_evans.jpg","roddy_mcdowall.jpg"],
+            "actorReparto":["Charlton heston","James Whitemore","Kim Hunter","Maurice Evans","Roddy Mcdowall"]
+        },
+        {
+            "id": 25,
+            "name": "Alice in wonderland",
+            "image": "alice_in_wonderland.jpg",
+            "price": 12.00,
+            "description": "En una tarde dorada, la joven Alice sigue a un Conejo Blanco, que desaparece por una madriguera de conejo cercana. Siguiéndolo rápidamente, ella cae en la madriguera y entra en el alegre y revuelto mundo del País de las Maravillas. Canciones memorables y escapadas caprichosas resaltan el viaje de Alicia, que culmina en un encuentro alocado con la Reina de Corazones... ¡y su ejército de naipes!.",
+            "genero":["Aventura","Fantasia"], 
+            "anio":1951,
+            "imagenPelicula":["alice_in_wonderland1.jpg","alice_in_wonderland2.jpg","alice_in_wonderland3.jpg","alice_in_wonderland4.jpg"],
+            "imagenReparto":["ed_wynn.jpg","jerry_colonna.jpg","kathryn_beaumont.jpg","richard_haydn.jpg","sterling_hollowayy.jpg"],
+            "actorReparto":["Ed Wynn","Jerry Colonna","Kathryn Beaumont","Richard Haydn","Sterling Hollowayy.jpg"]
         }
-        
     ]
 }
 
