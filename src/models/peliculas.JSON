@@ -221,12 +221,24 @@
             "name": "Back To The Future III",
             "image": "",
             "price": 5.82,
-            "description": "retoma la historia justo después de los eventos de la segunda película, con Marty McFly descubriendo una carta de su amigo, el Dr. Emmett "Doc" Brown, que fue escrita en 1885. La carta revela que Doc está atrapado en el Viejo Oeste después de haber sido enviado accidentalmente allí por una falla en la máquina del tiempo.",
-            "genero": "Ciencia ficción y Comedia",
-            "anio": 1985,
-            "imagenPelicula":["BackToTheFuture.jpg, BackToTheFuture2.jpg, BackToTheFuture3.jwebp, BackToTheFuture4.jpg"],
-            "imagenReparto": ["BackToTheFutureChristopherLloyd.jpg, BackToTheFutureCrispinGlover.jpg, BackToTheFutureKathleenThompson.jfif, BackToTheFutureMichaelFox.jpg"],
-            "actorReparto": ["Christopher Lloyd, Crispin Glover, Kathleen Thompson, Michael Fox"]
+            "description": "Retoma la historia justo después de los eventos de la segunda película, con Marty McFly descubriendo una carta de su amigo, el Dr. Emmett "Doc" Brown, que fue escrita en 1885. La carta revela que Doc está atrapado en el Viejo Oeste después de haber sido enviado accidentalmente allí por una falla en la máquina del tiempo.",
+            "genero": "Wéstern e Infantil",
+            "anio": 1990,
+            "imagenPelicula":["BTTF3.avif, BTTF32.webp, BTTF33.jfif, BTTF34.jpg"],
+            "imagenReparto": ["BackToTheFutureChristopherLloyd.jpg, BackToTheFutureC3MarySteenBurguen.jpg, BackToTheFutureKathleenThompson.jfif, BackToTheFutureMichaelFox.jpg"],
+            "actorReparto": ["Christopher Lloyd, Mary Steen Burguen, Kathleen Thompson, Michael Fox"]
+        },
+        {
+            "id": 24,
+            "name": "Back To The Future III",
+            "image": "",
+            "price": 5.82,
+            "description": "Retoma la historia justo después de los eventos de la segunda película, con Marty McFly descubriendo una carta de su amigo, el Dr. Emmett "Doc" Brown, que fue escrita en 1885. La carta revela que Doc está atrapado en el Viejo Oeste después de haber sido enviado accidentalmente allí por una falla en la máquina del tiempo.",
+            "genero": "Wéstern e Infantil",
+            "anio": 1990,
+            "imagenPelicula":["BTTF3.avif, BTTF32.webp, BTTF33.jfif, BTTF34.jpg"],
+            "imagenReparto": ["BackToTheFutureChristopherLloyd.jpg, BackToTheFutureC3MarySteenBurguen.jpg, BackToTheFutureKathleenThompson.jfif, BackToTheFutureMichaelFox.jpg"],
+            "actorReparto": ["Christopher Lloyd, Mary Steen Burguen, Kathleen Thompson, Michael Fox"]
         }
         
     ]
