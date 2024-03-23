@@ -206,17 +206,28 @@
         },
         {
             "id": 22,
-            "name": "El Mago de Oz",
+            "name": "Back To The Future",
             "image": "",
             "price": 5.82,
-            "description": "Una joven llamada Dorothy Gale, quien es llevada por un tornado desde su hogar en Kansas hasta la tierra mágica de Oz. En su viaje para encontrar al Mago de Oz y regresar a casa, Dorothy se une a un espantapájaros, un hombre de hojalata y un león cobarde. Juntos, enfrentan varios desafíos y adversidades mientras buscan la ayuda del Mago para cumplir sus deseos.",
-            "genero": "Musical y Fantasía",
-            "anio": 1939,
-            "imagenPelicula":["magoDeOz(reparto).jfif, magoDeOz(reparto)3.jfif, magoDeOz(reparto)2.jfif, magoDeOz(reparto)4.jfif"],
-            "imagenReparto": ["magoDeOz2.jfif, magoDeOz3.jfif, magoDeOz4.jfif, magoDeOz.jfif"],
-            "actorReparto": ["Judy Garldan, Jack Haley, Ray Bolger, Bert Lahr"]
+            "description": "Marty McFly un adolescente que accidentalmente viaja en el tiempo desde 1985 hasta 1955 en un DeLorean modificado por su amigo científico, el Dr. Emmett "Doc" Brown,  Marty se encuentra con versiones más jóvenes de sus padres y debe asegurarse de que se enamoren para garantizar su propia existencia en el futuro. Mientras intenta encontrar una forma de regresar a su propio tiempo, Marty también debe lidiar con una serie de eventos que podrían alterar el curso de la historia, incluyendo ayudar a un joven Doc Brown a inventar la máquina del tiempo.",
+            "genero": "Ciencia ficción y Comedia",
+            "anio": 1985,
+            "imagenPelicula":["BackToTheFuture.jpg, BackToTheFuture2.jpg, BackToTheFuture3.jwebp, BackToTheFuture4.jpg"],
+            "imagenReparto": ["BackToTheFutureChristopherLloyd.jpg, BackToTheFutureCrispinGlover.jpg, BackToTheFutureKathleenThompson.jfif, BackToTheFutureMichaelFox.jpg"],
+            "actorReparto": ["Christopher Lloyd, Crispin Glover, Kathleen Thompson, Michael Fox"]
+        },
+        {
+            "id": 23,
+            "name": "Back To The Future III",
+            "image": "",
+            "price": 5.82,
+            "description": "retoma la historia justo después de los eventos de la segunda película, con Marty McFly descubriendo una carta de su amigo, el Dr. Emmett "Doc" Brown, que fue escrita en 1885. La carta revela que Doc está atrapado en el Viejo Oeste después de haber sido enviado accidentalmente allí por una falla en la máquina del tiempo.",
+            "genero": "Ciencia ficción y Comedia",
+            "anio": 1985,
+            "imagenPelicula":["BackToTheFuture.jpg, BackToTheFuture2.jpg, BackToTheFuture3.jwebp, BackToTheFuture4.jpg"],
+            "imagenReparto": ["BackToTheFutureChristopherLloyd.jpg, BackToTheFutureCrispinGlover.jpg, BackToTheFutureKathleenThompson.jfif, BackToTheFutureMichaelFox.jpg"],
+            "actorReparto": ["Christopher Lloyd, Crispin Glover, Kathleen Thompson, Michael Fox"]
         }
-        
         
     ]
 }
