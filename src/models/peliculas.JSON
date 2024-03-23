@@ -9,8 +9,8 @@
             "genero": "Drama y Crimen",
             "anio": 1972,
             "imagenPelicula":["El-Padrino-00.jpeg, El-Padrino-01.jpg, El-Padrino-02.webp, El-Padrino-00.jpg"],
-            "imagenReparto": ["Al-Pacino.webp, Diane-Keaton.webp, Marlon-Brando.png y Robert-De-Niro.jpg"],
-            "actorReparto": ["Al Pacino, Marlon Brandon, Diane Keaton y Robert De Niro"]
+            "imagenReparto": ["Al-Pacino.webp, Diane-Keaton.webp, Marlon-Brando.png, Robert-De-Niro.jpg"],
+            "actorReparto": ["Al Pacino, Marlon Brandon, Diane Keaton, Robert De Niro"]
         },
         {
             "id": 2,
@@ -115,16 +115,26 @@
         {
             "id": 14,
             "name": "Ciudadano Kane",
-            "image": "Ciudano_KANE.jpg",
+            "image": "citizen_kane-Poster.jpeg",
             "price": 4.49,
-            "description": "Una película de misterio y drama dirigida, producida y coescrita por Orson Welles."
+            "description": "Un importante magnate estadounidense, Charles Foster Kane, dueño de una importante cadena de periódicos, de una red de emisoras, de dos sindicatos y de una inimaginable colección de obras de arte, muere en Xanadú, su fabuloso castillo de estilo oriental. La última palabra que pronuncia antes de expirar, ”Rosebud”, cuyo significado es un enigma, despierta una enorme curiosidad tanto en la prensa como entre la población. Así, un grupo de periodistas emprende una investigación para desentrañar el misterio.",
+            "genero": "Drama",
+            "anio": 1961,
+            "imagenPelicula": ["CiudadanoKane1.jpeg","ciudadanoKane2.jpeg","ciudadanoKane3.png","ciudadanoKane4.jpeg"],
+            "imagenReparto": ["dorothy_comingore.jpeg","everett_sloane.jpeg","george_coulouris.jpeg","joseph_cotten.jpeg","Orson-Welles.jpeg"],
+            "actorReparto": ["Dorothy Comingo","Everett Sloane","George Coulouris","Joseph Cotten","Orson Welles"]
         },
         {
             "id": 15,
             "name": "El Gran Dictador",
             "image": "El_gran_dictador-348479670-large.jpg",
             "price": 4.39,
-            "description": "Una comedia satírica política dirigida, escrita y protagonizada por Charlie Chaplin."
+            "description": "Un humilde barbero judío que combatió con el ejército de Tomania en la Primera Guerra Mundial vuelve a su casa años después del fin del conflicto. Amnésico a causa de un accidente de avión, no recuerda prácticamente nada de su vida pasada, y no conoce la situación política actual del país: Adenoid Hynkel, un dictador fascista y racista, ha llegado al poder y ha iniciado la persecución del pueblo judío, a quien considera responsable de la situación de crisis que vive el país. Paralelamente, Hynkel y sus colaboradores han empezado a preparar una ofensiva militar destinada a la conquista de todo el mundo.",
+            "genero":"Comedia",
+            "anio": 1940,
+            "imagenPelicula":["Dictator1.jpeg","Dictator2.jpeg","Dictator3.jpeg","Dictator4.jpeg"],
+            "imagenReparto":["charles_chaplin.jpeg","henry_daniell.jpeg","jack_oakie.jpeg","paulette_goddard.jpeg","reginald_gardiner.jpeg"],
+            "actorReparto":["Henry Daniell", "Jack Oakie", "Charles Chaplin","Paulette Goddard","Reginald Gardiner"]
         },
         {
             "id": 16,
@@ -136,9 +146,14 @@
         {
             "id": 17,
             "name": "Top Gun",
-            "image": "Top_gun.webp",
-            "price": 5.99,
-            "description": "Una clásica película de acción protagonizada por Tom Cruise como piloto de combate."
+            "image": "top_gun-Poster.jpeg",
+            "price": 20.50,
+            "description": "La Marina de los Estados Unidos ha creado una escuela de élite para pilotos con el fin de sacar una promoción de expertos en técnicas de combate. En la academia, más conocida como Top Gun, a los mejores se les entrena para ser intrépidos y fríos al mismo tiempo, capaces de no perder los nervios en situaciones extremas y de no inmutarse al romper la barrera del sonido a los mandos de un F-14. A la escuela llega el joven Maverick, famoso por su temeraria aunque brillante forma de pilotar.",
+            "genero":["Accion","Drama","Romance"],
+            "anio":1986,
+            "imagenPelicula":["topGun1.jpeg","topGun2.jpeg","topGun3.jpeg","topGun4.jpeg"],
+            "imagenReparto":["anthony_edwards.jpeg","kelly_mcgillis.jpeg","tom_cruise.jpeg","tom_skerritt.jpeg","val_kilmer.jpeg"],
+            "actorReparto":["Anthony Edwards","Kelly McGillis", "Tom Cruise","Tom Skerritt","Val Kilmer"]
         },
         {
             "id": 18,
@@ -164,6 +179,18 @@
             "imagenPelicula":["La_Historia_Interminable_01.webp, La_Historia_Interminable_02.webp, La_Historia_Interminable_03.jpg, La_Historia_Interminable_04.jpeg"],
             "imagenReparto":["Noah-Hathaway.jpg, Barret-Oliver.jpg, Gerald-McRaney.jpg, Tami-Stronach.jpg"],
             "actorReparto":["Noah Hathaway, Barret Oliver, Tami Stronach y Generald McRaney"]
+        },
+        {
+            "id": 20,
+            "name": "La chaqueta metalica",
+            "image": "full_metal_jacket-Poster.jpeg",
+            "price": 17.15,
+            "description": "Un grupo de reclutas se prepara en Parris Island, centro de entrenamiento de la marina norteamericana. Están bajo las órdenes del sargento Hartman, duro e implacable, cuya única misión en la vida es endurecer el cuerpo y el alma de los novatos, con el objetivo de que en el futuro puedan defenderse del enemigo. Pero no todos los jóvenes están preparados para soportar sus métodos.",
+            "genero":"Bélico - Drama",
+            "anio":1987,
+            "imagenPelicula":["metalJacket1.jpeg","metalJacket2.jpeg","metalJacket3.jpeg","metalJacket4.jpeg"],
+            "imagenReparto":["adam_baldwin.jpeg","arliss_howard.jpeg","dorian_harewood.jpeg","matthew_modine.jpeg","r_lee_ermey.jpeg","vincent_d_onofrio.jpeg"],
+            "actorReparto":["Adam Baldwin","Arliss Howard","Dorian Harewood","Matthew Modine","R Lee Ermey", "Vincent D Onofrio"]
         }
         
     ]
