@@ -105,20 +105,23 @@
             "name": "Fitzcarraldo",
             "image": "Fitzcarraldo_Web.jpg",
             "price": 4.69,
+            "genero": "Fantasía",
             "description": "Una película de aventuras y drama dirigida por Werner Herzog.",
-            "imagenPelicula": [],
-            "imagenReparto": [],
-            "actorReparto": []
+            "imagenPelicula": ["fitzcarraldo_captura1.jpg","fitzcarraldo_captura2.png","fitzcarraldo_captura3.jpg","fitzcarraldo_captura4.jpg"],
+            "imagenReparto": ["claudiaCardinale.jpg", "grandeOtelo.jpg", "klausKinski.jpg", "paulHittscher.jpg"],
+            "actorReparto": ["Claudia Cardinale", "Grande Otelo", "Klaus Kinski", "Paul Hittscher"]
         },
         {
             "id": 11,
             "name": "La tumba de las luciérnagas",
             "image": "La tumba_de_las_liciernagas..webp",
             "price": 3.59,
-            "description": "Una película japonesa de animación sobre la guerra dirigida por Isao Takahata.",
-            "imagenPelicula": [],
-            "imagenReparto": [],
-            "actorReparto": []
+            "description": "Una película japonesa de animación sobre la guerra dirigida por Isao Takahata",
+            "anio":"1988",
+            "genero": ["Anime", "Fantasia"],
+            "imagenPelicula": ["laTumbaDeLasLuciernagas_captura1.png", "laTumbaDeLasLuciernagas_captura2.jpg", "laTumbaDeLasLuciernagas_captura3.jpg", "laTumbaDeLasLuciernagas_captura4.jpg"],
+            "imagenReparto": ["ayanoShiraishi.jpg", "crispinFreeman.jpg", "jRobertSpencer.jpg", "tsutomuTsatsumi.jpg"],
+            "actorReparto": ["Ayano Shiraishi", "Crispin Freeman", "J. Robert Spencer", "Tsutomu Tsatsumi"]
         },
         {
             "id": 12,
@@ -126,9 +129,11 @@
             "image": "MiVecino_TOTORO.webp",
             "price": 4.29,
             "description": "Una película japonesa de fantasía animada dirigida por Hayao Miyazaki.",
-            "imagenPelicula": [],
-            "imagenReparto": [],
-            "actorReparto": []
+            "genero": ["Anime", "Aventura"],
+            "anio": "1988",
+            "imagenPelicula": ["miVecinoTotoro_captura1.jpeg", "miVecinoTotoro_captura2.jpg", "miVecinoTotoro_captura3.webp", "miVecinoTotoro_captura4.jpg"],
+            "imagenReparto": ["dakotaFanning.jpg", "elleFanning.jpg", "norikoHidaka.jpg", "patCarroll.jpg"],
+            "actorReparto": ["Dakota Fanning", "Elle Fanning", "Noriko Hidaka", "Pat Carroll"]
         },
         {
             "id": 13,
@@ -136,9 +141,11 @@
             "image": "Robocop.jpg",
             "price": 5.09,
             "description": "Una película de acción cyberpunk dirigida por Paul Verhoeven.",
-            "imagenPelicula": [],
-            "imagenReparto": [],
-            "actorReparto": []
+            "genero": ["Accion", "Fantasia"],
+            "anio": "1987",
+            "imagenPelicula": ["robocop_captura1.webp", "robocop_captura2.jpg", "robocop_captura.jpg", "robocop_captura4.jpg"],
+            "imagenReparto": ["kurtwoodSmith.jpg", "miguelFerrer.jpg", "nancyAllen.webp", "peterWeller.jpg"],
+            "actorReparto": ["Kurtwood Smith", "Miguel Ferrer", "Nancy Allen", "Peter Weller"]
         },
         {
             "id": 14,
@@ -282,7 +289,35 @@
             "imagenPelicula":["alice_in_wonderland1.jpg","alice_in_wonderland2.jpg","alice_in_wonderland3.jpg","alice_in_wonderland4.jpg"],
             "imagenReparto":["ed_wynn.jpg","jerry_colonna.jpg","kathryn_beaumont.jpg","richard_haydn.jpg","sterling_hollowayy.jpg"],
             "actorReparto":["Ed Wynn","Jerry Colonna","Kathryn Beaumont","Richard Haydn","Sterling Hollowayy.jpg"]
+        },
+        {
+            "id": 26,
+            "name": "Blade Runner",
+            "image": "blade_Runner.jpg",
+            "price": 10.00,
+            "description": "En un futuro sombrío y lluvioso, un expolicía vuelve al servicio para buscar y destruir a un grupo de androides que fingen ser humanos para, integrados en la sociedad, encontrar a su creador y matarlo.",
+            "genero":["Aventura","Fantasia"], 
+            "anio":1982,
+            "imagenPelicula":["bladeRunner_captura1.jpg","bladeRunner_captura2.jpg","bladeRunner_captura3.jpg","bladeRunner_captura4.jpg"],
+            "imagenReparto":["darylHannah.jpg","harrisonFord.jpg","rutgerHauer.jpg","seanYoung.jpg"],
+            "actorReparto":["Daryl Hannah","Harrison Ford","Rutger Hauer","Sean Young"]
+        },
+        {
+            "id": 26,
+            "name": "Star Wars - EPISODE IV",
+            "image": "star-wars.webp",
+            "price": 10.00,
+            "description": "La nave en la que viaja la princesa Leia es capturada por las tropas imperiales al mando del temible Darth Vader. Antes de ser atrapada, Leia consigue introducir un mensaje en su robot R2-D2, quien acompañado de su inseparable C-3PO logra escapar. Tras aterrizar en el planeta Tattooine son capturados y vendidos al joven Luke Skywalker, quien descubrirá el mensaje oculto que va destinado a Obi Wan Kenobi, maestro Jedi a quien Luke debe encontrar para salvar a la princesa. ",
+            "genero":["Aventura","Fantasia"], 
+            "anio":1977,
+            "imagenPelicula":["starWars_captura1.jpg","starWars_captura2.jpg","starWars_captura3.jpg","starWars_captura4.webp"],
+            "imagenReparto":["alecGuiness.avif","carrieFisher.jpg","harrisonFord.webp","markHamill.webp"],
+            "actorReparto":["Alec Guiness","Carrie Fisher","Harrison Ford","Mark Hamill"]
         }
     ]
 }
+
+
+
+
 
