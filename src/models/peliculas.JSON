@@ -195,7 +195,7 @@
         {
             "id": 21,
             "name": "El Mago de Oz",
-            "image": "",
+            "image": "mago de oz.jpg",
             "price": 5.82,
             "description": "Una joven llamada Dorothy Gale, quien es llevada por un tornado desde su hogar en Kansas hasta la tierra mágica de Oz. En su viaje para encontrar al Mago de Oz y regresar a casa, Dorothy se une a un espantapájaros, un hombre de hojalata y un león cobarde. Juntos, enfrentan varios desafíos y adversidades mientras buscan la ayuda del Mago para cumplir sus deseos.",
             "genero": "Musical y Fantasía",
@@ -207,7 +207,7 @@
         {
             "id": 22,
             "name": "Back To The Future",
-            "image": "",
+            "image": "back-to-the-future.jpg",
             "price": 5.82,
             "description": "Marty McFly un adolescente que accidentalmente viaja en el tiempo desde 1985 hasta 1955 en un DeLorean modificado por su amigo científico, el Dr. Emmett Doc Brown,  Marty se encuentra con versiones más jóvenes de sus padres y debe asegurarse de que se enamoren para garantizar su propia existencia en el futuro. Mientras intenta encontrar una forma de regresar a su propio tiempo, Marty también debe lidiar con una serie de eventos que podrían alterar el curso de la historia, incluyendo ayudar a un joven Doc Brown a inventar la máquina del tiempo.",
             "genero": "Ciencia ficción y Comedia",
@@ -219,7 +219,7 @@
         {
             "id": 23,
             "name": "Back To The Future III",
-            "image": "",
+            "image": "BackToTheFutureFoto.jfif",
             "price": 5.82,
             "description": "Retoma la historia justo después de los eventos de la segunda película, con Marty McFly descubriendo una carta de su amigo, el Dr. Emmett Doc Brown, que fue escrita en 1885. La carta revela que Doc está atrapado en el Viejo Oeste después de haber sido enviado accidentalmente allí por una falla en la máquina del tiempo.",
             "genero": "Wéstern e Infantil",
@@ -231,7 +231,7 @@
         {
             "id": 24,
             "name": "Grease",
-            "image": "",
+            "image": "greaseportada.jfif",
             "price": 5.82,
             "description": "El rebelde Danny Zuko y la inocente australiana Sandy mantienen un romance durante las vacaciones, creyendo que no se volverán a ver; sin embargo, para sorpresa de ambos, se reencuentran en la escuela secundaria al empezar el nuevo curso.",
             "genero": "Musical y Comedia",
@@ -243,7 +243,7 @@
         {
             "id": 25,
             "name": "Casa Blanca",
-            "image": "",
+            "image": "Casablanca.jpg",
             "price": 5.82,
             "description": "En Marruecos, el dueño de un café ayuda a su ex novia y a su marido a escapar de los nazis.",
             "genero": "Romance",
@@ -255,7 +255,7 @@
         {
             "id": 26,
             "name": "Frankestein",
-            "image": "",
+            "image": "frankenstein.jpg",
             "price": 5.82,
             "description": "El Dr. Henry Frankenstein, un joven y apasionado científico, asistido por el jorobado Fritz, crea un cuerpo humano, cuyas partes han sido recolectadas secretamente y de varias fuentes. El anhelo que consume al doctor es el de crear vida humana a través de varios artefactos eléctricos perfeccionados por él mismo.",
             "genero": "Terror y Ciencia ficción",
