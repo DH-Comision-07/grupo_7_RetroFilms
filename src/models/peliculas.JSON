@@ -1,0 +1,257 @@
+{
+    "products" : [
+        {
+            "id": 1,
+            "name": "El Padrino",
+            "image": "El-Padrino-02.webp",
+            "price": 5.82,
+            "description": "Un hijo que busca un camino diferente al de su familia, que es una las grandes familias de la mafia italiana, se ve en la necesidad de tomar las riendas para cuidar de la familia.",
+            "genero": "Drama y Crimen",
+            "anio": 1972,
+            "imagenPelicula":["El-Padrino-00.jpeg, El-Padrino-01.jpg, El-Padrino-02.webp, El-Padrino-00.jpg"],
+            "imagenReparto": ["Al-Pacino.webp, Diane-Keaton.webp, Marlon-Brando.png, Robert-De-Niro.jpg"],
+            "actorReparto": ["Al Pacino, Marlon Brandon, Diane Keaton, Robert De Niro"]
+        },
+        {
+            "id": 2,
+            "name": "Breakfast at Tiffany's",
+            "image": "breakFast_at_Tiffanys.jpg",
+            "price": 3.49,
+            "description": "Una comedia romántica basada en la novela de Truman Capote.",
+            "genero": "romance",
+            "anio": 1961,
+            "imagenPelicula": [],
+            "imagenReparto": [],
+            "actorReparto": []
+            
+        },
+        {
+            "id": 3,
+            "name": "Amores Perros",
+            "image": "",
+            "price": 4.11,
+            "description":"Octavio, un joven adolescente enamorado de su cuñada, ha transformado a su perro Cofi en una mortífera arma con la que desea escapar de su miseria amorosa.",
+            "genero": "Drama y suspenso",
+            "anio": 2000,
+            "imagenPelicula": ["Amores-Perros-01.jpg, Amores-Perros-02.jpg, Amores-Perros-03.jpg, Amores-Perros-04.jpg, Amores-Perros-05.webq"],
+            "imagenReparto": ["Emilio-Echevarria.jpg, Gael-Garcia-Bernal.webq, Gerardo-Campbell.webq, Vanessa-Bauche.jpg"],
+            "actorReparto": ["Gael García Bernal, Vanessa Bauche, Emilio Echevarria, Gerardo Campbell"]
+        },
+        {
+            "id": 4,
+            "name": "Ben-Hur",
+            "image": "Ben-Hur_01.webp",
+            "price": 5.49,
+            "description": "Un hombre que lo perdió todo tiene una oportunidad regresar a su hogar para recuperar lo que se le despojo, en el contexto de la gran Roma Imperial",
+            "genero":"Épico Dramatico Histórico Romántico",
+            "anio": 1959,
+            "imagenPelicula": ["Ben-Hur_01.webq, Ben-Hur_02.jpg, Ben-Hur_03.jpg, Ben-Hur_04.jpg"],
+            "imagenReparto": ["Charlton-Heston.jpg, Haya_Harareet.jpg, Jack-Hawkins.webq, Stephen-Boyd.jpg"],
+            "actorReparto": ["Charlton Heston, Stephen Boyd, Jack Hawkins y Haya Harareet"]
+        },
+        {
+            "id": 5,
+            "name": "Gone with the Wind",
+            "image": "gone_with_the_wind.jpg",
+            "price": 4.79,
+            "description": "Una clásica película romántica ambientada durante la Guerra Civil Americana."
+        },
+        {
+            "id": 6,
+            "name": "La Dolce Vita",
+            "image": "La_dolce_vita.jpg",
+            "price": 3.99,
+            "description": "Una película italiana dirigida por Federico Fellini."
+        },
+        {
+            "id": 7,
+            "name": "Metropolis",
+            "image": "metropolis.jpg",
+            "price": 5.29,
+            "description": "Una película alemana expressionista de ciencia ficción dirigida por Fritz Lang."
+        },
+        {
+            "id": 8,
+            "name": "Seven Samurai",
+            "image": "Seven_Samurai_poster.jpg",
+            "price": 6.49,
+            "description": "Una épica película samurái japonesa dirigida por Akira Kurosawa."
+        },
+        {
+            "id": 9,
+            "name": "Tiempos Modernos",
+            "image": "tiempos_modernos.jpg",
+            "price": 3.89,
+            "description": "Una película cómica dirigida e interpretada por Charlie Chaplin."
+        },
+        {
+            "id": 10,
+            "name": "Fitzcarraldo",
+            "image": "Fitzcarraldo_Web.jpg",
+            "price": 4.69,
+            "description": "Una película de aventuras y drama dirigida por Werner Herzog."
+        },
+        {
+            "id": 11,
+            "name": "La tumba de las luciérnagas",
+            "image": "La tumba_de_las_liciernagas..webp",
+            "price": 3.59,
+            "description": "Una película japonesa de animación sobre la guerra dirigida por Isao Takahata."
+        },
+        {
+            "id": 12,
+            "name": "Mi Vecino Totoro",
+            "image": "MiVecino_TOTORO.webp",
+            "price": 4.29,
+            "description": "Una película japonesa de fantasía animada dirigida por Hayao Miyazaki."
+        },
+        {
+            "id": 13,
+            "name": "Robocop",
+            "image": "Robocop.jpg",
+            "price": 5.09,
+            "description": "Una película de acción cyberpunk dirigida por Paul Verhoeven."
+        },
+        {
+            "id": 14,
+            "name": "Ciudadano Kane",
+            "image": "citizen_kane-Poster.jpeg",
+            "price": 4.49,
+            "description": "Un importante magnate estadounidense, Charles Foster Kane, dueño de una importante cadena de periódicos, de una red de emisoras, de dos sindicatos y de una inimaginable colección de obras de arte, muere en Xanadú, su fabuloso castillo de estilo oriental. La última palabra que pronuncia antes de expirar, ”Rosebud”, cuyo significado es un enigma, despierta una enorme curiosidad tanto en la prensa como entre la población. Así, un grupo de periodistas emprende una investigación para desentrañar el misterio.",
+            "genero": "Drama",
+            "anio": 1961,
+            "imagenPelicula": ["CiudadanoKane1.jpeg","ciudadanoKane2.jpeg","ciudadanoKane3.png","ciudadanoKane4.jpeg"],
+            "imagenReparto": ["dorothy_comingore.jpeg","everett_sloane.jpeg","george_coulouris.jpeg","joseph_cotten.jpeg","Orson-Welles.jpeg"],
+            "actorReparto": ["Dorothy Comingo","Everett Sloane","George Coulouris","Joseph Cotten","Orson Welles"]
+        },
+        {
+            "id": 15,
+            "name": "El Gran Dictador",
+            "image": "El_gran_dictador-348479670-large.jpg",
+            "price": 4.39,
+            "description": "Un humilde barbero judío que combatió con el ejército de Tomania en la Primera Guerra Mundial vuelve a su casa años después del fin del conflicto. Amnésico a causa de un accidente de avión, no recuerda prácticamente nada de su vida pasada, y no conoce la situación política actual del país: Adenoid Hynkel, un dictador fascista y racista, ha llegado al poder y ha iniciado la persecución del pueblo judío, a quien considera responsable de la situación de crisis que vive el país. Paralelamente, Hynkel y sus colaboradores han empezado a preparar una ofensiva militar destinada a la conquista de todo el mundo.",
+            "genero":"Comedia",
+            "anio": 1940,
+            "imagenPelicula":["Dictator1.jpeg","Dictator2.jpeg","Dictator3.jpeg","Dictator4.jpeg"],
+            "imagenReparto":["charles_chaplin.jpeg","henry_daniell.jpeg","jack_oakie.jpeg","paulette_goddard.jpeg","reginald_gardiner.jpeg"],
+            "actorReparto":["Henry Daniell", "Jack Oakie", "Charles Chaplin","Paulette Goddard","Reginald Gardiner"]
+        },
+        {
+            "id": 16,
+            "name": "2001: A Space Odyssey",
+            "image": "61dOQvYDC5L.AC_UF894,1000_QL80.jpg",
+            "price": 5.79,
+            "description": "Una película de ciencia ficción dirigida por Stanley Kubrick."
+        },
+        {
+            "id": 17,
+            "name": "Top Gun",
+            "image": "top_gun-Poster.jpeg",
+            "price": 20.50,
+            "description": "La Marina de los Estados Unidos ha creado una escuela de élite para pilotos con el fin de sacar una promoción de expertos en técnicas de combate. En la academia, más conocida como Top Gun, a los mejores se les entrena para ser intrépidos y fríos al mismo tiempo, capaces de no perder los nervios en situaciones extremas y de no inmutarse al romper la barrera del sonido a los mandos de un F-14. A la escuela llega el joven Maverick, famoso por su temeraria aunque brillante forma de pilotar.",
+            "genero":["Accion","Drama","Romance"],
+            "anio":1986,
+            "imagenPelicula":["topGun1.jpeg","topGun2.jpeg","topGun3.jpeg","topGun4.jpeg"],
+            "imagenReparto":["anthony_edwards.jpeg","kelly_mcgillis.jpeg","tom_cruise.jpeg","tom_skerritt.jpeg","val_kilmer.jpeg"],
+            "actorReparto":["Anthony Edwards","Kelly McGillis", "Tom Cruise","Tom Skerritt","Val Kilmer"]
+        },
+        {
+            "id": 18,
+            "name": "El bueno, el feo y el malo",
+            "image": "El_bueno_el_feo_y_el_malo_01.jpg",
+            "price": 5.82,
+            "description": "Tres hombres violentos pelean por una caja que alberga 200 000 dólares, la cual fue escondida durante la Guerra Civil. Dado que ninguno puede encontrar la tumba donde está el botín sin la ayuda de los otros dos, deben colaborar, pese a odiarse.",
+            "genero": "spaghetti western",
+            "anio": 1962,
+            "imagenPelicula":["El_bueno_el_feo_y_el_malo_01.jpg, El_bueno_el_malo_el_feo_02.jpg, El_bueno_el_malo_el_feo_03.webp, El_bueno_el_malo_el_feo_04.jpg"],
+            "imagenReparto":["Clint-Eastwood.jpg, Lee Van Cleef.jpg, Eli-Wallach.webp, Rada Rassimov.jpg"],
+            "actorReparto":["Clint Eastwood, Eli Wallach, Lee Van Cleef, Roda Rassimov"]
+
+        },
+        {
+            "id": 19,
+            "name": "La Historia Interminable",
+            "image": "La_Historia_Interminable_01.webp",
+            "price": 19.12,
+            "description": "Un niño que pasa por un gran dolor descubre un mundo fantástico que está en peligro a través de un libro misterioso, que lo llevará a un gran viaje para enfrentar sus miedos.",
+            "genero":"Fantasía",
+            "anio":1984,
+            "imagenPelicula":["La_Historia_Interminable_01.webp, La_Historia_Interminable_02.webp, La_Historia_Interminable_03.jpg, La_Historia_Interminable_04.jpeg"],
+            "imagenReparto":["Noah-Hathaway.jpg, Barret-Oliver.jpg, Gerald-McRaney.jpg, Tami-Stronach.jpg"],
+            "actorReparto":["Noah Hathaway, Barret Oliver, Tami Stronach y Generald McRaney"]
+        },
+        {
+            "id": 20,
+            "name": "La chaqueta metalica",
+            "image": "full_metal_jacket-Poster.jpeg",
+            "price": 17.15,
+            "description": "Un grupo de reclutas se prepara en Parris Island, centro de entrenamiento de la marina norteamericana. Están bajo las órdenes del sargento Hartman, duro e implacable, cuya única misión en la vida es endurecer el cuerpo y el alma de los novatos, con el objetivo de que en el futuro puedan defenderse del enemigo. Pero no todos los jóvenes están preparados para soportar sus métodos.",
+            "genero":"Bélico - Drama",
+            "anio":1987,
+            "imagenPelicula":["metalJacket1.jpeg","metalJacket2.jpeg","metalJacket3.jpeg","metalJacket4.jpeg"],
+            "imagenReparto":["adam_baldwin.jpeg","arliss_howard.jpeg","dorian_harewood.jpeg","matthew_modine.jpeg","r_lee_ermey.jpeg","vincent_d_onofrio.jpeg"],
+            "actorReparto":["Adam Baldwin","Arliss Howard","Dorian Harewood","Matthew Modine","R Lee Ermey", "Vincent D Onofrio"]
+        },
+        {
+            "id": 21,
+            "name": "It",
+            "image": "it.webp",
+            "price": 10.50,
+            "description": "Un tranquilo y pequeño pueblo de Maine está siendo aterrorizado por una fuerza malévola oculta tras la máscara de un payaso, y que tan sólo se la conoce como It. Tras sus primeras víctimas, una pandilla formada por siete amigos de la infancia dedicen volver a reunirse para atacar el mal y destruirlo, intentando librar así del terror a su pueblo natal.",
+            "genero":["Fantasia","Terror"],
+            "anio":1990,
+            "imagenPelicula":["it1.jpg","it2.webp","it3.jpg","it4.jpg"],
+            "imagenReparto":["Dennis_Christopher.jpg","Harry_Anderson.jpg","Richard_Thomas.jpg","Tim_Reid.jpg","Richard_Masur.jpg"],
+            "actorReparto":["Dennis Christopher","Harry Anderson", "Richard Thomas","Tim Reid","Richard Masur"]
+        },
+        {
+            "id": 22,
+            "name": "Superman",
+            "image": "Superman.jpg",
+            "price": 14.99,
+            "description": "expulsado desde el moribundo planeta Krypton por su padre científico Jor-El, Kal-El llega a la Tierra y es acogido por los Kent. Después de la muerte de su padre adoptivo, Kal-El (llamado Clark) descubre sus orígenes y asume el papel de Superman. Al viajar a Metrópolis, Superman conoce a su interés amoroso Lois Lane y pronto se encuentra luchando contra Lex Luthor, un genio criminal que planea abandonar California.",
+            "genero":["Fantasia","Aventura","Accion"], 
+            "anio": 1978,
+            "imagenPelicula":["Superman1.jpg","Superman2.jpg","Superman3.jpg","Superman4.jpg"],
+            "imagenReparto":["christopher_reeve.jpg", "gene_hackman.jpg", "margot_kidder.jpg", "marlon_brando.jpg", "ned_beatty.jpg"],
+            "actorReparto":["Christopher Reeve", "Gene Hackman", "Margot Kidder", "Marlon Brando", "Ned Beatty"]
+        },
+        {
+            "id": 23,
+            "name": "Scarface",
+            "image": "Scarface.jpg",
+            "price": 19.99,
+            "description": "Al Pacino interpreta a Tony Montana, cuya inteligencia, agallas y ambición lo ayudan a pasar de un lavavajillas a la cima de un imperio criminal, pero cuya eventual paranoia y deseo incestuoso por su hermana pequeña (Mary Elizabeth Mastrantonio) resultan su perdición. Michelle Pfeiffer interpreta a la esposa trofeo de Tony, abandonada y adicta a la coca, y Steven Bauer es su amigo preocupado. F. Murray Abraham, Robert Loggia y Paul Shenar son algunos de los sórdidos socios comerciales y asesinos potenciales de Tony.",
+            "genero":["Mafia","Crimen","Accion"], 
+            "anio":1983,
+            "imagenPelicula":["Scarface1.jpg", "Scarface2.jpg", "Scarface3.jpg", "Scarface4.jpg"],
+            "imagenReparto":["al_pacino.jpg", "mary_elizabeth_mastrantonio.jpg","michelle_pfeiffer.jpg", "robert_loggia.jpg", "steven_bauer.jpg"],
+            "actorReparto":["Al Pacino", "Mary Elizabeth Mastrantonio", "michelle pfeiffer", "Robert loggia","Steven Bauer"]
+        },
+        {
+            "id": 24,
+            "name": "El planeta de los simios",
+            "image": "planet_of_the_apes.jpg",
+            "price": 9.99,
+            "description": "Temas sociológicos complejos recorren este clásico de ciencia ficción, sobre tres astronautas abandonados en un planeta futurista donde los simios gobiernan y los humanos son esclavos... El trío, atónito, descubre que estos simios altamente intelectuales pueden caminar erguidos y hablar. Incluso han establecido un sistema de clases y una estructura política. Los astronautas de repente se encuentran parte de una especie devaluada, atrapada y aprisionada por los simios. Pero uno, Taylor, logra escapar y, ayudado por un par de chimpancés compasivos, escapa a una sección de tierra deshabitada. Sin embargo, durante el viaje, Taylor hace un descubrimiento sorprendente e inquietante sobre el planeta y se da cuenta de que ha cerrado el círculo.",
+            "genero":"Aventura",
+            "anio":1968,
+            "imagenPelicula":["planet_of_the_apes1.jpg","planet_of_the_apes2.jpg","planet_of_the_apes3.jpg","planet_of_the_apes4.jpg"],
+            "imagenReparto":["charlton_heston.jpg","james_whitmore.jpg","kim_hunter.jpg","maurice_evans.jpg","roddy_mcdowall.jpg"],
+            "actorReparto":["Charlton heston","James Whitemore","Kim Hunter","Maurice Evans","Roddy Mcdowall"]
+        },
+        {
+            "id": 25,
+            "name": "Alice in wonderland",
+            "image": "alice_in_wonderland.jpg",
+            "price": 12.00,
+            "description": "En una tarde dorada, la joven Alice sigue a un Conejo Blanco, que desaparece por una madriguera de conejo cercana. Siguiéndolo rápidamente, ella cae en la madriguera y entra en el alegre y revuelto mundo del País de las Maravillas. Canciones memorables y escapadas caprichosas resaltan el viaje de Alicia, que culmina en un encuentro alocado con la Reina de Corazones... ¡y su ejército de naipes!.",
+            "genero":["Aventura","Fantasia"], 
+            "anio":1951,
+            "imagenPelicula":["alice_in_wonderland1.jpg","alice_in_wonderland2.jpg","alice_in_wonderland3.jpg","alice_in_wonderland4.jpg"],
+            "imagenReparto":["ed_wynn.jpg","jerry_colonna.jpg","kathryn_beaumont.jpg","richard_haydn.jpg","sterling_hollowayy.jpg"],
+            "actorReparto":["Ed Wynn","Jerry Colonna","Kathryn Beaumont","Richard Haydn","Sterling Hollowayy.jpg"]
+        }
+    ]
+}
+
