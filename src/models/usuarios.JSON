@@ -1,0 +1,12 @@
+{
+    "usuarios": [
+        {
+            "nombre": "Jose",
+            "apellido": "Gonzalez",
+            "email": "jose.gonzalez@gmail.com",
+            "contraseña": "123456",
+            "categoria": "gold",
+            "foto": ""
+        }
+    ]
+}

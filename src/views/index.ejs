@@ -56,28 +56,13 @@
 
         <div class="contenidoMain">
 
-     
+         
             <div class="cuadriculaPeliculas">
-              <div class="pelicula"><img src="img\Home\movieGrid\elPadrino.jpg" alt=""></div>
-              <div class="pelicula"><img src="img\Home\movieGrid\breakFast_at_Tiffanys.jpg" alt=""></div>
-              <div class="pelicula"><img src="img\Home\movieGrid\amores_perros.jpg" alt=""></div>
-              <div class="pelicula"><img src="img\Home\movieGrid\Ben-hurd.webp" alt=""></div>
-              <div class="pelicula"><img src="img\Home\movieGrid\gone_with_the_wind.jpg" alt=""></div>
-              <div class="pelicula"><img src="img\Home\movieGrid\La_dolce_vita.jpg" alt=""></div>
-              <div class="pelicula"><img src="img\Home\movieGrid\metropolis.jpg" alt=""></div>
-              <div class="pelicula"><img src="img\Home\movieGrid\Seven_Samurai_poster.jpg" alt=""></div>
-              <div class="pelicula"><img src="img\Home\movieGrid\tiempos_modernos.jpg" alt=""></div>
-              <div class="pelicula"><img src="img\Home\movieGrid\blade_Runner.jpg" alt=""></div>
-              <div class="pelicula"><img src="img\Home\movieGrid\Fitzcarraldo_Web.jpg" alt=""></div>
-              <div class="pelicula"><img src="img\Home\movieGrid\La tumba_de_las_liciernagas..webp" alt=""></div>
-              <div class="pelicula"><img src="img\Home\movieGrid\MiVecino_TOTORO.webp" alt=""></div>
-              <div class="pelicula"><img src="img\Home\movieGrid\Robocop.jpg" alt=""></div>
-              <div class="pelicula"><img src="img\Home\movieGrid\Ciudano_KANE.jpg" alt=""></div>
-              <div class="pelicula"><img src="img\Home\movieGrid\El_gran_dictador-348479670-large.jpg" alt=""></div>
-              <div class="pelicula"><img src="img\Home\movieGrid\61dOQvYDC5L._AC_UF894,1000_QL80_.jpg" alt=""></div>
-              <div class="pelicula"><img src="img\Home\movieGrid\Top_gun.webp" alt=""></div>
+              <% productos.forEach(function (producto) { %>
+              <div class="pelicula"><img src="img\Home\movieGrid\<%=producto.image%>" alt=""></div>
+              <%})%>
             </div>
-
+            
       
             <div class="topEstrenos">
               <div class="peliculaEstreno"> Top número 1<img src="img\Home\TopEstrenos\star wars.webp" alt="" ></div>

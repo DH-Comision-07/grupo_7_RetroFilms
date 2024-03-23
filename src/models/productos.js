@@ -14,6 +14,17 @@ const producto = {
             image: 'IMAGENES/carpetadeimgenes/breakFast_at_Tiffanys.jpg',
             price: 3.49,
             description: 'Una comedia romántica basada en la novela de Truman Capote.',
+            genero: 'romance',
+            anio: 1961,
+            imagenPelicula1:"",
+            imagenPelicula2:"",
+            imagenPelicula3:"",
+            imagenPelicula4:"",
+            imagenReparto1:"",
+            imagenReparto2:"",
+            imagenReparto3:"",
+            imagenReparto4:""
+
           },
           {
             id: nextProductId++,
