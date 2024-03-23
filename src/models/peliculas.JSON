@@ -245,12 +245,12 @@
             "name": "Casa Blanca",
             "image": "",
             "price": 5.82,
-            "description": "El rebelde Danny Zuko y la inocente australiana Sandy mantienen un romance durante las vacaciones, creyendo que no se volverán a ver; sin embargo, para sorpresa de ambos, se reencuentran en la escuela secundaria al empezar el nuevo curso.",
-            "genero": "Musical y Comedia",
-            "anio": 1978,
-            "imagenPelicula":["Grease.jfif, Grease1.avif, Grease3.webp, Grease4.webp"],
-            "imagenReparto": ["GreaseDidiConn.jpg, GreaseJohnTravolta.jpg, GreaseOliviaNewton.jpg, GreaseStockardChanning.jpg"],
-            "actorReparto": ["Didi Conn, John Travolta, Olivia Newton, Stockard Channing"]
+            "description": "En Marruecos, el dueño de un café ayuda a su ex novia y a su marido a escapar de los nazis.",
+            "genero": "Romance",
+            "anio": 1942,
+            "imagenPelicula":["Casablanca.jpg, Casablanca1.webp, Casablanca2.webp, Casablanca3.jpg"],
+            "imagenReparto": ["HumphreyBogart.jpg, , PeterLorreCasaBlanca.jpg, IngridBergmanCasaBlanca.jpg, PaulHenreidCasaBlanca.jpg"],
+            "actorReparto": ["Humphrey Bogart, Ingrid Bergman, Paul Henreid, Peter Lorre"]
         },
         {
             "id": 26,
@@ -261,12 +261,9 @@
             "genero": "Terror y Ciencia ficción",
             "anio": 1931,
             "imagenPelicula":["Frankestein.webp, Frankestein2.webp, Frankestein3.jfif, Frankestein4.webp"],
-            "imagenReparto": ["FrankesteinBorisKarloff.jpg, FrankesteinColinclive.jpg, FrankesteinJohnBoles.jpg, FrankesteinMaeClarke.jpg"],
+            "imagenReparto": ["FrankesteinBorisKarloff, FrankesteinColinclive.jpg, FrankesteinJohnBoles.jpg, FrankesteinMaeClarke.jpg"],
             "actorReparto": ["Boris Karloff, Colin Clive, John Boles, Mae Clarke"]
         }
-        
-        
-        
     ]
 }
 
