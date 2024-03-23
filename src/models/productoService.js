@@ -1,6 +1,6 @@
 const fs = require ('fs');
 const path = require ('path');
-const products = require ('./peliculas.JSON');
+const products = require ('./peliculas.json');
 
 let productoService = {
     products: products,
