@@ -1,4 +1,4 @@
-[
+
         {
             "Carrousell":[
                 {
@@ -126,7 +126,7 @@
             "movieGrid":[ {
                 "id": 11,
                 "name": "El Padrino",
-                "poster": "El-Padrino-02.webp",
+                "poster": "El-padrino/El-Padrino-02.webp",
                 "price": 5.82,
                 "description": "Un hijo que busca un camino diferente al de su familia, que es una las grandes familias de la mafia italiana, se ve en la necesidad de tomar las riendas para cuidar de la familia.",
                 "genre": ["Drama","Crimen"],
@@ -138,7 +138,7 @@
             {
                 "id": 12,
                 "name": "Breakfast at Tiffany's",
-                "poster": "breakFast_at_Tiffanys.jpg",
+                "poster": "Breakfast-at-tiffanys/Posters/Breakfast_at_Tiffany's_(1961_poster).jpeg",
                 "price": 3.49,
                 "description": "Holly Golightly es una bella joven neoyorquina que, aparentemente, lleva una vida fácil y alegre. Tiene un comportamiento bastante extravagante, por ejemplo, desayunar contemplando el escaparate de la lujosa joyería Tiffanys. Un día se muda a su mismo edificio Paul Varjak, un escritor que, mientras espera un éxito que nunca llega, vive a costa de una mujer madura.",
                 "genre": ["Romance","Drama", "Comedia"],
@@ -151,7 +151,7 @@
             {
                 "id": 13,
                 "name": "Amores Perros",
-                "poster": "Amores-Perros-01.jpg,",
+                "poster": "Amores-Perros/amores-perros-01.jpg",
                 "price": 4.11,
                 "description":"Octavio, un joven adolescente enamorado de su cuñada, ha transformado a su perro Cofi en una mortífera arma con la que desea escapar de su miseria amorosa.",
                 "genre": "Drama y suspenso",
@@ -163,7 +163,7 @@
             {
                 "id": 14,
                 "name": "Ben-Hur",
-                "poster": "Ben-Hur_01.webp",
+                "poster": "Ben-Hur/Ben-Hur_01.webp",
                 "price": 5.49,
                 "description": "Un hombre que lo perdió todo tiene una oportunidad regresar a su hogar para recuperar lo que se le despojo, en el contexto de la gran Roma Imperial",
                 "genre":["Épico", "Dramatico", "Histórico", "Romántico"],
@@ -381,6 +381,6 @@
             }
         ]
     }
-]
+
     
 
