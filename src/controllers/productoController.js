@@ -1,4 +1,4 @@
-let productos = require('../models/productos.js');
+let productoService = require('../models/productoService.js');
 const path = require('path');
 
 
