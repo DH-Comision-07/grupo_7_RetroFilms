@@ -1,17 +1,157 @@
 [
         {
-            
-            "id": 1,
-            "name": "El Padrino",
-            "imagenPortada": "El-Padrino-02.webp",
-            "price": 5.82,
-            "description": "Un hijo que busca un camino diferente al de su familia, que es una las grandes familias de la mafia italiana, se ve en la necesidad de tomar las riendas para cuidar de la familia.",
-            "genero": "Drama y Crimen",
-            "anio": 1972,
-            "imagenPelicula":["El-Padrino-00.jpeg, El-Padrino-01.jpg, El-Padrino-02.webp, El-Padrino-00.jpg"],
-            "imagenReparto": ["Al-Pacino.webp, Diane-Keaton.webp, Marlon-Brando.png, Robert-De-Niro.jpg"],
-            "actorReparto": ["Al Pacino, Marlon Brandon, Diane Keaton, Robert De Niro"]
-        },
+            "Carrousell":[
+                {
+                    "id": 18,
+                    "name": "El bueno, el feo y el malo",
+                    "imagenPortada": "El_bueno_el_feo_y_el_malo_01.jpg",
+                    "price": 5.82,
+                    "description": "Tres hombres violentos pelean por una caja que alberga 200 000 dólares, la cual fue escondida durante la Guerra Civil. Dado que ninguno puede encontrar la tumba donde está el botín sin la ayuda de los otros dos, deben colaborar, pese a odiarse.",
+                    "genero": "spaghetti western",
+                    "anio": 1962,
+                    "imagenPelicula":["El_bueno_el_feo_y_el_malo_01.jpg, El_bueno_el_malo_el_feo_02.jpg, El_bueno_el_malo_el_feo_03.webp, El_bueno_el_malo_el_feo_04.jpg"],
+                    "imagenReparto":["Clint-Eastwood.jpg, Lee Van Cleef.jpg, Eli-Wallach.webp, Rada Rassimov.jpg"],
+                    "actorReparto":["Clint Eastwood, Eli Wallach, Lee Van Cleef, Roda Rassimov"]
+        
+                },
+                {
+                    "id": 21,
+                    "name": "El Mago de Oz",
+                    "imagenPortada": "mago de oz.jpg",
+                    "price": 5.82,
+                    "description": "Una joven llamada Dorothy Gale, quien es llevada por un tornado desde su hogar en Kansas hasta la tierra mágica de Oz. En su viaje para encontrar al Mago de Oz y regresar a casa, Dorothy se une a un espantapájaros, un hombre de hojalata y un león cobarde. Juntos, enfrentan varios desafíos y adversidades mientras buscan la ayuda del Mago para cumplir sus deseos.",
+                    "genero": "Musical y Fantasía",
+                    "anio": 1939,
+                    "imagenPelicula":["magoDeOz(reparto).jfif, magoDeOz(reparto)3.jfif, magoDeOz(reparto)2.jfif, magoDeOz(reparto)4.jfif"],
+                    "imagenReparto": ["magoDeOz2.jfif, magoDeOz3.jfif, magoDeOz4.jfif, magoDeOz.jfif"],
+                    "actorReparto": ["Judy Garldan, Jack Haley, Ray Bolger, Bert Lahr"]
+                },
+                {
+                    "id": 26,
+                    "name": "Frankestein",
+                    "imagenPortada": "frankenstein.jpg",
+                    "price": 5.82,
+                    "description": "El Dr. Henry Frankenstein, un joven y apasionado científico, asistido por el jorobado Fritz, crea un cuerpo humano, cuyas partes han sido recolectadas secretamente y de varias fuentes. El anhelo que consume al doctor es el de crear vida humana a través de varios artefactos eléctricos perfeccionados por él mismo.",
+                    "genero": "Terror y Ciencia ficción",
+                    "anio": 1931,
+                    "imagenPelicula":["Frankestein.webp, Frankestein2.webp, Frankestein3.jfif, Frankestein4.webp"],
+                    "imagenReparto": ["FrankesteinBorisKarloff, FrankesteinColinclive.jpg, FrankesteinJohnBoles.jpg, FrankesteinMaeClarke.jpg"],
+                    "actorReparto": ["Boris Karloff, Colin Clive, John Boles, Mae Clarke"]
+                },
+                {
+                    "id": 24,
+                    "name": "Grease",
+                    "imagenPortada": "greaseportada.jfif",
+                    "price": 5.82,
+                    "description": "El rebelde Danny Zuko y la inocente australiana Sandy mantienen un romance durante las vacaciones, creyendo que no se volverán a ver; sin embargo, para sorpresa de ambos, se reencuentran en la escuela secundaria al empezar el nuevo curso.",
+                    "genero": "Musical y Comedia",
+                    "anio": 1978,
+                    "imagenPelicula":["Grease.jfif, Grease1.avif, Grease3.webp, Grease4.webp"],
+                    "imagenReparto": ["GreaseDidiConn.jpg, GreaseJohnTravolta.jpg, GreaseOliviaNewton.jpg, GreaseStockardChanning.jpg"],
+                    "actorReparto": ["Didi Conn, John Travolta, Olivia Newton, Stockard Channing"]
+                },
+                {
+                    "id": 22,
+                    "name": "Back To The Future",
+                    "imagenPortada": "back-to-the-future.jpg",
+                    "price": 5.82,
+                    "description": "Marty McFly un adolescente que accidentalmente viaja en el tiempo desde 1985 hasta 1955 en un DeLorean modificado por su amigo científico, el Dr. Emmett Doc Brown,  Marty se encuentra con versiones más jóvenes de sus padres y debe asegurarse de que se enamoren para garantizar su propia existencia en el futuro. Mientras intenta encontrar una forma de regresar a su propio tiempo, Marty también debe lidiar con una serie de eventos que podrían alterar el curso de la historia, incluyendo ayudar a un joven Doc Brown a inventar la máquina del tiempo.",
+                    "genero": "Ciencia ficción y Comedia",
+                    "anio": 1985,
+                    "imagenPelicula":["BackToTheFuture.jpg, BackToTheFuture2.jpg, BackToTheFuture3.jwebp, BackToTheFuture4.jpg"],
+                    "imagenReparto": ["BackToTheFutureChristopherLloyd.jpg, BackToTheFutureCrispinGlover.jpg, BackToTheFutureKathleenThompson.jfif, BackToTheFutureMichaelFox.jpg"],
+                    "actorReparto": ["Christopher Lloyd, Crispin Glover, Kathleen Thompson, Michael Fox"]
+                },
+                {
+                    "id": 25,
+                    "name": "Casa Blanca",
+                    "imagenPortada": "Casablanca.jpg",
+                    "price": 5.82,
+                    "description": "En Marruecos, el dueño de un café ayuda a su ex novia y a su marido a escapar de los nazis.",
+                    "genero": "Romance",
+                    "anio": 1942,
+                    "imagenPelicula":["Casablanca.jpg, Casablanca1.webp, Casablanca2.webp, Casablanca3.jpg"],
+                    "imagenReparto": ["HumphreyBogart.jpg, , PeterLorreCasaBlanca.jpg, IngridBergmanCasaBlanca.jpg, PaulHenreidCasaBlanca.jpg"],
+                    "actorReparto": ["Humphrey Bogart, Ingrid Bergman, Paul Henreid, Peter Lorre"]
+                },
+                {
+                    "id": 25,
+                    "name": "It",
+                    "imagenPortada": "it.wep",
+                    "price": 5.82,
+                    "description": "Un tranquilo y pequeño pueblo de Maine está siendo aterrorizado por una fuerza malévola oculta tras la máscara de un payaso, y que tan sólo se la conoce como It. Tras sus primeras víctimas, una pandilla formada por siete amigos de la infancia dedicen volver a reunirse para atacar el mal y destruirlo, intentando librar así del terror a su pueblo natal.",
+                    "genero": ["Terror","Fantastico"],
+                    "anio": 1990,
+                    "imagenPelicula":["it1.jpg, it2.webp, it4.jpg, it3.jpg"],
+                    "imagenReparto": ["Dennis_Christopher.jpg" , "Harry_Anderson.jpg", "Richard_Masur.jpg", "Richard_Thomas.jpg"],
+                    "actorReparto": ["Dennis Christopher","Harry Andreson","Richard Masur","Richard Thomas"]
+                },
+                {
+                    "id": 25,
+                    "name": "Superman",
+                    "imagenPortada": "superman.jpg",
+                    "price": 5.82,
+                    "description": "Desde una galaxia remota, un recién nacido es enviado por sus padres al espacio debido a la inminente destrucción del planeta donde viven. La nave aterriza en la Tierra, y el niño es adoptado por unos granjeros que le inculcan los mejores valores humanos. Con los años, el joven se irá a Metrópolis y allí usará sus poderes sobrenaturales para luchar contra el mal.",
+                    "genero": ["Ciencia Ficcion","Fantastico", "Aventura"],
+                    "anio": 1978,
+                    "imagenPelicula":["superman1.jpg", "superman2.jpg", "superman3.jpg", "superman4.jpg"],
+                    "imagenReparto": ["christopher_reeve.jpg" , "gene_hackman.jpg", "margot_kidder.jpg", "marlon_brando.jpg","ned_beatty.jpg"],
+                    "actorReparto": ["Christopher Reeve","Gene Hackman","Margot Kidder","Marlon Brando","Ned Beatty"]
+                },
+                {
+                    "id": 25,
+                    "name": "El planeta de los simios",
+                    "imagenPortada": "planet_of_the_apes.jpg",
+                    "price": 5.82,
+                    "description": "George Taylor es un astronauta que forma parte de la tripulación de una nave espacial -en una misión de larga duración- que se estrella en un planeta desconocido en el que, a primera vista, no hay vida inteligente. Sin embargo, muy pronto se dará cuenta de que está gobernado por una raza de simios mentalmente muy desarrollados que esclavizan a unos seres humanos que carecen de la facultad de hablar. Cuando su líder, el doctor Zaius, descubre horrorizado que Taylor posee el don de la palabra, decide que hay que eliminarlo.",
+                    "genero": ["Ciencia Ficcion", "Aventura"],
+                    "anio": 1968,
+                    "imagenPelicula":["planet_of_the_apes1.jpg", "planet_of_the_apes2.jpg", "planet_of_the_apes3.jpg", "planet_of_the_apes4.jpg"],
+                    "imagenReparto": ["cherlton_heston.jpg" , "james_whitmore.jpg", "kim_hunter.jpg", "maurice_evans.jpg","roddy_mcdowall.jpg"],
+                    "actorReparto": ["Cherlton Heston","James Whitmore","Kim Hunter","Maurice Evans","Roddy McDowall"]
+                },{
+                    "id": 25,
+                    "name": "Alicia en el pais de las maravillas",
+                    "imagenPortada": "alice_in_wonderland.jpg",
+                    "price": 5.82,
+                    "description": "Historia de magia y fantasía en la que la joven Alicia se sumerge en el sorprendente País de las Maravillas y conoce a extraordinarios personajes como Tweedledee y Tweedledum, el Sombrerero Loco, La Reina de Corazones y el frenético Conejo Blanco.",
+                    "genero": ["Fantastico","Animacion","Musical", "Aventura","Infantil"],
+                    "anio": 1951,
+                    "imagenPelicula":["alice_in_wonderland1.jpg", "alice_in_wonderland2.jpg", "alice_in_wonderland3.jpg", "alice_in_wonderland4.jpg"],
+                    "imagenReparto": ["ed_wynn.jpg" , "jerry_colonna.jpg", "kathryn_beaumont.jpg", "richard_haydn.jpg","sterling_holloway.jpg"],
+                    "actorReparto": ["Ed Wynn","Jerry Colonna","Kathryn Beaumont","Richard Haydn","Sterling Holloway"]
+                }
+            ],
+
+            "movieGrid":[ {
+                "id": 1,
+                "name": "El Padrino",
+                "imagenPortada": "El-Padrino-02.webp",
+                "price": 5.82,
+                "description": "Un hijo que busca un camino diferente al de su familia, que es una las grandes familias de la mafia italiana, se ve en la necesidad de tomar las riendas para cuidar de la familia.",
+                "genero": ["Drama","Crimen"],
+                "anio": 1972,
+                "imagenPelicula":["El-Padrino-00.jpeg", "El-Padrino-01.jpg", "El-Padrino-02.webp", "El-Padrino-00.jpg"],
+                "imagenReparto": ["Al-Pacino.webp", "Diane-Keaton.webp", "Marlon-Brando.png", "Robert-De-Niro.jpg"],
+                "actorReparto": ["Al Pacino", "Marlon Brandon", "Diane Keaton", "Robert De Niro"]
+            },
+            {
+                "id": 2,
+                "name": "Breakfast at Tiffany's",
+                "imagenPortada": "breakFast_at_Tiffanys.jpg",
+                "price": 3.49,
+                "description": "Holly Golightly es una bella joven neoyorquina que, aparentemente, lleva una vida fácil y alegre. Tiene un comportamiento bastante extravagante, por ejemplo, desayunar contemplando el escaparate de la lujosa joyería Tiffanys. Un día se muda a su mismo edificio Paul Varjak, un escritor que, mientras espera un éxito que nunca llega, vive a costa de una mujer madura.",
+                "genero": ["Romance","Drama", "Comedia"],
+                "anio": 1961,
+                "imagenPelicula": ["BT-img1.jpg"],
+                "imagenReparto": [],
+                "actorReparto": []
+                
+            },
+             
+        ],
+            "topMovies":[],
+               
         {
             "id": 2,
             "name": "Breakfast at Tiffany's",
@@ -155,19 +295,7 @@
             "imagenReparto":["anthony_edwards.jpeg","kelly_mcgillis.jpeg","tom_cruise.jpeg","tom_skerritt.jpeg","val_kilmer.jpeg"],
             "actorReparto":["Anthony Edwards","Kelly McGillis", "Tom Cruise","Tom Skerritt","Val Kilmer"]
         },
-        {
-            "id": 18,
-            "name": "El bueno, el feo y el malo",
-            "imagenPortada": "El_bueno_el_feo_y_el_malo_01.jpg",
-            "price": 5.82,
-            "description": "Tres hombres violentos pelean por una caja que alberga 200 000 dólares, la cual fue escondida durante la Guerra Civil. Dado que ninguno puede encontrar la tumba donde está el botín sin la ayuda de los otros dos, deben colaborar, pese a odiarse.",
-            "genero": "spaghetti western",
-            "anio": 1962,
-            "imagenPelicula":["El_bueno_el_feo_y_el_malo_01.jpg, El_bueno_el_malo_el_feo_02.jpg, El_bueno_el_malo_el_feo_03.webp, El_bueno_el_malo_el_feo_04.jpg"],
-            "imagenReparto":["Clint-Eastwood.jpg, Lee Van Cleef.jpg, Eli-Wallach.webp, Rada Rassimov.jpg"],
-            "actorReparto":["Clint Eastwood, Eli Wallach, Lee Van Cleef, Roda Rassimov"]
-
-        },
+       
         {
             "id": 19,
             "name": "La Historia Interminable",
@@ -192,30 +320,8 @@
             "imagenReparto":["adam_baldwin.jpeg","arliss_howard.jpeg","dorian_harewood.jpeg","matthew_modine.jpeg","r_lee_ermey.jpeg","vincent_d_onofrio.jpeg"],
             "actorReparto":["Adam Baldwin","Arliss Howard","Dorian Harewood","Matthew Modine","R Lee Ermey", "Vincent D Onofrio"]
         },
-        {
-            "id": 21,
-            "name": "El Mago de Oz",
-            "imagenPortada": "mago de oz.jpg",
-            "price": 5.82,
-            "description": "Una joven llamada Dorothy Gale, quien es llevada por un tornado desde su hogar en Kansas hasta la tierra mágica de Oz. En su viaje para encontrar al Mago de Oz y regresar a casa, Dorothy se une a un espantapájaros, un hombre de hojalata y un león cobarde. Juntos, enfrentan varios desafíos y adversidades mientras buscan la ayuda del Mago para cumplir sus deseos.",
-            "genero": "Musical y Fantasía",
-            "anio": 1939,
-            "imagenPelicula":["magoDeOz(reparto).jfif, magoDeOz(reparto)3.jfif, magoDeOz(reparto)2.jfif, magoDeOz(reparto)4.jfif"],
-            "imagenReparto": ["magoDeOz2.jfif, magoDeOz3.jfif, magoDeOz4.jfif, magoDeOz.jfif"],
-            "actorReparto": ["Judy Garldan, Jack Haley, Ray Bolger, Bert Lahr"]
-        },
-        {
-            "id": 22,
-            "name": "Back To The Future",
-            "imagenPortada": "back-to-the-future.jpg",
-            "price": 5.82,
-            "description": "Marty McFly un adolescente que accidentalmente viaja en el tiempo desde 1985 hasta 1955 en un DeLorean modificado por su amigo científico, el Dr. Emmett Doc Brown,  Marty se encuentra con versiones más jóvenes de sus padres y debe asegurarse de que se enamoren para garantizar su propia existencia en el futuro. Mientras intenta encontrar una forma de regresar a su propio tiempo, Marty también debe lidiar con una serie de eventos que podrían alterar el curso de la historia, incluyendo ayudar a un joven Doc Brown a inventar la máquina del tiempo.",
-            "genero": "Ciencia ficción y Comedia",
-            "anio": 1985,
-            "imagenPelicula":["BackToTheFuture.jpg, BackToTheFuture2.jpg, BackToTheFuture3.jwebp, BackToTheFuture4.jpg"],
-            "imagenReparto": ["BackToTheFutureChristopherLloyd.jpg, BackToTheFutureCrispinGlover.jpg, BackToTheFutureKathleenThompson.jfif, BackToTheFutureMichaelFox.jpg"],
-            "actorReparto": ["Christopher Lloyd, Crispin Glover, Kathleen Thompson, Michael Fox"]
-        },
+       
+       
         {
             "id": 23,
             "name": "Back To The Future III",
@@ -228,41 +334,10 @@
             "imagenReparto": ["BackToTheFutureChristopherLloyd.jpg, BackToTheFutureC3MarySteenBurguen.jpg, BackToTheFutureKathleenThompson.jfif, BackToTheFutureMichaelFox.jpg"],
             "actorReparto": ["Christopher Lloyd, Mary Steen Burguen, Kathleen Thompson, Michael Fox"]
         },
-        {
-            "id": 24,
-            "name": "Grease",
-            "imagenPortada": "greaseportada.jfif",
-            "price": 5.82,
-            "description": "El rebelde Danny Zuko y la inocente australiana Sandy mantienen un romance durante las vacaciones, creyendo que no se volverán a ver; sin embargo, para sorpresa de ambos, se reencuentran en la escuela secundaria al empezar el nuevo curso.",
-            "genero": "Musical y Comedia",
-            "anio": 1978,
-            "imagenPelicula":["Grease.jfif, Grease1.avif, Grease3.webp, Grease4.webp"],
-            "imagenReparto": ["GreaseDidiConn.jpg, GreaseJohnTravolta.jpg, GreaseOliviaNewton.jpg, GreaseStockardChanning.jpg"],
-            "actorReparto": ["Didi Conn, John Travolta, Olivia Newton, Stockard Channing"]
-        },
-        {
-            "id": 25,
-            "name": "Casa Blanca",
-            "imagenPortada": "Casablanca.jpg",
-            "price": 5.82,
-            "description": "En Marruecos, el dueño de un café ayuda a su ex novia y a su marido a escapar de los nazis.",
-            "genero": "Romance",
-            "anio": 1942,
-            "imagenPelicula":["Casablanca.jpg, Casablanca1.webp, Casablanca2.webp, Casablanca3.jpg"],
-            "imagenReparto": ["HumphreyBogart.jpg, , PeterLorreCasaBlanca.jpg, IngridBergmanCasaBlanca.jpg, PaulHenreidCasaBlanca.jpg"],
-            "actorReparto": ["Humphrey Bogart, Ingrid Bergman, Paul Henreid, Peter Lorre"]
-        },
-        {
-            "id": 26,
-            "name": "Frankestein",
-            "imagenPortada": "frankenstein.jpg",
-            "price": 5.82,
-            "description": "El Dr. Henry Frankenstein, un joven y apasionado científico, asistido por el jorobado Fritz, crea un cuerpo humano, cuyas partes han sido recolectadas secretamente y de varias fuentes. El anhelo que consume al doctor es el de crear vida humana a través de varios artefactos eléctricos perfeccionados por él mismo.",
-            "genero": "Terror y Ciencia ficción",
-            "anio": 1931,
-            "imagenPelicula":["Frankestein.webp, Frankestein2.webp, Frankestein3.jfif, Frankestein4.webp"],
-            "imagenReparto": ["FrankesteinBorisKarloff, FrankesteinColinclive.jpg, FrankesteinJohnBoles.jpg, FrankesteinMaeClarke.jpg"],
-            "actorReparto": ["Boris Karloff, Colin Clive, John Boles, Mae Clarke"]
-        }
-    ]
+       
+       
+        
+    }
+]
+    
 
