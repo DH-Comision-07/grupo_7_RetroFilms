@@ -57,8 +57,8 @@
         <div class="contenidoMain">
 
             <div class="cuadriculaPeliculas">
-              <% productos.forEach(function (producto) { %>
-              <div class="pelicula"><img src="img/DetalleProducto/<%=producto.movieGrid.poster%>" alt=""></div>
+              <%productos.forEach(function (producto){%>
+              <div class="pelicula"><img src="img/DetalleProducto/<%=producto.poster%>" alt=""></div>
               <%})%>
             </div>
             

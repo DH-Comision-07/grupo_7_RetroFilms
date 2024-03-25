@@ -1,4 +1,4 @@
-
+[
         {
             "Carrousell":[
                 {
@@ -122,7 +122,6 @@
                     "namesCast": ["Ed Wynn","Jerry Colonna","Kathryn Beaumont","Richard Haydn","Sterling Holloway"]
                 }
             ],
-
             "movieGrid":[ {
                 "id": 11,
                 "name": "El Padrino",
@@ -134,8 +133,8 @@
                 "imagesMovie":["El-Padrino-00.jpeg", "El-Padrino-01.jpg", "El-Padrino-02.webp", "El-Padrino-00.jpg"],
                 "imagesCast": ["Al-Pacino.webp", "Diane-Keaton.webp", "Marlon-Brando.png", "Robert-De-Niro.jpg"],
                 "namesCast": ["Al Pacino", "Marlon Brandon", "Diane Keaton", "Robert De Niro"]
-            },
-            {
+                },
+                {
                 "id": 12,
                 "name": "Breakfast at Tiffany's",
                 "poster": "Breakfast-at-tiffanys/Posters/Breakfast_at_Tiffany's_(1961_poster).jpeg",
@@ -147,8 +146,8 @@
                 "imagesCast": ["AudreyHepburn.jpeg","Buddy_Ebsen_-_USCG.jpeg","George_Peppard_(1964).jpeg","John_McGiver_1964.jpeg","Jose de Vilallonga_(cropped).jpeg","Martin_Balsam_Film_Still.jpeg","Mickey_Rooney_still.jpeg","Patricia_Neal_1952.jpeg","Stanley_Adams.jpeg"],
                 "namesCast": ["Audrey Hepburn","Buddy Ebsen","George Peppard","John McGiver","Jose de Vilallonga","Martin Balsam","Mickey Rooney","Patricia Neal","Stanley Adams"]
                 
-            },
-            {
+                },
+                {
                 "id": 13,
                 "name": "Amores Perros",
                 "poster": "Amores-Perros/amores-perros-01.jpg",
@@ -159,8 +158,8 @@
                 "imagesMovie": ["Amores-Perros-02.jpg", "Amores-Perros-03.jpg", "Amores-Perros-04.jpg", "Amores-Perros-05.webq"],
                 "imagesCast": ["Emilio-Echevarria.jpg", "Gael-Garcia-Bernal.webq", "Gerardo-Campbell.webq"," Vanessa-Bauche.jpg"],
                 "namesCast": ["Gael García Bernal", "Vanessa Bauche", "Emilio Echevarria", "Gerardo Campbell"]
-            },
-            {
+                },
+                {
                 "id": 14,
                 "name": "Ben-Hur",
                 "poster": "Ben-Hur/Ben-Hur_01.webp",
@@ -171,8 +170,8 @@
                 "imagesMovie": ["Ben-Hur_01.webq", "Ben-Hur_02.jpg", "Ben-Hur_03.jpg", "Ben-Hur_04.jpg"],
                 "imagesCast": ["Charlton-Heston.jpg", "Haya_Harareet.jpg", "Jack-Hawkins.webq", "Stephen-Boyd.jpg"],
                 "namesCast": ["Charlton Heston", "Stephen Boyd", "Jack Hawkins", "Haya Harareet"]
-            },
-            {
+                },
+                {
                 "id": 15,
                 "name": "Lo que el viento se llevó",
                 "poster": "LoQueElVientoSeLlevo.jpeg",
@@ -183,8 +182,8 @@
                 "imagesMovie": ["loqueElViento1.jpeg", "loqueElviento2.jpeg", "loqueElViento3.jpeg", "loqueElViento4.jpeg"],
                 "imagesCast": ["clark_gable.jpeg", "hattie_mcdaniel.jpeg", "leslie_howard.jpeg", "olivia_de_havilland.jpeg","vivien_leigh.jpeg"],
                 "namesCast": ["Clark Gable", "Hattie McDaniel", "Leslie Howard", "Olivia de Havilland","Vivien Leigh"]
-            },
-            {
+                },
+                {
                 "id": 16,
                 "name": "La Dolce Vita",
                 "poster": "LaDolceVita-poster.jpeg",
@@ -195,8 +194,8 @@
                 "imagesMovie": ["ladolce1.jpeg", "ladolce2.jpeg", "ladolce3.jpeg", "ladolce4.jpeg"],
                 "imagesCast": ["alain_cuny.jpeg", "anita_ekberg.jpeg", "anouk_aimee.jpeg", "marcello_mastroianni.jpeg","yvonne_furneaux.jpeg"],
                 "namesCast": ["Alain Cuny", "Anita Ekberg", "Anouk Aimee", "Marcello Mastroianni","Yvonne Furneaux"]
-            },
-            {
+                },
+                {
                 "id": 17,
                 "name": "Seven Samurai",
                 "poster": "Seven_Samurai_poster.jpg",
@@ -207,8 +206,8 @@
                 "imagesMovie": ["sietesamurai1.jpeg", "sietesamurai2.jpeg", "sietesamurai3.jpeg", "sietesamurai4.jpeg"],
                 "imagesCast": ["minoru_chiaki.jpeg", "seiji_miyaguchi.jpeg", "takashi_shimura.jpeg", "toshiro_mifune.jpeg","yoshio_inaba.jpeg"],
                 "namesCast": ["Minoru Chiaki", "Seiji Miyaguchi", "Takashi Shimura", "Tochiro Mifune","Yoshio inaba"]
-            },
-            {
+                },
+                {
                 "id": 18,
                 "name": "Tiempos Modernos",
                 "poster": "tiempos_modernos.jpg",
@@ -219,8 +218,8 @@
                 "imagesMovie": ["tiemposmodernos1.jpeg", "tiemposmodernos2.jpeg", "tiemposmodernos3.jpeg", "tiemposmodernos4.jpeg"],
                 "imagesCast": ["charles_chaplin.jpeg", "chester_conklin.jpeg", "henry_bergman.jpeg", "paulette_goddard.jpeg","stanley_stanford.jpeg"],
                 "namesCast": ["Charles Chaplin", "Chester Conklin", "Henry Bergman", "Paulette Goddard","Stanley Standford"]
-            },
-            {
+                },
+                {
                 "id": 19,
                 "name": "Fitzcarraldo",
                 "poster": "Fitzcarraldo_Web.jpg",
@@ -231,8 +230,8 @@
                 "imagesMovie": ["fitzcarraldo1.jpg","fitzcarraldo2.jpg", "fitzcarraldo3.jpg", "fitzcarraldo4.jpg"],
                 "imagesCast": ["claudia_cardinale.jpg", "jose_lewgoy.jpg", "klaus_kinski.jpg", "miguel_angel_fuentes.jpg","paul_hittscher.jpg"],
                 "namesCast": ["Claudia Cardinale", "Jose Lewgoy", "Klaus Kinski", "Miguel Angel Fuentes","Paul Hittscher"]
-            },
-            {
+                },
+                {
                 "id": 20,
                 "name": "La tumba de las luciérnagas",
                 "poster": "grave_of_the_fireflies.jpg",
@@ -243,8 +242,8 @@
                 "imagesMovie": ["grave_of_the_fireflies1.jpg","grave_of_the_fireflies2.jpg", "grave_of_the_fireflies3.jpg", "grave_of_the_fireflies4.jpg"],
                 "imagesCast": ["Corinne_Orr.jpg", "robert_spencer.jpg", "shannon_conley.jpg"],
                 "namesCast": ["Corinne Orr", "Robert Spencer", "Shannon Conley"]
-            },
-            {
+                },
+                {
                 "id": 21,
                 "name": "Mi Vecino Totoro",
                 "poster": "mi_vecino_tororo.jpg",
@@ -255,8 +254,8 @@
                 "imagesMovie": ["mi_vecino_tororo1.jpg","mi_vecino_tororo2.jpg", "mi_vecino_tororo3.jpg", "mi_vecino_tororo4.jpg"],
                 "imagesCast": ["dakota_fanning.jpg", "hitoshi_takagi.jpg", "noriko_hidaka.jpg","pat_carroll.jpg"],
                 "namesCast": ["Dakota Fanning", "Hitoshi Takagi", "Noriko Hidaka","Pat Carroll"]
-            },
-            {
+                },
+                {
                 "id": 22,
                 "name": "Robocop",
                 "poster": "robocop.jpg",
@@ -267,9 +266,8 @@
                 "imagesMovie": ["robocop1.jpg","robocop2.jpg", "robocop3.jpg", "robocop4.jpg"],
                 "imagesCast": ["kurtwood_smith.jpg", "miguel_ferrer.jpg", "nancy_allen.jpg","peter_weller.jpg","ronny_cox.jpg"],
                 "namesCast": ["Kurtwood Smith", "Miguel Ferrer", "Nancy Allen","Peter Weller", "Ronny Cox"]
-            },
-        
-            {
+                },
+                {
                 "id": 23,
                 "name": "Ciudadano Kane",
                 "poster": "citizen_kane-Poster.jpeg",
@@ -280,8 +278,8 @@
                 "imagesMovie": ["CiudadanoKane1.jpeg","ciudadanoKane2.jpeg","ciudadanoKane3.png","ciudadanoKane4.jpeg"],
                 "imagesCast": ["dorothy_comingore.jpeg","everett_sloane.jpeg","george_coulouris.jpeg","joseph_cotten.jpeg","Orson-Welles.jpeg"],
                 "namesCast": ["Dorothy Comingo","Everett Sloane","George Coulouris","Joseph Cotten","Orson Welles"]
-            },
-            {
+                },
+                {
                 "id": 24,
                 "name": "El Gran Dictador",
                 "poster": "El_gran_dictador-348479670-large.jpg",
@@ -292,8 +290,8 @@
                 "imagesMovie":["Dictator1.jpeg","Dictator2.jpeg","Dictator3.jpeg","Dictator4.jpeg"],
                 "imagesCast":["charles_chaplin.jpeg","henry_daniell.jpeg","jack_oakie.jpeg","paulette_goddard.jpeg","reginald_gardiner.jpeg"],
                 "namesCast":["Henry Daniell", "Jack Oakie", "Charles Chaplin","Paulette Goddard","Reginald Gardiner"]
-            },
-            {
+                },
+                {
                 "id": 25,
                 "name": "2001: A Space Odyssey",
                 "poster": "spaceOdyssey-Poster.jpeg",
@@ -304,8 +302,8 @@
                 "imagesMovie":["odisea1.jpeg","odisea2.jpeg","odisea3.jpeg","odisea4.jpeg"],
                 "imagesCast":["daniel_richter.jpeg","gary_lockwood.jpeg","keir_dullea.jpeg","leonard_rossiter.jpeg","william_sylvester.jpeg"],
                 "namesCast":["Daniel Richter", "Gary Lockwood", "Keir Dullea","Leonard Rossiter","William Sylvester"]
-            },
-            {
+                },
+                {
                 "id": 26,
                 "name": "Top Gun",
                 "poster": "top_gun-Poster.jpeg",
@@ -316,8 +314,8 @@
                 "imagesMovie":["topGun1.jpeg","topGun2.jpeg","topGun3.jpeg","topGun4.jpeg"],
                 "imagesCast":["anthony_edwards.jpeg","kelly_mcgillis.jpeg","tom_cruise.jpeg","tom_skerritt.jpeg","val_kilmer.jpeg"],
                 "namesCast":["Anthony Edwards","Kelly McGillis", "Tom Cruise","Tom Skerritt","Val Kilmer"]
-            },
-            {
+                },
+                {
                 "id": 27,
                 "name": "La Historia Interminable",
                 "poster": "La_Historia_Interminable_01.webp",
@@ -328,8 +326,8 @@
                 "imagesMovie":["La_Historia_Interminable_01.webp, La_Historia_Interminable_02.webp, La_Historia_Interminable_03.jpg, La_Historia_Interminable_04.jpeg"],
                 "imagesCast":["Noah-Hathaway.jpg, Barret-Oliver.jpg, Gerald-McRaney.jpg, Tami-Stronach.jpg"],
                 "namesCast":["Noah Hathaway, Barret Oliver, Tami Stronach y Generald McRaney"]
-            },
-            {
+                },
+                {
                 "id": 28,
                 "name": "La chaqueta metalica",
                 "poster": "full_metal_jacket-Poster.jpeg",
@@ -340,10 +338,10 @@
                 "imagesMovie":["metalJacket1.jpeg","metalJacket2.jpeg","metalJacket3.jpeg","metalJacket4.jpeg"],
                 "imagesCast":["adam_baldwin.jpeg","arliss_howard.jpeg","dorian_harewood.jpeg","matthew_modine.jpeg","r_lee_ermey.jpeg","vincent_d_onofrio.jpeg"],
                 "namesCast":["Adam Baldwin","Arliss Howard","Dorian Harewood","Matthew Modine","R Lee Ermey", "Vincent D Onofrio"]
-            }
-        ],
+                }
+            ],
             "topMovies":[       
-            {
+                {
                 "id": 29,
                 "name": "La Historia Interminable",
                 "poster": "La_Historia_Interminable_01.webp",
@@ -354,8 +352,8 @@
                 "imagesMovie":["La_Historia_Interminable_01.webp", "La_Historia_Interminable_02.webp", "La_Historia_Interminable_03.jpg", "La_Historia_Interminable_04.jpeg"],
                 "imagesCast":["Noah-Hathaway.jpg", "Barret-Oliver.jpg", "Gerald-McRaney.jpg", "Tami-Stronach.jpg"],
                 "namesCast":["Noah Hathaway", "Barret Oliver", "Tami Stronach" , "Generald McRaney"]
-            },
-            {
+                },
+                {
                 "id": 30,
                 "name": "Back To The Future III",
                 "poster": "BackToTheFutureFoto.jfif",
@@ -366,8 +364,8 @@
                 "imagesMovie":["BTTF3.avif", "BTTF32.webp", "BTTF33.jfif", "BTTF34.jpg"],
                 "imagesCast": ["BackToTheFutureChristopherLloyd.jpg", "BackToTheFutureC3MarySteenBurguen.jpg", "BackToTheFutureKathleenThompson.jfif", "BackToTheFutureMichaelFox.jpg"],
                 "namesCast": ["Christopher Lloyd", "Mary Steen Burguen", "Kathleen Thompson", "Michael Fox"]
-            },
-            {
+                },
+                {
                 "id": 31,
                 "name": "Star Wars",
                 "poster": "star wars.webp",
@@ -378,9 +376,9 @@
                 "imagesMovie":["starwars1.jpeg", "starwars2.jpeg", "starwars3.jpeg", "starwars4.jpeg"],
                 "imagesCast": ["alec_guinness.jpeg","carrie_fisher.jpeg","harrison_ford.jpeg","mark_hamill.jpeg","peter_cushing.jpeg"],
                 "namesCast": ["Alec Guinness", "Carrie Fisher", "Harrison Ford", "Mark Hamill","Peter Cushing"]
-            }
-        ]
-    }
-
+                }
+            ]
+        }
+]
     
 

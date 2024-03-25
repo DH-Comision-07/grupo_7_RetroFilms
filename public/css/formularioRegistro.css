@@ -1,15 +1,21 @@
 * {
     box-sizing: border-box;
-    font-family: "Noto Serif", serif;
+    
+    
 }
+
 
 body, html {
     margin: 0;
     padding: 0;
+    
+    
 }
 
-header, body {
-    background-color: white
+body {
+    background-color: white;
+    
+    
 }
 
 .headerImg {
@@ -29,6 +35,7 @@ form {
     border: 2px solid #02263F;
     border-radius: 2%;
     background-color: #E0EBF3;
+    font-family: "Noto Serif", serif;
 }
 
 label , p{

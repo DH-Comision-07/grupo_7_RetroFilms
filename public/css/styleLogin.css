@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: "Noto Serif";
+    
 }
 
 html {
@@ -41,6 +41,7 @@ header, body {
     border-radius: 2%;
     background-color: #E0EBF3;
     color: black;
+    font-family: "Noto Serif";
 }
 
 .usuario input,
