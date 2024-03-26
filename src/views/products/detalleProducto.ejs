@@ -19,19 +19,19 @@
        <br>
       <section class ="peliculaSeleccionada">
          <article class = "cajaPoster">
-            <img class="btPoster" src="/img/DetalleProducto/Breakfast-at-tiffanys/Posters/Breakfast_at_Tiffany's_(1961_poster).jpeg" alt="">
+            <img class="btPoster" src="/img/DetalleProducto/<% product.name %>/<% product.poster %>" alt="">
         <br>
             <button class ="botonPoster">Ver poster</button>
          </article>
       <br>
          <article class = "cajaDescripcionPelicula">
              <div class ="tituloPelicula">
-                 <h3 class ="tituloPeli">Breakfast at Tiffany's</h3>
+                 <h3 class ="tituloPeli"><%= product.name %></h3>
              </div>
         <br>
              <div class ="precio">
                  <h4>Precio:</h4>
-                 <p>$7000</p>
+                 <p>$<%= product.price %></p>
              </div>    
         <br>
 
@@ -44,7 +44,7 @@
               </ul>
        <br>
         
-                <p class ="descripcionPeli">Holly Golightly (Audrey Hepburn) es aparentemente una escort (la película no es clara en este punto, a diferencia del libro) y aspirante a actriz con un comportamiento bastante extravagante. Prueba de ello es su costumbre de desayunar frente a la joyería Tiffany & Co. Paul Varjack (George Peppard) es un tímido escritor que es el mantenido de una mujer casada. Cuando ambos se convierten en vecinos y se conocen, Paul se enamora de Holly. Sin embargo ella lo rechaza después y se compromete, por su dinero, con José Pereira (José Luis de Vilallonga), un político brasileño millonario. Finalmente, después de que su prometido rompe con ella, Holly acepta el amor de Paul.</p>
+                <p class ="descripcionPeli"> <%= product.description %></p>
                 <div>
                      <button class="botones"><a href="#"></a>Agregar al carrito</button>
                      <button class="botones"><a href="#"></a> Comprar ahora</button>
@@ -60,6 +60,15 @@
                        <li><img src="/img/DetalleProducto/Breakfast-at-tiffanys/BT-img2.jpeg" alt=""></li>
                        <li><img src="/img/DetalleProducto/Breakfast-at-tiffanys/BT-img3.jpeg" alt=""></li>
                        <li><img src="/img/DetalleProducto/Breakfast-at-tiffanys/BT-img4.jpeg" alt=""></li>
+
+                        <%(product).forEach(function (producto){%>
+                            <img src="img/Home/detalleProducto/<% product.name %>/<% product.poster %>" alt=""></div>
+                        <%})%>
+                </div>
+              
+            </section>
+          </div>
+          */ %>
                   </ul>
              </article>
       <br>

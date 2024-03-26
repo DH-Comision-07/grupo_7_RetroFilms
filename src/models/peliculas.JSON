@@ -1,6 +1,6 @@
-{
-    "products" : [
+[
         {
+<<<<<<< HEAD
             "id": 1,
             "name": "El Padrino",
             "image": "El-Padrino-02.webp",
@@ -165,7 +165,387 @@
             "imagenReparto":["Noah-Hathaway.jpg, Barret-Oliver.jpg, Gerald-McRaney.jpg, Tami-Stronach.jpg"],
             "actorReparto":["Noah Hathaway, Barret Oliver, Tami Stronach y    Generald McRaney"]
         }
+=======
+            "Carrousell":[
+                {
+                    "id": 1,
+                    "name": "El bueno, el feo y el malo",
+                    "poster": "El_bueno_el_feo_y_el_malo_01.jpg",
+                    "price": 5.82,
+                    "description": "Tres hombres violentos pelean por una caja que alberga 200 000 dólares, la cual fue escondida durante la Guerra Civil. Dado que ninguno puede encontrar la tumba donde está el botín sin la ayuda de los otros dos, deben colaborar, pese a odiarse.",
+                    "genre": ["spaghetti western"],
+                    "year": 1962,
+                    "imagesMovie":["El_bueno_el_feo_y_el_malo_01.jpg", "El_bueno_el_malo_el_feo_02.jpg", "El_bueno_el_malo_el_feo_03.webp", "El_bueno_el_malo_el_feo_04.jpg"],
+                    "imagesCast":["Clint-Eastwood.jpg", "Lee Van Cleef.jpg", "Eli-Wallach.webp", "Rada Rassimov.jpg"],
+                    "namesCast":["Clint Eastwood", "Eli Wallach", "Lee Van Cleef", "Roda Rassimov"]
+>>>>>>> 8bb7e4f7c35fa2e38071c6ab34f040a0bcd24ad0
         
-    ]
-}
+                },
+                {
+                    "id": 2,
+                    "name": "El Mago de Oz",
+                    "poster": "mago de oz.jpg",
+                    "price": 5.82,
+                    "description": "Una joven llamada Dorothy Gale, quien es llevada por un tornado desde su hogar en Kansas hasta la tierra mágica de Oz. En su viaje para encontrar al Mago de Oz y regresar a casa, Dorothy se une a un espantapájaros, un hombre de hojalata y un león cobarde. Juntos, enfrentan varios desafíos y adversidades mientras buscan la ayuda del Mago para cumplir sus deseos.",
+                    "genre": ["Musical" , "Fantasía"],
+                    "year": 1939,
+                    "imagesMovie":["magoDeOz(reparto).jfif", "magoDeOz(reparto)3.jfif", "magoDeOz(reparto)2.jfif", "magoDeOz(reparto)4.jfif"],
+                    "imagesCast": ["magoDeOz2.jfif", "magoDeOz3.jfif", "magoDeOz4.jfif", "magoDeOz.jfif"],
+                    "namesCast": ["Judy Garldan", "Jack Haley", "Ray Bolger", "Bert Lahr"]
+                },
+                {
+                    "id": 3,
+                    "name": "Frankestein",
+                    "poster": "frankenstein.jpg",
+                    "price": 5.82,
+                    "description": "El Dr. Henry Frankenstein, un joven y apasionado científico, asistido por el jorobado Fritz, crea un cuerpo humano, cuyas partes han sido recolectadas secretamente y de varias fuentes. El anhelo que consume al doctor es el de crear vida humana a través de varios artefactos eléctricos perfeccionados por él mismo.",
+                    "genre": ["Terror ", "Ciencia ficción"],
+                    "year": 1931,
+                    "imagesMovie":["Frankestein.webp", "Frankestein2.webp", "Frankestein3.jfif", "Frankestein4.webp"],
+                    "imagesCast": ["FrankesteinBorisKarloff", "FrankesteinColinclive.jpg", "FrankesteinJohnBoles.jpg", "FrankesteinMaeClarke.jpg"],
+                    "namesCast": ["Boris Karloff", "Colin Clive", "John Boles", "Mae Clarke"]
+                },
+                {
+                    "id": 4,
+                    "name": "Grease",
+                    "poster": "greaseportada.jfif",
+                    "price": 5.82,
+                    "description": "El rebelde Danny Zuko y la inocente australiana Sandy mantienen un romance durante las vacaciones, creyendo que no se volverán a ver; sin embargo, para sorpresa de ambos, se reencuentran en la escuela secundaria al empezar el nuevo curso.",
+                    "genre": ["Musical" , "Comedia"],
+                    "year": 1978,
+                    "imagesMovie":["Grease.jfif", "Grease1.avif", "Grease3.webp", "Grease4.webp"],
+                    "imagesCast": ["GreaseDidiConn.jpg", "GreaseJohnTravolta.jpg", "GreaseOliviaNewton.jpg", "GreaseStockardChanning.jpg"],
+                    "namesCast": ["Didi Conn", "John Travolta", "Olivia Newton", "Stockard Channing"]
+                },
+                {
+                    "id": 5,
+                    "name": "Back To The Future",
+                    "poster": "back-to-the-future.jpg",
+                    "price": 5.82,
+                    "description": "Marty McFly un adolescente que accidentalmente viaja en el tiempo desde 1985 hasta 1955 en un DeLorean modificado por su amigo científico, el Dr. Emmett Doc Brown,  Marty se encuentra con versiones más jóvenes de sus padres y debe asegurarse de que se enamoren para garantizar su propia existencia en el futuro. Mientras intenta encontrar una forma de regresar a su propio tiempo, Marty también debe lidiar con una serie de eventos que podrían alterar el curso de la historia, incluyendo ayudar a un joven Doc Brown a inventar la máquina del tiempo.",
+                    "genre": ["Ciencia ficción","Comedia"],
+                    "year": 1985,
+                    "imagesMovie":["BackToTheFuture.jpg", "BackToTheFuture2.jpg", "BackToTheFuture3.jwebp", "BackToTheFuture4.jpg"],
+                    "imagesCast": ["BackToTheFutureChristopherLloyd.jpg", "BackToTheFutureCrispinGlover.jpg", "BackToTheFutureKathleenThompson.jfif", "BackToTheFutureMichaelFox.jpg"],
+                    "namesCast": ["Christopher Lloyd", "Crispin Glover", "Kathleen Thompson", "Michael Fox"]
+                },
+                {
+                    "id": 6,
+                    "name": "Casa Blanca",
+                    "poster": "Casablanca.jpg",
+                    "price": 5.82,
+                    "description": "En Marruecos, el dueño de un café ayuda a su ex novia y a su marido a escapar de los nazis.",
+                    "genre": "Romance",
+                    "year": 1942,
+                    "imagesMovie":["Casablanca.jpg", "Casablanca1.webp", "Casablanca2.webp", "Casablanca3.jpg"],
+                    "imagesCast": ["HumphreyBogart.jpg", "PeterLorreCasaBlanca.jpg", "IngridBergmanCasaBlanca.jpg", "PaulHenreidCasaBlanca.jpg"],
+                    "namesCast": ["Humphrey Bogart", "Ingrid Bergman", "Paul Henreid", "Peter Lorre"]
+                },
+                {
+                    "id": 7,
+                    "name": "It",
+                    "poster": "it.wep",
+                    "price": 5.82,
+                    "description": "Un tranquilo y pequeño pueblo de Maine está siendo aterrorizado por una fuerza malévola oculta tras la máscara de un payaso, y que tan sólo se la conoce como It. Tras sus primeras víctimas, una pandilla formada por siete amigos de la infancia dedicen volver a reunirse para atacar el mal y destruirlo, intentando librar así del terror a su pueblo natal.",
+                    "genre": ["Terror","Fantastico"],
+                    "year": 1990,
+                    "imagesMovie":["it1.jpg, it2.webp", "it4.jpg", "it3.jpg"],
+                    "imagesCast": ["Dennis_Christopher.jpg" , "Harry_Anderson.jpg", "Richard_Masur.jpg", "Richard_Thomas.jpg"],
+                    "namesCast": ["Dennis Christopher","Harry Andreson","Richard Masur","Richard Thomas"]
+                },
+                {
+                    "id": 8,
+                    "name": "Superman",
+                    "poster": "superman.jpg",
+                    "price": 5.82,
+                    "description": "Desde una galaxia remota, un recién nacido es enviado por sus padres al espacio debido a la inminente destrucción del planeta donde viven. La nave aterriza en la Tierra, y el niño es adoptado por unos granjeros que le inculcan los mejores valores humanos. Con los años, el joven se irá a Metrópolis y allí usará sus poderes sobrenaturales para luchar contra el mal.",
+                    "genre": ["Ciencia Ficcion","Fantastico", "Aventura"],
+                    "year": 1978,
+                    "imagesMovie":["superman1.jpg", "superman2.jpg", "superman3.jpg", "superman4.jpg"],
+                    "imagesCast": ["christopher_reeve.jpg" , "gene_hackman.jpg", "margot_kidder.jpg", "marlon_brando.jpg","ned_beatty.jpg"],
+                    "namesCast": ["Christopher Reeve","Gene Hackman","Margot Kidder","Marlon Brando","Ned Beatty"]
+                },
+                {
+                    "id": 9,
+                    "name": "El planeta de los simios",
+                    "poster": "planet_of_the_apes.jpg",
+                    "price": 5.82,
+                    "description": "George Taylor es un astronauta que forma parte de la tripulación de una nave espacial -en una misión de larga duración- que se estrella en un planeta desconocido en el que, a primera vista, no hay vida inteligente. Sin embargo, muy pronto se dará cuenta de que está gobernado por una raza de simios mentalmente muy desarrollados que esclavizan a unos seres humanos que carecen de la facultad de hablar. Cuando su líder, el doctor Zaius, descubre horrorizado que Taylor posee el don de la palabra, decide que hay que eliminarlo.",
+                    "genre": ["Ciencia Ficcion", "Aventura"],
+                    "year": 1968,
+                    "imagesMovie":["planet_of_the_apes1.jpg", "planet_of_the_apes2.jpg", "planet_of_the_apes3.jpg", "planet_of_the_apes4.jpg"],
+                    "imagesCast": ["cherlton_heston.jpg" , "james_whitmore.jpg", "kim_hunter.jpg", "maurice_evans.jpg","roddy_mcdowall.jpg"],
+                    "namesCast": ["Cherlton Heston","James Whitmore","Kim Hunter","Maurice Evans","Roddy McDowall"]
+                },{
+                    "id": 10,
+                    "name": "Alicia en el pais de las maravillas",
+                    "poster": "alice_in_wonderland.jpg",
+                    "price": 5.82,
+                    "description": "Historia de magia y fantasía en la que la joven Alicia se sumerge en el sorprendente País de las Maravillas y conoce a extraordinarios personajes como Tweedledee y Tweedledum, el Sombrerero Loco, La Reina de Corazones y el frenético Conejo Blanco.",
+                    "genre": ["Fantastico","Animacion","Musical", "Aventura","Infantil"],
+                    "year": 1951,
+                    "imagesMovie":["alice_in_wonderland1.jpg", "alice_in_wonderland2.jpg", "alice_in_wonderland3.jpg", "alice_in_wonderland4.jpg"],
+                    "imagesCast": ["ed_wynn.jpg" , "jerry_colonna.jpg", "kathryn_beaumont.jpg", "richard_haydn.jpg","sterling_holloway.jpg"],
+                    "namesCast": ["Ed Wynn","Jerry Colonna","Kathryn Beaumont","Richard Haydn","Sterling Holloway"]
+                }
+            ],
+            "movieGrid":[ {
+                "id": 11,
+                "name": "El Padrino",
+                "poster": "El-padrino/El-Padrino-02.webp",
+                "price": 5.82,
+                "description": "Un hijo que busca un camino diferente al de su familia, que es una las grandes familias de la mafia italiana, se ve en la necesidad de tomar las riendas para cuidar de la familia.",
+                "genre": ["Drama","Crimen"],
+                "year": 1972,
+                "imagesMovie":["El-Padrino-00.jpeg", "El-Padrino-01.jpg", "El-Padrino-02.webp", "El-Padrino-00.jpg"],
+                "imagesCast": ["Al-Pacino.webp", "Diane-Keaton.webp", "Marlon-Brando.png", "Robert-De-Niro.jpg"],
+                "namesCast": ["Al Pacino", "Marlon Brandon", "Diane Keaton", "Robert De Niro"]
+                },
+                {
+                "id": 12,
+                "name": "Breakfast at Tiffany's",
+                "poster": "Breakfast-at-tiffanys/Posters/Breakfast_at_Tiffany's_(1961_poster).jpeg",
+                "price": 3.49,
+                "description": "Holly Golightly es una bella joven neoyorquina que, aparentemente, lleva una vida fácil y alegre. Tiene un comportamiento bastante extravagante, por ejemplo, desayunar contemplando el escaparate de la lujosa joyería Tiffanys. Un día se muda a su mismo edificio Paul Varjak, un escritor que, mientras espera un éxito que nunca llega, vive a costa de una mujer madura.",
+                "genre": ["Romance","Drama", "Comedia"],
+                "year": 1961,
+                "imagesMovie": ["BT-img1.jpg","BT-img2.jpg","BT-img3.jpg","BT-img3.jpg"],
+                "imagesCast": ["AudreyHepburn.jpeg","Buddy_Ebsen_-_USCG.jpeg","George_Peppard_(1964).jpeg","John_McGiver_1964.jpeg","Jose de Vilallonga_(cropped).jpeg","Martin_Balsam_Film_Still.jpeg","Mickey_Rooney_still.jpeg","Patricia_Neal_1952.jpeg","Stanley_Adams.jpeg"],
+                "namesCast": ["Audrey Hepburn","Buddy Ebsen","George Peppard","John McGiver","Jose de Vilallonga","Martin Balsam","Mickey Rooney","Patricia Neal","Stanley Adams"]
+                
+                },
+                {
+                "id": 13,
+                "name": "Amores Perros",
+                "poster": "Amores-Perros/amores-perros-01.jpg",
+                "price": 4.11,
+                "description":"Octavio, un joven adolescente enamorado de su cuñada, ha transformado a su perro Cofi en una mortífera arma con la que desea escapar de su miseria amorosa.",
+                "genre": "Drama y suspenso",
+                "year": 2000,
+                "imagesMovie": ["Amores-Perros-02.jpg", "Amores-Perros-03.jpg", "Amores-Perros-04.jpg", "Amores-Perros-05.webq"],
+                "imagesCast": ["Emilio-Echevarria.jpg", "Gael-Garcia-Bernal.webq", "Gerardo-Campbell.webq"," Vanessa-Bauche.jpg"],
+                "namesCast": ["Gael García Bernal", "Vanessa Bauche", "Emilio Echevarria", "Gerardo Campbell"]
+                },
+                {
+                "id": 14,
+                "name": "Ben-Hur",
+                "poster": "Ben-Hur/Ben-Hur_01.webp",
+                "price": 5.49,
+                "description": "Un hombre que lo perdió todo tiene una oportunidad regresar a su hogar para recuperar lo que se le despojo, en el contexto de la gran Roma Imperial",
+                "genre":["Épico", "Dramatico", "Histórico", "Romántico"],
+                "year": 1959,
+                "imagesMovie": ["Ben-Hur_01.webq", "Ben-Hur_02.jpg", "Ben-Hur_03.jpg", "Ben-Hur_04.jpg"],
+                "imagesCast": ["Charlton-Heston.jpg", "Haya_Harareet.jpg", "Jack-Hawkins.webq", "Stephen-Boyd.jpg"],
+                "namesCast": ["Charlton Heston", "Stephen Boyd", "Jack Hawkins", "Haya Harareet"]
+                },
+                {
+                "id": 15,
+                "name": "Lo que el viento se llevó",
+                "poster": "LoQueElVientoSeLlevo.jpeg",
+                "price": 4.79,
+                "description": "Georgia, 1861. En la elegante mansión sureña de Tara, vive Scarlett O'Hara (Vivien Leigh), la joven más bella, caprichosa y egoísta de la región. Ella suspira por el amor de Ashley (Leslie Howard), pero él está prometido con su prima, la dulce y bondadosa Melanie (Olivia de Havilland). En la última fiesta antes del estallido de la Guerra de Secesión (1861-1865), Scarlett conoce al cínico y apuesto Rhett Butler (Clark Gable), un vividor arrogante y aventurero, que sólo piensa en sí mismo y que no tiene ninguna intención de participar en la contienda. Lo único que él desea es hacerse rico y conquistar el corazón de la hermosa Scarlett.",
+                "genre":["Drama", "Aventura", "Romance"],
+                "year": 1939,
+                "imagesMovie": ["loqueElViento1.jpeg", "loqueElviento2.jpeg", "loqueElViento3.jpeg", "loqueElViento4.jpeg"],
+                "imagesCast": ["clark_gable.jpeg", "hattie_mcdaniel.jpeg", "leslie_howard.jpeg", "olivia_de_havilland.jpeg","vivien_leigh.jpeg"],
+                "namesCast": ["Clark Gable", "Hattie McDaniel", "Leslie Howard", "Olivia de Havilland","Vivien Leigh"]
+                },
+                {
+                "id": 16,
+                "name": "La Dolce Vita",
+                "poster": "LaDolceVita-poster.jpeg",
+                "price": 3.99,
+                "description": "Marcello Rubini es un desencantado periodista romano, en busca de celebridades, que se mueve con insatisfacción por las fiestas nocturnas que celebra la burguesía de la época. Merodea por distintos lugares de Roma, siempre rodeado de todo tipo de personajes, especialmente de la élite de la sociedad italiana. En una de sus salidas se entera de que Sylvia, una célebre diva del mundo del cine, llega a Roma, cree que ésta es una gran oportunidad para conseguir una gran noticia, y, en consecuencia, la perseguirá por las noches por diferentes lugares de la ciudad.",
+                "genre":["Drama", "Comedia"],
+                "year": 1960,
+                "imagesMovie": ["ladolce1.jpeg", "ladolce2.jpeg", "ladolce3.jpeg", "ladolce4.jpeg"],
+                "imagesCast": ["alain_cuny.jpeg", "anita_ekberg.jpeg", "anouk_aimee.jpeg", "marcello_mastroianni.jpeg","yvonne_furneaux.jpeg"],
+                "namesCast": ["Alain Cuny", "Anita Ekberg", "Anouk Aimee", "Marcello Mastroianni","Yvonne Furneaux"]
+                },
+                {
+                "id": 17,
+                "name": "Seven Samurai",
+                "poster": "Seven_Samurai_poster.jpg",
+                "price": 6.49,
+                "description": "Japón, Siglo XVI. Una aldea de campesinos indefensos es repetidamente atacada y saqueada por una banda de forajidos. Aconsejados por el anciano de la aldea, unos aldeanos acuden a la ciudad con el objetivo de contratar a un grupo de samuráis para protegerlos. A pesar de que el único salario es comida y techo, varios samuráis se van incorporando uno a uno al singular grupo que finalmente se dirige a la aldea.",
+                "genre":["Drama", "Aventura"],
+                "year": 1954,
+                "imagesMovie": ["sietesamurai1.jpeg", "sietesamurai2.jpeg", "sietesamurai3.jpeg", "sietesamurai4.jpeg"],
+                "imagesCast": ["minoru_chiaki.jpeg", "seiji_miyaguchi.jpeg", "takashi_shimura.jpeg", "toshiro_mifune.jpeg","yoshio_inaba.jpeg"],
+                "namesCast": ["Minoru Chiaki", "Seiji Miyaguchi", "Takashi Shimura", "Tochiro Mifune","Yoshio inaba"]
+                },
+                {
+                "id": 18,
+                "name": "Tiempos Modernos",
+                "poster": "tiempos_modernos.jpg",
+                "price": 3.89,
+                "description": "Extenuado por el frenético ritmo de la cadena de montaje, un obrero metalúrgico acaba perdiendo la razón. Después de recuperarse en un hospital, sale y es encarcelado por participar en una manifestación en la que se encontraba por casualidad. En la cárcel, también sin pretenderlo, ayuda a controlar un motín, gracias a lo cual queda en libertad. Una vez fuera, reemprende la lucha por la supervivencia en compañía de una joven huérfana a la que conoce en la calle.",
+                "genre":["Comedia"],
+                "year": 1936,
+                "imagesMovie": ["tiemposmodernos1.jpeg", "tiemposmodernos2.jpeg", "tiemposmodernos3.jpeg", "tiemposmodernos4.jpeg"],
+                "imagesCast": ["charles_chaplin.jpeg", "chester_conklin.jpeg", "henry_bergman.jpeg", "paulette_goddard.jpeg","stanley_stanford.jpeg"],
+                "namesCast": ["Charles Chaplin", "Chester Conklin", "Henry Bergman", "Paulette Goddard","Stanley Standford"]
+                },
+                {
+                "id": 19,
+                "name": "Fitzcarraldo",
+                "poster": "Fitzcarraldo_Web.jpg",
+                "price": 4.69,
+                "description": "Brian Fitzgerald Fitzcarraldo, un excéntrico y megalómano hombre de negocios obsesionado con la ópera, ha ido perdiendo su prestigio y su fortuna en absurdas empresas sin futuro. Su último proyecto consiste en construir un teatro de ópera en un poblado peruano a orillas del Amazonas; para conseguir el capital necesario para financiar tan magna empresa se dedica al comercio del caucho. Su extravagante plan exige sacar del río un gran barco fluvial y transportarlo hasta la cima de un monte.",
+                "genre":["Aventura","Drama"],
+                "year": 1982,
+                "imagesMovie": ["fitzcarraldo1.jpg","fitzcarraldo2.jpg", "fitzcarraldo3.jpg", "fitzcarraldo4.jpg"],
+                "imagesCast": ["claudia_cardinale.jpg", "jose_lewgoy.jpg", "klaus_kinski.jpg", "miguel_angel_fuentes.jpg","paul_hittscher.jpg"],
+                "namesCast": ["Claudia Cardinale", "Jose Lewgoy", "Klaus Kinski", "Miguel Angel Fuentes","Paul Hittscher"]
+                },
+                {
+                "id": 20,
+                "name": "La tumba de las luciérnagas",
+                "poster": "grave_of_the_fireflies.jpg",
+                "price": 3.59,
+                "description": "Segunda Guerra Mundial (1939-1945). Seita y Setsuko son hijos de un oficial de la marina japonesa que viven en Kobe. Un día, durante un bombardeo, no consiguen llegar a tiempo al búnker donde su madre los espera. Cuando después buscan a su madre, la encuentran malherida en la escuela, que ha sido convertida en un hospital de urgencia.",
+                "genre":["Aventura","Drama"],
+                "year": 1988,
+                "imagesMovie": ["grave_of_the_fireflies1.jpg","grave_of_the_fireflies2.jpg", "grave_of_the_fireflies3.jpg", "grave_of_the_fireflies4.jpg"],
+                "imagesCast": ["Corinne_Orr.jpg", "robert_spencer.jpg", "shannon_conley.jpg"],
+                "namesCast": ["Corinne Orr", "Robert Spencer", "Shannon Conley"]
+                },
+                {
+                "id": 21,
+                "name": "Mi Vecino Totoro",
+                "poster": "mi_vecino_tororo.jpg",
+                "price": 4.29,
+                "description": "En los años 50, una familia japonesa se traslada al campo. Las dos hijas, Satsuki y Mei, entablan amistad con Totoro, un espíritu del bosque. El padre es un profesor universitario que estimula la imaginación de sus hijas relatándoles fábulas e historias mágicas sobre duendes, fantasmas y espíritus protectores de los hogares, mientras la madre se encuentra enferma en el hospital.",
+                "genre":["Animacion","Fantastico","Infantil"],
+                "year": 1988,
+                "imagesMovie": ["mi_vecino_tororo1.jpg","mi_vecino_tororo2.jpg", "mi_vecino_tororo3.jpg", "mi_vecino_tororo4.jpg"],
+                "imagesCast": ["dakota_fanning.jpg", "hitoshi_takagi.jpg", "noriko_hidaka.jpg","pat_carroll.jpg"],
+                "namesCast": ["Dakota Fanning", "Hitoshi Takagi", "Noriko Hidaka","Pat Carroll"]
+                },
+                {
+                "id": 22,
+                "name": "Robocop",
+                "poster": "robocop.jpg",
+                "price": 5.09,
+                "description": "Ambientada en una sociedad futura. Alex J. Murphy, agente de policía de Detroit, es asesinado en acto de servicio. Para acabar con la delincuencia en la ciudad, las autoridades aprueban la creación de una máquina letal, mitad robot, mitad hombre, a la que llaman Robocop, y para fabricarla utilizan el cuerpo de Murphy. El experimento parece un éxito, pero el policía, a pesar de estar muerto, conserva la memoria y decide vengarse de sus asesinos.",
+                "genre":["Ciencia Ficcion","Accion"],
+                "year": 1987,
+                "imagesMovie": ["robocop1.jpg","robocop2.jpg", "robocop3.jpg", "robocop4.jpg"],
+                "imagesCast": ["kurtwood_smith.jpg", "miguel_ferrer.jpg", "nancy_allen.jpg","peter_weller.jpg","ronny_cox.jpg"],
+                "namesCast": ["Kurtwood Smith", "Miguel Ferrer", "Nancy Allen","Peter Weller", "Ronny Cox"]
+                },
+                {
+                "id": 23,
+                "name": "Ciudadano Kane",
+                "poster": "citizen_kane-Poster.jpeg",
+                "price": 4.49,
+                "description": "Un importante magnate estadounidense, Charles Foster Kane, dueño de una importante cadena de periódicos, de una red de emisoras, de dos sindicatos y de una inimaginable colección de obras de arte, muere en Xanadú, su fabuloso castillo de estilo oriental. La última palabra que pronuncia antes de expirar, ”Rosebud”, cuyo significado es un enigma, despierta una enorme curiosidad tanto en la prensa como entre la población. Así, un grupo de periodistas emprende una investigación para desentrañar el misterio.",
+                "genero": "Drama",
+                "anio": 1961,
+                "imagesMovie": ["CiudadanoKane1.jpeg","ciudadanoKane2.jpeg","ciudadanoKane3.png","ciudadanoKane4.jpeg"],
+                "imagesCast": ["dorothy_comingore.jpeg","everett_sloane.jpeg","george_coulouris.jpeg","joseph_cotten.jpeg","Orson-Welles.jpeg"],
+                "namesCast": ["Dorothy Comingo","Everett Sloane","George Coulouris","Joseph Cotten","Orson Welles"]
+                },
+                {
+                "id": 24,
+                "name": "El Gran Dictador",
+                "poster": "El_gran_dictador-348479670-large.jpg",
+                "price": 4.39,
+                "description": "Un humilde barbero judío que combatió con el ejército de Tomania en la Primera Guerra Mundial vuelve a su casa años después del fin del conflicto. Amnésico a causa de un accidente de avión, no recuerda prácticamente nada de su vida pasada, y no conoce la situación política actual del país: Adenoid Hynkel, un dictador fascista y racista, ha llegado al poder y ha iniciado la persecución del pueblo judío, a quien considera responsable de la situación de crisis que vive el país. Paralelamente, Hynkel y sus colaboradores han empezado a preparar una ofensiva militar destinada a la conquista de todo el mundo.",
+                "genero":"Comedia",
+                "anio": 1940,
+                "imagesMovie":["Dictator1.jpeg","Dictator2.jpeg","Dictator3.jpeg","Dictator4.jpeg"],
+                "imagesCast":["charles_chaplin.jpeg","henry_daniell.jpeg","jack_oakie.jpeg","paulette_goddard.jpeg","reginald_gardiner.jpeg"],
+                "namesCast":["Henry Daniell", "Jack Oakie", "Charles Chaplin","Paulette Goddard","Reginald Gardiner"]
+                },
+                {
+                "id": 25,
+                "name": "2001: A Space Odyssey",
+                "poster": "spaceOdyssey-Poster.jpeg",
+                "price": 5.79,
+                "description": "La película de ciencia-ficción por excelencia de la historia del cine narra los diversos periodos de la historia de la humanidad, no sólo del pasado, sino también del futuro. Hace millones de años, antes de la aparición del homo sapiens, unos primates descubren un monolito que los conduce a un estadio de inteligencia superior. Millones de años después, otro monolito, enterrado en una luna, despierta el interés de los científicos. Por último, durante una misión de la NASA, HAL 9000, una máquina dotada de inteligencia artificial, se encarga de controlar todos los sistemas de una nave espacial tripulada.",
+                "genero":"Ciencia Ficcion",
+                "anio": 1968,
+                "imagesMovie":["odisea1.jpeg","odisea2.jpeg","odisea3.jpeg","odisea4.jpeg"],
+                "imagesCast":["daniel_richter.jpeg","gary_lockwood.jpeg","keir_dullea.jpeg","leonard_rossiter.jpeg","william_sylvester.jpeg"],
+                "namesCast":["Daniel Richter", "Gary Lockwood", "Keir Dullea","Leonard Rossiter","William Sylvester"]
+                },
+                {
+                "id": 26,
+                "name": "Top Gun",
+                "poster": "top_gun-Poster.jpeg",
+                "price": 20.50,
+                "description": "La Marina de los Estados Unidos ha creado una escuela de élite para pilotos con el fin de sacar una promoción de expertos en técnicas de combate. En la academia, más conocida como Top Gun, a los mejores se les entrena para ser intrépidos y fríos al mismo tiempo, capaces de no perder los nervios en situaciones extremas y de no inmutarse al romper la barrera del sonido a los mandos de un F-14. A la escuela llega el joven Maverick, famoso por su temeraria aunque brillante forma de pilotar.",
+                "genero":["Accion","Drama","Romance"],
+                "anio":1986,
+                "imagesMovie":["topGun1.jpeg","topGun2.jpeg","topGun3.jpeg","topGun4.jpeg"],
+                "imagesCast":["anthony_edwards.jpeg","kelly_mcgillis.jpeg","tom_cruise.jpeg","tom_skerritt.jpeg","val_kilmer.jpeg"],
+                "namesCast":["Anthony Edwards","Kelly McGillis", "Tom Cruise","Tom Skerritt","Val Kilmer"]
+                },
+                {
+                "id": 27,
+                "name": "La Historia Interminable",
+                "poster": "La_Historia_Interminable_01.webp",
+                "price": 19.12,
+                "description": "Un niño que pasa por un gran dolor descubre un mundo fantástico que está en peligro a través de un libro misterioso, que lo llevará a un gran viaje para enfrentar sus miedos.",
+                "genero":"Fantasía",
+                "anio":1984,
+                "imagesMovie":["La_Historia_Interminable_01.webp, La_Historia_Interminable_02.webp, La_Historia_Interminable_03.jpg, La_Historia_Interminable_04.jpeg"],
+                "imagesCast":["Noah-Hathaway.jpg, Barret-Oliver.jpg, Gerald-McRaney.jpg, Tami-Stronach.jpg"],
+                "namesCast":["Noah Hathaway, Barret Oliver, Tami Stronach y Generald McRaney"]
+                },
+                {
+                "id": 28,
+                "name": "La chaqueta metalica",
+                "poster": "full_metal_jacket-Poster.jpeg",
+                "price": 17.15,
+                "description": "Un grupo de reclutas se prepara en Parris Island, centro de entrenamiento de la marina norteamericana. Están bajo las órdenes del sargento Hartman, duro e implacable, cuya única misión en la vida es endurecer el cuerpo y el alma de los novatos, con el objetivo de que en el futuro puedan defenderse del enemigo. Pero no todos los jóvenes están preparados para soportar sus métodos.",
+                "genero":"Bélico - Drama",
+                "anio":1987,
+                "imagesMovie":["metalJacket1.jpeg","metalJacket2.jpeg","metalJacket3.jpeg","metalJacket4.jpeg"],
+                "imagesCast":["adam_baldwin.jpeg","arliss_howard.jpeg","dorian_harewood.jpeg","matthew_modine.jpeg","r_lee_ermey.jpeg","vincent_d_onofrio.jpeg"],
+                "namesCast":["Adam Baldwin","Arliss Howard","Dorian Harewood","Matthew Modine","R Lee Ermey", "Vincent D Onofrio"]
+                }
+            ],
+            "topMovies" :[       
+                {
+                "id": 29,
+                "name": "La Historia Interminable",
+                "poster": "La_Historia_Interminable_01.webp",
+                "price": 19.12,
+                "description": "Un niño que pasa por un gran dolor descubre un mundo fantástico que está en peligro a través de un libro misterioso, que lo llevará a un gran viaje para enfrentar sus miedos.",
+                "genre":"Fantasía",
+                "year":1984,
+                "imagesMovie":["La_Historia_Interminable_01.webp", "La_Historia_Interminable_02.webp", "La_Historia_Interminable_03.jpg", "La_Historia_Interminable_04.jpeg"],
+                "imagesCast":["Noah-Hathaway.jpg", "Barret-Oliver.jpg", "Gerald-McRaney.jpg", "Tami-Stronach.jpg"],
+                "namesCast":["Noah Hathaway", "Barret Oliver", "Tami Stronach" , "Generald McRaney"]
+                },
+                {
+                "id": 30,
+                "name": "Back To The Future III",
+                "poster": "BackToTheFutureFoto.jfif",
+                "price": 5.82,
+                "description": "Retoma la historia justo después de los eventos de la segunda película, con Marty McFly descubriendo una carta de su amigo, el Dr. Emmett Doc Brown, que fue escrita en 1885. La carta revela que Doc está atrapado en el Viejo Oeste después de haber sido enviado accidentalmente allí por una falla en la máquina del tiempo.",
+                "genre": ["Wéstern", "Infantil"],
+                "year": 1990,
+                "imagesMovie":["BTTF3.avif", "BTTF32.webp", "BTTF33.jfif", "BTTF34.jpg"],
+                "imagesCast": ["BackToTheFutureChristopherLloyd.jpg", "BackToTheFutureC3MarySteenBurguen.jpg", "BackToTheFutureKathleenThompson.jfif", "BackToTheFutureMichaelFox.jpg"],
+                "namesCast": ["Christopher Lloyd", "Mary Steen Burguen", "Kathleen Thompson", "Michael Fox"]
+                },
+                {
+                "id": 31,
+                "name": "Star Wars",
+                "poster": "star wars.webp",
+                "price": 5.82,
+                "description": "La princesa Leia, líder del movimiento rebelde que desea reinstaurar la República en la galaxia en los tiempos ominosos del Imperio, es capturada por las Fuerzas Imperiales, capitaneadas por el implacable Darth Vader, el sirviente más fiel del Emperador. El intrépido y joven Luke Skywalker, ayudado por Han Solo, capitán de la nave espacial El Halcón Milenario, y los androides, R2D2 y C3PO, serán los encargados de luchar contra el enemigo e intentar rescatar a la princesa para volver a instaurar la justicia en el seno de la galaxia.",
+                "genre": ["Ciencia Ficcion", "Aventura"],
+                "year": 1977,
+                "imagesMovie":["starwars1.jpeg", "starwars2.jpeg", "starwars3.jpeg", "starwars4.jpeg"],
+                "imagesCast": ["alec_guinness.jpeg","carrie_fisher.jpeg","harrison_ford.jpeg","mark_hamill.jpeg","peter_cushing.jpeg"],
+                "namesCast": ["Alec Guinness", "Carrie Fisher", "Harrison Ford", "Mark Hamill","Peter Cushing"]
+                }
+            ]
+        
+]
+    
 
