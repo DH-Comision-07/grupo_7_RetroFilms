@@ -48,6 +48,24 @@
 
             </section>
         </div>
+        
+        <% /*
+        <div class="carrusel">
+          <section>
+            
+              <div class="cuadriculaPeliculas">
+                <%(productos[0]).forEach(function (producto){%>
+                  <a href="/products/detalleProducto/<%=producto.id%>"
+                    <img src="img/Home/detalleProducto/portada/<%=producto.poster%>" alt=""></div>
+                  </a>
+                <%})%>
+              </div>
+            
+          </section>
+        </div>
+        */ %>
+
+
         <div class="tabsContenido">
             <div>Últimas</div>
             <div>Estrenos</div>
@@ -62,12 +80,33 @@
               <%})%>
             </div>
             
+            
+            <% /*
+            <div class="cuadriculaPeliculas">
+              <%(productos[1]).forEach(function (producto){%>
+                <a href="/products/detalleProducto/<%=producto.id%>"
+                  <div class="pelicula"><img src="img/DetalleProducto/portada/<%=producto.poster%>" alt=""></div>
+                </a>
+              <%})%>
+            </div>
+            */ %>
       
             <div class="topEstrenos">
               <div class="peliculaEstreno"> Top número 1<img src="img\Home\TopEstrenos\star wars.webp" alt="" ></div>
               <div class="peliculaEstreno"> Top número 2 <img src="img\Home\TopEstrenos\Volver_al_Futuro_III_Poster.webp" alt="" ></div>
               <div class="peliculaEstreno"> Top número 3 <img src="img\Home\TopEstrenos\Historia sin fin.jpg" alt="" ></div>
             </div>
+
+                        <% /*
+            <div class="topEstrenos">
+              <%(productos[2]).forEach(function (producto){%>
+                <a href="/products/detalleProducto/<%=producto.id%>"
+                  <div class="peliculaEstreno"><img src="img/DetalleProducto/portada/<%=producto.poster%>" alt=""></div>
+                </a>
+                <%})%>
+              </div>
+              */ %>
+
         </div>
 
     </main>
