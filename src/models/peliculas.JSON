@@ -1,5 +1,4 @@
-{
-    "products" : [
+[
         {
             "id": 1,
             "name": "El Padrino",
@@ -314,8 +313,8 @@
             "imagenReparto":["alecGuiness.avif","carrieFisher.jpg","harrisonFord.webp","markHamill.webp"],
             "actorReparto":["Alec Guiness","Carrie Fisher","Harrison Ford","Mark Hamill"]
         }
-    ]
-}
+]
+
 
 
 
