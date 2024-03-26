@@ -1,9 +1,9 @@
-const productoService = require('../models/productoService.js')
+const productService = require('../models/productService.js')
 
 const mainController = { 
-    index: (req, res) => res.render("index", {productos : productoService.getAll()}),
+    index: (req, res) => res.render("index", {products : productService.getAll()}),
 }
 
-console.log((productoService.getAll())[0])
+console.log((productService.getAll())[0])
 
 module.exports = mainController;

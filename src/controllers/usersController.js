@@ -1,4 +1,4 @@
-let productos = require('../models/productoService.js');
+let products = require('../models/productService.js');
 const path = require('path');
 
 const usersController = { 

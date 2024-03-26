@@ -1,6 +1,5 @@
 [
         {
-<<<<<<< HEAD
             "id": 1,
             "name": "El Padrino",
             "image": "El-Padrino-02.webp",
@@ -164,21 +163,7 @@
             "imagenPelicula":["La_Historia_Interminable_01.webp, La_Historia_Interminable_02.webp, La_Historia_Interminable_03.jpg, La_Historia_Interminable_04.jpeg"],
             "imagenReparto":["Noah-Hathaway.jpg, Barret-Oliver.jpg, Gerald-McRaney.jpg, Tami-Stronach.jpg"],
             "actorReparto":["Noah Hathaway, Barret Oliver, Tami Stronach y    Generald McRaney"]
-        }
-=======
-            "Carrousell":[
-                {
-                    "id": 1,
-                    "name": "El bueno, el feo y el malo",
-                    "poster": "El_bueno_el_feo_y_el_malo_01.jpg",
-                    "price": 5.82,
-                    "description": "Tres hombres violentos pelean por una caja que alberga 200 000 dólares, la cual fue escondida durante la Guerra Civil. Dado que ninguno puede encontrar la tumba donde está el botín sin la ayuda de los otros dos, deben colaborar, pese a odiarse.",
-                    "genre": ["spaghetti western"],
-                    "year": 1962,
-                    "imagesMovie":["El_bueno_el_feo_y_el_malo_01.jpg", "El_bueno_el_malo_el_feo_02.jpg", "El_bueno_el_malo_el_feo_03.webp", "El_bueno_el_malo_el_feo_04.jpg"],
-                    "imagesCast":["Clint-Eastwood.jpg", "Lee Van Cleef.jpg", "Eli-Wallach.webp", "Rada Rassimov.jpg"],
-                    "namesCast":["Clint Eastwood", "Eli Wallach", "Lee Van Cleef", "Roda Rassimov"]
->>>>>>> 8bb7e4f7c35fa2e38071c6ab34f040a0bcd24ad0
+        },
         
                 },
                 {

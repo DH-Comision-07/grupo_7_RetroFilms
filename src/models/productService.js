@@ -20,6 +20,6 @@ getOneBy: function (id) {
 
 }
 
-module.exports = productoService;
+module.exports = productService;
 
-console.log(productoService.getAll())
+console.log(productService.getAll())

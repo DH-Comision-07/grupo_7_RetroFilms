@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const productoController = require('../controllers/productoController')
+const productController = require('../controllers/productController')
 const multer = require('multer');
 const path = require("path")
 
@@ -18,15 +18,15 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage })
 
-router.get('/detalleProducto/:id', productoController.detalleProducto);
-router.get('/carritoCompras', productoController.carritoCompras); //metodo (verbo)
-router.get('/:id', productoController.idProducto); // metodo get one
+router.get('/detalleProduct/:id', productController.detalleProduct);
+router.get('/carritoCompras', productController.carritoCompras); //metodo (verbo)
+router.get('/:id', productController.idProduct); // metodo get one
 
-router.get('/crear', productoController.crear);
-router.post('/', upload.single('image'), productoController.agregar)
+router.get('/crear', productController.crear);
+router.post('/', upload.single('image'), productController.agregar)
 
 
-router.get('/editar/:id', productoController.editar);
-router.put('/:id' ,upload.single('image'), productoController.guardar)
+router.get('/editar/:id', productController.editar);
+router.put('/:id' ,upload.single('image'), productController.guardar)
 
 module.exports = router;
