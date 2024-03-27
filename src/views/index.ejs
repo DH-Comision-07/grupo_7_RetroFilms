@@ -27,12 +27,12 @@
           <i class="fas fa-arrow-up"></i>
         </a>
   <header>
-        <%-include('./partials/header') %>
+        <%-include('./partials/header')%>
   </header>
 
     <main class="bodyPrincipal">
         <div class="carrusel">
-            <section >
+            <section>
                 <img src="img/Home/slider/mago de oz.jpg" alt="" >
                 <img src="img/Home/slider/back-to-the-future.jpg" alt="" >
                 <img src="img/Home/slider/Grease.jpg" alt="" >
@@ -44,10 +44,9 @@
                 <img src="img/Home/slider/planeta de los simios.webp" alt="">
                 <img src="img/Home/slider/aliciaenel.jpg" alt="">
                 <img src="img/Home/slider/elbuenomalofeo.webp" alt="">
-
-
             </section>
         </div>
+
         <div class="tabsContenido">
             <div>Últimas</div>
             <div>Estrenos</div>
@@ -57,16 +56,16 @@
         <div class="contenidoMain">
 
             <div class="cuadriculaPeliculas">
-              <%productos.forEach(function (producto){%>
-              <div class="pelicula"><img src="img/DetalleProducto/<%=producto.poster%>" alt=""></div>
+              <%movieGridMovies.forEach(function (movie){%>
+              <div class="pelicula"><img src="img/DetalleProducto/<%=movie.poster%>" alt=""></div>
               <%})%>
             </div>
             
       
             <div class="topEstrenos">
-              <div class="peliculaEstreno"> Top número 1<img src="img\Home\TopEstrenos\star wars.webp" alt="" ></div>
-              <div class="peliculaEstreno"> Top número 2 <img src="img\Home\TopEstrenos\Volver_al_Futuro_III_Poster.webp" alt="" ></div>
-              <div class="peliculaEstreno"> Top número 3 <img src="img\Home\TopEstrenos\Historia sin fin.jpg" alt="" ></div>
+              <%topMovies.forEach(function (movie,index){%>
+              <div class="peliculaEstreno"> Top número <%=index+1%><img src="img/DetalleProducto/<%=movie.poster%>" alt="" ></div>
+              <%})%>
             </div>
         </div>
 
