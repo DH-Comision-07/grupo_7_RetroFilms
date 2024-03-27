@@ -5,9 +5,16 @@ const products = require ('./peliculas.json');
 let productoService = {
     products: products, 
 
-    // getAll: function () {
-    //     return this.products;
-    // },  
+    getCarrousell: function(){
+        return this.products.carrousell;
+    },
+    getMovieGrid: function(){
+        return this.products.movieGrid;
+    },
+    getTopMovies: function(){
+        return this.products.topMovies;
+    },
+    
     getOneBy: function (id) {
         let carrousellmovie = this.products.carrousell.find(product => product.id == id);
         if(!carrousellmovie){
@@ -33,15 +40,6 @@ let productoService = {
         // return movies.find(product => product.id == id);
 
     },
-    getCarrousell: function(){
-        return this.products.carrousell;
-    },
-    getMovieGrid: function(){
-        return this.products.movieGrid;
-    },
-    getTopMovies: function(){
-        return this.products.topMovies;
-    },
     save: function(product){
         this.products.push(product);
         fs.writeFileSync(path.resolve(__dirname, "../data/productsDataBase.json"), JSON.stringify(this.products))
@@ -51,3 +49,4 @@ let productoService = {
 }
 
 module.exports = productoService;
+
