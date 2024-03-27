@@ -8,6 +8,7 @@ let productoService = {
     getCarrousell: function(){
         return this.products.carrousell;
     },
+
     getMovieGrid: function(){
         return this.products.movieGrid;
     },
@@ -25,8 +26,6 @@ let productoService = {
             }else{
                 return movieGrid;
             }
-
-
         }else{
             //existe en carrousel y la retornamos
             return carrousellmovie;

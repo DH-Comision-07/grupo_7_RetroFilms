@@ -1,9 +1,9 @@
 {
-            "Carrousell": [
+            "carrousell": [
                 {
                     "id": 1,
                     "name": "El bueno, el feo y el malo",
-                    "poster": "El-Bueno-El-Malo-El-Feo/El_bueno_el_feo_y_el_malo_01.jpg",
+                    "poster": "Slider/elbuenomalofeo.webp",
                     "price": 5.82,
                     "description": "Tres hombres violentos pelean por una caja que alberga 200 000 dólares, la cual fue escondida durante la Guerra Civil. Dado que ninguno puede encontrar la tumba donde está el botín sin la ayuda de los otros dos, deben colaborar, pese a odiarse.",
                     "genre": [
@@ -32,7 +32,7 @@
                 {
                     "id": 2,
                     "name": "El Mago de Oz",
-                    "poster": "ElMagoDeOz/mago de oz.jpg",
+                    "poster": "Slider/mago de oz.jpg",
                     "price": 5.82,
                     "description": "Una joven llamada Dorothy Gale, quien es llevada por un tornado desde su hogar en Kansas hasta la tierra mágica de Oz. En su viaje para encontrar al Mago de Oz y regresar a casa, Dorothy se une a un espantapájaros, un hombre de hojalata y un león cobarde. Juntos, enfrentan varios desafíos y adversidades mientras buscan la ayuda del Mago para cumplir sus deseos.",
                     "genre": [
@@ -62,7 +62,7 @@
                 {
                     "id": 3,
                     "name": "Frankestein",
-                    "poster": "Frankestein/frankenstein.jpg",
+                    "poster": "Slider/frankenstein.jpg",
                     "price": 5.82,
                     "description": "El Dr. Henry Frankenstein, un joven y apasionado científico, asistido por el jorobado Fritz, crea un cuerpo humano, cuyas partes han sido recolectadas secretamente y de varias fuentes. El anhelo que consume al doctor es el de crear vida humana a través de varios artefactos eléctricos perfeccionados por él mismo.",
                     "genre": [
@@ -92,7 +92,7 @@
                 {
                     "id": 4,
                     "name": "Grease",
-                    "poster": "Grease/Grease.jpg",
+                    "poster": "Slider/Grease.jpg",
                     "price": 5.82,
                     "description": "El rebelde Danny Zuko y la inocente australiana Sandy mantienen un romance durante las vacaciones, creyendo que no se volverán a ver; sin embargo, para sorpresa de ambos, se reencuentran en la escuela secundaria al empezar el nuevo curso.",
                     "genre": [
@@ -122,7 +122,7 @@
                 {
                     "id": 5,
                     "name": "Back To The Future",
-                    "poster": "BackToTheFuture/back-to-the-future.jpg",
+                    "poster": "Slider/back-to-the-future.jpg",
                     "price": 5.82,
                     "description": "Marty McFly un adolescente que accidentalmente viaja en el tiempo desde 1985 hasta 1955 en un DeLorean modificado por su amigo científico, el Dr. Emmett Doc Brown,  Marty se encuentra con versiones más jóvenes de sus padres y debe asegurarse de que se enamoren para garantizar su propia existencia en el futuro. Mientras intenta encontrar una forma de regresar a su propio tiempo, Marty también debe lidiar con una serie de eventos que podrían alterar el curso de la historia, incluyendo ayudar a un joven Doc Brown a inventar la máquina del tiempo.",
                     "genre": [
@@ -152,7 +152,7 @@
                 {
                     "id": 6,
                     "name": "Casa Blanca",
-                    "poster": "CasaBlanca/Casablanca copy.jpg",
+                    "poster": "Slider/Casablanca.jpg",
                     "price": 5.82,
                     "description": "En Marruecos, el dueño de un café ayuda a su ex novia y a su marido a escapar de los nazis.",
                     "genre": "Romance",
@@ -179,7 +179,7 @@
                 {
                     "id": 7,
                     "name": "It",
-                    "poster": "Payasoit/IT.jpeg",
+                    "poster": "Slider/IT.jpeg",
                     "price": 5.82,
                     "description": "Un tranquilo y pequeño pueblo de Maine está siendo aterrorizado por una fuerza malévola oculta tras la máscara de un payaso, y que tan sólo se la conoce como It. Tras sus primeras víctimas, una pandilla formada por siete amigos de la infancia dedicen volver a reunirse para atacar el mal y destruirlo, intentando librar así del terror a su pueblo natal.",
                     "genre": [
@@ -208,7 +208,7 @@
                 {
                     "id": 8,
                     "name": "Superman",
-                    "poster": "Superman/superman.jpg",
+                    "poster": "Slider/superman.jpg",
                     "price": 5.82,
                     "description": "Desde una galaxia remota, un recién nacido es enviado por sus padres al espacio debido a la inminente destrucción del planeta donde viven. La nave aterriza en la Tierra, y el niño es adoptado por unos granjeros que le inculcan los mejores valores humanos. Con los años, el joven se irá a Metrópolis y allí usará sus poderes sobrenaturales para luchar contra el mal.",
                     "genre": [
@@ -241,7 +241,7 @@
                 {
                     "id": 9,
                     "name": "El planeta de los simios",
-                    "poster": "ElPlanetaDeLosSimios/planet_of_the_apes.jpg",
+                    "poster": "Slider/planeta de los simios.webp",
                     "price": 5.82,
                     "description": "George Taylor es un astronauta que forma parte de la tripulación de una nave espacial -en una misión de larga duración- que se estrella en un planeta desconocido en el que, a primera vista, no hay vida inteligente. Sin embargo, muy pronto se dará cuenta de que está gobernado por una raza de simios mentalmente muy desarrollados que esclavizan a unos seres humanos que carecen de la facultad de hablar. Cuando su líder, el doctor Zaius, descubre horrorizado que Taylor posee el don de la palabra, decide que hay que eliminarlo.",
                     "genre": [
@@ -273,7 +273,7 @@
                 {
                     "id": 10,
                     "name": "Alicia en el pais de las maravillas",
-                    "poster": "AliceInWonderland/alice_in_wonderland.jpg",
+                    "poster": "Slider/aliciaenel.jpg",
                     "price": 5.82,
                     "description": "Historia de magia y fantasía en la que la joven Alicia se sumerge en el sorprendente País de las Maravillas y conoce a extraordinarios personajes como Tweedledee y Tweedledum, el Sombrerero Loco, La Reina de Corazones y el frenético Conejo Blanco.",
                     "genre": [
