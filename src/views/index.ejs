@@ -31,21 +31,13 @@
   </header>
 
     <main class="bodyPrincipal">
-        <div class="carrusel">
+          <div class="carrusel">
             <section>
-                <img src="img/Home/slider/mago de oz.jpg" alt="" >
-                <img src="img/Home/slider/back-to-the-future.jpg" alt="" >
-                <img src="img/Home/slider/Grease.jpg" alt="" >
-                <img src="img/Home/slider/Casablanca.jpg" alt="" >
-                <img src="img/Home/slider/frankenstein.jpg" alt="" >
-                <img src="img/Home/slider/IT.jpeg" alt="">
-                <img src="img/Home/slider/superman.jpg" alt="">
-                <img src="img/Home/slider/scarface.jpg" alt="">
-                <img src="img/Home/slider/planeta de los simios.webp" alt="">
-                <img src="img/Home/slider/aliciaenel.jpg" alt="">
-                <img src="img/Home/slider/elbuenomalofeo.webp" alt="">
+              <%carrousellMovies.forEach(function (movie){%>
+                <img src="img/Home/<%=movie.poster%>" alt="" >
+              <%})%>
             </section>
-        </div>
+          </div>
 
         <div class="tabsContenido">
             <div>Últimas</div>

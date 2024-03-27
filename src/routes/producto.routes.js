@@ -15,17 +15,22 @@ const storage = multer.diskStorage({
         return cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname))
     }
 })
-
 const upload = multer({ storage: storage })
 
-router.get('/detalleProducto/:id', productoController.detalleProducto);
-router.get('/carritoCompras', productoController.carritoCompras); //metodo (verbo)
-router.get('/:id', productoController.idProducto); // metodo get one
+// --- GET ONE PRODUCT -----//
 
+//router.get('/detalleProducto', productoController.detalleProducto);
+router.get('/detalleProducto/:id', productoController.id); // metodo get one
+
+
+//---GET SHOPPING CART --//
+router.get('/carritoCompras', productoController.carritoCompras); //metodo (verbo)
+
+// -- CREATE PRODUCT --//
 router.get('/crear', productoController.crear);
 router.post('/', upload.single('image'), productoController.agregar)
 
-
+//-- EDIT PRODUCT--//
 router.get('/editar/:id', productoController.editar);
 router.put('/:id' ,upload.single('image'), productoController.guardar)
 
