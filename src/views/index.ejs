@@ -11,45 +11,56 @@
 </head>
 
 <body>
-        <a href="#" class="back-to-top">
-          <i class="fas fa-arrow-up"></i>
-        </a>
+  <a href="#" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
   <header>
         <%-include('./partials/header')%>
   </header>
 
-    <main class="bodyPrincipal">
-          <div class="carrusel">
-            <section>
-              <%carrousellMovies.forEach(function (movie){%>
-                <img src="img/Home/<%=movie.poster%>" alt="" >
-              <%})%>
-            </section>
-          </div>
+  <main class="bodyPrincipal">
+      <div class="carrusel">
+        <section>
+          <%carrousellMovies.forEach(function (movie){%>
+            <a href="/products/detalleProducto/<%= movie.id %>">
+              <img src="img/Home/<%=movie.poster%>" alt="" >
+            </a>
+          <%})%>
+        </section>
+      </div>
 
-        <div class="tabsContenido">
-            <div>Últimas</div>
-            <div>Estrenos</div>
-            <div>Más Vistas</div>
-        </div>
+      <div class="tabsContenido">
+          <div>Últimas</div>
+          <div>Estrenos</div>
+          <div>Más Vistas</div>
+      </div>
 
-        <div class="contenidoMain">
+      <div class="contenidoMain">
 
-            <div class="cuadriculaPeliculas">
-              <%movieGridMovies.forEach(function (movie){%>
-              <div class="pelicula"><img src="img/DetalleProducto/<%=movie.poster%>" alt=""></div>
-              <%})%>
+        <div class="cuadriculaPeliculas">
+          <%movieGridMovies.forEach(function (movie){%>
+            <div class="pelicula">
+              <a href="/products/detalleProducto/<%= movie.id %>">
+                <img src="img/DetalleProducto/<%=movie.poster%>" alt="">
+              </a>
             </div>
-      
-            <div class="topEstrenos">
-              <%topMovies.forEach(function (movie,index){%>
-              <div class="peliculaEstreno"> Top número <%=index+1%> <img src="img/DetalleProducto/<%=movie.poster%>" alt="" ></div>
-              <%})%>
-              </div>
-
+          <%})%>
+        </div>
+  
+        <div class="topEstrenos">
+          <%topMovies.forEach(function (movie,index){%>
+            <div class="peliculaEstreno"> Top número <%=index+1%> 
+              <a href="/products/detalleProducto/<%= movie.id %>">
+                <img src="img/DetalleProducto/<%=movie.poster%>" alt="" >
+              </a>
+            </div>
+          <%})%>
         </div>
 
-    </main>
+      </div>
+
+  </main>
 
   <footer>
     <%-include('./partials/footer')%>
