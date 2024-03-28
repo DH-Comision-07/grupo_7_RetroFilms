@@ -15,7 +15,6 @@ const storage = multer.diskStorage({
         return cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname))
     }
 })
-
 const upload = multer({ storage: storage })
 
 router.get('/detalleProduct/:id', productController.detalleProduct);

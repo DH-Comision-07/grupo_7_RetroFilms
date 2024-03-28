@@ -9,93 +9,56 @@
 </head>
 
 <body>
-        <a href="#" class="back-to-top">
-          <i class="fas fa-arrow-up"></i>
-        </a>
+  <a href="#" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
   <header>
-        <%-include('./partials/header') %>
+        <%-include('./partials/header')%>
   </header>
 
-    <main class="bodyPrincipal">
-        <div class="carrusel">
-            <section>
-                <img src="img/Home/slider/mago de oz.jpg" alt="" >
-                <img src="img/Home/slider/back-to-the-future.jpg" alt="" >
-                <img src="img/Home/slider/Grease.jpg" alt="" >
-                <img src="img/Home/slider/Casablanca.jpg" alt="" >
-                <img src="img/Home/slider/frankenstein.jpg" alt="" >
-                <img src="img/Home/slider/IT.jpeg" alt="">
-                <img src="img/Home/slider/superman.jpg" alt="">
-                <img src="img/Home/slider/scarface.jpg" alt="">
-                <img src="img/Home/slider/planeta de los simios.webp" alt="">
-                <img src="img/Home/slider/aliciaenel.jpg" alt="">
-                <img src="img/Home/slider/elbuenomalofeo.webp" alt="">
+  <main class="bodyPrincipal">
+      <div class="carrusel">
+        <section>
+          <%carrousellMovies.forEach(function (movie){%>
+            <a href="/products/detalleProducto/<%= movie.id %>">
+              <img src="img/Home/<%=movie.poster%>" alt="" >
+            </a>
+          <%})%>
+        </section>
+      </div>
 
+      <div class="tabsContenido">
+          <div>Últimas</div>
+          <div>Estrenos</div>
+          <div>Más Vistas</div>
+      </div>
 
-            </section>
-        </div>
-        
-        <% /*
-        <div class="carrusel">
-          <section>
-            
-              <div class="cuadriculaPeliculas">
-                <%(productos[0]).forEach(function (producto){%>
-                  <a href="/products/detalleProducto/<%=producto.id%>"
-                    <img src="img/Home/detalleProducto/portada/<%=producto.poster%>" alt=""></div>
-                  </a>
-                <%})%>
-              </div>
-            
-          </section>
-        </div>
-        */ %>
+      <div class="contenidoMain">
 
-
-        <div class="tabsContenido">
-            <div>Últimas</div>
-            <div>Estrenos</div>
-            <div>Más Vistas</div>
-        </div>
-
-        <div class="contenidoMain">
-
-            <div class="cuadriculaPeliculas">
-              <%productos.forEach(function (producto){%>
-              <div class="pelicula"><img src="img/DetalleProducto/<%=producto.poster%>" alt=""></div>
-              <%})%>
+        <div class="cuadriculaPeliculas">
+          <%movieGridMovies.forEach(function (movie){%>
+            <div class="pelicula">
+              <a href="/products/detalleProducto/<%= movie.id %>">
+                <img src="img/DetalleProducto/<%=movie.poster%>" alt="">
+              </a>
             </div>
-            
-            
-            <% /*
-            <div class="cuadriculaPeliculas">
-              <%(productos[1]).forEach(function (producto){%>
-                <a href="/products/detalleProducto/<%=producto.id%>"
-                  <div class="pelicula"><img src="img/DetalleProducto/portada/<%=producto.poster%>" alt=""></div>
-                </a>
-              <%})%>
+          <%})%>
+        </div>
+  
+        <div class="topEstrenos">
+          <%topMovies.forEach(function (movie,index){%>
+            <div class="peliculaEstreno"> Top número <%=index+1%> 
+              <a href="/products/detalleProducto/<%= movie.id %>">
+                <img src="img/DetalleProducto/<%=movie.poster%>" alt="" >
+              </a>
             </div>
-            */ %>
-      
-            <div class="topEstrenos">
-              <div class="peliculaEstreno"> Top número 1<img src="img\Home\TopEstrenos\star wars.webp" alt="" ></div>
-              <div class="peliculaEstreno"> Top número 2 <img src="img\Home\TopEstrenos\Volver_al_Futuro_III_Poster.webp" alt="" ></div>
-              <div class="peliculaEstreno"> Top número 3 <img src="img\Home\TopEstrenos\Historia sin fin.jpg" alt="" ></div>
-            </div>
-
-                        <% /*
-            <div class="topEstrenos">
-              <%(productos[2]).forEach(function (producto){%>
-                <a href="/products/detalleProducto/<%=producto.id%>"
-                  <div class="peliculaEstreno"><img src="img/DetalleProducto/portada/<%=producto.poster%>" alt=""></div>
-                </a>
-                <%})%>
-              </div>
-              */ %>
-
+          <%})%>
         </div>
 
-    </main>
+      </div>
+
+  </main>
 
   <footer>
     <%-include('./partials/footer')%>

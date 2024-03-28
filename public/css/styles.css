@@ -163,6 +163,7 @@ header{
     grid-gap: 15px;
     margin-top:0px;
     width: 70%;
+    object-fit: contain;
 
     img{
         width: 100%;
@@ -173,8 +174,9 @@ header{
 .pelicula {
     width: 300px;
     background-color: #ddd;
-    height: 350px;
+    height: 425px;
     overflow-y: hidden;
+    object-fit: contain;
 }
 
 
@@ -200,7 +202,9 @@ header{
     padding: 10px;
     border-radius: 10px;
     border:  2px solid #02b0ff;
-    width: 400px;
+    width: 80%;
+    object-fit: contain;
+    
 }
 
 .iconosFooter {
@@ -284,7 +288,7 @@ section img:hover{
     
     
     .peliculaEstreno {
-        width: 240px;
+        width: 100%;
     }
    
 }
@@ -300,7 +304,7 @@ section img:hover{
     
     
     .peliculaEstreno {
-        width: 260px;
+        width: 100%;
     }
    
 }
@@ -336,7 +340,7 @@ section img:hover{
     
     
     .peliculaEstreno {
-        width: 200px;
+        width: 100%;
     }
     .iconosFooter {
         font-size: 35px;

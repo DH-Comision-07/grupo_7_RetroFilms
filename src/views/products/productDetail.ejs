@@ -19,32 +19,31 @@
        <br>
       <section class ="peliculaSeleccionada">
          <article class = "cajaPoster">
-            <img class="btPoster" src="/img/DetalleProducto/<% product.name %>/<% product.poster %>" alt="">
+            <img class="btPoster" src="img/DetalleProducto/<%=movieDetails.poster%>" alt="">
         <br>
-            <button class ="botonPoster">Ver poster</button>
          </article>
       <br>
          <article class = "cajaDescripcionPelicula">
              <div class ="tituloPelicula">
-                 <h3 class ="tituloPeli"><%= product.name %></h3>
+                 <h3 class ="tituloPeli"><%=movieDetails.name%></h3>
              </div>
         <br>
              <div class ="precio">
-                 <h4>Precio:</h4>
-                 <p>$<%= product.price %></p>
+                 <h3>Precio:</h3>
+                 <p>$<%=movieDetails.price%></p>
              </div>    
         <br>
 
-        <h4>Duración: 2 hr</h4>
+        <h3>Duración: 2 hr</h3>
+
               <ul class = "detallePeli">
-                 <li class ="vistas"><a  href="#"></a>Vistas</li>
-                 <li class = "anio"><a  href="#"></a>Año</li>
+                 <li class = "anio"><a  href="#"></a><%=movieDetails.year%></li>
                  <li class = "calif"><a  href="#"></a>Calificacion</li>
-                 <li class ="genero"><a  href="#"></a>Genero</li>  <!--Incluir letrero que al hacer hover, muestre las respuestas de cada item de la lista (uno por uno)-->
+                 <li class ="genero"><a  href="#"></a><%=movieDetails.genre%></li>  <!--Incluir letrero que al hacer hover, muestre las respuestas de cada item de la lista (uno por uno)-->
               </ul>
        <br>
         
-                <p class ="descripcionPeli"> <%= product.description %></p>
+                <p class ="descripcionPeli"><%=movieDetails.description%></p>
                 <div>
                      <button class="botones"><a href="#"></a>Agregar al carrito</button>
                      <button class="botones"><a href="#"></a> Comprar ahora</button>
@@ -60,15 +59,6 @@
                        <li><img src="/img/DetalleProducto/Breakfast-at-tiffanys/BT-img2.jpeg" alt=""></li>
                        <li><img src="/img/DetalleProducto/Breakfast-at-tiffanys/BT-img3.jpeg" alt=""></li>
                        <li><img src="/img/DetalleProducto/Breakfast-at-tiffanys/BT-img4.jpeg" alt=""></li>
-
-                        <%(product).forEach(function (producto){%>
-                            <img src="img/Home/detalleProducto/<% product.name %>/<% product.poster %>" alt=""></div>
-                        <%})%>
-                </div>
-              
-            </section>
-          </div>
-          */ %>
                   </ul>
              </article>
       <br>
