@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include('../partials/head')%>
+    <title>productDetail</title>
+    <link rel="stylesheet" href="/css/productDetail.css">
+</head>
+
+<body>  
+    <header>
+        <%-include('../partials/header')%>
+    </header>
+    <br>
+    <section class ="contenedorTotal">
+       <article>
+          <button class ="buttonGoBack"><a class ="volver-pag-anterior"><i class="fa-solid fa-backward-step"></i>
+              Volver</a></button>
+       </article>
+       <br>
+      <section class ="selectedMovie">
+         <article class = "cajaPoster">
+            <img class="btPoster" src="/img/productDetail/<%=movieDetails.poster%>" alt="">
+        <br>
+         </article>
+      <br>
+         <article class = "movieDescriptionBox">
+             <div class ="movieeTitle">
+                 <h3 class ="movieTitle"><%=movieDetails.name%></h3>
+             </div>
+        <br>
+             <div class ="precio">
+                 <h3>Precio:</h3>
+                 <p>$<%=movieDetails.price%></p>
+             </div>    
+        <br>
+
+        <h3>Duración: 2 hr</h3>
+
+              <ul class = "movieDetail">
+                 <li class = "anio"><a  href="#"></a><%=movieDetails.year%> </li>
+                 <li> - </li>
+                 <li class = "calif"><a  href="#"></a>Calificacion </li>
+                 <li> - </li>
+                 <li class ="genero"><a  href="#"></a><%=movieDetails.genre%> </li>  <!--Incluir letrero que al hacer hover, muestre las respuestas de cada item de la lista (uno por uno)-->
+              </ul>
+       <br>
+        
+                <p class ="movieDescription"><%=movieDetails.description%></p>
+                <div>
+                     <button class="buttons"><a href="#"></a>Agregar al carrito</button>
+                     <button class="buttons"><a href="#"></a> Comprar ahora</button>
+                </div>
+         </article>
+     </section>
+      <br>
+         <h3 class="titulo">Imagenes</h3>
+              <article class = "imagesGrid">
+        <br>
+                  <ul>
+                       <li><img src="/img/productDetail/Breakfast-at-tiffanys/BT-img1.jpeg" alt=""></li>
+                       <li><img src="/img/productDetail/Breakfast-at-tiffanys/BT-img2.jpeg" alt=""></li>
+                       <li><img src="/img/productDetail/Breakfast-at-tiffanys/BT-img3.jpeg" alt=""></li>
+                       <li><img src="/img/productDetail/Breakfast-at-tiffanys/BT-img4.jpeg" alt=""></li>
+                  </ul>
+             </article>
+      <br>
+         <h3 class="titulo">Reparto Principal</h3>
+      <br>
+            <article class ="mainCast">
+              
+                <div>
+                     <img class="actor" src="/img/productDetail/Breakfast-at-tiffanys/AudreyHepburn.jpeg" alt=""> 
+                     <p>Audrey Hepburn</p>
+                </div>
+                <div>
+                     <img class = "actor" src="/img/productDetail/Breakfast-at-tiffanys/George_Peppard_(1964).jpeg" alt=""> 
+                     <p>George Peppard</p>
+                </div>
+                <div>
+                     <img class="actor" src="/img/productDetail/Breakfast-at-tiffanys/Patricia_Neal_1952.jpeg" alt="">
+                     <p>Patricia Neal</p>
+                </div>
+                <div>
+                     <img class="actor" src="/img/productDetail/Breakfast-at-tiffanys/Buddy_Ebsen_-_USCG.jpeg" alt="">
+                     <p>Buddy Ebsen</p>
+                </div>
+                <div>
+                     <img class="actor" src="/img/productDetail/Breakfast-at-tiffanys/Martin_Balsam_Film_Still.jpeg" alt="">
+                     <p>Martin Balsam</p>
+                </div>
+                <div>
+                     <img class="actor" src="/img/productDetail/Breakfast-at-tiffanys/Mickey_Rooney_still.jpeg" alt="">
+                     <p>Mickey Rooney</p>
+                </div>
+                <div>
+                     <img class="actor" src="/img/productDetail/Breakfast-at-tiffanys/Alan_Reed_in_Time_Table_(1956).jpeg" alt="">
+                     <p>Alan Reed</p>
+                </div>
+                <div>
+                     <img class="actor" src="/img/productDetail/Breakfast-at-tiffanys/Jose de Vilallonga_(cropped).jpeg" alt="">
+                     <p>José Luis de Vilallonga</p>
+                </div>
+                <div>
+                     <img class="actor" src="/img/productDetail/Breakfast-at-tiffanys/John_McGiver_1964.jpeg" alt="">
+                     <p>John McGiver</p>
+                </div>
+                <div>
+                     <img class="actor" src="/img/productDetail/Breakfast-at-tiffanys/Stanley_Adams.jpeg" alt="">
+                     <p>Stanley Adams</p>
+                </div>
+        
+            </article>
+      <br>
+         <h3 class="titulo">También te puede gustar</h3>
+      <br>
+            <article class ="youMightAlsoLike">
+                <div class ="back"><i class="fa-solid fa-angle-left"></i></div>
+                <div><img src="/img/productDetail/Amanecer/Amanecer-poster.jpeg" alt=""><a href="#"></a></div>
+                <div><img src="/img/productDetail/CantandoBajoLaLluvia/CantandoBajoLaLluvia-poster.jpeg" alt=""><a href="#"></a></div>
+                <div><img src="/img/productDetail/LaDolceVita/LaDolceVita-poster.jpeg" alt=""><a href="#"></a></div>
+                <div><img src="/img/productDetail/LoQueElVientoSeLlevo/LoQueElVientoSeLlevo.jpeg" alt=""><a href="#"></a></div>
+                <div class ="forward"><i class="fa-solid fa-angle-right"></i></div>
+            </article>
+      <br>
+         <h3 class="titulo">Reviews</h3>
+            <article class = "resenias">
+        <br>
+                <div class = "cajaComentario">
+                <div class="usuario">
+                    <img src="/img/productDetail/Usuarios/avatar1.png" alt="fotoUsuario"> Nombre del Usuario
+                </div>
+                    <p class ="comentario">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex accusamus magni ab assumenda enim, possimus voluptatum saepe similique voluptas! Sapiente ducimus quas at consectetur provident. Obcaecati minus animi porro inventore?
+                    </p>
+                </div>
+        <br>
+                <div class = "cajaComentario">
+                   <div class="usuario">
+                       <img src="/img/productDetail/Usuarios/avatar2.png" alt="fotoUsuario"> Nombre del Usuario
+                   </div>
+                       <p class ="comentario">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex accusamus magni ab assumenda enim, possimus voluptatum saepe similique voluptas! Sapiente ducimus quas at consectetur provident. Obcaecati minus animi porro inventore?
+                    </p>
+                </div>
+            </article>
+    
+    </section>
+        <br>
+    <footer>
+        <%-include('../partials/footer') %>
+    </footer>
+</body>
+      
+</html>

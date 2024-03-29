@@ -2,66 +2,61 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <script src="https://kit.fontawesome.com/ef41563829.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="/css/styles.css">  
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <script src="https://kit.fontawesome.com/ef41563829.js" crossorigin="anonymous"></script>
+  <%- include("partials/head.ejs") %>  
+  <link rel="stylesheet" href="/css/styles.css"> 
   <title>RetroFilms</title> 
-
+ 
 </head>
 
 <body>
-        <a href="#" class="back-to-top">
-          <i class="fas fa-arrow-up"></i>
-        </a>
+  <a href="#" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
   <header>
         <%-include('./partials/header')%>
   </header>
 
-    <main class="bodyPrincipal">
-          <div class="carrusel">
-            <section>
-              <%carrousellMovies.forEach(function (movie){%>
-                <img src="img/Home/<%=movie.poster%>" alt="" >
-              <%})%>
-            </section>
-          </div>
+  <main class="mainBody">
+      <div class="carrousell">
+        <section>
+          <%carrousellMovies.forEach(function (movie){%>
+            <img src="img/Home/<%=movie.poster%>" alt="" >
+          <%})%>
+        </section>
+      </div>
 
-        <div class="tabsContenido">
-            <div>Últimas</div>
-            <div>Estrenos</div>
-            <div>Más Vistas</div>
-        </div>
+      <div class="contentTabs">
+          <div>Últimas</div>
+          <div>Estrenos</div>
+          <div>Más Vistas</div>
+      </div>
 
-        <div class="contenidoMain">
+      <div class="mainContent">
 
-            <div class="cuadriculaPeliculas">
-              <%movieGridMovies.forEach(function (movie){%>
-              <div class="pelicula"><img src="img/DetalleProducto/<%=movie.poster%>" alt=""></div>
-              <%})%>
+        <div class="movieGrid">
+          <%movieGridMovies.forEach(function (movie){%>
+            <div class="movie">
+              <a href="/products/productDetail/<%= movie.id %>">
+                <img src="img/productDetail/<%=movie.poster%>" alt="">
+              </a>
             </div>
-      
-            <div class="topEstrenos">
-              <%topMovies.forEach(function (movie,index){%>
-              <div class="peliculaEstreno"> Top número <%=index+1%> <img src="img/DetalleProducto/<%=movie.poster%>" alt="" ></div>
-              <%})%>
-              </div>
-
+          <%})%>
+        </div>
+  
+        <div class="topMovies">
+          <%topMovies.forEach(function (movie,index){%>
+            <div class="newMovies"> Top número <%=index+1%> 
+              <a href="/products/productDetail/<%= movie.id %>">
+                <img src="img/productDetail/<%=movie.poster%>" alt="" >
+              </a>
+            </div>
+          <%})%>
         </div>
 
-    </main>
+      </div>
+
+  </main>
 
   <footer>
     <%-include('./partials/footer')%>

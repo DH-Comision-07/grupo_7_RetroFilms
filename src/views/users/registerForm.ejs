@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Registro</title>
+        <link rel="stylesheet" href="/css/registerForm.css">
+        <%-include('../partials/head') %>
+
+    </head>
+
+    <header class="header">
+        <%-include('../partials/header')%>
+    </header>
+    
+    <body>
+  
+        <form action="#" method="post">
+            <label for="nombre">Tu nombre
+                <input type="text"  name="nombre" placeholder="Nombres y Apellidos" required pattern="[^\d+$]+" title="Solo se permiten letras y numeros">
+            </label>
+
+            <label for="userName">Nombre de Usuario
+                <input type="text"  name="userName" placeholder="User name" required pattern="[^\d+$]+" title="Solo se permiten letras y numeros">
+            </label>
+
+            <label for="telefono">Numero de telefono movil
+                <input type="tel" name ="telefono" placeholder ="xxx-xxx-xxx" required pattern="[\d+]+" title="Solo se permiten numeros">
+            </label>
+
+            <label for="profilePic">Foto de perfil
+                <input type="file" name ="profilePic" accept=".jpg" class="profilePhoto">
+            </label>
+
+            <label for ="password">Contraseña
+                <input type ="password" name = "password" placeholder = "xxxx" required pattern="[^\d+$]+" title="Solo se permiten letras y numeros">
+            </label>
+            
+            <label for = "repite-password">Repite la contraseña
+                <input type = "password" name = "repite-password" placeholder= "xxxx" required pattern="[^\d+$]+" title="Solo se permiten letras y numeros">
+            </label>
+
+            <label for="checkbox">
+                <input type=checkbox name = "checkbox" required pattern="[^\d+$]+" title="Solo se permiten letras y numeros">Acepta condiciones y restricciones 
+            </label>
+
+            <br>
+            
+            <label for="submitButton">
+                <button type=submit name="submitButton"> Continuar </button>
+            </label>
+
+            <p class="login">¿Ya tienes cuenta? <a href="#">Log in </a> </p>
+             
+        </form>
+
+    </body>
+
+    <footer>
+        <%-include('../partials/footer') %>
+    </footer>
+</html>

@@ -19,7 +19,7 @@ header, body {
     background-color: white
 }
 
-.contenedor {
+.container {
     margin: 5.4% 5.4%;
 }
 
@@ -33,7 +33,7 @@ header, body {
     height: 20%;
 }
 
-.formulario {
+.entryForm {
     width: 70vw;
     margin: auto ;
     padding : 30px ;
@@ -44,8 +44,8 @@ header, body {
     font-family: "Noto Serif";
 }
 
-.usuario input,
-.contraseña input {
+.user input,
+.password input {
     width: 100%;
     background-color: #fff;
     color:black;
@@ -57,9 +57,9 @@ header, body {
     border-radius: 10px;
 }
 
-.ingresar button,
+.submit button,
 .crearCuenta button,
-.recuperarContraseña button {
+.savePassword button {
     width: 100%;
     padding: 10px;
     font-size: 16px;
@@ -72,7 +72,7 @@ header, body {
 }
 
 @media screen and (min-width: 768px) {
-    .formulario {
+    .entryForm {
         width: 500px;
         margin: 0px auto;
     }

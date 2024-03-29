@@ -1,7 +1,7 @@
-const productoService = require('../models/productoService.js')
+const productService = require('../models/productService.js')
 
 const mainController = { 
-    index: (req, res) => res.render("index", {carrousellMovies: productoService.getCarrousell(),movieGridMovies: productoService.getMovieGrid(), topMovies: productoService.getTopMovies()})
+    index: (req, res) => res.render("index", {carrousellMovies: productService.getCarrousell(),movieGridMovies: productService.getMovieGrid(), topMovies: productService.getTopMovies()})
 }
 
 
