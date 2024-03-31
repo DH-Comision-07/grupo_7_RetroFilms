@@ -56,59 +56,23 @@
          <h3 class="titulo">Imagenes</h3>
               <article class = "imagesGrid">
         <br>
+        <% for (let imagesMovie of movieDetails.imagesMovie) { %>
                   <ul>
-                       <li><img src="/img/productDetail/Breakfast-at-tiffanys/BT-img1.jpeg" alt=""></li>
-                       <li><img src="/img/productDetail/Breakfast-at-tiffanys/BT-img2.jpeg" alt=""></li>
-                       <li><img src="/img/productDetail/Breakfast-at-tiffanys/BT-img3.jpeg" alt=""></li>
-                       <li><img src="/img/productDetail/Breakfast-at-tiffanys/BT-img4.jpeg" alt=""></li>
+                       <li><img src="/img/productDetail/<%= imagesMovie %>" alt=""></li>
                   </ul>
+                  <% } %>
+                  
              </article>
       <br>
          <h3 class="titulo">Reparto Principal</h3>
       <br>
             <article class ="mainCast">
-              
+                <% for (let cast of movieDetails.cast){%>
                 <div>
-                     <img class="actor" src="/img/productDetail/Breakfast-at-tiffanys/AudreyHepburn.jpeg" alt=""> 
-                     <p>Audrey Hepburn</p>
+                    <img class="actor" src="/img/productDetail/<%=cast.image%>" alt=""> 
+                    <p><%=cast.name%></p>
                 </div>
-                <div>
-                     <img class = "actor" src="/img/productDetail/Breakfast-at-tiffanys/George_Peppard_(1964).jpeg" alt=""> 
-                     <p>George Peppard</p>
-                </div>
-                <div>
-                     <img class="actor" src="/img/productDetail/Breakfast-at-tiffanys/Patricia_Neal_1952.jpeg" alt="">
-                     <p>Patricia Neal</p>
-                </div>
-                <div>
-                     <img class="actor" src="/img/productDetail/Breakfast-at-tiffanys/Buddy_Ebsen_-_USCG.jpeg" alt="">
-                     <p>Buddy Ebsen</p>
-                </div>
-                <div>
-                     <img class="actor" src="/img/productDetail/Breakfast-at-tiffanys/Martin_Balsam_Film_Still.jpeg" alt="">
-                     <p>Martin Balsam</p>
-                </div>
-                <div>
-                     <img class="actor" src="/img/productDetail/Breakfast-at-tiffanys/Mickey_Rooney_still.jpeg" alt="">
-                     <p>Mickey Rooney</p>
-                </div>
-                <div>
-                     <img class="actor" src="/img/productDetail/Breakfast-at-tiffanys/Alan_Reed_in_Time_Table_(1956).jpeg" alt="">
-                     <p>Alan Reed</p>
-                </div>
-                <div>
-                     <img class="actor" src="/img/productDetail/Breakfast-at-tiffanys/Jose de Vilallonga_(cropped).jpeg" alt="">
-                     <p>José Luis de Vilallonga</p>
-                </div>
-                <div>
-                     <img class="actor" src="/img/productDetail/Breakfast-at-tiffanys/John_McGiver_1964.jpeg" alt="">
-                     <p>John McGiver</p>
-                </div>
-                <div>
-                     <img class="actor" src="/img/productDetail/Breakfast-at-tiffanys/Stanley_Adams.jpeg" alt="">
-                     <p>Stanley Adams</p>
-                </div>
-        
+                <%}%>
             </article>
       <br>
          <h3 class="titulo">También te puede gustar</h3>
