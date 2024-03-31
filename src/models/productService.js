@@ -30,22 +30,20 @@ let productService = {
             //existe en carrousel y la retornamos
             return carrousellmovie;
         }
-
-        // https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
-        // let movies = [];
-        // movies = movies.concat(this.products.carrousell);
-        // movies = movies.concat(this.products.movieGrid);
-        // movies = movies.concat(this.products.topMovies);
-        // return movies.find(product => product.id == id);
-
     },
-    save: function(product){
-        this.products.push(product);
-        fs.writeFileSync(path.resolve(__dirname, "../data/productsDataBase.json"), JSON.stringify(this.products))
-        return "OK"
-    },
+    
+    addMovie: function(movie){
 
+        this.getMovieGrid().push(movie);
+        fs.writeFileSync(path.resolve(__dirname, "../models/movies.json"), JSON.stringify(this.getMovieGrid), (err)=>{
+            if(!err){
+            return res.send('pelicula añadida al JSON')
+            }else{
+            console.log('ERROR')
+            }
+        })
+
+    }
 }
 
-module.exports = productService;
-
+module.exports = productService

@@ -8,6 +8,7 @@ const indexRouter = require("./routes/index.routes")
 app.use(methodOverride('_method')) // middleware para habilitar
 app.listen(port, () => 
 console.log('https://localhost:'+ port));
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, "/views"));
 

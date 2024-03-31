@@ -1,12 +1,14 @@
 * {
     box-sizing: border-box;
-    font-family: "Noto Serif";
+    font-family: "Bebas Neue", sans-serif;
 }
+
+
 
 body {
     font-size:17px;
     font-weight: 200;
-    font-family: 'Noto Serif';
+    font-family: "Noto Serif";
     color:#0000; 
 }
 
@@ -19,12 +21,14 @@ form {
     border-radius: 2%;
     background-color: #E0EBF3;
     color: black;
-    margin-top: 0px
+    margin-top: 0px;
+    font-family: "Noto Serif"; 
 }
 
 label {
     display: block;
     margin-bottom: 8px;
+    font-family: "Noto Serif";
 }
 
 input[type="text"],
@@ -39,6 +43,7 @@ textarea {
     padding: 5px;
     box-sizing: border-box;
     border-radius: 10px;
+    font-family: "Noto Serif";
 }
 
 button {
