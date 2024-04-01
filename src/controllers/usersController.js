@@ -16,7 +16,11 @@ const usersController = {
                 oldData: req.body
             });
         }
+
+        return res.send("Tu usuario ha sido creado con exito!")
     }
+
+    
 }
 
 module.exports = usersController;

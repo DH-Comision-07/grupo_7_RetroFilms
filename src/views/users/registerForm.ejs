@@ -65,7 +65,13 @@
                     type="file" 
                     name ="profilePic" 
                     accept=".jpg" 
-                    class="profilePhoto">
+                    class="<%= locals.errors && errors.email ? "form-control-is-invalid" : null %>">
+
+                    <% if (locals.errors && errors.profilePic) { %>
+                        <div class="textDanger">
+                            <%= errors.profilePic.msg  %>
+                        </div>
+                    <% } %>
             </label>
 
             <label for ="password">Contraseña
