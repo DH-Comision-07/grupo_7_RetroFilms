@@ -32,18 +32,38 @@ let productService = {
         }
     },
     
-    addMovie: function(movie){
+   addMovie: function(movie){
+    console.log(req.files);
+       /* let maxId = 0;
+        for (let i=0; i<this.products.movieGrid.length; i++){
+            if(maxId > this.product.moviegrid[i]){
+                maxId= this.products.movieGrid [i].id;
+            };
+        }
 
-        this.getMovieGrid().push(movie);
-        fs.writeFileSync(path.resolve(__dirname, "../models/movies.json"), JSON.stringify(this.getMovieGrid), (err)=>{
-            if(!err){
-            return res.send('pelicula añadida al JSON')
-            }else{
-            console.log('ERROR')
+        let newMovie = {
+            id:(maxId +1),
+            name:req.nody.name,
+            poster:req.file.filename,
+            price:req.body.price,
+            description: req.body.description,
+            genre:req.body.genre,
+            year:req.body.year,
+            imagesMovie:req.file.filename,
+            cast:{
+                castName:req.body.name,
+                castPic:req.file.filename
             }
-        })
-
+        }
+        this.products.moviegrid.push(newMovie);
+        let moviesJSON= JSON.stringify(this.products.movieGrid);
+        fs.writeFileSync(path.resolve(__dirname, "../models/movies.json"),moviesJSON);
+            console.log(newMovie)
+            resizeBy.redirect('/');*/
+        }
     }
-}
 
-module.exports = productService
+
+
+
+module.exports = productService;

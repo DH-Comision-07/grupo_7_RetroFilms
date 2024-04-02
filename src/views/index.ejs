@@ -21,7 +21,9 @@
       <div class="carrousell">
         <section>
           <%carrousellMovies.forEach(function (movie){%>
+            <a href="/products/productDetail/<%= movie.id %>">
             <img src="img/productDetail/<%=movie.poster%>" alt="" >
+          </a>
           <%})%>
         </section>
       </div>

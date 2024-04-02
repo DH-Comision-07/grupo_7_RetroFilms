@@ -8,7 +8,7 @@ const productController = {
         create: (req, res) => res.render('creation'),
         edit:(req, res) => res.render('edition'),
         save: (req, res) => res.send('quedó guardado'),
-        add: (req, res) => res.send(req.body)
+        add: (req, res) => console.log(req.files),
     } 
 
 module.exports = productController;

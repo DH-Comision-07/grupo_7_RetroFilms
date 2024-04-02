@@ -225,7 +225,9 @@ section{
     justify-content: center;
 }
 
-section img{
+/*AXEL: Arreglar los estilos del carrusel*/
+
+section img{ 
     width: 0px;
     flex-grow: 1;
     object-fit: cover;
