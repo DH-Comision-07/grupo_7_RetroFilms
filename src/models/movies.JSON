@@ -17,24 +17,7 @@
                 "El-Padrino/padrino3.jpeg",
                 "El-Padrino/padrino4.jpeg"
             ],
-            "cast": [
-                {
-                    "name": "Al Pacino",
-                    "image": "El-padrino/Al-Pacino.webp"
-                },
-                {
-                    "name": "Diane Keaton",
-                    "image": "El-padrino/Diane-Keaton.webp"
-                },
-                {
-                    "name": "Marlon Brandon",
-                    "image": "El-padrino/Marlon-Brando.png"
-                },
-                {
-                    "name": "Robert De Niro",
-                    "image": "El-padrino/Robert-De-Niro.jpg"
-                }
-            ]
+            "cast": [ "Al Pacino", "Diane Keaton", "Marlon Brando", "Robert De Niro"]
         },
         {
             "id": 12,
@@ -54,44 +37,7 @@
                 "Breakfast-at-tiffanys/BT-img3.jpeg",
                 "Breakfast-at-tiffanys/BT-img4.jpeg"
             ],
-            "cast": [
-                {
-                    "name": "Audrey Hepburn",
-                    "image": "Breakfast-at-tiffanys/AudreyHepburn.jpeg"
-                },
-                {
-                    "name": "Buddy Ebsen",
-                    "image": "Breakfast-at-tiffanys/Buddy_Ebsen_-_USCG.jpeg"
-                },
-                {
-                    "name": "George Peppard",
-                    "image": "Breakfast-at-tiffanys/George_Peppard_(1964).jpeg"
-                },
-                {
-                    "name": "John McGiver",
-                    "image": "Breakfast-at-tiffanys/John_McGiver_1964.jpeg"
-                },
-                {
-                    "name": "Jose de Vilallonga",
-                    "image": "Breakfast-at-tiffanys/Jose de Vilallonga_(cropped).jpeg"
-                },
-                {
-                    "name": "Martin Balsam",
-                    "image": "Breakfast-at-tiffanys/Martin_Balsam_Film_Still.jpeg"
-                },
-                {
-                    "name": "Mickey Rooney",
-                    "image": "Breakfast-at-tiffanys/Mickey_Rooney_still.jpeg"
-                },
-                {
-                    "name": "Patricia Neal",
-                    "image": "Breakfast-at-tiffanys/Patricia_Neal_1952.jpeg"
-                },
-                {
-                    "name": "Stanley Adams",
-                    "image": "Breakfast-at-tiffanys/Stanley_Adams.jpeg"
-                }
-            ]
+            "cast": [ "Audrey Hepburn", "Buddy Ebsen",  "George Peppard", "John McGiver","Jose de Vilallonga", "Martin Balsam","Mickey Rooney","Patricia Neal", "Stanley Adams"]
         },
         {
             "id": 13,
@@ -107,24 +53,7 @@
                 "Amores-Perros/Amores-Perros-04.jpg",
                 "Amores-Perros/Amores-Perros-05.webp"
             ],
-            "cast": [
-                {
-                    "name": "Emilio Echevarria",
-                    "image": "Amores-Perros/Emilio-Echevarria.jpg"
-                },
-                {
-                    "name": "Gael García Bernal",
-                    "image": "Amores-Perros/Gael-Garcia-Bernal.webp"
-                },
-                {
-                    "name": "Gerardo Campbell",
-                    "image": "Amores-Perros/Gerardo-Campbell.webp"
-                },
-                {
-                    "name": "Vanessa Bauche",
-                    "image": "Amores-Perros/Vanessa-Bauche.jpg"
-                }
-            ]
+            "cast": ["Emilio Echevarria","Gael García Bernal","Gerardo Campbell","Vanessa Bauche"]
         },
         {
             "id": 14,
@@ -145,24 +74,7 @@
                 "Ben-Hur/Ben-Hur_03.jpg",
                 "Ben-Hur/Ben-Hur_04.jpeg"
             ],
-            "cast": [
-                {
-                    "name": "Charlton Heston",
-                    "image": "Ben-Hur/Charlton-Heston.jpg"
-                },
-                {
-                    "name": "Haya Harareet",
-                    "image": "Ben-Hur/Haya_Harareet.jpg"
-                },
-                {
-                    "name": "Jack Hawkins",
-                    "image": "Ben-Hur/Jack-Hawkins.webp"
-                },
-                {
-                    "name": "Stephen Boyd",
-                    "image": "Ben-Hur/Stephen-Boyd.jpg"
-                }
-            ]
+            "cast": ["Charlton Heston","Haya Harareet","Jack Hawkins","Stephen Boyd"]
         },
         {
             "id": 15,
@@ -182,28 +94,7 @@
                 "LoQueElVientoSeLlevo/loqueElViento3.jpeg",
                 "LoQueElVientoSeLlevo/loqueElViento4.jpeg"
             ],
-            "cast": [
-                {
-                    "name": "Clark Gable",
-                    "image": "LoQueElVientoSeLlevo/clark_gable.jpeg"
-                },
-                {
-                    "name": "Hattie McDaniel",
-                    "image": "LoQueElVientoSeLlevo/hattie_mcdaniel.jpeg"
-                },
-                {
-                    "name": "Leslie Howard",
-                    "image": "LoQueElVientoSeLlevo/leslie_howard.jpeg"
-                },
-                {
-                    "name": "Olivia de Havilland",
-                    "image": "LoQueElVientoSeLlevo/olivia_de_havilland.jpeg"
-                },
-                {
-                    "name": "Vivien Leigh",
-                    "image": "LoQueElVientoSeLlevo/vivien_leigh.jpeg"
-                }
-            ]
+            "cast": ["Clark Gable","Hattie McDaniel","Leslie Howard","Olivia de Havilland","Vivien Leigh"]
         },
         {
             "id": 16,
@@ -222,28 +113,7 @@
                 "LaDolceVita/ladolce3.jpeg",
                 "LaDolceVita/ladolce4.jpeg"
             ],
-            "cast": [
-                {
-                    "name": "Alain Cuny",
-                    "image": "LaDolceVita/alain_cuny.jpeg"
-                },
-                {
-                    "name": "Anita Ekberg",
-                    "image": "LaDolceVita/anita_ekberg.jpeg"
-                },
-                {
-                    "name": "Anouk Aimee",
-                    "image": "LaDolceVita/anouk_aimee.jpeg"
-                },
-                {
-                    "name": "Marcello Mastroianni",
-                    "image": "LaDolceVita/marcello_mastroianni.jpeg"
-                },
-                {
-                    "name": "Yvonne Furneaux",
-                    "image": "LaDolceVita/yvonne_furneaux.jpeg"
-                }
-            ]
+            "cast": ["Alain Cuny","Anita Ekberg","Anouk Aimee","Marcello Mastroianni","Yvonne Furneaux"]
         },
         {
             "id": 17,
@@ -262,28 +132,7 @@
                 "Seven Samurai/sietesamurai3.jpeg",
                 "Seven Samurai/sietesamurai4.jpeg"
             ],
-            "cast": [
-                {
-                    "name": "Minoru Chiaki",
-                    "image": "Seven Samurai/minoru_chiaki.jpeg"
-                },
-                {
-                    "name": "Seiji Miyaguchi",
-                    "image": "Seven Samurai/seiji_miyaguchi.jpeg"
-                },
-                {
-                    "name": "Takashi Shimura",
-                    "image": "Seven Samurai/takashi_shimura.jpeg"
-                },
-                {
-                    "name": "Tochiro Mifune",
-                    "image": "Seven Samurai/toshiro_mifune.jpeg"
-                },
-                {
-                    "name": "Yoshio inaba",
-                    "image": "Seven Samurai/yoshio_inaba.jpeg"
-                }
-            ]
+            "cast": ["Minoru Chiaki", "Seiji Miyaguchi", "Takashi Shimura", "Tochiro Mifune", "Yoshio inaba"]
         },
         {
             "id": 18,
@@ -301,28 +150,7 @@
                 "tiemposModernos/tiemposmodernos3.jpeg",
                 "tiemposModernos/tiemposmodernos4.jpeg"
             ],
-            "cast": [
-                {
-                    "name": "Charles Chaplin",
-                    "image": "tiemposModernos/charles_chaplin.jpeg"
-                },
-                {
-                    "name": "Chester Conklin",
-                    "image": "tiemposModernos/chester_conklin.jpeg"
-                },
-                {
-                    "name": "Henry Bergman",
-                    "image": "tiemposModernos/henry_bergman.jpeg"
-                },
-                {
-                    "name": "Paulette Goddard",
-                    "image": "tiemposModernos/paulette_goddard.jpeg"
-                },
-                {
-                    "name": "Stanley Standford",
-                    "image": "tiemposModernos/stanley_stanford.jpeg"
-                }
-            ]
+            "cast": ["Charles Chaplin", "Chester Conklin", "Henry Bergman", "Paulette Goddard", "Stanley Standford"]
         },
         {
             "id": 19,
@@ -341,28 +169,7 @@
                 "Fitzcarraldo/fitzcarraldo3.jpg",
                 "Fitzcarraldo/fitzcarraldo4.jpg"
             ],
-            "cast": [
-                {
-                    "name": "Claudia Cardinale",
-                    "image": "Fitzcarraldo/claudia_cardinale.jpg"
-                },
-                {
-                    "name": "Jose Lewgoy",
-                    "image": "Fitzcarraldo/jose_lewgoy.jpg"
-                },
-                {
-                    "name": "Klaus Kinski",
-                    "image": "Fitzcarraldo/klaus_kinski.jpg"
-                },
-                {
-                    "name": "Miguel Angel Fuentes",
-                    "image": "Fitzcarraldo/miguel_angel_fuentes.jpg"
-                },
-                {
-                    "name": "Paul Hittscher",
-                    "image": "Fitzcarraldo/paul_hittscher.jpg"
-                }
-            ]
+            "cast": ["Claudia Cardinale", "Jose Lewgoy","Klaus Kinski","Miguel Angel Fuentes","Paul Hittscher"]
         },
         {
             "id": 20,
@@ -381,20 +188,7 @@
                 "LaTumbaDeLasLuciernagas/grave_of_the_fireflies3.jpg",
                 "LaTumbaDeLasLuciernagas/grave_of_the_fireflies4.jpg"
             ],
-            "cast": [
-                {
-                    "name": "Corinne Orr",
-                    "image": "LaTumbaDeLasLuciernagas/Corinne_Orr.jpg"
-                },
-                {
-                    "name": "Robert Spencer",
-                    "image": "LaTumbaDeLasLuciernagas/robert_spencer.jpg"
-                },
-                {
-                    "name": "Shannon Conley",
-                    "image": "LaTumbaDeLasLuciernagas/shannon_conley.jpg"
-                }
-            ]
+            "cast": [ "Corinne Orr", "Robert Spencer", "Shannon Conley"]
         },
         {
             "id": 21,
@@ -414,24 +208,7 @@
                 "MiVecinoTororo/mi_vecino_tororo3.jpg",
                 "MiVecinoTororo/mi_vecino_tororo4.jpg"
             ],
-            "cast": [
-                {
-                    "name": "Dakota Fanning",
-                    "image": "MiVecinoTororo/dakota_fanning.jpg"
-                },
-                {
-                    "name": "Hitoshi Takagi",
-                    "image": "MiVecinoTororo/hitoshi_takagi.jpg"
-                },
-                {
-                    "name": "Noriko Hidaka",
-                    "image": "MiVecinoTororo/noriko_hidaka.jpg"
-                },
-                {
-                    "name": "Shigesato Itoi",
-                    "image": "MiVecinoTororo/Shigesato_Itoi.jpeg"
-                }
-            ]
+            "cast": [ "Dakota Fanning", "Hitoshi Takagi", "Noriko Hidaka", "Shigesato Itoi"]
         },
         {
             "id": 22,
@@ -450,28 +227,7 @@
                 "Robocop/robocop3.jpg",
                 "Robocop/robocop4.jpg"
             ],
-            "cast": [
-                {
-                    "name": "Kurtwood Smith",
-                    "image": "Robocop/kurtwood_smith.jpg"
-                },
-                {
-                    "name": "Miguel Ferrer",
-                    "image": "Robocop/miguel_ferrer.jpg"
-                },
-                {
-                    "name": "Nancy Allen",
-                    "image": "Robocop/nancy_allen.jpg"
-                },
-                {
-                    "name": "Peter Weller",
-                    "image": "Robocop/peter_weller.jpg"
-                },
-                {
-                    "name": "Ronny Cox",
-                    "image": "Robocop/ronny_cox.jpg"
-                }
-            ]
+            "cast": [ "Kurtwood Smith","Miguel Ferrer","Nancy Allen","Peter Weller","Ronny Cox"]
         },
         {
             "id": 23,
@@ -487,28 +243,7 @@
                 "ciudadanoKane/ciudadanoKane3.png",
                 "ciudadanoKane/ciudadanoKane4.jpeg"
             ],
-            "cast": [
-                {
-                    "name": "Dorothy Comingo",
-                    "image": "ciudadanoKane/dorothy_comingore.jpeg"
-                },
-                {
-                    "name": "Everett Sloane",
-                    "image": "ciudadanoKane/everett_sloane.jpeg"
-                },
-                {
-                    "name": "George Coulouris",
-                    "image": "ciudadanoKane/george_coulouris.jpeg"
-                },
-                {
-                    "name": "Joseph Cotten",
-                    "image": "ciudadanoKane/joseph_cotten.jpeg"
-                },
-                {
-                    "name": "Orson Welles",
-                    "image": "ciudadanoKane/Orson-Welles.jpeg"
-                }
-            ]
+            "cast": [ "Dorothy Comingo","Everett Sloane","George Coulouris","Joseph Cotten","Orson Welles"]
         },
         {
             "id": 24,
@@ -524,28 +259,7 @@
                 "ElGranDictador/Dictator3.jpeg",
                 "ElGranDictador/Dictator4.jpeg"
             ],
-            "cast": [
-                {
-                    "name": "Henry Daniell",
-                    "image": "ElGranDictador/henry_daniell.jpeg"
-                },
-                {
-                    "name": "Jack Oakie",
-                    "image": "ElGranDictador/jack_oakie.jpeg"
-                },
-                {
-                    "name": "Charles Chaplin",
-                    "image": "ElGranDictador/charles_chaplin.jpeg"
-                },
-                {
-                    "name": "Paulette Goddard",
-                    "image": "ElGranDictador/paulette_goddard.jpeg"
-                },
-                {
-                    "name": "Reginald Gardiner",
-                    "image": "ElGranDictador/reginald_gardiner.jpeg"
-                }
-            ]
+            "cast": [ "Henry Daniell","Jack Oakie","Charles Chaplin","Paulette Goddard","Reginald Gardiner"]
         },
         {
             "id": 25,
@@ -561,28 +275,7 @@
                 "odiseaEnElEspacio/odisea3.jpeg",
                 "odiseaEnElEspacio/odisea4.jpeg"
             ],
-            "cast": [
-                {
-                    "name": "Daniel Richter",
-                    "image": "odiseaEnElEspacio/daniel_richter.jpeg"
-                },
-                {
-                    "name": "Gary Lockwood",
-                    "image": "odiseaEnElEspacio/gary_lockwood.jpeg"
-                },
-                {
-                    "name": "Keir Dullea",
-                    "image": "odiseaEnElEspacio/keir_dullea.jpeg"
-                },
-                {
-                    "name": "Leonard Rossiter",
-                    "image": "odiseaEnElEspacio/leonard_rossiter.jpeg"
-                },
-                {
-                    "name": "William Sylvester",
-                    "image": "odiseaEnElEspacio/william_sylvester.jpeg"
-                }
-            ]
+            "cast": ["Daniel Richter","Gary Lockwood","Keir Dullea","Leonard Rossiter","William Sylvester"]
         },
         {
             "id": 26,
@@ -602,28 +295,7 @@
                 "topGun/topGun3.jpeg",
                 "topGun/topGun4.jpeg"
             ],
-            "cast": [
-                {
-                    "name": "Anthony Edwards",
-                    "image": "topGun/anthony_edwards.jpeg"
-                },
-                {
-                    "name": "Kelly McGillis",
-                    "image": "topGun/kelly_mcgillis.jpeg"
-                },
-                {
-                    "name": "Tom Cruise",
-                    "image": "topGun/tom_cruise.jpeg"
-                },
-                {
-                    "name": "Tom Skerritt",
-                    "image": "topGun/tom_skerritt.jpeg"
-                },
-                {
-                    "name": "Val Kilmer",
-                    "image": "topGun/val_kilmer.jpeg"
-                }
-            ]
+            "cast": ["Anthony Edwards","Kelly McGillis","Tom Cruise","Tom Skerritt","Val Kilmer"]
         },
         {
             "id": 27,
@@ -639,24 +311,7 @@
                 "La-Historia-Interminable/La_Historia_Interminable_03.jpg",
                 "La-Historia-Interminable/La_Historia_Interminable_04.jpeg"
             ],
-            "cast": [
-                {
-                    "name": "Noah Hathaway",
-                    "image": "La-Historia-Interminable/Noah-Hathaway.jpg"
-                },
-                {
-                    "name": "Barret Oliver",
-                    "image": "La-Historia-Interminable/Barret-Oliver.jpg"
-                },
-                {
-                    "name": "Tami Stronach",
-                    "image": "La-Historia-Interminable/Tami-Stronach.jpg"
-                },
-                {
-                    "name": "General McRaney",
-                    "image": "La-Historia-Interminable/Gerald-McRaney.jpg"
-                }
-            ]
+            "cast": ["Noah Hathaway","Barret Oliver","Tami Stronach","General McRaney"]
         },
         {
             "id": 28,
@@ -672,32 +327,7 @@
                 "laChaquetaMetalica/metalJacket3.jpeg",
                 "laChaquetaMetalica/metalJacket4.jpeg"
             ],
-            "cast": [
-                {
-                    "name": "Adam Baldwin",
-                    "image": "laChaquetaMetalica/adam_baldwin.jpeg"
-                },
-                {
-                    "name": "Arliss Howard",
-                    "image": "laChaquetaMetalica/arliss_howard.jpeg"
-                },
-                {
-                    "name": "Dorian Harewood",
-                    "image": "laChaquetaMetalica/dorian_harewood.jpeg"
-                },
-                {
-                    "name": "Matthew Modine",
-                    "image": "laChaquetaMetalica/matthew_modine.jpeg"
-                },
-                {
-                    "name": "R Lee Ermey",
-                    "image": "laChaquetaMetalica/r_lee_ermey.jpeg"
-                },
-                {
-                    "name": "Vincent D Onofrio",
-                    "image": "laChaquetaMetalica/vincent_d_onofrio.jpeg"
-                }
-            ]
+            "cast": ["Adam Baldwin","Arliss Howard","Dorian Harewood","Matthew Modine","R Lee Ermey","Vincent D Onofrio"]
         }
     ],
     "topMovies": [
@@ -715,24 +345,7 @@
                 "La-Historia-Interminable/La_Historia_Interminable_03.jpg",
                 "La-Historia-Interminable/La_Historia_Interminable_04.jpeg"
             ],
-            "cast": [
-                {
-                    "name": "Noah Hathaway",
-                    "image": "La-Historia-Interminable/Noah-Hathaway.jpg"
-                },
-                {
-                    "name": "Barret Oliver",
-                    "image": "La-Historia-Interminable/Barret-Oliver.jpg"
-                },
-                {
-                    "name": "Gerald McRaney",
-                    "image": "La-Historia-Interminable/Gerald-McRaney.jpg"
-                },
-                {
-                    "name": "Tami Stronach",
-                    "image": "La-Historia-Interminable/Tami-Stronach.jpg"
-                }
-            ]
+            "cast": ["Noah Hathaway","Barret Oliver","Gerald McRaney","Tami Stronach"]
         },
         {
             "id": 30,
@@ -751,24 +364,7 @@
                 "BTTF3/BTTF33.jfif",
                 "BTTF3/BTTF34.jpg"
             ],
-            "cast": [
-                {
-                    "name": "Christopher Lloyd",
-                    "image": "BTTF3/BackToTheFutureChristopherLloyd.jpg"
-                },
-                {
-                    "name": "Mary Steen Burguen",
-                    "image": "BTTF3/BackToTheFuture3MarySteenBurguen.jpg"
-                },
-                {
-                    "name": "Kathleen Thompson",
-                    "image": "BTTF3/BackToTheFutureKathleenThompson.jfif"
-                },
-                {
-                    "name": "Michael Fox",
-                    "image": "BTTF3/BackToTheFutureMichaelFox.jpg"
-                }
-            ]
+            "cast": ["Christopher Lloyd","Mary Steen Burguen","Kathleen Thompson","Michael Fox"]
         },
         {
             "id": 31,
@@ -787,28 +383,7 @@
                 "starwars/starwars3.jpeg",
                 "starwars/starwars4.jpeg"
             ],
-            "cast": [
-                {
-                    "name": "Alec Guinness",
-                    "image": "starwars/alec_guinness.jpeg"
-                },
-                {
-                    "name": "Carrie Fisher",
-                    "image": "starwars/carrie_fisher.jpeg"
-                },
-                {
-                    "name": "Harrison Ford",
-                    "image": "starwars/harrison_ford.jpeg"
-                },
-                {
-                    "name": "Mark Hamill",
-                    "image": "starwars/mark_hamill.jpeg"    
-                },
-                {
-                    "name": "Peter Cushing",
-                    "image": "starwars/peter_cushing.jpeg"
-                }
-            ]
+            "cast": ["Alec Guinness","Carrie Fisher","Harrison Ford","Mark Hamill","Peter Cushing"]
         }
     ]
 }
