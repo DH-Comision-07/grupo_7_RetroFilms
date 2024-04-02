@@ -14,7 +14,7 @@ app.set('views', path.join(__dirname, "/views"));
 
 app.use(express.static('public'));
 
-app.use(express.urlencoded( { extended: false } ));//permite que los campos de formularios se env    
+app.use(express.urlencoded( { extended: false } )); //permite que los campos de formularios se capturen via post en "req.body"     
 app.use(express.json())
 
 app.use('/', indexRouter);

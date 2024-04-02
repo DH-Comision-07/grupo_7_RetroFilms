@@ -2,7 +2,7 @@ const productService = require('../models/productService.js')
 
 const mainController = { 
     index: (req, res) => res.render("index", {
-        carrousellMovies: productService.getCarrousell(),
+        carrousell: productService.getCarrousell(),
         movieGridMovies: productService.getMovieGrid(), 
         topMovies: productService.getTopMovies()
     })
