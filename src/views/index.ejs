@@ -18,14 +18,13 @@
   </header>
 
   <main class="mainBody">
-      <div class="carrousell">
+      <div>
         <section>
-          <%carrousellMovies.forEach(function (movie){%>
-            <img src="img/productDetail/<%=movie.poster%>" alt="" >
-          <%})%>
-        </section>
+          <%carrousell.forEach(function (movie){%>
+            <img src="img/productDetail/<%=movie.poster%>" alt="<%=movie.name%>" >
+          <%})%> 
+        </section>  
       </div>
-       
       <div class="contentTabs">
           <div>Últimas</div>
           <div>Estrenos</div>

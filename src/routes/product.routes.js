@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
         return cb(null, fileDir)
     },
     filename: function (req, file, cb) {
-        const uniqueSuffix = "movie-" + Date.now()
+        const uniqueSuffix = "image-" + Date.now()
         return cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname))
     }
 })
@@ -31,7 +31,7 @@ router.get('/shoppingCart', productController.shoppingCart); //metodo (verbo)
 
 // ---- CREATE PRODUCT ----//
 router.get('/create', productController.create);
-router.post('/',upload.array('image'),productController.add)
+router.post('/',upload.array('imagesMovie'), productController.add)
 
 // ----- EDIT PRODUCT ----//
 router.get('/edit/:id', productController.edit);

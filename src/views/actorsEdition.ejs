@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include("partials/head.ejs") %>
+        <title>Crear Producto</title>
+        <link rel="stylesheet" href="/css/actorEdition.css">
+    </head>
+    <body>
+        <header>
+            <%- include("partials/header.ejs") %>
+        </header>
+        <br>
+        <form action="/actors" method="POST" enctype="multipart/form-data">
+            <label for="fullName">Nombre:</label>
+                <input type="text" id="fullName" name="fullName">
+            <label for="shortBio">Biografia:</label>
+            <textarea id="shortBio" name="shortBio" rows="6" ></textarea>
+            <label for="moviesPlayedAt">Peliculas en las que participa:</label>
+            <input type="text" id="moviesPlayedAt" name="moviesPlayedAt">
+            <label for="actorPic">Foto:</label>
+            <input type="file" id="actorPic" name="actorPic" >
+        <br>
+        <button type="submit">Editar Actor</button>
+
+        </form>
+    
+</body>
+</html>
