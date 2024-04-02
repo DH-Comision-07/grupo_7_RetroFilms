@@ -60,6 +60,7 @@ router.get("/login", usersController.login)
 router.get("/register", usersController.register)
 /*router.post("/register", uploadFile.single("profilePic"), validations,  usersController.processRegister)*/
 
-
+/*------ EDICION DE USUARIOS -----*/
+router.get('/edit/:id', usersController.userEdit)
 
 module.exports = router;

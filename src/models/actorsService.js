@@ -12,4 +12,4 @@ let actorsService = {
     }
 }
 
-module.exports = actorsService
+module.exports = actorsService;

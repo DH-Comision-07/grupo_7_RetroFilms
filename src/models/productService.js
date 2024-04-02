@@ -1,16 +1,10 @@
 const fs = require ('fs');
 const path = require ('path');
 const products = require ('./movies.json');
-const carrousell = require ('./carrousell.json');
+
 
 let productService = {
     products: products, 
-
-    carrousell:carrousell,
-
-    getCarrousell: function(){
-        return this.carrousell;
-    },
 
     getMovieGrid: function(){
         return this.products.movieGrid;

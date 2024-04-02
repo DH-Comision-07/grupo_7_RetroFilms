@@ -6,7 +6,8 @@ const usersController = {
     login: (req, res) => res.render("users/login"),
 
     register: (req, res) => res.render("users/registerForm"),
-    
+
+    userEdit: (req, res) =>res.render('users/userEditForm'),    
     /*processRegister: (req, res) => {
         const resultValidation = validationResult(req);
         
