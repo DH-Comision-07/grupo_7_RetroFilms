@@ -10,25 +10,22 @@
         <%- include("partials/header.ejs") %>
     </header>
     <br>
-    <form action="/products/create" method="POST" enctype="multipart/form-data">
+    <form action="/products" method="POST" enctype="multipart/form-data">
         <label for="name">NOMBRE</label>
-        <input type="text" id="name" name="name">
+            <input type="text" id="name" name="name">
         <label for="image">IMAGEN PORTADA</label>
-        <input type="file" id="image" name="image" accept="image/*">
+            <input type="file" multiple id="image" name="image" accept="image/*">
         <label for="price">PRECIO</label>
-        <input type="number" id="price" name="price">
+            <input type="number" id="price" name="price">
         <label for="description">DESCRIPCIÓN</label>
         <textarea id="description" name="description" rows="4" ></textarea>
         <label for="category">GÉNERO</label>
-        <input type="text" id="category" name="category" >
+            <input type="text" id="category" name="category" >
         <label for="name">AÑO</label>
-        <input type="number" id="anio" name="anio" >
+            <input type="number" id="anio" name="anio" >
         <br>
-        <label for="image">IMAGENES GRABACIÓN</label>
-        <input type="file" multiple id="image" name="image" accept="image/*" >
-        <label for="image">REPARTO</label> Foto y nombre del actor:
-        <input type="file" multiple id="image" name="image" accept="image/*">
-        <input type="text" name="castName" id="castName"> 
+        <label for="image">REPARTO</label> Nombre del actor:
+            <input type="text" name="castName" id="castName"> 
         <br>
         
         <button type="submit">Crear Producto</button>
