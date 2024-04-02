@@ -1,5 +1,4 @@
-{ 
-    "carrousell": [
+[
         {
             "id": 1,
             "name": "El bueno, el feo y el malo",
@@ -200,4 +199,3 @@
                 "topMovies": false
             }
     ]
-}

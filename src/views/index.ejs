@@ -21,7 +21,7 @@
       <div>
         <section>
           <%carrousell.forEach(function (movie){%>
-            <img src="img/productDetail/<%=movie.poster%>" alt="<%=movie.name%>" >
+            <img src="img/productDetail/<%=movie.poster%>" alt="" >
           <%})%> 
         </section>  
       </div>
@@ -37,7 +37,7 @@
           <%movieGridMovies.forEach(function (movie){%>
             <div class="movie">
               <a href="/products/productDetail/<%= movie.id %>">
-                <img src="img/productDetail/<%=movie.poster%>" alt="">
+                <img src="img/productDetail/<%=movie.imagesMovie[0]%>" alt="">
               </a>
             </div>
           <%})%>
@@ -47,7 +47,7 @@
           <%topMovies.forEach(function (movie,index){%>
             <div class="newMovies"> Top número <%=index+1%> 
               <a href="/products/productDetail/<%= movie.id %>">
-                <img src="img/productDetail/<%=movie.poster%>" alt="" >
+                <img src="img/productDetail/<%=movie.imagesMovie[0]%>" alt="" >
               </a>
             </div>
           <%})%>
