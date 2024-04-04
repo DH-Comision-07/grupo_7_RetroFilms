@@ -44,7 +44,10 @@ router.get('/productDetail/:id/edit', productController.edit);
 router.put('/:id' ,upload.array('imagesMovie'), productController.save)
 
 //-- DELETE PRODUCT ---// 
-/*router.get('/productDetail/:id/', productController.find);
-router.delete('/:id', productController.delete);*/
+router.get('/productDetail/:id/', productController.find);
+router.delete('/:id', productController.delete);
+
+router.delete
+
 
 module.exports = router;

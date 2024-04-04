@@ -2,9 +2,9 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const port = 8085;
-const methodOverride = require ('method-override')
+const methodOverride = require ('method-override');
 const bodyParser = require ('body-parser');
-const indexRouter = require("./routes/index.routes")
+const indexRouter = require("./routes/index.routes");
 
 app.use(methodOverride('_method')) // middleware para habilitar
 
@@ -22,7 +22,7 @@ app.set('views', path.join(__dirname, "/views"));
 app.use(express.static('public'));
 
 app.use(express.urlencoded( { extended: false } )); //permite que los campos de formularios se capturen via post en "req.body"     
-app.use(express.json())
+app.use(express.json());
 
 app.use('/', indexRouter);
 

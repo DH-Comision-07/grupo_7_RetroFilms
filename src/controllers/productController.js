@@ -21,6 +21,7 @@ const productController = {
                                 res.status(500).json({ message: error.message });
                 }
         }
-}
+        
+};
 
 module.exports = productController;
