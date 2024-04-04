@@ -6,50 +6,42 @@ const products = require ('./movies.json');
 let productService = {
     products: products, 
 
-    getMovieGrid: function(){
-        return this.products.movieGrid;
+    getAll: function() {
+        return this.products;
     },
-    getTopMovies: function(){
-        return this.products.topMovies;
+    getTopMovies: function() {
+        return this.products.filter(movie=>movie.topNewMovies === true);
     },
-    
+    getMovieGrid: function() {
+        return this.products.filter(movie=>movie.topNewMovies === false);
+    },
     getOneBy: function (id) {
-            let movieGrid = this.products.movieGrid.find(product => product.id == id);
-            if(!movieGrid){
-                return this.products.topMovies.find(product => product.id == id);
-            }else{
-                return movieGrid;
-            }
+            return this.products.find(product => product.id == id);
     },
     
-    addMovie: function(movie){
-    console.log(req.files);
-       /* let maxId = 0;
-        for (let i=0; i<this.products.movieGrid.length; i++){
-            if(maxId > this.product.moviegrid[i]){
-                maxId= this.products.movieGrid [i].id;
+    addMovie: function(movie,imagePaths){           
+        let maxId = 0;
+        for (let i=0; i < this.products.length; i++){
+            if(this.products[i].id > maxId){
+                maxId = this.products[i].id;
             };
         }
 
         let newMovie = {
             id:(maxId +1),
-            name:req.nody.name,
-            poster:req.file.filename,
-            price:req.body.price,
-            description: req.body.description,
-            genre:req.body.genre,
-            year:req.body.year,
-            imagesMovie:req.file.filename,
-            cast:{
-                castName:req.body.name,
-                castPic:req.file.filename
-            }
+            name:movie.name,
+            price: parseFloat(movie.price),
+            description: movie.description,
+            genre:[movie.genre],
+            year: parseInt(movie.year),
+            imagesMovie:imagePaths,
+            topNewMovies:movie.topNewMovies === "on",
+            cast: []        
         }
-        this.products.moviegrid.push(newMovie);
-        let moviesJSON= JSON.stringify(this.products.movieGrid);
+        console.log("creating movie",newMovie)
+        this.products.push(newMovie);
+        let moviesJSON= JSON.stringify(this.products);
         fs.writeFileSync(path.resolve(__dirname, "../models/movies.json"),moviesJSON);
-            console.log(newMovie)
-            resizeBy.redirect('/');*/
         }
     }
 

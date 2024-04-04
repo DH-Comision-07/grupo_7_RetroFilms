@@ -9,14 +9,12 @@
     <header>
         <%- include("partials/header.ejs") %>
     </header>
-    <br>
-    <form action="/products" method="POST" enctype="multipart/form-data">
+    <br>   
+    <form action="/products" method="POST" enctype="multipart/form-data">        
         <label for="name">NOMBRE</label>
             <input type="text" id="name" name="name">
-        <label for="image">IMAGENES</label>
-            <input type="file" multiple id="image" name="image" accept="image/*">
         <label for="price">PRECIO</label>
-            <input type="number" id="price" name="price">
+            <input type="number" id="price" name="price" accept="0-100" step=".01"/>
         <label for="description">DESCRIPCIÓN</label>
         <textarea id="description" name="description" rows="4" ></textarea>
         <label for="genre">GÉNERO</label>
@@ -24,6 +22,11 @@
         <label for="year">AÑO</label>
             <input type="number" id="year" name="year" >
         <br>
+        <label for="image">IMAGENES</label>
+            <input type="file" multiple id="imagesMovie" name="imagesMovie" accept="image/*">
+        <br>
+        <label for="topNewMovies">CATEGORIA</label>
+            <input type="checkbox" name="topNewMovies" id="topNewMovies"> Estreno
         
         <button type="submit">Crear Producto</button>
     </form>

@@ -12,9 +12,16 @@ const storage = multer.diskStorage({
         const fileDir = path.resolve(__dirname, "../../public/img/productDetail")
         return cb(null, fileDir)
     },
-    filename: function (req, file, cb) {
-        const uniqueSuffix = "image-" + Date.now()
-        return cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname))
+    filename: function (req, file, cb) {        
+        const uniqueSuffix = "image-" + Date.now();
+        const imageName = file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname);
+        if(!req.imagePaths){
+            req.imagePaths = [];
+        }
+
+        req.imagePaths.push(imageName);
+        console.log("saving image",imageName)
+        return cb(null, imageName)
     }
 })
 const upload = multer({ storage: storage })

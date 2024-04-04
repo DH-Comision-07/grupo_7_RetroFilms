@@ -3,9 +3,16 @@ const app = express();
 const path = require("path");
 const port = 8085;
 const methodOverride = require ('method-override')
+const bodyParser = require ('body-parser');
 const indexRouter = require("./routes/index.routes")
 
 app.use(methodOverride('_method')) // middleware para habilitar
+
+// Middleware body-parser para analizar los datos del cuerpo de las solicitudes HTTP
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+
 app.listen(port, () => 
 console.log('https://localhost:'+ port));
 
