@@ -44,13 +44,23 @@ let productService = {
         fs.writeFileSync(path.resolve(__dirname, "../models/movies.json"),moviesJSON);
         },
 
-    editMovie:function(id,movie){
-        let index = this.products.indexOf(this.getOneBy(id));
-        //console.log('index',index);
-        this.products[index] = movie;
-        this.products[index].cast=[];//reset the array of actors to empty when editing a movie      
-        let updatedProducts = [...this.products];    
-        fs.appendFileSync(path.join(__dirname,"../models/movies.json"),JSON.stringify(updatedProducts));  
+    editMovie:(id,editedMovie) => {
+            const moviesFilePath = path.resolve(__dirname, '../models/movies.json'); //Definimos la ruta al json
+            const moviesJSON = JSON.parse(fs.readFileSync(moviesFilePath, 'utf-8')); //leemos el json
+
+            const movieIndex = moviesJSON.findIndex(movie => movie.id === id); // creamos la variable MovieIndex para encontrar la posicion en el array de peliculas que pertenezca a la pelicula que estamos buscando para editar
+
+            if (movieIndex === -1) {
+            throw new Error('Película no encontrada'); //condicional donde verificamos si la posición y por ende la pelicula, existe en el array (si arrojara -1, significa que la pelicula no existe y devuelve el error)
+            }
+
+            moviesJSON[movieIndex] = {   //Acá accedemos a la posicion en el indes de la pelicula encontrada por id
+                ...moviesJSON[movieIndex],  //hacemos una copia del objeto literal de esa pelicula(id) con spread operator
+                ...editedMovie // Actualiza las propiedades cambiadas o editadas y las lleva a la copia anterior
+            };
+            fs.writeFileSync(moviesFilePath, JSON.stringify(moviesJSON)); //escribimos en el json el objeto modificado
+
+            return moviesJSON[movieIndex] // nos muestra el objeto modificado
     }
 }
 

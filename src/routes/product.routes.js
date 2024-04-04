@@ -41,6 +41,10 @@ router.post('/',upload.array('imagesMovie'), productController.add)
 
 // ----- EDIT PRODUCT ----//
 router.get('/productDetail/:id/edit', productController.edit);
-router.put('/:id' ,upload.single('image'), productController.save)
+router.put('/:id' ,upload.array('imagesMovie'), productController.save)
+
+//-- DELETE PRODUCT ---// 
+/*router.get('/productDetail/:id/', productController.find);
+router.delete('/:id', productController.delete);*/
 
 module.exports = router;

@@ -540,5 +540,23 @@
             "Peter Cushing"
         ],
         "topNewMovies": true
+    },
+    {
+        "id": 32,
+        "name": "Una nueva pelicula",
+        "price": 7.99,
+        "description": "Una nueva peli para probar",
+        "genre": [
+            "Ninguno"
+        ],
+        "year": 2024,
+        "imagesMovie": [
+            "imagesMovie-image-1712261643598.jpeg",
+            "imagesMovie-image-1712261643599.jpeg",
+            "imagesMovie-image-1712261643599.jpeg",
+            "imagesMovie-image-1712261643600.jpeg"
+        ],
+        "topNewMovies": true,
+        "cast": []
     }
 ]
