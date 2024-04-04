@@ -139,12 +139,18 @@ header{
     background-image: linear-gradient(150deg, #5990b8, #150e23);
     width: 100%;
     color: white;
+    
 }
 
 .contentTabs div {
     padding: 1rem;
     border-bottom: 5px solid #FF7000;
     font-size: 20px;
+    
+}
+.contentTabs a {
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .mainContent {

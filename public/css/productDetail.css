@@ -91,6 +91,12 @@ body{
     color:indigo;
 } 
 
+.buttonsTop{
+    display: flex;
+    justify-content: space-between;
+
+}
+
 
 .buttonGoBack{
     margin: 10px;
@@ -106,9 +112,64 @@ body{
 
 }
 
+.buttonGoBack a{
+    text-decoration: none;
+    color:#ffffff;
+}
+
 .buttonGoBack:hover{
     color:indigo;
 }
+
+.editButton{
+    margin: 10px;
+    padding: 20px;
+    font-family: 'Bebas Neue';
+    font-size: 18px;    
+    width: 150px;
+    border:none;
+    border-radius: 10px;
+    background-color: #02b0ff;  
+    color:#ffffff;
+    
+    
+
+}
+.editButton a{
+    text-decoration: none;
+    color:#ffffff
+}
+
+.editButton:hover{
+    color:indigo;
+}
+
+.deleteButton{
+    margin: 10px;
+    padding: 20px;
+    font-family: 'Bebas Neue';
+    font-size: 18px;    
+    width: 150px;
+    border:none;
+    border-radius: 10px;
+    background-color: #02b0ff;  
+    color:#ffffff;
+    margin-right: 8vw;
+    
+    
+
+}
+.deleteButton a{
+    text-decoration: none;
+    color:#ffffff
+}
+
+.deleteButton:hover{
+    color:indigo;
+}
+
+
+
 /*------ Carril Imagenes ------------*/
 
 .imagesGrid {

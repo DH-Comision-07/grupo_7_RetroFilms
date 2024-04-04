@@ -12,10 +12,14 @@
     </header>
     <br>
     <section class ="contenedorTotal">
-       <article>
-          <button class ="buttonGoBack"><a class ="volver-pag-anterior"><i class="fa-solid fa-backward-step"></i>
-              Volver</a></button>
-       </article>
+        <article class="buttonsTop">
+            <button class ="buttonGoBack"><a href="/"><i class="fa-solid fa-backward-step"></i>
+                Volver</a></button>  
+                <div class="intChangesButton">  
+                    <button class="editButton"><a href="/products/productDetail/<%=movieDetails.id%>/edit">Editar Pelicula</a></button>
+                    <button class="deleteButton"><a href="#">Eliminar Pelicula</a></button>
+                </div>
+        </article>
        <br>
       <section class ="selectedMovie">
          <article class = "cajaPoster">
@@ -49,8 +53,10 @@
                 <div>
                      <button class="buttons"><a href="#"></a>Agregar al carrito</button>
                      <button class="buttons"><a href="#"></a> Comprar ahora</button>
-                </div>
+                    
+                </div>  
          </article>
+
      </section>
       <br>
          <h3 class="titulo">Imagenes</h3>

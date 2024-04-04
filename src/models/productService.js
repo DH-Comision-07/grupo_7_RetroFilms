@@ -42,8 +42,17 @@ let productService = {
         this.products.push(newMovie);
         let moviesJSON= JSON.stringify(this.products);
         fs.writeFileSync(path.resolve(__dirname, "../models/movies.json"),moviesJSON);
-        }
+        },
+
+    editMovie:function(id,movie){
+        let index = this.products.indexOf(this.getOneBy(id));
+        //console.log('index',index);
+        this.products[index] = movie;
+        this.products[index].cast=[];//reset the array of actors to empty when editing a movie      
+        let updatedProducts = [...this.products];    
+        fs.appendFileSync(path.join(__dirname,"../models/movies.json"),JSON.stringify(updatedProducts));  
     }
+}
 
 
 

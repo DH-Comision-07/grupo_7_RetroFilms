@@ -20,7 +20,6 @@ const storage = multer.diskStorage({
         }
 
         req.imagePaths.push(imageName);
-        console.log("saving image",imageName)
         return cb(null, imageName)
     }
 })
@@ -41,7 +40,7 @@ router.get('/create', productController.create);
 router.post('/',upload.array('imagesMovie'), productController.add)
 
 // ----- EDIT PRODUCT ----//
-router.get('/edit/:id', productController.edit);
-router.put('/:id' ,/*upload.single('image'),*/ productController.save)
+router.get('/productDetail/:id/edit', productController.edit);
+router.put('/:id' ,upload.single('image'), productController.save)
 
 module.exports = router;

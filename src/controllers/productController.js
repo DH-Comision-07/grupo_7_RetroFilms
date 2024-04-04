@@ -7,10 +7,14 @@ const productController = {
         id: (req, res) => res.render('products/productDetail', { movieDetails: productService.getOneBy(req.params.id) }), // falta el objeto literal para llamar el :id
         create: (req, res) => res.render('creation'),
         edit: (req, res) => res.render('edition'),
-        save: (req, res) => res.send('quedó guardado'),
+        save: (req, res) => {
+                productService.editMovie(req.params.id, req.body)
+                res.redirect('/')
+        },
+
         add: (req, res) => {
                 productService.addMovie(req.body,req.imagePaths);
-                res.send('quedó guardado');
+                res.redirect('/')
         }
 }
 
