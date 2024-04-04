@@ -10,14 +10,23 @@
 <body>
     <br>
     <form action="/producto/productDetail/:id?_method=PUT" method="POST" enctype="multipart/form-data">
-        <label for="name">Nombre del Producto:</label>
-        <input type="text" id="name" name="name" value="" required>
-        <label for="description">Descripcion:</label>
-        <textarea id="description" name="description" required></textarea>
-        <label for="image">Imagen:</label>
-        <input type="file" id="image" name="image" accept="image/*">
-        <label for="price">Precio:</label>
-        <input type="number" id="price" name="price" value="0.00" required>
+        <label for="name">NOMBRE</label>
+            <input type="text" id="name" name="name">
+        <label for="price">PRECIO</label>
+            <input type="number" id="price" name="price" accept="0-100" step=".01"/>
+        <label for="description">DESCRIPCIÓN</label>
+        <textarea id="description" name="description" rows="4" ></textarea>
+        <label for="genre">GÉNERO</label>
+            <input type="text" id="genre" name="genre" >
+        <label for="year">AÑO</label>
+            <input type="number" id="year" name="year" >
+        <br>
+        <label for="image">IMAGENES</label>
+            <input type="file" multiple id="imagesMovie" name="imagesMovie" accept="image/*">
+        <br>
+        <label for="topNewMovies">CATEGORIA</label>
+            <input type="checkbox" name="topNewMovies" id="topNewMovies"> Estreno
+        
         <button type="submit">Guardar Cambios</button>
     </form>
 </body>
