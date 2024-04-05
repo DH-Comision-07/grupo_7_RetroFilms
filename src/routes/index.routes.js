@@ -1,14 +1,18 @@
 const express = require('express');
-const routes = express.Router(); 
-const productRouter = require( './producto.routes');
+const router = express.Router(); 
+
+const productRouter = require( './product.routes');
 const userRouter = require("./users.routes.js")
+const actorsRouter = require('./actors.routes.js')
+
 const mainController = require("../controllers/mainController.js")
 
-routes.get('/', mainController.index);
-routes.use("/users", userRouter)
-routes.use("/producto", productRouter)
-routes.get('/crear', (req, res) => res.render('creacion'));
-routes.get('/editar', (req, res) => res.render('edicion'));
+router.get('/', mainController.index);
+router.use("/users", userRouter);
+router.use("/products", productRouter);
+router.use("/actors", actorsRouter);
 
 
-module.exports = routes;
+
+
+module.exports = router;
