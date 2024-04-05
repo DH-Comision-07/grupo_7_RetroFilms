@@ -1,4 +1,4 @@
-ESTRELLA DE MAR
+ESTRELLA DE MAR SPRINT 2
 
 Implementaremos la metodología Estrella de Mar, enfocándonos en acciones "start doing" para fortalecer el equipo:
 
@@ -86,3 +86,16 @@ En "stop doing," abandonaremos hábitos obstaculizadores:
    - Pondremos fin a la falta de comunicación clara, previniendo malentendidos.
 
 Estos cambios construirán un equipo eficiente, enfocado en crecimiento y disfrute del proceso, logrando resultados sólidos y satisfactorios en el proyecto.
+
+
+ESTRELLA DE MAR SPRINT 4
+
+Start Doing: Asegurarnos de comunicar nuestros avances de manera efectiva, pues al no saber los progresos del otro, se afecta la eficiencia del proyecto y la moral del equipo
+
+More of: Más compromiso con las tareas y consideración con los compañeros. Que los avances sean en equipo, no con más esfuerzos de unos que de otros
+
+Keep doing: Sigamos haciendo mayores esfuerzos en cumplir con las tareas asignadas y preguntando cuando no se sepa algo.
+
+Less off: En este sprint la comunicacion no fue acertiva, muy pocos levantaron la mano o dieron opiniones. Avanzamos a ciegas.
+
+Stop doing: Dejemos de trabajar solos, recordemos que somos equipo, podemos repartir cargas.

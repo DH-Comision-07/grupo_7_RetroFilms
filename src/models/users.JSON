@@ -1,0 +1,20 @@
+[
+    {
+        "id":1,
+        "name": "Jose Gonzalez",
+        "userName": "Gonzalez123",
+        "email": "jose.gonzalez@gmail.com",
+        "userPic": "",
+        "Password": "123456",
+        "category": "gold"
+    },
+    {
+        "id": 2,
+        "name": "Maria Perez",
+        "userName": "Perez456",
+        "email": "maria.perez@gmail.com",
+        "userPic": "",
+        "Password": "789",
+        "category": "platinum"
+    }
+]
