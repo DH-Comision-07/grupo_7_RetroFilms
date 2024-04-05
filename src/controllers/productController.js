@@ -3,18 +3,18 @@ const path = require('path');
 
 
 const productController = {
-        shoppingCart: (req, res) => res.render("products/shoppingCart"), //añadí la carpeta products que nos pidieron añadir en el sprint pasado, pues sin ella no renderisa la vista
-        id: (req, res) => res.render('products/productDetail', { movieDetails: productService.getOneBy(req.params.id) }), // falta el objeto literal para llamar el :id
+        shoppingCart: (req, res) => res.render("products/shoppingCart"), 
+        id: (req, res) => res.render('products/productDetail', { movieDetails: productService.getOneBy(req.params.id) }), 
         create: (req, res) => res.render('creation'),
         add: (req, res) => {
                 productService.addMovie(req.body,req.imagePaths);
                 res.redirect('/')
         },
-        edit: (req, res) => res.render('edition'),
+        edit: (req, res) => res.render('edition',{movie : productService.getOneBy(req.params.id)}),
         save:(req, res) => {
                         const { id } = req.params;
                         const updatedMovieInfo = req.body;
-                        try {
+                        try { //basado en documentacion-busqueda online
                                 const updatedMovie = productService.editMovie(id, updatedMovieInfo);
                                 res.json(updatedMovie); // Devuelve la película actualizada en formato JSON
                         } catch (error) {

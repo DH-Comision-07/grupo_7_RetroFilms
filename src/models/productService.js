@@ -38,7 +38,7 @@ let productService = {
             topNewMovies:movie.topNewMovies === "on",
             cast: []        
         }
-        console.log("creating movie",newMovie)
+
         this.products.push(newMovie);
         let moviesJSON= JSON.stringify(this.products);
         fs.writeFileSync(path.resolve(__dirname, "../models/movies.json"),moviesJSON);
@@ -47,9 +47,10 @@ let productService = {
     editMovie:(id,editedMovie) => {
             const moviesFilePath = path.resolve(__dirname, '../models/movies.json'); //Definimos la ruta al json
             const moviesINFO = JSON.parse(fs.readFileSync(moviesFilePath, 'utf-8')); //leemos el json
+            
 
-            const movieIndex = moviesINFO.findIndex(movie => movie.id === id); // creamos la variable MovieIndex para encontrar la posicion en el array de peliculas que pertenezca a la pelicula que estamos buscando para editar
-
+            const movieIndex = moviesINFO.findIndex(movie => movie.id == id); // creamos la variable MovieIndex para encontrar la posicion en el array de peliculas que pertenezca a la pelicula que estamos buscando para editar
+            console.log(movieIndex);
             if (movieIndex === -1) {
             throw new Error('Película no encontrada'); //condicional donde verificamos si la posición y por ende la pelicula, existe en el array (si arrojara -1, significa que la pelicula no existe y devuelve el error)
             }
