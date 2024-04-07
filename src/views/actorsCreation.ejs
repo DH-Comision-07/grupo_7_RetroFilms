@@ -10,7 +10,7 @@
             <%- include("partials/header.ejs") %>
         </header>
         <br>
-        <form action="/actors/actorsEdit/:id" method="POST" enctype="multipart/form-data">
+        <form action="/actors/actorsCreation" method="POST" enctype="multipart/form-data">
             <label for="fullName">Nombre:</label>
                 <input type="text" id="fullName" name="fullName">
             <label for="shortBio">Biografia:</label>
@@ -20,10 +20,10 @@
             <label for="actorPic">Foto:</label>
             <input type="file" id="actorPic" name="actorPic" >
         <br>
-        <button type="submit">Editar Actor</button>
+        <button type="submit">Crear Actor</button>
 
         </form>
-        <!--<form method="POST" action="/user/delete/?_method=DELETE"><button type="submit">Borrar</button></form> <%=// Esto no esta bien%> -->
+        
     <footer>
         <%- include("partials/footer.ejs") %>
     </footer>

@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const port = 8085;
+const port = 8080;
 const methodOverride = require ('method-override');
 const bodyParser = require ('body-parser');
 const indexRouter = require("./routes/index.routes");
