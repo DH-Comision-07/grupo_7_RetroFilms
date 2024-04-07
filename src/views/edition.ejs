@@ -11,25 +11,23 @@
     <br>
     <form action="/products/<%=movie.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
         <label for="name">NOMBRE</label>
-            <input type="text" id="name" name="name">
+            <input type="text" id="name" name="name" value = " <%= movie.name %> ">
         <label for="price">PRECIO</label>
-            <input type="number" id="price" name="price" accept="0-100" step=".01"/>
+            <input type="number" id="price" name="price" accept="0-100" step=".01" value="<%=movie.price%>" >
         <label for="description">DESCRIPCIÓN</label>
-        <textarea id="description" name="description" rows="4" ></textarea>
+        <textarea id="description" name="description" rows="4"><%=movie.description%></textarea>
         <label for="genre">GÉNERO</label>
-            <input type="text" id="genre" name="genre" >
+            <input type="text" id="genre" name="genre" value="<%=movie.genre%>">
         <label for="year">AÑO</label>
-            <input type="number" id="year" name="year" >
+            <input type="number" id="year" name="year" value="<%=movie.year%>">
         <br>
         <label for="image">IMAGENES</label>
             <input type="file" multiple id="imagesMovie" name="imagesMovie" accept="image/*">
         <br>
         <label for="topNewMovies">CATEGORIA</label>
-            <input type="checkbox" name="topNewMovies" id="topNewMovies"> Estreno
-        
+            <input type="checkbox" name="topNewMovies" id="topNewMovies" <%if(movie.topNewMovies == true){%> checked <%}%>> Estreno
         <button type="submit">Guardar Cambios</button>
     </form>
-    <!--<form method="POST" action="/user/delete/?_method=DELETE"><button type="submit">Borrar</button></form> <%=// Esto no esta bien%> -->
 </body>
 <br>
 <%- include("partials/footer.ejs") %>

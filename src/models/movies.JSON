@@ -443,14 +443,11 @@
     },
     {
         "id": 28,
-        "name": "La chaqueta metalica",
-        "price": 17.15,
+        "name": "           La chaqueta metalica           ",
+        "price": "17.15",
         "description": "Un grupo de reclutas se prepara en Parris Island, centro de entrenamiento de la marina norteamericana. Están bajo las órdenes del sargento Hartman, duro e implacable, cuya única misión en la vida es endurecer el cuerpo y el alma de los novatos, con el objetivo de que en el futuro puedan defenderse del enemigo. Pero no todos los jóvenes están preparados para soportar sus métodos.",
-        "genre": [
-            "Bélico",
-            "Drama"
-        ],
-        "year": 1987,
+        "genre": "Bélico,Drama",
+        "year": "1987",
         "imagesMovie": [
             "laChaquetaMetalica/full_metal_jacket-Poster.jpeg",
             "laChaquetaMetalica/metalJacket1.jpeg",
@@ -517,14 +514,11 @@
     },
     {
         "id": 31,
-        "name": "Star Wars",
-        "price": 5.82,
+        "name": " Star Wars ",
+        "price": "5.82",
         "description": "La princesa Leia, líder del movimiento rebelde que desea reinstaurar la República en la galaxia en los tiempos ominosos del Imperio, es capturada por las Fuerzas Imperiales, capitaneadas por el implacable Darth Vader, el sirviente más fiel del Emperador. El intrépido y joven Luke Skywalker, ayudado por Han Solo, capitán de la nave espacial El Halcón Milenario, y los androides, R2D2 y C3PO, serán los encargados de luchar contra el enemigo e intentar rescatar a la princesa para volver a instaurar la justicia en el seno de la galaxia.",
-        "genre": [
-            "Ciencia Ficcion",
-            "Aventura"
-        ],
-        "year": 1977,
+        "genre": "Ciencia Ficcion,Aventura",
+        "year": "1977",
         "imagesMovie": [
             "starwars/star wars.webp",
             "starwars/starwars1.jpeg",
@@ -540,21 +534,5 @@
             "Peter Cushing"
         ],
         "topNewMovies": true
-    },
-    {
-        "id": 32,
-        "name": "",
-        "price": "",
-        "description": "zxcvnjdfcgkmfgm,",
-        "genre": "",
-        "year": "",
-        "imagesMovie": [
-            "imagesMovie-image-1712261643598.jpeg",
-            "imagesMovie-image-1712261643599.jpeg",
-            "imagesMovie-image-1712261643599.jpeg",
-            "imagesMovie-image-1712261643600.jpeg"
-        ],
-        "topNewMovies": true,
-        "cast": []
     }
 ]

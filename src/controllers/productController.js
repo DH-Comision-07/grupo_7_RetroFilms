@@ -16,9 +16,20 @@ const productController = {
                         const updatedMovieInfo = req.body;
                         try { //basado en documentacion-busqueda online
                                 const updatedMovie = productService.editMovie(id, updatedMovieInfo);
-                                res.json(updatedMovie); // Devuelve la película actualizada en formato JSON
+                                //res.json(updatedMovie); // Devuelve la película actualizada en formato JSON
+                                res.redirect('/');
                         } catch (error) {
                                 res.status(500).json({ message: error.message });
+                }
+        },
+        find:  (req, res) => res.send ('se eliminó con exito'),
+        delete:(req,res)=>{
+                const { id } = req.params;
+                try { 
+                const updatedJSON = productService.deleteMovie(id);
+                res.redirect('/');
+                } catch (error) {
+                res.status(500).json({ message: error.message });       
                 }
         }
         
