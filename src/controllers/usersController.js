@@ -1,14 +1,15 @@
-let products = require('../models/productService.js');
+let usersService = require('../models/usersService.js');
 const path = require('path');
-/*const { validationResult } = require("express-validator");*/
+const { validationResult } = require("express-validator");
 
 const usersController = { 
     login: (req, res) => res.render("users/login"),
 
     register: (req, res) => res.render("users/registerForm"),
 
-    userEdit: (req, res) =>res.render('users/userEditForm'),    
-    /*processRegister: (req, res) => {
+    userEdit: (req, res) =>res.render('users/userEditForm'),
+
+    processRegister: function(req, res){
         const resultValidation = validationResult(req);
         
         if (resultValidation.errors.length > 0) {
@@ -18,8 +19,12 @@ const usersController = {
             });
         }
 
-        return res.send("Tu usuario ha sido creado con exito!")
-    }*/
+        console.log(req.body.realName)
+        console.log(usersService);
+
+        let newUser = usersService.createUser(req.body, req.imagePaths);
+        return res.send("ola muy buenas")
+    }
 
     
 }
