@@ -62,5 +62,16 @@
         ],
         "password": "1236",
         "category": "Invitado"
+    },
+    {
+        "id": 8,
+        "name": "Pepito Perez",
+        "userName": "PepitoP",
+        "email": "pepito@gmail.com",
+        "userPic": [
+            "profilePic-1713403115835.png"
+        ],
+        "password": "1234",
+        "category": "Invitado"
     }
 ]

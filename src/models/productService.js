@@ -58,6 +58,7 @@ let productService = {
             editedMovie.topNewMovies = editedMovie.topNewMovies === "on";
             editedMovie.price = parseFloat(editedMovie.price);
             editedMovie.year = parseInt(editedMovie.year);
+            editedMovie.genre = [editedMovie.genre];
             moviesINFO[movieIndex] = {   //Acá accedemos a la posicion en el index de la pelicula encontrada por id
                 ...moviesINFO[movieIndex],  //hacemos una copia del objeto literal de esa pelicula(id) con spread operator
                 ...editedMovie // Actualiza las propiedades cambiadas o editadas y las lleva a la copia anterior

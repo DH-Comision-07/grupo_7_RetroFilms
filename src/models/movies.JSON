@@ -547,5 +547,20 @@
         ],
         "topNewMovies": true,
         "cast": []
+    },
+    {
+        "id": 36,
+        "name": " pepito ",
+        "price": 36,
+        "description": "pepito perez",
+        "genre": [
+            "Animación"
+        ],
+        "year": 2001,
+        "imagesMovie": [
+            "imagesMovie-image-1713402830983.png"
+        ],
+        "topNewMovies": false,
+        "cast": []
     }
 ]
