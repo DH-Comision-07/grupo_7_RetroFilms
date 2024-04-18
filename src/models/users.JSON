@@ -1,20 +1,66 @@
 [
     {
-        "id":1,
-        "name": "Jose Gonzalez",
+        "id": 1,
+        "realName": "Jose Gonzalez",
         "userName": "Gonzalez123",
         "email": "jose.gonzalez@gmail.com",
-        "userPic": "",
+        "profilePic": "",
         "Password": "123456",
         "category": "gold"
     },
     {
         "id": 2,
-        "name": "Maria Perez",
+        "realName": "Maria Perez",
         "userName": "Perez456",
         "email": "maria.perez@gmail.com",
-        "userPic": "",
+        "profilePic": "",
         "Password": "789",
         "category": "platinum"
+    },
+    {
+        "id": 3,
+        "name": "joselito",
+        "userName": "jose",
+        "email": "jose@gmail.com",
+        "password": "1234",
+        "category": "category1"
+    },
+    {
+        "id": 4,
+        "name": "paola",
+        "userName": "pao",
+        "email": "pao@gmail.com",
+        "password": "1596",
+        "category": "Category3"
+    },
+    {
+        "id": 5,
+        "name": "Kate",
+        "userName": "Kate2",
+        "email": "kate@gmail.com",
+        "password": "1234",
+        "category": "Invitado"
+    },
+    {
+        "id": 6,
+        "name": "pepito",
+        "userName": "pepo",
+        "email": "pepo@gmail.com",
+        "userPic": [
+            "profilePic-profilePic_1712621250921.jpeg.jpeg"
+        ],
+        "password": "1236",
+        "category": "Platinum"
+    },
+    {
+        "id": 7,
+        "name": "lalo",
+        "userName": "lalo",
+        "email": "lalo@gmail.com",
+        "userPic": [
+            "profilePic-1712621398883.jpeg"
+        ],
+        "password": "1236",
+        "category": "Invitado"
     }
 ]

@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 
 app.listen(port, () => 
-console.log('https://localhost:'+ port));
+console.log('http://localhost:'+ port));
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, "/views"));

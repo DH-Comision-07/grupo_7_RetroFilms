@@ -64,8 +64,8 @@
                 <input 
                     type="file" 
                     name ="profilePic" 
-                    accept=".jpg" 
-                    class="<%= locals.errors && errors.email ? "form-control-is-invalid" : null %>">
+                    accept="image/jpeg, image/png, image/jpg, image/webp"
+                    class="<%= locals.errors && errors.email ? "form-control-is-invalid" : "input" %>">
 
                     <% if (locals.errors && errors.profilePic) { %>
                         <div class="textDanger">
@@ -101,6 +101,12 @@
                     </div>
                 <% } %>
             </label>
+            <label for="Category">Categoria:</label>
+            <select name="category" id="category">
+                <option value="Gold">Gold</option>
+                <option value="Platinum">Platinum</option>
+                <option value="Invitado">Invitado</option>
+            </select>
 
             <label for="checkbox">
                 <input 
