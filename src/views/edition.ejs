@@ -17,7 +17,7 @@
         <label for="description">DESCRIPCIÓN</label>
         <textarea id="description" name="description" rows="4"><%=movie.description%></textarea>
         <label for="genre">GÉNERO</label> 
-            <select multiple id="genre" name="genre" value="<%=movie.genre%>">
+            <select multiple id="genre" name="genre" value="<%=movie.genre%>"> <!--Puede seleccionar varias usando ctrl o cmd..  hay que añadirlo a las validaciones-->
                 <option value="Romance">Romance</option>
                 <option value="Ciencia Ficción">Ciencia Ficción</option>
                 <option value="Fantasía">Fantasía</option>
