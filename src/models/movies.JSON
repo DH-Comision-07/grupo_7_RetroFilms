@@ -562,5 +562,24 @@
         ],
         "topNewMovies": false,
         "cast": []
+    },
+    {
+        "id": 37,
+        "name": "Pollito",
+        "price": 32,
+        "description": "vkjhsadgvibsdojfvbjhsdf",
+        "genre": [
+            [
+                "Romance",
+                "Ciencia Ficción",
+                "Fantasía"
+            ]
+        ],
+        "year": 2001,
+        "imagesMovie": [
+            "imagesMovie-image-1713472713927.png"
+        ],
+        "topNewMovies": true,
+        "cast": []
     }
 ]
