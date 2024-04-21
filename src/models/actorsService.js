@@ -1,7 +1,7 @@
 const fs = require ('fs');
 const path = require ('path');
-const products = require ('./movies.json');
-const actors = require('./actors.json')
+const products = require ('../database/movies.json');
+const actors = require('../database/actors.json')
 
 let actorsService = {
 
