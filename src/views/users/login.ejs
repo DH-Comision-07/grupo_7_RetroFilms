@@ -14,17 +14,22 @@
         <div class="container">
             <img src="" alt="" class="logo">
             <div class="entryForm">
-                <form action="/login" method="post">
+                <form action="/users/login" method="POST">
                     <div class="user">
-                        <label for="username">Usuario</label>
+                        <label for="email">Email</label>
                         <br>
-                        <input type="text" id="username" name="username">
+                        <input type="email" id="email" name="email">
                     </div>
 
                     <div class="password">
                         <label for="password">Contraseña</label>
                         <br>
                         <input type="password" id="password" name="password">
+                        <%if(locals.errors && errors.email){%>
+                            <div class="textDanger">
+                                <%=errors.email.msg%>
+                            </div>
+                            <%}%>
                     </div>
                     <label>
                         <input type="checkbox" id="remember" name="remember">

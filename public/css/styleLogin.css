@@ -23,6 +23,12 @@ header, body {
     margin: 5.4% 5.4%;
 }
 
+.textDanger {
+    color: red;
+    font-size: 80%;
+    margin-bottom: 2%;
+}
+
 .headerImg {
     display: flex;
     align-items: center;

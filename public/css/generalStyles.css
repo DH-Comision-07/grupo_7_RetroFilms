@@ -71,6 +71,14 @@ header{
     background-color: #555;
 }
 
+.navbar select {
+        background-color: #002540;
+        border: none;
+        font-family: "Bebas Neue", sans-serif;
+        color: #996935;
+        font-size: 20px;
+}
+
 .searchBar {
     display: flex;
     align-items: center;
@@ -99,6 +107,14 @@ header{
   .search-button:hover {
     background-color: #0062cc;
   }
+
+.userImg{
+    width: 35px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius:50%;
+}
+
 
   .containerFooter {
     display: flex;
@@ -140,6 +156,9 @@ header{
         width: 40%;
         color:#B88442;
     }
+    .burgerMenu{
+        display: hidden;
+    }
    
 }
 
@@ -160,6 +179,9 @@ header{
     .iconsFooter {
         width: 40%;
         color:#B88442;
+    }
+    .burgerMenu{
+        display: hidden;
     }
    
 }
@@ -200,6 +222,10 @@ header{
     .iconsFooter {
         width: 40%;
         color:#B88442;
+    }
+
+    .burgerMenu{
+        display: hidden;
     }
 }
 

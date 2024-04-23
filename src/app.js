@@ -5,12 +5,19 @@ const port = 8080;
 const methodOverride = require ('method-override');
 const bodyParser = require ('body-parser');
 const indexRouter = require("./routes/index.routes");
+const session = require ('express-session');
 
 app.use(methodOverride('_method')) // middleware para habilitar
+
 
 // Middleware body-parser para analizar los datos del cuerpo de las solicitudes HTTP
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(session({
+    secret:'es un secretoooo',
+    resave:false,
+    saveUninitialized:false
+}))
 
 
 app.listen(port, () => 
