@@ -70,14 +70,24 @@ header{
 .navbar a:hover {
     background-color: #555;
 }
-
-.navbar select {
-        background-color: #002540;
-        border: none;
-        font-family: "Bebas Neue", sans-serif;
-        color: #996935;
-        font-size: 20px;
+.navBarYesLog{
+    list-style: none; /* Elimina los puntos de viñeta predeterminados */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.navBarNoLog{
+    list-style: none; /* Elimina los puntos de viñeta predeterminados */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .searchBar {
     display: flex;

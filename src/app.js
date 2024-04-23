@@ -9,6 +9,7 @@ const session = require ('express-session');
 
 app.use(methodOverride('_method')) // middleware para habilitar
 
+const loggedUserMid = require ('./middlewares/loggedUserMid');
 
 // Middleware body-parser para analizar los datos del cuerpo de las solicitudes HTTP
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -18,6 +19,8 @@ app.use(session({
     resave:false,
     saveUninitialized:false
 }))
+
+app.use(loggedUserMid); //middleware para el usuario logueado en el inde
 
 
 app.listen(port, () => 
