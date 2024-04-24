@@ -6,6 +6,7 @@ const methodOverride = require ('method-override');
 const bodyParser = require ('body-parser');
 const indexRouter = require("./routes/index.routes");
 const session = require ('express-session');
+const cookies = require('cookie-parser')
 
 app.use(methodOverride('_method')) // middleware para habilitar
 
@@ -20,7 +21,10 @@ app.use(session({
     saveUninitialized:false
 }))
 
+app.use(cookies());
+
 app.use(loggedUserMid); //middleware para el usuario logueado en el inde
+
 
 
 app.listen(port, () => 

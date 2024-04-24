@@ -4,10 +4,14 @@ const bcryptjs = require ('bcryptjs');
 const { validationResult } = require("express-validator");
 
 const usersController = { 
-    login: (req, res) => res.render("users/login"),
+    register: (req, res) => {
+        res.cookie('testing','Hola, mundo!',{maxAge:1000*120})
+        res.render("users/registerForm")
+    },
 
-    register: (req, res) => res.render("users/registerForm"),
-
+    login: (req, res) => {
+        return res.render("users/login")
+    },
     userEdit: (req, res) =>res.render('users/userEditForm'),
 
     processRegister: function(req, res){
@@ -43,9 +47,13 @@ const usersController = {
             if(passwordVerif){
                 delete userToLogIn.password;
                 req.session.userLogged = userToLogIn;
+                if(req.body.remember){
+                    res.cookie('userEmail',req.body.email,{maxAge:(1000 * 60)})
+                }
                 return res.redirect('profile')
             }
         }
+
         res.render('users/login', {
             errors:{
                 email:{
@@ -55,11 +63,13 @@ const usersController = {
         })
     },
 
-    profile: (req,res) => res.render('users/profile',{
-        user: req.session.userLogged
-    }),
+    profile: (req,res) => {
+        console.log(req.cookies.userEmail);
+        return res.render('users/profile',{user: req.session.userLogged})
+        },
 
     logout: (req,res) => {
+        res.clearCookie('userEmail');
         req.session.destroy();
         res.redirect("login")
     },

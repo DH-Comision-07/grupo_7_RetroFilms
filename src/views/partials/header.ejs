@@ -19,7 +19,7 @@
            <div class = "fatherMenu">
                 <ul class = "navBarYesLog">
                     <%if(locals.loggedIn){%>
-                        <img class = "userImg" src="/img/productDetail/userAvatar.png" alt="">
+                        <img class = "userImg" src="/img/avatars/<%=locals.userLogged.userPic%>" alt="">Hola,<%=locals.userLogged.userName%>
                         <li><a href="/users/profile">Mi Perfil</a></li>
                         <li><a href="/users/logout">Cerrar sesión</a></li>
                   </ul>
