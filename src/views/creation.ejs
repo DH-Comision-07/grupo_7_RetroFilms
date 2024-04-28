@@ -17,8 +17,8 @@
             <input type="number" id="price" name="price" accept="0-100" step=".01"/>
         <label for="description">DESCRIPCIÓN</label>
         <textarea id="description" name="description" rows="4" ></textarea>
-        <label for="genre">GÉNERO</label> 
-            <select multiple id="genre" name="genre"> <!--Puede seleccionar varias usando ctrl o cmd..  hay que añadirlo a las validaciones-->
+        <label  for="genre">GÉNERO</label> 
+            <select class ="genreOption" multiple id="genre" name="genre"> <!--Puede seleccionar varias usando ctrl o cmd..  hay que añadirlo a las validaciones-->
                 <option value="Romance">Romance</option>
                 <option value="Ciencia Ficción">Ciencia Ficción</option>
                 <option value="Fantasía">Fantasía</option>
@@ -35,6 +35,7 @@
                 <option value="Suspenso">Suspenso</option>
                 <option value="Crimen">Crimen</option>
             </select>
+            <p>Presione ctrl para seleccionar más de una opción</p>
             
         <label for="year">AÑO</label>
             <input type="number" id="year" name="year" >

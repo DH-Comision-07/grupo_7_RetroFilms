@@ -64,7 +64,7 @@ const usersController = {
     },
 
     profile: (req,res) => {
-        console.log(req.cookies.userEmail);
+        //console.log(req.cookies.userEmail);
         return res.render('users/profile',{user: req.session.userLogged})
         },
 

@@ -46,6 +46,26 @@ textarea {
     font-family: "Noto Serif";
 }
 
+.genreOption{
+    width: 100%;
+    background-color: #fff;
+    color:black;
+    font-size: 14px;
+    min-height: 20px;
+    margin: 0 0 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-family: "Noto Serif";
+}
+
+form p{
+    font-family: "Noto Serif";    
+    font-size: 14px;
+    color: #02b0ff;
+    
+}
+
 button {
     width: 100%;
     padding: 10px;
