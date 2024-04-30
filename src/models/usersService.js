@@ -37,7 +37,7 @@ let usersService = {
 
         let newUser = {
             id:(maxId +1),
-            name:user.realName,
+            name:user.name,
             userName:user.userName,
             email:user.email,
             userPic: imagePaths,

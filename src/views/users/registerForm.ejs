@@ -18,14 +18,14 @@
             <label for="name">Tu nombre
                 <input 
                     type="text"  
-                    name="realName" 
+                    name="name" 
                     placeholder="Nombres y Apellidos" 
-                    class= "<%= locals.errors && errors.realName ? "form-control-is-invalid" : null %>" 
-                    value= "<%= locals.oldData ? oldData.realName : null %>"
+                    class= "<%= locals.errors && errors.name ? "form-control-is-invalid" : null %>" 
+                    value= "<%= locals.oldData ? oldData.name : null %>"
                 >
-                <% if (locals.errors && errors.realName) { %>
+                <% if (locals.errors && errors.name) { %>
                     <div class="textDanger">
-                        <%= errors.realName.msg  %>
+                        <%= errors.name.msg  %>
                     </div>
                 <% } %>
             </label>
@@ -101,7 +101,7 @@
                     </div>
                 <% } %>
             </label>
-            <label for="Category">Categoria:</label>
+            <label for="category">Categoria:</label>
             <select name="category" id="category">
                 <option value="Gold">Gold</option>
                 <option value="Platinum">Platinum</option>
