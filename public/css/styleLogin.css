@@ -23,6 +23,12 @@ header, body {
     margin: 5.4% 5.4%;
 }
 
+.textDanger {
+    color: red;
+    font-size: 80%;
+    margin-bottom: 2%;
+}
+
 .headerImg {
     display: flex;
     align-items: center;
@@ -58,7 +64,7 @@ header, body {
 }
 
 .submit button,
-.crearCuenta button,
+.createAccount button,
 .savePassword button {
     width: 100%;
     padding: 10px;
@@ -69,6 +75,11 @@ header, body {
     border-radius: 10px;
     cursor: pointer;
     margin: 8px 0;
+}
+
+.createAccount a{
+    text-decoration: none;
+    color: #fff;
 }
 
 @media screen and (min-width: 768px) {

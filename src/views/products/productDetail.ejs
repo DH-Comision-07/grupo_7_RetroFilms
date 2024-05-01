@@ -17,7 +17,9 @@
                 Volver</a></button>  
                 <div class="intChangesButton">  
                     <button class="editButton"><a href="/products/productDetail/<%=movieDetails.id%>/edit">Editar Pelicula</a></button>
-                    <button class="deleteButton"><a href="#">Eliminar Pelicula</a></button>
+                    <form action="/products/productDetail/<%=movieDetails.id%>/delete?_method=DELETE" method="POST">
+                        <button type= "submit" class="deleteButton">Eliminar Pelicula</button>
+                    </form>
                 </div>
         </article>
        <br>

@@ -97,10 +97,15 @@ body{
 
 }
 
+.intChangesButton{
+    display: flex;
+    justify-content: space-between;
+}
+
 
 .buttonGoBack{
     margin: 10px;
-    padding: 20px;
+    padding: 0px;
     font-family: 'Bebas Neue';
     font-size: 18px;
     width: 150px;

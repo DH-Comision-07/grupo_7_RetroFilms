@@ -18,14 +18,14 @@
             <label for="name">Tu nombre
                 <input 
                     type="text"  
-                    name="realName" 
+                    name="name" 
                     placeholder="Nombres y Apellidos" 
-                    class= "<%= locals.errors && errors.realName ? "form-control-is-invalid" : null %>" 
-                    value= "<%= locals.oldData ? oldData.realName : null %>"
+                    class= "<%= locals.errors && errors.name ? "form-control-is-invalid" : null %>" 
+                    value= "<%= locals.oldData ? oldData.name : null %>"
                 >
-                <% if (locals.errors && errors.realName) { %>
+                <% if (locals.errors && errors.name) { %>
                     <div class="textDanger">
-                        <%= errors.realName.msg  %>
+                        <%= errors.name.msg  %>
                     </div>
                 <% } %>
             </label>
@@ -60,12 +60,12 @@
                 <% } %>
             </label>
 
-            <label for="profilePic">Foto de perfil
+            <label for="userPic">Foto de perfil
                 <input 
                     type="file" 
-                    name ="profilePic" 
-                    accept=".jpg" 
-                    class="<%= locals.errors && errors.email ? "form-control-is-invalid" : null %>">
+                    name ="userPic" 
+                    accept="image/jpeg, image/png, image/jpg, image/webp"
+                    class="<%= locals.errors && errors.email ? "form-control-is-invalid" : "input" %>">
 
                     <% if (locals.errors && errors.profilePic) { %>
                         <div class="textDanger">
@@ -101,6 +101,12 @@
                     </div>
                 <% } %>
             </label>
+            <label for="category">Categoria:</label>
+            <select name="category" id="category">
+                <option value="Gold">Gold</option>
+                <option value="Platinum">Platinum</option>
+                <option value="Invitado">Invitado</option>
+            </select>
 
             <label for="checkbox">
                 <input 
@@ -124,7 +130,7 @@
                 <button type=submit name="submitButton"> Continuar </button>
             </label>
 
-            <p class="login">¿Ya tienes cuenta? <a href="#">Log in </a> </p>
+            <p class="login">¿Ya tienes cuenta? <a href="/users/login">Log in </a> </p>
              
         </form>
 

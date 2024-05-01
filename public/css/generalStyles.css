@@ -70,6 +70,24 @@ header{
 .navbar a:hover {
     background-color: #555;
 }
+.navBarYesLog{
+    list-style: none; /* Elimina los puntos de viñeta predeterminados */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBarNoLog{
+    list-style: none; /* Elimina los puntos de viñeta predeterminados */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .searchBar {
     display: flex;
@@ -99,6 +117,14 @@ header{
   .search-button:hover {
     background-color: #0062cc;
   }
+
+.userImg{
+    width: 35px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius:50%;
+}
+
 
   .containerFooter {
     display: flex;
@@ -140,6 +166,9 @@ header{
         width: 40%;
         color:#B88442;
     }
+    .burgerMenu{
+        display: hidden;
+    }
    
 }
 
@@ -160,6 +189,9 @@ header{
     .iconsFooter {
         width: 40%;
         color:#B88442;
+    }
+    .burgerMenu{
+        display: hidden;
     }
    
 }
@@ -200,6 +232,10 @@ header{
     .iconsFooter {
         width: 40%;
         color:#B88442;
+    }
+
+    .burgerMenu{
+        display: hidden;
     }
 }
 
