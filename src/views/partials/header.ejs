@@ -15,11 +15,21 @@
              <i class="fa-solid fa-magnifying-glass"></i>
            </button>
          </div>
-
            <a href="/products/shoppingCart" class="menuItem"><i class="fa-solid fa-cart-shopping"></i></a>
-           <a class="menuItem" href="/users/login">Iniciar Sesión</a>
-           <a class="menuItem" href="/users/register">Registrarse</a>
-             <i class="fa-solid fa-bars"></i>
+           <div class = "fatherMenu">
+                <ul class = "navBarYesLog">
+                    <%if(locals.loggedIn){%>
+                        <img class = "userImg" src="/img/avatars/<%=locals.userLogged.userPic%>" alt="">Hola,<%=locals.userLogged.userName%>
+                        <li><a href="/users/profile">Mi Perfil</a></li>
+                        <li><a href="/users/logout">Cerrar sesión</a></li>
+                  </ul>
+                  <%}else{%>
+                <ul class = "navBarNoLog">
+                <li><a class="menuItem" href="/users/login">Iniciar Sesión</a></li>
+                <li><a class="menuItem" href="/users/register">Registrarse</a></li>
+                </ul>
+          <%}%>
+        </div>
       </nav>
 
     </div>
