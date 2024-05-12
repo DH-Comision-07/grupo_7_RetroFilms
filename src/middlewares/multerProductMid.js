@@ -17,22 +17,22 @@ const storage = multer.diskStorage({
         if (file.fieldname == "poster"){
             const uniqueSuffix = "poster-" + Date.now();
             const imageName = file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname);
-            // if(!req.imagePath){
-            //     req.imagePath = "";
-            // } 
+            if(!req.imagePath){
+                req.imagePath = [];
+            } 
     
-            // req.imagePath.push(imageName);
+            req.imagePath.push(imageName);
             return cb(null, imageName)
         }
         else if (file.fieldname == "imagesMovie"){
         const uniqueSuffix = "image-" + Date.now();
-        const imagesName = file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname);
-        // if(!req.imagePaths){
-        //     req.imagePaths = [];
-        // } 
+        const imageName = file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname);
+        if(!req.imagePaths){
+            req.imagePaths = [];
+        } 
 
-        // req.imagePaths.push(imagesName);
-        return cb(null, imagesName)
+        req.imagePaths.push(imageName);
+        return cb(null, imageName)
     }
 }})
 

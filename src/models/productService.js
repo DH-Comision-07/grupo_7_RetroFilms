@@ -20,7 +20,7 @@ let productService = {
             return movieById;
     },
     
-    addMovie: function(movie/*, imagePath, imagePaths*/){           
+    addMovie: function(movie, imagePath, imagePaths){           
         let maxId = 0;
         for (let i=0; i < this.products.length; i++){
             if(this.products[i].id > maxId){
@@ -35,8 +35,8 @@ let productService = {
             description: movie.description,
             genre:movie.genre,
             year: parseInt(movie.year),
-            poster:[movie.poster]/*imagePath*/,
-            imagesMovie:[movie.imagesMovie]/*[imagePaths]*/,
+            poster:/*[movie.poster]*/imagePath,
+            imagesMovie:/*[movie.imagesMovie]*/imagePaths,
             topNewMovies:movie.topNewMovies === "on",
             cast: []        
         }
