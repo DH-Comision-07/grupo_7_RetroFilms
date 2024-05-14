@@ -534,5 +534,28 @@
             "Peter Cushing"
         ],
         "topNewMovies": true
+    },
+    {
+        "id": 32,
+        "name": "Duna",
+        "price": 7.5,
+        "description": "<input type=\"file\" id=\"poster\" name=\"poster\" accept=\"image/*\" value= \"<%=movie.poster%>\"required>",
+        "genre": [
+            "Ciencia Ficción",
+            "Fantasía",
+            "Acción"
+        ],
+        "year": 1984,
+        "imagesMovie": [
+            "imagesMovie-image-1715657303805.jpeg",
+            "imagesMovie-image-1715657303805.jpeg",
+            "imagesMovie-image-1715657303805.jpeg",
+            "imagesMovie-image-1715657303806.jpeg"
+        ],
+        "topNewMovies": true,
+        "cast": [],
+        "poster": [
+            "/posters/poster-poster-1715657303804.jpg"
+        ]
     }
 ]

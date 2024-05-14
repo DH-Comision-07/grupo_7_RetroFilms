@@ -17,7 +17,7 @@
         <label for="description">DESCRIPCIÓN</label>
         <textarea id="description" name="description" rows="4"><%=movie.description%></textarea>
         <label for="genre">GÉNERO</label> 
-            <select multiple id="genre" name="genre" value="<%=movie.genre%>"> <!--Puede seleccionar varias usando ctrl o cmd..  hay que añadirlo a las validaciones-->
+            <select multiple class = "genreOption" id="genre" name="genre" value="<%=movie.genre%> selected"> <!--Puede seleccionar varias usando ctrl o cmd..  hay que añadirlo a las validaciones-->
                 <option value="Romance">Romance</option>
                 <option value="Ciencia Ficción">Ciencia Ficción</option>
                 <option value="Fantasía">Fantasía</option>
@@ -38,9 +38,10 @@
             <input type="number" id="year" name="year" value="<%=movie.year%>">
         <br>
         <label for="image">PORTADA</label>
-            <input type="file" id="poster" name="poster" accept="image/*" required>
+            <input type="file" id="poster" name="poster" accept="image/*" value= "<%=movie.poster%>"required>
+                    
         <label for="image">IMAGENES</label>
-            <input type="file" multiple id="imagesMovie" name="imagesMovie" accept="image/*">
+            <input type="file" multiple id="imagesMovie" name="imagesMovie" accept="image/*" value="<%movie.imagesMovie%>">
         <br>
         <label for="topNewMovies">CATEGORIA</label>
             <input type="checkbox" name="topNewMovies" id="topNewMovies" <%if(movie.topNewMovies == true){%> checked <%}%>> Estreno

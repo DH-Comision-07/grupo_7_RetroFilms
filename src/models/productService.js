@@ -36,9 +36,9 @@ let productService = {
             genre:movie.genre,
             year: parseInt(movie.year),
             poster:/*[movie.poster]*/imagePath,
-            imagesMovie:/*[movie.imagesMovie]*/imagePaths,
-            topNewMovies:movie.topNewMovies === "on",
-            cast: []        
+            imagesMovie:/*[movie.imagesMovie]*/[imagePaths],
+            cast: [],
+            topNewMovies:movie.topNewMovies === "on"
         }
 
         this.products.push(newMovie);
@@ -46,7 +46,7 @@ let productService = {
         fs.writeFileSync(path.resolve(__dirname, "../database/movies.json"),moviesJSON);
     },
 
-    editMovie:(id,editedMovie) => {
+    editMovie:(id,editedMovie, imagePath, imagePaths) => {
             const moviesFilePath = path.resolve(__dirname, '../database/movies.json'); //Definimos la ruta al json
             const moviesINFO = JSON.parse(fs.readFileSync(moviesFilePath, 'utf-8')); //leemos el json
             
@@ -56,10 +56,13 @@ let productService = {
             throw new Error('Película no encontrada'); //condicional donde verificamos si la posición y por ende la pelicula, existe en el array (si arrojara -1, significa que la pelicula no existe y devuelve el error)
             }
 
-            editedMovie.topNewMovies = editedMovie.topNewMovies === "on";
+            
             editedMovie.price = parseFloat(editedMovie.price);
             editedMovie.year = parseInt(editedMovie.year);
-            editedMovie.genre = [editedMovie.genre];
+            editedMovie.poster = imagePath;
+            editedMovie.genre = editedMovie.genre;
+            editedMovie.imagesMovie = imagePaths;
+            editedMovie.topNewMovies = editedMovie.topNewMovies === "on";
             moviesINFO[movieIndex] = {   //Acá accedemos a la posicion en el index de la pelicula encontrada por id
                 ...moviesINFO[movieIndex],  //hacemos una copia del objeto literal de esa pelicula(id) con spread operator
                 ...editedMovie // Actualiza las propiedades cambiadas o editadas y las lleva a la copia anterior

@@ -15,7 +15,7 @@ const productController = {
                         const { id } = req.params;
                         const updatedMovieInfo = req.body;
                         try { //basado en documentacion-busqueda online
-                                const updatedMovie = productService.editMovie(id, updatedMovieInfo);
+                                const updatedMovie = productService.editMovie(id, updatedMovieInfo, req.imagePath, req.imagePaths);
                                 res.redirect('/');
                         } catch (error) {
                                 res.status(500).json({ message: error.message });
