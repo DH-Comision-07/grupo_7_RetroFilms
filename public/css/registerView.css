@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.titulo{
+    font-size: 80px;
+    color: black;
+}
+
+.text{
+    font-size: 40px;
+    color: black;
+}
