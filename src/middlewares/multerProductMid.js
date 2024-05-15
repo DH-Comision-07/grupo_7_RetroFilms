@@ -15,8 +15,8 @@ const storage = multer.diskStorage({
     },
     filename: function (req, file, cb) {   
         if (file.fieldname == "poster"){
-            const uniqueSuffix = "poster-" + Date.now();
-            const imageName = file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname);
+            //const uniqueSuffix = "poster-" + Date.now();
+            const imageName = "poster-" + Date.now() + "-" + file.originalname
             if(!req.imagePath){
                 req.imagePath = [];
             } 
@@ -25,8 +25,8 @@ const storage = multer.diskStorage({
             return cb(null, imageName)
         }
         else if (file.fieldname == "imagesMovie"){
-        const uniqueSuffix = "image-" + Date.now();
-        const imageName = file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname);
+        //const uniqueSuffix = "image-" + Date.now();
+        const imageName = "movieImage-" + Date.now() + "-" + file.originalname
         if(!req.imagePaths){
             req.imagePaths = [];
         } 

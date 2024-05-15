@@ -36,7 +36,7 @@ let productService = {
             genre:movie.genre,
             year: parseInt(movie.year),
             poster:/*[movie.poster]*/imagePath,
-            imagesMovie:/*[movie.imagesMovie]*/[imagePaths],
+            imagesMovie:/*[movie.imagesMovie]*/imagePaths,
             cast: [],
             topNewMovies:movie.topNewMovies === "on"
         }

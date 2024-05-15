@@ -7,6 +7,8 @@ const productController = {
         id: (req, res) => res.render('products/productDetail', { movieDetails: productService.getOneBy(req.params.id) }), 
         create: (req, res) => res.render('creation'),
         add: (req, res) => {
+                console.log(req.imagePath);
+                console.log(req.imagePaths);
                 productService.addMovie(req.body, req.imagePath, req.imagePaths);
                 res.redirect('/')
         },
