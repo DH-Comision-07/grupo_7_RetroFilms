@@ -37,7 +37,7 @@ const usersController = {
     }
 
         let newUser = usersService.createUser(req.body, req.imagePaths);
-        return res.send("Tu perfil ha sido creado con éxito")
+        return res.render("users/registerView")
     },
 
     processLogIn: function(req, res){

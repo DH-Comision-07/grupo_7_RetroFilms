@@ -190,5 +190,82 @@
   ],
   "password": "$2a$10$70T7wuWdmR3uN.qree/CdObT1VNgkvrG908BTtJMYBQZU7YyPP7Iu",
   "category": "Gold"
+ },
+ {
+  "id": 21,
+  "name": "Pepito Perez",
+  "userName": "PepitoP",
+  "email": "pepitop@gmail.com",
+  "userPic": [
+   "userPic-1715898426029.jpeg"
+  ],
+  "password": "$2a$10$8xpRzErFte1OOB6yGU3tteHzRKpftGxOUuxVUAhn5JUEbOZDFE7d2",
+  "category": "Invitado"
+ },
+ {
+  "id": 22,
+  "name": "Juan Molina",
+  "userName": "Juanm",
+  "email": "juanm@gmail.com",
+  "userPic": [
+   "userPic-1715898526780.jpeg"
+  ],
+  "password": "$2a$10$NnidkG/lVND/9E16Hyq2euHNHUaedUf/pf.VEKvnJqg3EyzFrGZE2",
+  "category": "Gold"
+ },
+ {
+  "id": 23,
+  "name": "Juanito",
+  "userName": "juanito",
+  "email": "juanito@gmail.com",
+  "userPic": [
+   "userPic-1715898590080.jpeg"
+  ],
+  "password": "$2a$10$SIlgnmGJ3K.YWmKyBubg3.ik.I4aocHMx4cUZzKCRPDaGWukP55O.",
+  "category": "Gold"
+ },
+ {
+  "id": 24,
+  "name": "Sutanito",
+  "userName": "Sutanito",
+  "email": "sutanito@gmail.com",
+  "userPic": [
+   "userPic-1715898726338.jpeg"
+  ],
+  "password": "$2a$10$ZQji432fgiWYBpzIG6Wvs.KP3FinHGHlepc6fTyS/ndRVvmNcwMl.",
+  "category": "Gold"
+ },
+ {
+  "id": 25,
+  "name": "perrito1",
+  "userName": "perrito1",
+  "email": "perrito1@gmail.com",
+  "userPic": [
+   "userPic-1715898831385.jpeg"
+  ],
+  "password": "$2a$10$6j9FI1OW.yG9tsCjzR6b2OEzndddZtDtFa7PBuigH.ZwCZ3i3hsxG",
+  "category": "Gold"
+ },
+ {
+  "id": 26,
+  "name": "perrito",
+  "userName": "perrito2",
+  "email": "perrito2@gmail.com",
+  "userPic": [
+   "userPic-1715898904004.jpeg"
+  ],
+  "password": "$2a$10$MzVI897tIOVAJ2JPsGe7ue4a6DCtxcZediIwOR20ETORAH26qgN4q",
+  "category": "Gold"
+ },
+ {
+  "id": 27,
+  "name": "perritos",
+  "userName": "perrito5",
+  "email": "perrito5@gmail.com",
+  "userPic": [
+   "userPic-1715899189785.jpeg"
+  ],
+  "password": "$2a$10$2VD2PBghAtrJwnKGqWS8u.gbhrmJsIMAAxj4EwtEX.LfY38N9b97m",
+  "category": "Gold"
  }
 ]

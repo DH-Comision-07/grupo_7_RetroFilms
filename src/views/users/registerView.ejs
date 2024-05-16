@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vista de registo</title>
-    <%-include('../partials/header')%>
+    <link rel="stylesheet" href="/css/registerView.css">
+    <%-include('../partials/head') %>
+    
 </head>
 
 <body>
+  <header>
+    <%-include('../partials/header')%>
+  </header>
     <h1 class="titulo"> Felicidades tu perfil se creo de manera correcta.</h1>
     <p class="text">Ahora puedes disfrutar de todo nuestro contenido</p>
 
-    <div>
-    <section>
-      <%carrousell.forEach(function (movie){%>
-        <img src="img/productDetail/<%=movie.imagesMovie[0]%>" alt="" >
-      <%})%> 
-    </section>  
-  </div>
+
 
 </body>
 
