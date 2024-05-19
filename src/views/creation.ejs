@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("partials/head.ejs") %>
+    <title>Crear Producto</title>
+    <link rel="stylesheet" href="/css/creation.css">
+</head>
+<body>
+    <header>
+        <%- include("partials/header.ejs") %>
+    </header>
+    <br>   
+    <form action="/products" method="POST" enctype="multipart/form-data">        
+        <label for="name">NOMBRE</label>
+            <input type="text" id="name" name="name">
+        <label for="price">PRECIO</label>
+            <input type="number" id="price" name="price" accept="0-100" step=".01"/>
+        <label for="description">DESCRIPCIÓN</label>
+        <textarea id="description" name="description" rows="4" ></textarea>
+        <label  for="genre">GÉNERO</label> 
+            <select class ="genreOption" multiple id="genre" name="genre"> <!--Puede seleccionar varias usando ctrl o cmd..  hay que añadirlo a las validaciones-->
+                <option value="Romance">Romance</option>
+                <option value="Ciencia Ficción">Ciencia Ficción</option>
+                <option value="Fantasía">Fantasía</option>
+                <option value="Acción">Acción</option>
+                <option value="Aventura">Aventura</option>
+                <option value="Infantil">Infantil</option>
+                <option value="Wéstern">Wéstern</option>
+                <option value="Bélico">Bélico</option>
+                <option value="Drama">Drama</option>
+                <option value="Comedia">Comedia</option>
+                <option value="Animación">Animación</option>
+                <option value="Épico">Épico</option>
+                <option value="Histórico">Histórico</option>
+                <option value="Suspenso">Suspenso</option>
+                <option value="Crimen">Crimen</option>
+            </select>
+            <p>Presione ctrl para seleccionar más de una opción</p>
+            
+        <label for="year">AÑO</label>
+            <input type="number" id="year" name="year" >
+        <br>
+        <label for="poster">PORTADA</label>
+            <input type="file" id="poster" name="poster" accept="image/*" required>
+        <label for="imagesMovies">IMAGENES</label>
+            <input type="file" multiple id="imagesMovie" name="imagesMovie" accept="image/*" required>
+            <br>
+        <label for="topNewMovies">CATEGORIA</label>
+            <input type="checkbox" name="topNewMovies" id="topNewMovies"> Estreno
+        
+        <button type="submit">Crear Producto</button>
+    </form>
+
+</body>
+    <br>
+    <%- include("partials/footer.ejs") %>
+</html>

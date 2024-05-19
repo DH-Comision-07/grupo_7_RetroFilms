@@ -12,14 +12,12 @@ body {
 
 }
 
-
-  
 header{
     width: 100%;
     background-image: linear-gradient(150deg, #002540, #150e23);
 }
 
-.contenedorHeader1 {
+.containerHeader1 {
     align-items: center;
     background-color: #002540;
     width: 100%;
@@ -45,7 +43,7 @@ header{
 }
 
 
-.barraBuscadora  {
+.searchBar  {
     color: #996935;
     text-decoration: none;
     padding: 0, 5rem 1rem;
@@ -55,7 +53,7 @@ header{
     }
 }
 
-.barraBuscadora button {
+.searchBar button {
     color: rgb(0, 0, 0);
     text-decoration: underline;
     padding: 0.5rem 1rem;
@@ -72,8 +70,26 @@ header{
 .navbar a:hover {
     background-color: #555;
 }
+.navBarYesLog{
+    list-style: none; /* Elimina los puntos de viñeta predeterminados */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-.barraBuscadora {
+.navBarNoLog{
+    list-style: none; /* Elimina los puntos de viñeta predeterminados */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.searchBar {
     display: flex;
     align-items: center;
     background-color: #fff;
@@ -82,7 +98,7 @@ header{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  .barraBuscadora input[type="text"] {
+  .searchBar input[type="text"] {
     flex-grow: 1;
     padding: 5px;
     border: none;
@@ -102,7 +118,15 @@ header{
     background-color: #0062cc;
   }
 
-  .contenedorFooter {
+.userImg{
+    width: 35px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius:50%;
+}
+
+
+  .containerFooter {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -119,14 +143,14 @@ header{
     align-items: center;
 }
 
-.iconosFooter {
+.iconsFooter {
     font-size: 30px;
     color:#B88442;
 }
 
 @media screen and (min-width: 1091px) and (max-width: 1379px) {
  
-    .pelicula {
+    .movie {
         width: 220px;
        
         height: 300px;
@@ -134,20 +158,23 @@ header{
     }
     
     
-    .peliculaEstreno {
+    .newMovies {
         width: 240px;
     }
 
-    .iconosFooter {
+    .iconsFooter {
         width: 40%;
         color:#B88442;
+    }
+    .burgerMenu{
+        display: hidden;
     }
    
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1090px) {
  
-    .pelicula {
+    .movie {
         width: 200px;
        
         height: 260px;
@@ -155,20 +182,23 @@ header{
     }
     
     
-    .peliculaEstreno {
+    .newMovies {
         width: 260px;
     }
 
-    .iconosFooter {
+    .iconsFooter {
         width: 40%;
         color:#B88442;
+    }
+    .burgerMenu{
+        display: hidden;
     }
    
 }
 
 @media screen and (min-width: 769px) and (max-width: 999px) {
 
-    .contenedorHeader1 {
+    .containerHeader1 {
         width: 100%;
         padding: 20px;
     }
@@ -181,14 +211,14 @@ header{
         font-size: 16px;
     }
 
-    .cuadriculaPeliculas {
+    .movieGrid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     
     }
 
   
-    .pelicula {
+    .movie {
         width: 240px;
        
         height: 300px;
@@ -196,18 +226,22 @@ header{
     }
     
     
-    .peliculaEstreno {
+    .newMovies {
         width: 200px;
     }
-    .iconosFooter {
+    .iconsFooter {
         width: 40%;
         color:#B88442;
+    }
+
+    .burgerMenu{
+        display: hidden;
     }
 }
 
 @media screen and (min-width: 350px) and (max-width: 768px) {
 
-    .contenedorHeader1 {
+    .containerHeader1 {
         width: 100%;
         padding: 20px;
     }
@@ -220,13 +254,13 @@ header{
         gap: 10px;
     }
 
-    .cuadriculaPeliculas{
+    .movieGrid{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         width: 50%;
     
     }
-    .pelicula {
+    .movie {
         width: 90%;
         max-width: 250px;   
         height: 200px;
@@ -235,16 +269,16 @@ header{
     }
     
     
-    .peliculaEstreno {
+    .newMovies {
     
         width: 100%;
     }
 
-    .articuloMenu{
+    .menuItem{
         display: none;
     }
 
-    .topEstrenos {
+    .topMovies {
         width: 40%;
         flex-direction: column;
         flex: 1;
@@ -260,7 +294,7 @@ header{
             width: 100%;
         }
     }
-    .iconosFooter {
+    .iconsFooter {
         width: 40%;
         color:#B88442;
     }
@@ -268,7 +302,7 @@ header{
 
 @media screen and (min-width: 200px) and (max-width: 349px) {
 
-    .contenedorHeader1 {
+    .containerHeader1 {
         width: 70%;
         padding: 10px;
     }
@@ -280,13 +314,13 @@ header{
         gap: 15px;
     }
 
-    .cuadriculaPeliculas {
+    .movieGrid {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         width: 50%;
     
     }
-    .pelicula {
+    .movie {
         display: flex;
         flex-direction: column;
         width: 90%;
@@ -298,16 +332,16 @@ header{
     }
     
     
-    .peliculaEstreno {
+    .newMovies {
     
         width: 100%;
     }
 
-    .articuloMenu{
+    .menuItems{
         display: none;
     }
 
-    .topEstrenos {
+    .topMovies {
         width: 40%;
         flex-direction: column;
         flex: 1;
@@ -324,16 +358,16 @@ header{
         }
     }
    
-    .contenedorHeader1 {
+    .containerHeader1 {
         border-bottom: none;
     }
     
-    .tabsContenido div {
+    .contentTabs div {
         padding: none;
         border-bottom: 5px solid #FF7000;
         font-size: 13px;
 }
-.contenedorFooter {
+.containerFooter {
     display: flex;
     align-items: center;
     background-color: #002540;;
@@ -342,10 +376,10 @@ header{
 
 }
 
-.contenedorFooter p{
+.containerFooter p{
     display: none;
 }
-.iconosFooter {
+.iconsFooter {
     width: 40%;
     color:#B88442;
 }
