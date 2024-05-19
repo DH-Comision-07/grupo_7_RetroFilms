@@ -1,8 +1,8 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "database_development",
+    "password": " ",
+    "database": "retrofilms",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
@@ -20,4 +20,4 @@ module.exports = {
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
-};
+}
