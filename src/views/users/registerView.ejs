@@ -5,22 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vista de registo</title>
     <link rel="stylesheet" href="/css/registerView.css">
-    <%-include('../partials/head') %>
-    
+    <%- include('../partials/head') %>
 </head>
-
 <body>
   <header>
-    <%-include('../partials/header')%>
+    <%- include('../partials/header') %>
   </header>
-    <h1 class="titulo"> Felicidades tu perfil se creo de manera correcta.</h1>
+    <h1 class="titulo"> Felicidades tu perfil se creó de manera correcta</h1>
+       <div class = "imagenWelcome"> <img src="/img/Home/TopEstrenos/register1.jpg" alt=""></div>
+      
+
+
     <p class="text">Ahora puedes disfrutar de todo nuestro contenido</p>
+    <div class="slider">
+        <div class="slider--inner"> 
+        <img src="/img/Home/slider-2/71nPxrvteKL._AC_UF894,1000_QL80_.jpg" alt="">
+        <img src="/img/Home/slider-2/scale.png" alt="">
+        <img src="/img/Home/slider-2/scale.webp" alt="">
+        <img src="/img/Home/slider-2/202352514653_1.jpg" alt="">
+        <img src="/img/Home/slider-2/Gorillas_in_the_Mist.webp" alt="">
+        <img src="/img/Home/slider-2/Nico.webp" alt="">
+        <img src="/img/Home/slider-2/819NpnjWXzL._AC_UF894,1000_QL80_.jpg" alt="">
+        <img src="/img/Home/slider-2/MV5BMWUzN2VkY2ItYmQ4YS00MjFmLWJhZDQtYWY1NWQ2NTA5NDNlXkEyXkFqcGdeQXVyNDc2NjEyMw@@._V1_.jpg" alt="">
+        <img src="/img/Home/slider-2/evil_dead.jpg" alt="">
+        <img src="/img/Home/slider-2/rambo_III.jpg" alt="">
+        <img src="/img/Home/slider-2/film__4271-an-american-tail--hi_res-7cfcd1a4.jpg" alt="">
+        <img src="/img/Home/slider-2/balto.jpg" alt="">
+        <img src="/img/Home/slider-2/it-eso-2715849.webp" alt="">
+        <img src="/img/Home/slider-2/Star_Wars_Logo.svg.png" alt="">
+        <img src="/img/Home/slider-2/cleopatra.jpg" alt="">
+       </div>
+    </div>
+    <div class="container">
+        <div>
+          <a href="retrofilms" class="btn">Ver todo nuestro contenido</a>
+        </div>
+    </div>
+    <footer>
+        <%- include('../partials/footer') %>
+    </footer>
 
+    <!-- Mueve el código JavaScript aquí -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sliderInner = document.querySelector('.slider--inner');
+            let index = 1;
+            const imagen = sliderInner.querySelectorAll('img');
 
-
+            setInterval(function(){
+                const percentage = index * -100;
+                sliderInner.style.transform = "translateX("+ percentage +"%)";
+                index++;
+                if(index > imagen.length - 1){
+                    index = 0;
+                }
+            }, 3000);
+        });
+    </script>
 </body>
-
-<footer>
-    <%-include('../partials/footer') %>
-</footer>
 </html>

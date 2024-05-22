@@ -12,3 +12,71 @@
     font-size: 40px;
     color: black;
 }
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    display: flex;
+    flex-direction: column;
+}
+.btn{
+    text-decoration: none;
+    padding: 20px 50px;
+    font-size: 1.5rem;
+    position: relative;
+    margin: 32px;
+    background: #02263F;
+    color: aliceblue;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.btn::after, .btn::after{
+    content: ""
+    position absolute;
+    opacity: 0.3;
+    background: #996935;
+    border: inherit;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.3s ease;
+}
+.btn:hover{
+      transform: translate(-12px, -12px);
+}
+
+.btn:hover::after{
+    transform: translate(6px, 6px);
+}
+
+.btn:hover::before{
+    transform: translate(12px, 12px);
+}
+
+.slider--inner{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 400px;
+    transition: all 8s ease-in;
+}
+
+.slider--inner img{
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+img{
+    width: 100%;
+}
+
+.slider{
+    overflow: hidden;
+}
