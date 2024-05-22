@@ -1,5 +1,5 @@
-const productService = require('../models/productService.js')
-const carrousellService = require( '../models/carrousellService.js');
+const productService = require('../services/productService.js')
+const carrousellService = require( '../services/carrousellService.js');
 
 const mainController = { 
     index: (req, res) => res.render("index", {

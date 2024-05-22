@@ -1,4 +1,4 @@
-let actorsService = require('../models/actorsService');
+let actorsService = require('../services/actorsService');
 const path = require('path');
 
 

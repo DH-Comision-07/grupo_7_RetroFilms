@@ -1,4 +1,4 @@
-const users = require ('../database/users.json');
+const users = require ('../database/json/users.json');
 const fs = require ('fs');
 const path = require ('path');
 const bcrypt = require ('bcryptjs')

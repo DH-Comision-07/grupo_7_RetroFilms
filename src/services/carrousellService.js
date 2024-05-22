@@ -1,4 +1,4 @@
-const carrousell = require ('../database/carrousell.json');
+const carrousell = require ('../database/json/carrousell.json');
 
 
 let carrousellService = {
