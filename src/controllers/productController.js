@@ -1,5 +1,6 @@
 let productService = require('../services/productService');
 const path = require('path');
+const db = require("../database/models");
 
 
 const productController = {
@@ -36,3 +37,31 @@ const productController = {
 };
 
 module.exports = productController;
+
+
+// ------------- DB ------------- //
+const productController2 = { 
+        detail: async function(req,res) {
+                try {
+                        await db.Movies.findByPk(req.params.id)
+                                .then(function(movie){
+                                        res.render("productDetail", {movie:movie})
+                                })
+                        
+                } catch (error) {
+                        console.log(error)
+                        res.send("Ha ocurrido un error al buscar la pelicula")
+                }
+
+        },
+
+        create: async function(req,res) {
+                try {
+                        await productService.newMovie(req.body);
+                        res.redirect("/movies");
+                } catch (error) {
+                        console.log(error)
+                        res.send("Ha ocurrido un error al crear la pelicula")
+                }
+    }
+}
