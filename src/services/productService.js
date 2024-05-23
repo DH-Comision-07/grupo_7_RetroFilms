@@ -119,9 +119,3 @@ function Movie(name, price, description, genre, year, poster, imagesMovie, categ
     this.category = category;
     this.carrousell = carrousell;
 }
-
-// Crear una instancia del objeto Persona
-const persona1 = new Persona("Juan", 30);
-
-console.log(persona1.nombre); // Output: Juan
-console.log(persona1.edad);   // Output: 30
