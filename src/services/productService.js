@@ -1,7 +1,7 @@
 const fs = require ('fs');
 const path = require ('path');
 const products = require ('../database/json/movies.json');
-
+const db = require("../database/models")
 
 let productService = {
     products: products, 
@@ -88,7 +88,38 @@ let productService = {
     }
 }
 
-
-
-
 module.exports = productService;
+
+
+// ------------- METODOS CON DB ------------- //
+
+let productService2 = {
+
+    newMovie: async function() {
+        try {
+            db.Movies.create(Movie)
+        } catch (error) {
+            
+        }
+    } 
+
+}
+
+
+function Movie(name, price, description, genre, year, poster, imagesMovie, category, carrousell) {
+    this.name = name;
+    this.price = price;
+    this.description = description;
+    this.genre = genre;
+    this.year = year;
+    this.poster = poster;
+    this.imagesMovie = imagesMovie;
+    this.category = category;
+    this.carrousell = carrousell;
+}
+
+// Crear una instancia del objeto Persona
+const persona1 = new Persona("Juan", 30);
+
+console.log(persona1.nombre); // Output: Juan
+console.log(persona1.edad);   // Output: 30
