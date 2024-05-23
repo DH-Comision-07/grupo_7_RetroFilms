@@ -3,6 +3,7 @@ const path = require('path');
 const db = require("../database/models");
 
 
+
 const productController = {
         shoppingCart: (req, res) => res.render("products/shoppingCart"), 
         id: (req, res) => res.render('products/productDetail', { movieDetails: productService.getOneBy(req.params.id) }), 
@@ -43,7 +44,7 @@ module.exports = productController;
 const productController2 = { 
         detail: async function(req,res) {
                 try {
-                        await db.Movies.findByPk(req.params.id)
+                        await db.Movie.findByPk(req.params.id)
                                 .then(function(movie){
                                         res.render("productDetail", {movie:movie})
                                 })
@@ -63,5 +64,5 @@ const productController2 = {
                         console.log(error)
                         res.send("Ha ocurrido un error al crear la pelicula")
                 }
-    }
+        }
 }

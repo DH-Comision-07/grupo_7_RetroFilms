@@ -18,7 +18,7 @@ module.exports = function(sequelize, dataTypes){
         allowNull: false
     },
     release_date: {
-        type: dataTypes.YEAR,
+        type: dataTypes.DATE,
         allowNull: false
     },
     price: {

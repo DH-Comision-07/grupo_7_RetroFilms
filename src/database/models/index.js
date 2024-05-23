@@ -27,8 +27,14 @@ fs
     );
   })
   .forEach(file => {
+    console.log(`Importando archivo de modelo: ${file}`);
     const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
+    if (!model || !model.name) {
+      console.error(`El modelo en el archivo ${file} no se importó correctamente o no tiene un nombre definido.`);
+    } else {
+      console.log(`Modelo importado correctamente: ${model.name}`);
     db[model.name] = model;
+    }
   });
 
 Object.keys(db).forEach(modelName => {
