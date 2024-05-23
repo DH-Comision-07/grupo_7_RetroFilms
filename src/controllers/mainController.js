@@ -15,7 +15,7 @@ const mainController = {
 module.exports = mainController;
 
 
-// ------------- DB ------------- //
+//------------- DB ------------- //
 const mainController2 = { 
     index: (req, res) => 
         db.Movie.findAll()

@@ -99,7 +99,7 @@ let productService2 = {
 
     newMovie: async function() {
         try {
-            db.Movies.create(Movie)
+            db.Movie.create()
         } catch (error) {
             
         }
@@ -118,4 +118,14 @@ function Movie(name, price, description, genre, year, poster, imagesMovie, categ
     this.imagesMovie = imagesMovie;
     this.category = category;
     this.carrousell = carrousell;
+<<<<<<< HEAD
 }
+=======
+}
+
+// // Crear una instancia del objeto Persona
+// const persona1 = new Persona("Juan", 30);
+
+// console.log(persona1.nombre); // Output: Juan
+// console.log(persona1.edad);   // Output: 30
+>>>>>>> ef04b8eff590a7ef52f71bf053cfae476841a26a
