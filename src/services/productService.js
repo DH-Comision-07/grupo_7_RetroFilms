@@ -38,7 +38,8 @@ let productService = {
             poster:/*[movie.poster]*/imagePath,
             imagesMovie:/*[movie.imagesMovie]*/imagePaths,
             cast: [],
-            topNewMovies:movie.topNewMovies === "on"
+            topNewMovies:movie.topNewMovies === "on",
+            carrousell:movie.carrousell === "on"
         }
 
         this.products.push(newMovie);
@@ -63,6 +64,7 @@ let productService = {
             editedMovie.genre = editedMovie.genre;
             editedMovie.imagesMovie = imagePaths;
             editedMovie.topNewMovies = editedMovie.topNewMovies === "on";
+            editedMovie.carrousell = editedMovie.carrousell === "on";
             moviesINFO[movieIndex] = {   //Acá accedemos a la posicion en el index de la pelicula encontrada por id
                 ...moviesINFO[movieIndex],  //hacemos una copia del objeto literal de esa pelicula(id) con spread operator
                 ...editedMovie // Actualiza las propiedades cambiadas o editadas y las lleva a la copia anterior

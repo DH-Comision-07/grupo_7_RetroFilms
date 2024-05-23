@@ -45,6 +45,8 @@
         <br>
         <label for="topNewMovies">CATEGORIA</label>
             <input type="checkbox" name="topNewMovies" id="topNewMovies" <%if(movie.topNewMovies == true){%> checked <%}%>> Estreno
+        <label for="carrousell">¿ES DEL CARRUSEL?</label>
+            <input type="checkbox" name="carrousell" id="carrousell"<%if(movie.carrousell == true){%> checked <%}%>> Carrusel
         <button type="submit">Guardar Cambios</button>
     </form>
 </body>
