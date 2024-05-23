@@ -99,11 +99,31 @@ let productService2 = {
 
     newMovie: async function() {
         try {
-            db.Movie.create()
+            await db.Movie.create(new Movie)
         } catch (error) {
-            
+            console.log(error)
+            return "Error. La pelicula no se ha creado"
         }
-    } 
+    },
+
+    getOne: async function(id) {
+        try {
+            await db.Movie.findByPk(id)
+        } catch (error) {
+            console.log(error)
+            return "Error. La pelicula no se ha encontrado"
+        }
+    }, 
+
+    updateOne: async function(id, body) {
+        try {
+            let movie = new Movie(body);
+            await db.Movie.update(movie, {where: {id: id}})
+        } catch (error) {
+            console.log(error)
+            return "Error. La pelicula no se ha actualizado"
+        }
+    }
 
 }
 
@@ -118,14 +138,4 @@ function Movie(name, price, description, genre, year, poster, imagesMovie, categ
     this.imagesMovie = imagesMovie;
     this.category = category;
     this.carrousell = carrousell;
-<<<<<<< HEAD
 }
-=======
-}
-
-// // Crear una instancia del objeto Persona
-// const persona1 = new Persona("Juan", 30);
-
-// console.log(persona1.nombre); // Output: Juan
-// console.log(persona1.edad);   // Output: 30
->>>>>>> ef04b8eff590a7ef52f71bf053cfae476841a26a

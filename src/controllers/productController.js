@@ -3,7 +3,6 @@ const path = require('path');
 const db = require("../database/models");
 
 
-
 const productController = {
         shoppingCart: (req, res) => res.render("products/shoppingCart"), 
         id: (req, res) => res.render('products/productDetail', { movieDetails: productService.getOneBy(req.params.id) }), 
@@ -44,7 +43,7 @@ module.exports = productController;
 const productController2 = { 
         detail: async function(req,res) {
                 try {
-                        await db.Movie.findByPk(req.params.id)
+                        await db.Movies.findByPk(req.params.id)
                                 .then(function(movie){
                                         res.render("productDetail", {movie:movie})
                                 })
@@ -64,5 +63,38 @@ const productController2 = {
                         console.log(error)
                         res.send("Ha ocurrido un error al crear la pelicula")
                 }
+        },
+
+        add: (req,res) => res.render('creation'),
+
+        edit: async function (req,res) { 
+                try {
+                        await productService.getOne(req.params.id)
+                        .then(function(movie){
+                                res.render("edition", {movie:movie})
+                        }) 
+                } catch (error) {
+                        console.log(error)
+                        res.send("Ha ocurrido un error al buscar la pelicula")
+                }
+        },
+
+        update: async function(req, res) {
+                try {
+                        await productService.updateOne(req.params.id, req.body)
+                        res.redirect("/movies/productDetail/" + req.params.id)
+                } catch (error) {
+                        console.log(error)
+                        res.send("Ha ocurrido un error al buscar la pelicula")
+                }
+        },
+
+        delete: async function(req, res) {
+                try {
+                        
+                } catch (error) {
+                        
+                }
         }
+
 }
