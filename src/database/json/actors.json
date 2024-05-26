@@ -4,62 +4,63 @@
         "fullName": "Clint Eastwood",
         "shortBio": "Clint Eastwood es un actor, director y productor estadounidense. Ha sido galardonado con múltiples premios a lo largo de su carrera.",
         "moviesPlayedAt": [],
-        "actorPic": ""
+        "actorPic": "Clint_Eastwood.jpeg"
     },
     {
         "id": 2,
         "fullName": "Eli Wallach",
         "shortBio": "Eli Wallach fue un actor estadounidense conocido por su versatilidad y talento. Participó en numerosas películas y obras de teatro a lo largo de su carrera.",
         "moviesPlayedAt": [],
-        "actorPic": ""
+        "actorPic": "Eli_Wallach.jpeg"
     },
     {
         "id": 3,
         "fullName": "Lee Van Cleef",
         "shortBio": "Lee Van Cleef fue un actor estadounidense conocido por sus papeles en películas del género western. Su presencia en pantalla y su habilidad actoral lo convirtieron en una figura icónica del cine.",
         "moviesPlayedAt": [],
-        "actorPic": ""
+        "actorPic": "Lee_Van_Cleef.jpeg"
     },
     {
         "id": 4,
         "fullName": "Rada Rassimov",
         "shortBio": "Rada Rassimov es una actriz italiana conocida por su trabajo en cine y televisión. Ha participado en una variedad de géneros cinematográficos a lo largo de su carrera.",
         "moviesPlayedAt": [],
-        "actorPic": ""
+        "actorPic": "Rada_Rassimov.jpeg"
     },
     {
         "id": 5,
         "fullName": "Judy Garland",
         "shortBio": "Judy Garland fue una actriz y cantante estadounidense reconocida por su talento y carisma. Es especialmente recordada por su papel como Dorothy en El Mago de Oz.",
-        "moviesPlayedAt": []
+        "moviesPlayedAt": [],
+        "actorPic": "Judy_Garland.jpeg"
     },
     {
         "id": 6,
         "fullName": "Jack Haley",
         "shortBio": "Jack Haley fue un actor y comediante estadounidense conocido por su papel como el Hombre de Hojalata en El Mago de Oz. Su carrera abarcó tanto el cine como la televisión.",
         "moviesPlayedAt": [],
-        "actorPic": ""
+        "actorPic": "Jack_Haley.jpeg"
     },
     {
         "id": 7,
         "fullName": "Ray Bolger",
         "shortBio": "Ray Bolger fue un actor, cantante y bailarín estadounidense conocido por su papel como el Espantapájaros en El Mago de Oz. Su habilidad para la danza lo convirtió en una figura destacada de Hollywood.",
         "moviesPlayedAt": [],
-        "actorPic": ""
+        "actorPic": "Ray_Bolger"
     },
     {
         "id": 8,
         "fullName": "Bert Lahr",
         "shortBio": "Bert Lahr fue un actor y comediante estadounidense conocido por su papel como el León Cobarde en El Mago de Oz. Su talento para la comedia lo convirtió en una figura querida por el público.",
         "moviesPlayedAt": [],
-        "actorPic": ""
+        "actorPic": "Bert_Lahr.jpeg"
     },
     {
         "id": 9,
         "fullName": "Boris Karloff",
         "shortBio": "Boris Karloff fue un actor británico conocido por sus interpretaciones en películas de terror, especialmente por su papel como el monstruo en Frankenstein. Su presencia en pantalla y su talento actoral lo convirtieron en una leyenda del cine.",
         "moviesPlayedAt": [],
-        "actorPic": ""
+        "actorPic": "Boris_Karloff.jpeg"
     },
     {
         "id": 10,

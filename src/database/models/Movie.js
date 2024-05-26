@@ -32,6 +32,10 @@ module.exports = function(sequelize, dataTypes){
     top_movie: {
         type: dataTypes.BOOLEAN,
         allowNull: true
+    },
+    is_carrousell:{
+        type: dataTypes.BOOLEAN,
+        allowNull: true
     }
     };
 
