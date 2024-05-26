@@ -2,6 +2,7 @@ let usersService = require('../services/usersService.js');
 const path = require('path');
 const bcryptjs = require ('bcryptjs');
 const { validationResult } = require("express-validator");
+const db = require("../database/models")
 
 const usersController = { 
     register: (req, res) => {
