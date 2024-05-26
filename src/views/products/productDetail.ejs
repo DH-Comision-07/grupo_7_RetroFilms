@@ -63,11 +63,13 @@
         <h3 class="titulo">Imagenes</h3>
             <article class = "imagesGrid">
         <br>
-        <% for (let images of movieDetail.images) { %>
+        <% for (let i = 0; i < movieDetail.images.length; i++) { %>
+            <% if (movieDetail.images[i].image_type_id == 2) { %>
                 <ul>
-                    <li><img src="/img/productDetail/<%= images %>" alt=""></li>
+                    <li><img src="/img/productDetail/<%= movieDetail.images[i].name_URL %>" alt=""></li>
                 </ul>
                 <% } %>
+        <% } %>;
             </article>
         <br>
         <h3 class="titulo">Reparto Principal</h3>
