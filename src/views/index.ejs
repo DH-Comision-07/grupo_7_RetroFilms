@@ -20,9 +20,10 @@
   <main class="mainBody">
       <div>
         <section>
-          <%carrousell.forEach(function (movie){%>
-            <img src="img/productDetail/<%=movie.imagesMovie[0]%>" alt="" >
-          <%})%> 
+          <%movies.forEach(function (movie){%>
+            <% if (movie.is_carrousell == false && movie.images.length > 0 ) { %>
+            <img src="img/productDetail/<%= movie.images[0].name_URL %>" alt="<%= movie.name %>">
+          <%}})%> 
         </section>  
       </div>
       <div class="contentTabs">
@@ -35,23 +36,25 @@
       <div class="mainContent">
 
         <div class="movieGrid">
-          <%movieGrid.forEach(function (movie){%>           
+          <%movies.forEach(function (movie){%>           
             <div class="movie">
-              <a href="/products/productDetail/<%= movie.id %>">
-                <img src="img/productDetail/<%=movie.poster%>" alt="">
+              <% if (movie.images.length > 0 && movie.is_carrousell == 0 && movie.top_movie == 0) { %>
+                <a href="/products/productDetail/<%= movie.id %>">
+                    <img src="img/productDetail/<%= movie.images[0].name_URL %>" alt="">
               </a>
-            </div>       
-          <%})%>  
+            </div>        
+          <%}})%>  
         </div>
   
         <div class="topMovies">
-          <%topMovies.forEach(function (movie,index){%>           
-            <div class="newMovies"> Top número <%=index+1%> 
-              <a href="/products/productDetail/<%= movie.id %>">
-                <img src="img/productDetail/<%=movie.poster%>" alt="" >
-              </a>
-            </div> 
-          <%})%>
+          <%movies.forEach(function (movie,index){%>           
+              <div class="newMovies"> Top número <%=index+1%>
+                <% if (movie.top_movie == 1) { %> 
+                <a href="/products/productDetail/<%= movie.id %>">
+                  <img src="img/productDetail/<%=movie.images[0].name_URL %>" alt="" >
+                </a>
+                <%}})%>
+              </div> 
         </div>
 
       </div>

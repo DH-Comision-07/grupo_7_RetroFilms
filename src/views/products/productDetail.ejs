@@ -16,75 +16,75 @@
             <button class ="buttonGoBack"><a href="/"><i class="fa-solid fa-backward-step"></i>
                 Volver</a></button>  
                 <div class="intChangesButton">  
-                    <button class="editButton"><a href="/products/productDetail/<%=movieDetails.id%>/edit">Editar Pelicula</a></button>
-                    <form action="/products/productDetail/<%=movieDetails.id%>/delete?_method=DELETE" method="POST">
+                    <button class="editButton"><a href="/products/productDetail/<%=movieDetail.id%>/edit">Editar Pelicula</a></button>
+                    <form action="/products/productDetail/<%=movieDetail.id%>/delete?_method=DELETE" method="POST">
                         <button type= "submit" class="deleteButton">Eliminar Pelicula</button>
                     </form>
                 </div>
         </article>
         <br>
-      <section class ="selectedMovie">
-         <article class = "cajaPoster">
-            <img class="poster" src="/img/productDetail/<%=movieDetails.poster%>" alt="">
+    <section class ="selectedMovie">
+        <article class = "cajaPoster">
+            <img class="poster" src="/img/productDetail/<%=movieDetail.images[0].name_URL%>" alt="">
         <br>
-         </article>
-      <br>
-         <article class = "movieDescriptionBox">
-             <div class ="movieeTitle">
-                 <h3 class ="movieTitle"><%=movieDetails.name%></h3>
-             </div>
+        </article>
+    <br>
+        <article class = "movieDescriptionBox">
+            <div class ="movieeTitle">
+                <h3 class ="movieTitle"><%=movieDetail.name%></h3>
+            </div>
         <br>
-             <div class ="precio">
-                 <h3>Precio:</h3>
-                 <p>$<%=movieDetails.price%></p>
-             </div>    
+            <div class ="precio">
+                <h3>Precio:</h3>
+                <p>$<%=movieDetail.price%></p>
+            </div>    
         <br>
 
-        <h3>Duración: 2 hr</h3>
+        <h3>Duración: <%=movieDetail.length%> hr</h3>
 
-              <ul class = "movieDetail">
-                 <li class = "anio"><a  href="#"></a><%=movieDetails.year%> </li>
-                 <li> - </li>
-                 <li class = "calif"><a  href="#"></a>Calificacion </li>
-                 <li> - </li>
-                 <li class ="genero"><a  href="#"></a><%=movieDetails.genre%> </li>  <!--Incluir letrero que al hacer hover, muestre las respuestas de cada item de la lista (uno por uno)-->
-              </ul>
-       <br>
+            <ul class = "movieDetail">
+                <li class = "anio"><a  href="#"></a><%=movieDetail.year%> </li>
+                <li> - </li>
+                <li class = "calif"><a  href="#"></a>Calificacion </li>
+                <li> - </li>
+                <li class ="genero"><a  href="#"></a> <%=movieDetail.genres%> </li>  <!--Incluir letrero que al hacer hover, muestre las respuestas de cada item de la lista (uno por uno)-->
+            </ul>
+        <br>
         
-                <p class ="movieDescription"><%=movieDetails.description%></p>
+                <p class ="movieDescription"><%=movieDetail.description%></p>
                 <div>
-                     <button class="buttons"><a href="#"></a>Agregar al carrito</button>
-                     <button class="buttons"><a href="#"></a> Comprar ahora</button>
-                    
+                    <button class="buttons"><a href="#"></a>Agregar al carrito</button>
+                    <button class="buttons"><a href="#"></a> Comprar ahora</button>                    
                 </div>  
-         </article>
+        </article>
 
-     </section>
-      <br>
-         <h3 class="titulo">Imagenes</h3>
-              <article class = "imagesGrid">
+    </section>
+    <br>
+        <h3 class="titulo">Imagenes</h3>
+            <article class = "imagesGrid">
         <br>
-        <% for (let imagesMovie of movieDetails.imagesMovie) { %>
-                  <ul>
-                       <li><img src="/img/productDetail/<%= imagesMovie %>" alt=""></li>
-                  </ul>
-                  <% } %>
-                  
-             </article>
-      <br>
-         <h3 class="titulo">Reparto Principal</h3>
-      <br>
+        <% for (let i = 0; i < movieDetail.images.length; i++) { %>
+            <% if (movieDetail.images[i].image_type_id == 2) { %>
+                <ul>
+                    <li><img src="/img/productDetail/<%= movieDetail.images[i].name_URL %>" alt=""></li>
+                </ul>
+                <% } %>
+        <% } %>;
+            </article>
+        <br>
+        <h3 class="titulo">Reparto Principal</h3>
+        <br>
             <article class ="mainCast">
-                <% for (let cast of movieDetails.cast){%>
+                <% for (let actors of movieDetail.actors){%>
                 <div>
-                    <img class="actor" src="/img/productDetail/placeholder.jpeg" alt=""> 
+                    <img class="actor" src="/img/productDetail/<%= actors %>" alt=""> 
                     <p><%=cast%></p>
                 </div>
                 <%}%>
             </article>
-      <br>
-         <h3 class="titulo">También te puede gustar</h3>
-      <br>
+        <br>
+        <h3 class="titulo">También te puede gustar</h3>
+        <br>
             <article class ="youMightAlsoLike">
                 <div class ="back"><i class="fa-solid fa-angle-left"></i></div>
                 <div><img src="/img/productDetail/Amanecer/Amanecer-poster.jpeg" alt=""><a href="#"></a></div>
@@ -93,8 +93,8 @@
                 <div><img src="/img/productDetail/LoQueElVientoSeLlevo/LoQueElVientoSeLlevo.jpeg" alt=""><a href="#"></a></div>
                 <div class ="forward"><i class="fa-solid fa-angle-right"></i></div>
             </article>
-      <br>
-         <h3 class="titulo">Reviews</h3>
+        <br>
+        <h3 class="titulo">Reviews</h3>
             <article class = "resenias">
         <br>
                 <div class = "cajaComentario">
@@ -106,10 +106,10 @@
                 </div>
         <br>
                 <div class = "cajaComentario">
-                   <div class="usuario">
-                       <img src="/img/productDetail/Usuarios/avatar2.png" alt="fotoUsuario"> Nombre del Usuario
-                   </div>
-                       <p class ="comentario">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex accusamus magni ab assumenda enim, possimus voluptatum saepe similique voluptas! Sapiente ducimus quas at consectetur provident. Obcaecati minus animi porro inventore?
+                    <div class="usuario">
+                        <img src="/img/productDetail/Usuarios/avatar2.png" alt="fotoUsuario"> Nombre del Usuario
+                </div>
+                    <p class ="comentario">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex accusamus magni ab assumenda enim, possimus voluptatum saepe similique voluptas! Sapiente ducimus quas at consectetur provident. Obcaecati minus animi porro inventore?
                     </p>
                 </div>
             </article>
@@ -119,6 +119,5 @@
     <footer>
         <%-include('../partials/footer') %>
     </footer>
-</body>
-      
+</body>   
 </html>
