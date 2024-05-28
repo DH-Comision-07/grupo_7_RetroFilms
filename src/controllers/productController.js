@@ -52,17 +52,20 @@ const productController = {
 
         },
 
-        create: async function(req,res) {
+        add: async function(req,res) {
                 try {
-                        await productService.newMovie(req.body);
-                        res.redirect("/movies");
+                        let newMovie = await productService.newMovie(req.body);
+                        //console.log(newMovie);
+                        //res.redirect("/");
+                        //return newMovie
+                        
                 } catch (error) {
                         console.log(error)
                         res.send("Ha ocurrido un error al crear la pelicula")
                 }
         },
 
-        add: (req,res) => res.render('creation'),
+        create: (req,res) => res.render('creation'),
 
         edit: async function (req,res) { 
                 try {
@@ -78,8 +81,8 @@ const productController = {
 
         update: async function(req, res) {
                 try {
-                        await productService.updateOne(req.params.id, req.body)
-                        res.redirect("/movies/productDetail/" + req.params.id)
+                        await productService.updateOne(req.params.id, req.body, req.files)
+                        res.redirect("/products/productDetail/" + req.params.id)
                 } catch (error) {
                         console.log(error)
                         res.send("Ha ocurrido un error al buscar la pelicula")

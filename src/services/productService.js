@@ -94,9 +94,42 @@ const db = require("../database/models")
 
 let productService = {
 
+    findTopMovie : async function(){
+        try {
+            let topMovies= await db.Movie.findAll({
+                where: {
+                    top_movie:1
+                }
+            })
+            //console.log('Top Movies:', topMovies);
+            return topMovies
+        } catch (error) {
+            console.error('Error fetching top movies:', error); 
+            throw error;
+        }
+            
+    },
+
+    findIsCarrousell: async function(){
+        try {
+            let carrousell= await db.Movie.findAll({
+                where: {
+                    is_carrousell:1 
+                }
+            })
+            //console.log('Carrousell Movies:', carrousell);
+            return carrousell
+        } catch (error) {
+            console.error('Error fetching carrousell movies:', error); // Log de error
+            throw error;
+        }
+        
+    },
+
     newMovie: async function() {
         try {
-            await db.Movie.create(new Movie)
+            let newMovie = await db.Movie.create(new Movie)
+            console.log(newMovie);
         } catch (error) {
             console.log(error)
             return "Error. La pelicula no se ha creado"
@@ -119,9 +152,10 @@ let productService = {
         }
     }, 
 
-    updateOne: async function(id, body) {
+    updateOne: async function(id, body, files) {
         try {
-            let movie = new Movie(body);
+            let movie = new Movie(body, files);
+            console.log(movie);
             await db.Movie.update(movie, {where: {id: id}})
         } catch (error) {
             console.log(error)
@@ -132,16 +166,17 @@ let productService = {
 }
 
 
-function Movie(name, price, description, genre, year, poster, imagesMovie, category, carrousell) {
+function Movie(name, price, length, description, genre, release_date, images, images, top_movie, is_carrousell) {
     this.name = name;
-    this.price = price;
+    this.price = parseFloat(price);
+    this.length = parseInt(length);
     this.description = description;
-    this.genre = genre;
-    this.year = year;
-    this.poster = poster;
-    this.imagesMovie = imagesMovie;
-    this.category = category;
-    this.carrousell = carrousell;
+    this.genre =  genre;
+    this.release_date = parseInt(release_date);
+    this.images = images;
+    this.images = [images];
+    this.top_movie = top_movie;
+    this.is_carrousell = is_carrousell;
 }
 
 

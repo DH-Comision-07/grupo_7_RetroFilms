@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <%- include("partials/head.ejs") %>  
+  <%- include("./partials/head.ejs") %>  
   <link rel="stylesheet" href="/css/styles.css"> 
   <title>RetroFilms</title> 
 
@@ -18,14 +18,21 @@
   </header>
 
   <main class="mainBody">
-      <div>
+      
         <section>
-          <%movies.forEach(function (movie){%>
-            <% if (movie.is_carrousell == false && movie.images.length > 0 ) { %>
+          <div class = "carrousell">
+          <% if (carrousell && carrousell.length > 0) { %>
+            <% carrousell.forEach(function (movie) { %>
+              <% if (movie.images && movie.images.length > 0) { %>
+                <div class="movie">
             <img src="img/productDetail/<%= movie.images[0].name_URL %>" alt="<%= movie.name %>">
-          <%}})%> 
+                </div>
+          </div>
+          <%}%> 
+          <%})%>
+          <%}%> 
         </section>  
-      </div>
+    
       <div class="contentTabs">
           <div><a href="/products/create">Crear Pelicula</a></div>
           <div>Últimas</div>
@@ -36,28 +43,30 @@
       <div class="mainContent">
 
         <div class="movieGrid">
-          <%movies.forEach(function (movie){%>           
+          <% if (movies && movies.length > 0) { %>
+          <%movies.forEach(function (movie){%> 
+            <% if (movie.images && movie.images.length > 0) { %>          
             <div class="movie">
-              <% if (movie.images.length > 0 && movie.is_carrousell == 0 && movie.top_movie == 0) { %>
                 <a href="/products/productDetail/<%= movie.id %>">
                     <img src="img/productDetail/<%= movie.images[0].name_URL %>" alt="">
               </a>
             </div>        
-          <%}})%>  
+          <%}});%>  
+          <%}%> 
         </div>
   
         <div class="topMovies">
-          <%movies.forEach(function (movie,index){%>           
-              <div class="newMovies"> Top número <%=index+1%>
-                <% if (movie.top_movie == 1) { %> 
-                <a href="/products/productDetail/<%= movie.id %>">
-                  <img src="img/productDetail/<%=movie.images[0].name_URL %>" alt="" >
-                </a>
-                <%}})%>
-              </div> 
+          <% if (movies.topMovie === 1 && movies.length > 0) { %>
+              <%movies.topMovie.forEach(function (movie,index){%>  
+                          <div class="newMovies"> Top número <%=index+1%>
+                          <% movie.images.forEach(function (image) { %> 
+                            <a href="/products/productDetail/<%= movie.id %>">
+                              <img src="img/productDetail/<%=image[0].name_URL %>" alt="" >
+                            </a>
+                        <%})})}%>
+                        
+                </div>
         </div>
-
-      </div>
 
   </main>
 
