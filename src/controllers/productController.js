@@ -56,9 +56,9 @@ const productController = {
                 try {
                         let newMovie = await productService.newMovie(req.body);
                         //console.log(newMovie);
-                        //res.redirect("/");
-                        //return newMovie
-                        
+                        res.redirect("/");
+                        return newMovie
+                
                 } catch (error) {
                         console.log(error)
                         res.send("Ha ocurrido un error al crear la pelicula")
