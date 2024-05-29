@@ -47,7 +47,12 @@
                 <li> - </li>
                 <li class = "calif"><a  href="#"></a>Calificacion </li>
                 <li> - </li>
-                <li class ="genero"><a  href="#"></a> <%=movieDetail.genre%> </li>  <!--Incluir letrero que al hacer hover, muestre las respuestas de cada item de la lista (uno por uno)-->
+                <%for (let i=0; i< movieDetail.genres.length; i++){%> 
+                    <%if (i ===  movieDetail.genres.length -1 ) {%>
+                        <li class ="genero"><a  href="#"></a> <%=movieDetail.genres[i].name%></li>  <!--Incluir letrero que al hacer hover, muestre las respuestas de cada item de la lista (uno por uno)-->
+                    <%} else {%>
+                        <li class ="genero"><a  href="#"></a> <%=movieDetail.genres[i].name%>,</li>
+                    <%}}%>
             </ul>
         <br>
         
@@ -75,12 +80,14 @@
         <h3 class="titulo">Reparto Principal</h3>
         <br>
             <article class ="mainCast">
-                <% for (let actors of movieDetail.actors){%>
+
+                <%for (let i=0; i< movieDetail.actors.length; i++){%> 
                 <div>
-                    <img class="actor" src="/img/productDetail/<%= actors %>" alt=""> 
-                    <p><%=cast%></p>
+                    <img class="actor" src="/img/actors/<%= movieDetail.actors[i].profile_pic%>" alt=""> 
+                    <p><%=movieDetail.actors[i].full_name%></p>
                 </div>
                 <%}%>
+
             </article>
         <br>
         <h3 class="titulo">También te puede gustar</h3>

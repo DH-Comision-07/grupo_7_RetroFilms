@@ -54,7 +54,8 @@ const productController = {
 
         add: async function(req,res) {
                 try {
-                        let newMovie = await productService.newMovie(req.body);
+                        let newMovie = await productService.newMovieData(req.body);
+                        //let newImages = await productService.newImage(req.files)
                         //console.log(newMovie);
                         res.redirect("/");
                         return newMovie

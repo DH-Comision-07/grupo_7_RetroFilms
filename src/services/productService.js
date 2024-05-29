@@ -125,16 +125,38 @@ let productService = {
         }
         
     },
+    // newImage: async function (files){
+    //     try {
+    //         let newImage = await db.Images.create (
+    //             name_URL = files.filename,
+    //             image_type = files.fieldname,
+    //         ) 
+    //         return newImage
+    //     } catch (error) {
+    //         console.log(error)
+    //         return "Error. La pelicula no se ha creado"
+    //     }
+    // },
 
-    newMovie: async function() {
+    newMovieData: async function(body) {
         try {
-            let newMovie = await db.Movie.create(new Movie)
+            //console.log(Movie);
+            console.log(body);
+            console.log(files);
+
+            let newMovie = await db.Movie.create(new Movie(body), {
+            include:[
+                {association : 'images'}
+            ]
+        }
+        )
             console.log(newMovie);
+            //return newMovie // añadir association
         } catch (error) {
             console.log(error)
             return "Error. La pelicula no se ha creado"
         }
-    },
+    }, 
 
     getOne: async function(id) {
         try {
@@ -145,6 +167,7 @@ let productService = {
                     {association: "images"},
                 ]
             })
+            console.log(oneMovie.actors[1].full_name);
             return oneMovie
         } catch (error) {
             console.log(error)
@@ -166,15 +189,15 @@ let productService = {
 }
 
 
-function Movie(name, price, length, description, genre, release_date, images, images, top_movie, is_carrousell) {
+function Movie(name, price, length, description, genre, release_date, poster, imagesMovie, top_movie, is_carrousell) {
     this.name = name;
     this.price = parseFloat(price);
     this.length = parseInt(length);
     this.description = description;
     this.genre =  genre;
     this.release_date = parseInt(release_date);
-    this.images = images;
-    this.images = [images];
+    this.poster = poster;
+    this.imagesMovie = [imagesMovie];
     this.top_movie = top_movie;
     this.is_carrousell = is_carrousell;
 }
