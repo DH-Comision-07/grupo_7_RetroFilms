@@ -99,3 +99,7 @@ Keep doing: Sigamos haciendo mayores esfuerzos en cumplir con las tareas asignad
 Less off: En este sprint la comunicacion no fue acertiva, muy pocos levantaron la mano o dieron opiniones. Avanzamos a ciegas.
 
 Stop doing: Dejemos de trabajar solos, recordemos que somos equipo, podemos repartir cargas.
+
+ESTRELLA DE MAR SPRINT 6
+
+En general las tareas no se distribuyeron bien y otra vez el trabajo cayó en los hombros de unos pocos. Nadie comunicó nada, ni avances o preocupaciones, y tampoco hubo participación de 'equipo'. Sin embargo, entre los compañeros de mayor participación, si hubo un canal abierto de comunicación y se intentó distribuir la carga laboral para lograr cumplir con los tiempos.

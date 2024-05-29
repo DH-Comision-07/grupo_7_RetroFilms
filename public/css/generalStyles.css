@@ -126,7 +126,7 @@ header{
 }
 
 
-  .containerFooter {
+.containerFooter {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -146,6 +146,10 @@ header{
 .iconsFooter {
     font-size: 30px;
     color:#B88442;
+}
+
+.userEmail{
+    font-size: 40px;
 }
 
 @media screen and (min-width: 1091px) and (max-width: 1379px) {
