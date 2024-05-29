@@ -14,10 +14,12 @@
             <input type="text" id="name" name="name" value = " <%= movie.name %> ">
         <label for="price">PRECIO</label>
             <input type="number" id="price" name="price" accept="0-100" step=".01" value="<%=movie.price%>" >
+        <label for="length">DURACIÓN</label>
+            <input type="number" id="length" name="length" accept="0-100" step=".01" value="<%=movie.length%>" >
         <label for="description">DESCRIPCIÓN</label>
         <textarea id="description" name="description" rows="4"><%=movie.description%></textarea>
         <label for="genre">GÉNERO</label> 
-            <select multiple id="genre" name="genre" value="<%=movie.genre%>"> <!--Puede seleccionar varias usando ctrl o cmd..  hay que añadirlo a las validaciones-->
+            <select multiple class = "genreOption" id="genre" name="genre" value="<%=movie.genre%> selected"> <!--Puede seleccionar varias usando ctrl o cmd..  hay que añadirlo a las validaciones-->
                 <option value="Romance">Romance</option>
                 <option value="Ciencia Ficción">Ciencia Ficción</option>
                 <option value="Fantasía">Fantasía</option>
@@ -34,14 +36,21 @@
                 <option value="Suspenso">Suspenso</option>
                 <option value="Crimen">Crimen</option>
             </select>
-        <label for="year">AÑO</label>
-            <input type="number" id="year" name="year" value="<%=movie.year%>">
+        <label for="release_date">AÑO</label>
+            <input type="number" id="year" name="year" value="<%=movie.release_date%>">
         <br>
+        <label for="image">PORTADA</label>
+            <input type="file" id="poster" name="poster" accept="image/*" value= "<%=movie.images[0]%>"required>
+                    
         <label for="image">IMAGENES</label>
-            <input type="file" multiple id="imagesMovie" name="imagesMovie" accept="image/*">
+            <input type="file" multiple id="imagesMovie" name="imagesMovie" accept="image/*" value="<%movie.images%>">
         <br>
-        <label for="topNewMovies">CATEGORIA</label>
-            <input type="checkbox" name="topNewMovies" id="topNewMovies" <%if(movie.topNewMovies == true){%> checked <%}%>> Estreno
+        <label for="top_movie">CATEGORIA</label>
+            <input type="checkbox" name="top_movie" id="top_movie" <%if(movie.top_movie == true){%> checked <%}%>> Estreno
+            <br>
+        <label for="is_carrousell">¿ES DEL CARRUSEL?</label>
+        <br>
+            <input type="checkbox" name="is_carrousell" id="is_carrousell"<%if(movie.is_carrousell == true){%> checked <%}%>> Carrusel
         <button type="submit">Guardar Cambios</button>
     </form>
 </body>

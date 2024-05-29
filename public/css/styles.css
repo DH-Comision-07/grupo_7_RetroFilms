@@ -161,7 +161,7 @@ header{
     width: 90%;
     justify-content: center;
 
-  }
+}
 
 .movieGrid {
     display: grid;
@@ -196,8 +196,6 @@ header{
     font-size: 20px;
     align-items: end;
     
-
-
     img{
         width: 100%;
     }
@@ -223,6 +221,7 @@ section{
     width: 90%;
     height: 350px;
 }
+
 .carrousell{
     width: 100vw;
     display: flex;

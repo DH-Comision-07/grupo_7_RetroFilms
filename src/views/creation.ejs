@@ -15,6 +15,8 @@
             <input type="text" id="name" name="name">
         <label for="price">PRECIO</label>
             <input type="number" id="price" name="price" accept="0-100" step=".01"/>
+        <label for="length">DURACIÓN</label>
+            <input type="number" id="length" name="length" accept="0-100" step=".01">
         <label for="description">DESCRIPCIÓN</label>
         <textarea id="description" name="description" rows="4" ></textarea>
         <label  for="genre">GÉNERO</label> 
@@ -37,14 +39,19 @@
             </select>
             <p>Presione ctrl para seleccionar más de una opción</p>
             
-        <label for="year">AÑO</label>
-            <input type="number" id="year" name="year" >
+        <label for="release_date">AÑO</label>
+            <input type="number" id="release_date" name="release_date" >
         <br>
-        <label for="image">IMAGENES</label>
+        <label for="poster">PORTADA</label>
+            <input type="file" id="poster" name="poster" accept="image/*" required>
+        <label for="imagesMovies">IMAGENES</label>
             <input type="file" multiple id="imagesMovie" name="imagesMovie" accept="image/*" required>
-        <br>
-        <label for="topNewMovies">CATEGORIA</label>
-            <input type="checkbox" name="topNewMovies" id="topNewMovies"> Estreno
+            <br>
+        <label for="top_movie">CATEGORIA</label>
+            <input type="checkbox" name="top_movie" id="top_movie"> Estreno
+            <br>
+        <label for="is_carrousell">¿ES DEL CARRUSEL?</label>
+            <input type="checkbox" name="is_carrousell" id="is_carrousell"> Carrusel
         
         <button type="submit">Crear Producto</button>
     </form>

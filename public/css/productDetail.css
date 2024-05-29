@@ -36,9 +36,10 @@ body{
 
 
 
-.btPoster{
+
+.poster{
     display:block;
-    width: 180px;
+    width: 300px;
     margin-left:85px;
     align-content: center;
 }

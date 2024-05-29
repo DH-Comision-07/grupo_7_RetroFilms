@@ -1,7 +1,8 @@
-let usersService = require('../models/usersService.js');
+let usersService = require('../services/usersService.js');
 const path = require('path');
 const bcryptjs = require ('bcryptjs');
 const { validationResult } = require("express-validator");
+const db = require("../database/models")
 
 const usersController = { 
     register: (req, res) => {
@@ -37,7 +38,7 @@ const usersController = {
     }
 
         let newUser = usersService.createUser(req.body, req.imagePaths);
-        return res.send("Tu perfil ha sido creado con éxito")
+        return res.render("users/registerView")
     },
 
     processLogIn: function(req, res){
