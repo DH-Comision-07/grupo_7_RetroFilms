@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("partials/header.ejs") %>
+    <%- include("partials/head.ejs") %>
+
+    <title>Editar Producto</title>
+    <link rel="stylesheet" href="/css/edition.css">
+</head>
+<body>
+    <br>
+    <form action="/products/<%=movie.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <label for="name">NOMBRE</label>
+            <input type="text" id="name" name="name" value = " <%= movie.name %> ">
+        <label for="price">PRECIO</label>
+            <input type="number" id="price" name="price" accept="0-100" step=".01" value="<%=movie.price%>" >
+        <label for="length">DURACIÓN</label>
+            <input type="number" id="length" name="length" accept="0-100" step=".01" value="<%=movie.length%>" >
+        <label for="description">DESCRIPCIÓN</label>
+        <textarea id="description" name="description" rows="4"><%=movie.description%></textarea>
+        <label for="genre">GÉNERO</label> 
+            <select multiple class = "genreOption" id="genre" name="genre" value="<%=movie.genre%> selected"> <!--Puede seleccionar varias usando ctrl o cmd..  hay que añadirlo a las validaciones-->
+                <option value="Romance">Romance</option>
+                <option value="Ciencia Ficción">Ciencia Ficción</option>
+                <option value="Fantasía">Fantasía</option>
+                <option value="Acción">Acción</option>
+                <option value="Aventura">Aventura</option>
+                <option value="Infantil">Infantil</option>
+                <option value="Wéstern">Wéstern</option>
+                <option value="Bélico">Bélico</option>
+                <option value="Drama">Drama</option>
+                <option value="Comedia">Comedia</option>
+                <option value="Animación">Animación</option>
+                <option value="Épico">Épico</option>
+                <option value="Histórico">Histórico</option>
+                <option value="Suspenso">Suspenso</option>
+                <option value="Crimen">Crimen</option>
+            </select>
+        <label for="release_date">AÑO</label>
+            <input type="number" id="year" name="year" value="<%=movie.release_date%>">
+        <br>
+        <label for="image">PORTADA</label>
+            <input type="file" id="poster" name="poster" accept="image/*" value= "<%=movie.images[0]%>"required>
+                    
+        <label for="image">IMAGENES</label>
+            <input type="file" multiple id="imagesMovie" name="imagesMovie" accept="image/*" value="<%movie.images%>">
+        <br>
+        <label for="top_movie">CATEGORIA</label>
+            <input type="checkbox" name="top_movie" id="top_movie" <%if(movie.top_movie == true){%> checked <%}%>> Estreno
+            <br>
+        <label for="is_carrousell">¿ES DEL CARRUSEL?</label>
+        <br>
+            <input type="checkbox" name="is_carrousell" id="is_carrousell"<%if(movie.is_carrousell == true){%> checked <%}%>> Carrusel
+        <button type="submit">Guardar Cambios</button>
+    </form>
+</body>
+<br>
+<%- include("partials/footer.ejs") %>
+
+</html>

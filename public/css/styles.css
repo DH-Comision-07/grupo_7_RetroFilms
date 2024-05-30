@@ -19,7 +19,7 @@ header{
     width: 100%;
 } 
 
-.contenedorHeader1 {
+.containerHeader1 {
     align-items: center;
     background-color: #002540;
     width: 100%;
@@ -27,7 +27,7 @@ header{
     border-bottom: 2px solid #02b0ff;
 }
 
-.contenedorFooter {
+.containerFooter {
     display: flex;
     align-items: center;
     background-color: #002540;
@@ -64,7 +64,7 @@ header{
 }
 
 
-.barraBuscadora  {
+.searchBar  {
     color: #996935;
     text-decoration: none;
     padding: 0, 5rem 1rem;
@@ -74,7 +74,7 @@ header{
     }
 }
 
-.barraBuscadora button {
+.searchBar button {
     color: rgb(0, 0, 0);
     text-decoration: underline;
     padding: 0.5rem 1rem;
@@ -92,7 +92,7 @@ header{
     background-color: #555;
 }
 
-.barraBuscadora {
+.searchBar {
     display: flex;
     align-items: center;
     background-color: #fff;
@@ -101,7 +101,7 @@ header{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  .barraBuscadora input[type="text"] {
+  .searchBar input[type="text"] {
     flex-grow: 1;
     padding: 5px;
     border: none;
@@ -133,21 +133,27 @@ header{
     cursor: pointer;
 }
 
-.tabsContenido {
+.contentTabs {
     display: flex;
     justify-content: space-around;
     background-image: linear-gradient(150deg, #5990b8, #150e23);
     width: 100%;
     color: white;
+    
 }
 
-.tabsContenido div {
+.contentTabs div {
     padding: 1rem;
     border-bottom: 5px solid #FF7000;
     font-size: 20px;
+    
+}
+.contentTabs a {
+    text-decoration: none;
+    color: #ffffff;
 }
 
-.contenidoMain {
+.mainContent {
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -155,14 +161,15 @@ header{
     width: 90%;
     justify-content: center;
 
-  }
+}
 
-.cuadriculaPeliculas {
+.movieGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
     margin-top:0px;
     width: 70%;
+    object-fit: contain;
 
     img{
         width: 100%;
@@ -170,15 +177,16 @@ header{
 
 }
 
-.pelicula {
+.movie {
     width: 300px;
     background-color: #ddd;
-    height: 350px;
+    height: 425px;
     overflow-y: hidden;
+    object-fit: contain;
 }
 
 
-.topEstrenos {
+.topMovies {
     width: 20%;
     flex-direction: column;
     flex: 1;
@@ -188,22 +196,22 @@ header{
     font-size: 20px;
     align-items: end;
     
-
-
     img{
         width: 100%;
     }
 }
 
-.peliculaEstreno {
+.newMovies {
     background-color: #ddd;
     padding: 10px;
     border-radius: 10px;
     border:  2px solid #02b0ff;
-    width: 400px;
+    width: 80%;
+    object-fit: contain;
+    
 }
 
-.iconosFooter {
+.iconsFooter {
     font-size: 40px;
     color:#B88442;
 }
@@ -213,7 +221,8 @@ section{
     width: 90%;
     height: 350px;
 }
-.carrusel{
+
+.carrousell{
     width: 100vw;
     display: flex;
     padding-left: 15px;
@@ -221,15 +230,17 @@ section{
     justify-content: center;
 }
 
-section img{
-    width: 0px;
+
+
+section img{ 
+    width: 200px;
     flex-grow: 1;
     object-fit: cover;
     opacity: .8;
     transition: .5s ease;
 }
 
-.bodyPrincipal{
+.mainBody{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -239,7 +250,7 @@ section img{
 }
 
 section img:hover{
-    cursor: crosshair;
+    cursor:pointer;
     width: 100px;
     opacity: 1;
     filter: contrast(120%);
@@ -275,7 +286,7 @@ section img:hover{
 
   @media screen and (min-width: 1091px) and (max-width: 1379px) {
  
-    .pelicula {
+    .movie {
         width: 220px;
        
         height: 300px;
@@ -283,15 +294,15 @@ section img:hover{
     }
     
     
-    .peliculaEstreno {
-        width: 240px;
+    .newMovies {
+        width: 100%;
     }
    
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1090px) {
  
-    .pelicula {
+    .movie {
         width: 200px;
        
         height: 260px;
@@ -299,15 +310,15 @@ section img:hover{
     }
     
     
-    .peliculaEstreno {
-        width: 260px;
+    .newMovies {
+        width: 100%;
     }
    
 }
 
 @media screen and (min-width: 769px) and (max-width: 999px) {
 
-    .contenedorHeader1 {
+    .containerHeader1 {
         width: 100%;
         padding: 20px;
     }
@@ -320,14 +331,14 @@ section img:hover{
         font-size: 16px;
     }
 
-    .cuadriculaPeliculas {
+    .movieGrid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     
     }
 
   
-    .pelicula {
+    .movie {
         width: 240px;
        
         height: 300px;
@@ -335,10 +346,10 @@ section img:hover{
     }
     
     
-    .peliculaEstreno {
-        width: 200px;
+    .newMovies {
+        width: 100%;
     }
-    .iconosFooter {
+    .iconsFooter {
         font-size: 35px;
         color:#B88442;
     }
@@ -346,7 +357,7 @@ section img:hover{
 
 @media screen and (min-width: 350px) and (max-width: 768px) {
 
-    .contenedorHeader1 {
+    .containerHeader1 {
         width: 100%;
         padding: 20px;
     }
@@ -358,13 +369,13 @@ section img:hover{
         gap: 10px;
     }
 
-    .cuadriculaPeliculas {
+    .movieGrid {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         width: 50%;
     
     }
-    .pelicula {
+    .movie {
         width: 90%;
         max-width: 250px;   
         height: 200px;
@@ -373,16 +384,16 @@ section img:hover{
     }
     
     
-    .peliculaEstreno {
+    .newMovies {
     
         width: 100%;
     }
 
-    .articuloMenu{
+    .menuItem{
         display: none;
     }
 
-    .topEstrenos {
+    .topMovies {
         width: 40%;
         flex-direction: column;
         flex: 1;
@@ -398,7 +409,7 @@ section img:hover{
             width: 100%;
         }
     }
-    .iconosFooter {
+    .iconsFooter {
         font-size: 30px;
         color:#B88442;
     }
@@ -406,7 +417,7 @@ section img:hover{
 
 @media screen and (min-width: 200px) and (max-width: 349px) {
 
-    .contenedorHeader1 {
+    .containerHeader1 {
         width: 70%;
         padding: 10px;
     }
@@ -418,13 +429,13 @@ section img:hover{
         gap: 15px;
     }
 
-    .cuadriculaPeliculas {
+    .movieGrid {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         width: 50%;
     
     }
-    .pelicula {
+    .movie {
         display: flex;
         flex-direction: column;
         width: 90%;
@@ -436,16 +447,16 @@ section img:hover{
     }
     
     
-    .peliculaEstreno {
+    .newMovies {
     
         width: 100%;
     }
 
-    .articuloMenu{
+    .menuItem{
         display: none;
     }
 
-    .topEstrenos {
+    .topMovies {
         width: 40%;
         flex-direction: column;
         flex: 1;
@@ -462,16 +473,16 @@ section img:hover{
         }
     }
    
-    .contenedorHeader1 {
+    .containerHeader1 {
         border-bottom: none;
     }
     
-    .tabsContenido div {
+    .contentTabs div {
         padding: none;
         border-bottom: 5px solid #FF7000;
         font-size: 13px;
 }
-.contenedorFooter {
+.containerFooter {
     display: flex;
     align-items: center;
     background-color: #002540;;
@@ -480,10 +491,10 @@ section img:hover{
 
 }
 
-.contenedorFooter p{
+.containerFooter p{
     display: none;
 }
-.iconosFooter {
+.iconsFooter {
     font-size: 20px;
     color:#B88442;
 }

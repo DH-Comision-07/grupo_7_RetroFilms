@@ -2,76 +2,73 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <script src="https://kit.fontawesome.com/ef41563829.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="/css/styles.css">  
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <script src="https://kit.fontawesome.com/ef41563829.js" crossorigin="anonymous"></script>
+  <%- include("./partials/head.ejs") %>  
+  <link rel="stylesheet" href="/css/styles.css"> 
   <title>RetroFilms</title> 
 
 </head>
 
 <body>
-        <a href="#" class="back-to-top">
-          <i class="fas fa-arrow-up"></i>
-        </a>
+  <a href="#" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
   <header>
-        <%-include('./partials/header') %>
+        <%-include('./partials/header')%>
   </header>
 
-    <main class="bodyPrincipal">
-        <div class="carrusel">
-            <section >
-                <img src="img/Home/slider/mago de oz.jpg" alt="" >
-                <img src="img/Home/slider/back-to-the-future.jpg" alt="" >
-                <img src="img/Home/slider/Grease.jpg" alt="" >
-                <img src="img/Home/slider/Casablanca.jpg" alt="" >
-                <img src="img/Home/slider/frankenstein.jpg" alt="" >
-                <img src="img/Home/slider/IT.jpeg" alt="">
-                <img src="img/Home/slider/superman.jpg" alt="">
-                <img src="img/Home/slider/scarface.jpg" alt="">
-                <img src="img/Home/slider/planeta de los simios.webp" alt="">
-                <img src="img/Home/slider/aliciaenel.jpg" alt="">
-                <img src="img/Home/slider/elbuenomalofeo.webp" alt="">
-
-
-            </section>
-        </div>
-        <div class="tabsContenido">
-            <div>Últimas</div>
-            <div>Estrenos</div>
-            <div>Más Vistas</div>
-        </div>
-
-        <div class="contenidoMain">
-
-         
-            <div class="cuadriculaPeliculas">
-              <% productos.forEach(function (producto) { %>
-              <div class="pelicula"><img src="img\detalleProducto\<%=producto.imagenPortada%>" alt=""></div>
-              <%})%>
-            </div>
-            
+  <main class="mainBody">
       
-            <div class="topEstrenos">
-              <div class="peliculaEstreno"> Top número 1<img src="img\Home\TopEstrenos\star wars.webp" alt="" ></div>
-              <div class="peliculaEstreno"> Top número 2 <img src="img\Home\TopEstrenos\Volver_al_Futuro_III_Poster.webp" alt="" ></div>
-              <div class="peliculaEstreno"> Top número 3 <img src="img\Home\TopEstrenos\Historia sin fin.jpg" alt="" ></div>
-            </div>
+        <section>
+          <div class = "carrousell">
+          <% if (carrousell && carrousell.length > 0) { %>
+            <% carrousell.forEach(function (movie) { %>
+              <% if (movie.images && movie.images.length > 0) { %>
+                <div class="movie">
+            <img src="img/productDetail/<%= movie.images[0].name_URL %>" alt="<%= movie.name %>">
+                </div>
+          </div>
+          <%}%> 
+          <%})%>
+          <%}%> 
+        </section>  
+    
+      <div class="contentTabs">
+          <div><a href="/products/create">Crear Pelicula</a></div>
+          <div>Últimas</div>
+          <div>Estrenos</div>
+          <div>Más Vistas</div>
+      </div>
+
+      <div class="mainContent">
+
+        <div class="movieGrid">
+          <% if (movies && movies.length > 0) { %>
+          <%movies.forEach(function (movie){%> 
+            <% if (movie.images && movie.images.length > 0) { %>          
+            <div class="movie">
+                <a href="/products/productDetail/<%= movie.id %>">
+                    <img src="img/productDetail/<%= movie.images[0].name_URL %>" alt="">
+              </a>
+            </div>        
+          <%}});%>  
+          <%}%> 
+        </div>
+  
+        <div class="topMovies">
+          <% if (movies.topMovie === 1 && movies.length > 0) { %>
+              <%movies.topMovie.forEach(function (movie,index){%>  
+                          <div class="newMovies"> Top número <%=index+1%>
+                          <% movie.images.forEach(function (image) { %> 
+                            <a href="/products/productDetail/<%= movie.id %>">
+                              <img src="img/productDetail/<%=image[0].name_URL %>" alt="" >
+                            </a>
+                        <%})})}%>
+                        
+                </div>
         </div>
 
-    </main>
+  </main>
 
   <footer>
     <%-include('./partials/footer')%>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include('../partials/head')%>
+    <title>productDetail</title>
+    <link rel="stylesheet" href="/css/productDetail.css">
+</head>
+
+<body>  
+    <header>
+        <%-include('../partials/header')%>
+    </header>
+    <br>
+    <section class ="contenedorTotal">
+        <article class="buttonsTop">
+            <button class ="buttonGoBack"><a href="/"><i class="fa-solid fa-backward-step"></i>
+                Volver</a></button>  
+                <div class="intChangesButton">  
+                    <button class="editButton"><a href="/products/productDetail/<%=movieDetail.id%>/edit">Editar Pelicula</a></button>
+                    <form action="/products/productDetail/<%=movieDetail.id%>/delete?_method=DELETE" method="POST">
+                        <button type= "submit" class="deleteButton">Eliminar Pelicula</button>
+                    </form>
+                </div>
+        </article>
+        <br>
+    <section class ="selectedMovie">
+        <article class = "cajaPoster">
+            <img class="poster" src="/img/productDetail/<%=movieDetail.images[0].name_URL%>" alt="">
+        <br>
+        </article>
+    <br>
+        <article class = "movieDescriptionBox">
+            <div class ="movieeTitle">
+                <h3 class ="movieTitle"><%=movieDetail.name%></h3>
+            </div>
+        <br>
+            <div class ="precio">
+                <h3>Precio:</h3>
+                <p>$<%=movieDetail.price%></p>
+            </div>    
+        <br>
+
+        <h3>Duración: <%=movieDetail.length%> min</h3>
+
+            <ul class = "movieDetail">
+                <li class = "anio"><a  href="#"></a><%=movieDetail.release_date%> </li>
+                <li> - </li>
+                <li class = "calif"><a  href="#"></a>Calificacion </li>
+                <li> - </li>
+                <%for (let i=0; i< movieDetail.genres.length; i++){%> 
+                    <%if (i ===  movieDetail.genres.length -1 ) {%>
+                        <li class ="genero"><a  href="#"></a> <%=movieDetail.genres[i].name%></li>  <!--Incluir letrero que al hacer hover, muestre las respuestas de cada item de la lista (uno por uno)-->
+                    <%} else {%>
+                        <li class ="genero"><a  href="#"></a> <%=movieDetail.genres[i].name%>,</li>
+                    <%}}%>
+            </ul>
+        <br>
+        
+                <p class ="movieDescription"><%=movieDetail.description%></p>
+                <div>
+                    <button class="buttons"><a href="#"></a>Agregar al carrito</button>
+                    <button class="buttons"><a href="#"></a> Comprar ahora</button>                    
+                </div>  
+        </article>
+
+    </section>
+    <br>
+        <h3 class="titulo">Imagenes</h3>
+            <article class = "imagesGrid">
+        <br>
+        <% for (let i = 0; i < movieDetail.images.length; i++) { %>
+            <% if (movieDetail.images[i].image_type_id == 2) { %>
+                <ul>
+                    <li><img src="/img/productDetail/<%= movieDetail.images[i].name_URL %>" alt=""></li>
+                </ul>
+                <% } %>
+        <% } %>;
+            </article>
+        <br>
+        <h3 class="titulo">Reparto Principal</h3>
+        <br>
+            <article class ="mainCast">
+
+                <%for (let i=0; i< movieDetail.actors.length; i++){%> 
+                <div>
+                    <img class="actor" src="/img/actors/<%= movieDetail.actors[i].profile_pic%>" alt=""> 
+                    <p><%=movieDetail.actors[i].full_name%></p>
+                </div>
+                <%}%>
+
+            </article>
+        <br>
+        <h3 class="titulo">También te puede gustar</h3>
+        <br>
+            <article class ="youMightAlsoLike">
+                <div class ="back"><i class="fa-solid fa-angle-left"></i></div>
+                <div><img src="/img/productDetail/Amanecer/Amanecer-poster.jpeg" alt=""><a href="#"></a></div>
+                <div><img src="/img/productDetail/CantandoBajoLaLluvia/CantandoBajoLaLluvia-poster.jpeg" alt=""><a href="#"></a></div>
+                <div><img src="/img/productDetail/LaDolceVita/LaDolceVita-poster.jpeg" alt=""><a href="#"></a></div>
+                <div><img src="/img/productDetail/LoQueElVientoSeLlevo/LoQueElVientoSeLlevo.jpeg" alt=""><a href="#"></a></div>
+                <div class ="forward"><i class="fa-solid fa-angle-right"></i></div>
+            </article>
+        <br>
+        <h3 class="titulo">Reviews</h3>
+            <article class = "resenias">
+        <br>
+                <div class = "cajaComentario">
+                <div class="usuario">
+                    <img src="/img/avatars/Usuarios/avatar1.png" alt="fotoUsuario"> Nombre del Usuario
+                </div>
+                    <p class ="comentario">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex accusamus magni ab assumenda enim, possimus voluptatum saepe similique voluptas! Sapiente ducimus quas at consectetur provident. Obcaecati minus animi porro inventore?
+                    </p>
+                </div>
+        <br>
+                <div class = "cajaComentario">
+                    <div class="usuario">
+                        <img src="/img/productDetail/Usuarios/avatar2.png" alt="fotoUsuario"> Nombre del Usuario
+                </div>
+                    <p class ="comentario">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex accusamus magni ab assumenda enim, possimus voluptatum saepe similique voluptas! Sapiente ducimus quas at consectetur provident. Obcaecati minus animi porro inventore?
+                    </p>
+                </div>
+            </article>
+    
+    </section>
+        <br>
+    <footer>
+        <%-include('../partials/footer') %>
+    </footer>
+</body>   
+</html>
