@@ -44,6 +44,7 @@ const productController = {
         detail: async function(req,res) {
                 try {
                         let movieDetail = await productService.getOne(req.params.id)
+                        console.log(movieDetail.genres);
                         return res.render("products/productDetail", {movieDetail:movieDetail})
                 } catch (error) {
                         console.log(error)

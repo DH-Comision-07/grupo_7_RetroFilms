@@ -23,7 +23,7 @@ module.exports = function(sequelize, dataTypes){
     };
 
     let config = {
-        tableName : 'Actors',
+        tableName : 'actors',
         timestamps : false
     };
 

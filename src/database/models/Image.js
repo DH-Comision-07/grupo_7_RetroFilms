@@ -16,14 +16,14 @@ module.exports = function(sequelize, dataTypes){
             type: dataTypes.INTEGER,
             allowNull: false
         },
-        'categoria-tipo': { // Cambio de nombre de la columna
-            type: dataTypes.INTEGER,
+        categoria_tipo: { // Cambio de nombre de la columna
+            type: dataTypes.STRING,
             allowNull: false
         }
     };
 
     let config = {
-        tableName : 'Images',
+        tableName : 'images',
         timestamps : false
     };
 
@@ -36,7 +36,7 @@ module.exports = function(sequelize, dataTypes){
         });
         Image.belongsTo(models.ImageType, {
             as: 'imageType',
-            foreignKey: 'categoria-tipo' // Actualización del nombre de la clave foránea
+            foreignKey: 'categoria_tipo' // Actualización del nombre de la clave foránea
         });
     };
     

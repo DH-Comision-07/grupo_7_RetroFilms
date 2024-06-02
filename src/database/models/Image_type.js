@@ -24,7 +24,7 @@ module.exports = function(sequelize, dataTypes){
     ImageType.associate = function(models) {
         ImageType.hasMany(models.Image, {
             as: 'images',
-            foreignKey: 'categoria-tipo' // Aquí se ajusta el nombre de la clave foránea
+            foreignKey: 'categoria_tipo' // Aquí se ajusta el nombre de la clave foránea
         });
     };
     
