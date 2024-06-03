@@ -6,6 +6,7 @@
     <title>Perfil</title>
         <%- include("../partials/head.ejs") %>
         <link rel="stylesheet" href="/css/generalStyles.css">
+        <link rel="stylesheet" href="/css/profile.">
 
 </head>
 <body>
@@ -17,6 +18,49 @@
     <img src="/img/avatars/<%=user.userPic%>" alt="imagen">
     <p class="userEmail"><%=user.email%></p>
     
+    <p class="texto">
+      Te extrañamos, que bueno que regresas, checa nuestros entrenos en la plataforma.
+    </p>
+  
+
+    <div class="carrusel">
+        <div class="grande">
+            <img src="#" alt="Imagen 1" class="img">
+            <img src="#" alt="Imagen 2" class="img">
+            <img src="#" alt="Imagen 3" class="img">  
+        </div>
+         <ul class="puntos">
+            <li class="punto activo"></li>
+            <li class="punto"></li>
+            <li class="punto"></li>
+         </ul>
+
+    </div>
+
+    <script>
+        const grande = document.querySelector('.grande');
+        const punto = document.querySelectorAll('.punto')
+
+        punto.forEach((cadaPunto, i)=>{
+            punto[i].addEventListener('click', ()=>{
+
+                let position = i
+                let operacion = position *-33
+
+                grande.style.transform = `translateX(${operacion}%)`
+
+                punto.forEach((cadaPunto, i)=> {
+                    punto[i].classList.remove('activo')
+                })
+                punto[i].classList.add('activo')
+            })
+        })
+    </script>
+    <div>
+        <button type="button"><a href="/users/index" class="btn">Ver todo nuestro contenido</a></button>
+
+       </div>
+
 </body>
 <footer>
     <%-include('../partials/footer') %>

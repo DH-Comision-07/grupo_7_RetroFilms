@@ -1,0 +1,556 @@
+[
+ {
+  "id": 1,
+  "name": "Jose Gonzalez",
+  "userName": "Gonzalez123",
+  "email": "jose.gonzalez@gmail.com",
+  "profilePic": "",
+  "Password": "123456",
+  "category": "gold"
+ },
+ {
+  "id": 2,
+  "name": "Maria Perez",
+  "userName": "Perez456",
+  "email": "maria.perez@gmail.com",
+  "profilePic": "",
+  "Password": "789",
+  "category": "platinum"
+ },
+ {
+  "id": 3,
+  "name": "joselito",
+  "userName": "jose",
+  "email": "jose@gmail.com",
+  "password": "1234",
+  "category": "category1"
+ },
+ {
+  "id": 4,
+  "name": "paola",
+  "userName": "pao",
+  "email": "pao@gmail.com",
+  "password": "1596",
+  "category": "Category3"
+ },
+ {
+  "id": 5,
+  "name": "Kate",
+  "userName": "Kate2",
+  "email": "kate@gmail.com",
+  "password": "1234",
+  "category": "Invitado"
+ },
+ {
+  "id": 6,
+  "name": "pepito",
+  "userName": "pepo",
+  "email": "pepo@gmail.com",
+  "userPic": [
+   "profilePic-profilePic_1712621250921.jpeg.jpeg"
+  ],
+  "password": "1236",
+  "category": "Platinum"
+ },
+ {
+  "id": 7,
+  "name": "lalo",
+  "userName": "lalo",
+  "email": "lalo@gmail.com",
+  "userPic": [
+   "profilePic-1712621398883.jpeg"
+  ],
+  "password": "1236",
+  "category": "Invitado"
+ },
+ {
+  "id": 8,
+  "name": "Pepito Perez",
+  "userName": "PepitoP",
+  "email": "pepito@gmail.com",
+  "userPic": [
+   "profilePic-1713403115835.png"
+  ],
+  "password": "1234",
+  "category": "Invitado"
+ },
+ {
+  "id": 10,
+  "name": "Prencejo",
+  "userName": "pren",
+  "email": "pren@gmail.com",
+  "userPic": [
+   "profilePic-1713731789982.jpeg"
+  ],
+  "password": "3456",
+  "category": "Platinum"
+ },
+ {
+  "id": 11,
+  "name": "Diego",
+  "userName": "Diego",
+  "email": "Diego@gmail.com",
+  "userPic": [
+   "profilePic-1713732924983.png"
+  ],
+  "password": "7896",
+  "category": "Gold"
+ },
+ {
+  "id": 12,
+  "name": "Camila",
+  "userName": "Cami",
+  "email": "Cami@gmail.com",
+  "userPic": [
+   "profilePic-1713733405658.png"
+  ],
+  "password": "$2a$10$A714NuFs6HHOlB9dehwpqeCZ5PSr6ZQBOHlF6XZbWGIgGeDA6RLLq",
+  "category": "Gold"
+ },
+ {
+  "id": 13,
+  "name": "Pedrito",
+  "userName": "peter",
+  "email": "peter@gmail.com",
+  "userPic": [
+   "profilePic-1713738627973.png"
+  ],
+  "password": "$2a$10$EbBc5DiM7Lian8gD/gxfFugYlOaXZSAIjMr7iD6kSkNP3qpEoTo3u",
+  "category": "Gold"
+ },
+ {
+  "id": 14,
+  "name": "Laura Osorio",
+  "userName": "LauO",
+  "email": "lauo@gmail.com",
+  "userPic": [
+   "userPic-1714435338197.png"
+  ],
+  "password": "$2a$10$ZtiYsEiqlr3i4TtBO4BgEu5bL85xi3pfalgXcDfwXQY21WzEq.cJa",
+  "category": "Gold"
+ },
+ {
+  "id": 15,
+  "name": "Miguel Jobssss",
+  "userName": "Miguel Job",
+  "email": "jobsssallendes@gmail.com",
+  "userPic": [
+   "userPic-1714437418626.jpg"
+  ],
+  "category": "Gold"
+ },
+ {
+  "id": 16,
+  "name": "Job",
+  "userName": "Jobsssss",
+  "email": "jobs@gmail.com",
+  "userPic": [
+   "userPic-1714438099540.jpg"
+  ],
+  "password": "$2a$10$qArm2PC.oja6VrAF48brWeA1N3wU9Fnu0lD8ZulnzFhM1zNnxqIAe",
+  "category": "Gold"
+ },
+ {
+  "id": 17,
+  "name": "Lorena",
+  "userName": "Loressss",
+  "email": "lorena@gmail.com",
+  "userPic": [
+   "userPic-1714495757674.webp"
+  ],
+  "category": "Gold"
+ },
+ {
+  "id": 18,
+  "name": "Jorge ",
+  "userName": "El Jorge",
+  "email": "jorge@gmail.com",
+  "userPic": [
+   "userPic-1714499571868.webp"
+  ],
+  "category": "Gold"
+ },
+ {
+  "id": 19,
+  "name": "Berenice Quiroz ",
+  "userName": "Beressssss",
+  "email": "bere@gmail.com",
+  "userPic": [
+   "userPic-1715793073045.jpg"
+  ],
+  "category": "Platinum"
+ },
+ {
+  "id": 20,
+  "name": "karla Rodríguez ",
+  "userName": "abraxas",
+  "email": "karla@gmail.com",
+  "userPic": [
+   "userPic-1715796101089.jpg"
+  ],
+  "password": "$2a$10$70T7wuWdmR3uN.qree/CdObT1VNgkvrG908BTtJMYBQZU7YyPP7Iu",
+  "category": "Gold"
+ },
+ {
+  "id": 21,
+  "name": "Pepito Perez",
+  "userName": "PepitoP",
+  "email": "pepitop@gmail.com",
+  "userPic": [
+   "userPic-1715898426029.jpeg"
+  ],
+  "password": "$2a$10$8xpRzErFte1OOB6yGU3tteHzRKpftGxOUuxVUAhn5JUEbOZDFE7d2",
+  "category": "Invitado"
+ },
+ {
+  "id": 22,
+  "name": "Juan Molina",
+  "userName": "Juanm",
+  "email": "juanm@gmail.com",
+  "userPic": [
+   "userPic-1715898526780.jpeg"
+  ],
+  "password": "$2a$10$NnidkG/lVND/9E16Hyq2euHNHUaedUf/pf.VEKvnJqg3EyzFrGZE2",
+  "category": "Gold"
+ },
+ {
+  "id": 23,
+  "name": "Juanito",
+  "userName": "juanito",
+  "email": "juanito@gmail.com",
+  "userPic": [
+   "userPic-1715898590080.jpeg"
+  ],
+  "password": "$2a$10$SIlgnmGJ3K.YWmKyBubg3.ik.I4aocHMx4cUZzKCRPDaGWukP55O.",
+  "category": "Gold"
+ },
+ {
+  "id": 24,
+  "name": "Sutanito",
+  "userName": "Sutanito",
+  "email": "sutanito@gmail.com",
+  "userPic": [
+   "userPic-1715898726338.jpeg"
+  ],
+  "password": "$2a$10$ZQji432fgiWYBpzIG6Wvs.KP3FinHGHlepc6fTyS/ndRVvmNcwMl.",
+  "category": "Gold"
+ },
+ {
+  "id": 25,
+  "name": "perrito1",
+  "userName": "perrito1",
+  "email": "perrito1@gmail.com",
+  "userPic": [
+   "userPic-1715898831385.jpeg"
+  ],
+  "password": "$2a$10$6j9FI1OW.yG9tsCjzR6b2OEzndddZtDtFa7PBuigH.ZwCZ3i3hsxG",
+  "category": "Gold"
+ },
+ {
+  "id": 26,
+  "name": "perrito",
+  "userName": "perrito2",
+  "email": "perrito2@gmail.com",
+  "userPic": [
+   "userPic-1715898904004.jpeg"
+  ],
+  "password": "$2a$10$MzVI897tIOVAJ2JPsGe7ue4a6DCtxcZediIwOR20ETORAH26qgN4q",
+  "category": "Gold"
+ },
+ {
+  "id": 27,
+  "name": "perritos",
+  "userName": "perrito5",
+  "email": "perrito5@gmail.com",
+  "userPic": [
+   "userPic-1715899189785.jpeg"
+  ],
+  "password": "$2a$10$2VD2PBghAtrJwnKGqWS8u.gbhrmJsIMAAxj4EwtEX.LfY38N9b97m",
+  "category": "Gold"
+ },
+ {
+  "id": 28,
+  "name": "Mattia Itan Passaccin ",
+  "userName": "Matti",
+  "email": "matti@gmail.com",
+  "userPic": [
+   "userPic-1715902295863.jpg"
+  ],
+  "password": "$2a$10$XJz1Bk3/DgNkqbxXoI/WguApM5W3bkPsH1/qy.eQdsuq0yfuqSNaq",
+  "category": "Gold"
+ },
+ {
+  "id": 29,
+  "name": "Ritalin",
+  "userName": "Ritalin ",
+  "email": "ritalin@gmail.com",
+  "userPic": [
+   "userPic-1715904209541.jpeg"
+  ],
+  "password": "$2a$10$Ss3XhXDr6r0uC.L13k2UzO00JZyhK.y.WlQneVIYcws9zNlYaSeGa",
+  "category": "Gold"
+ },
+ {
+  "id": 30,
+  "name": "Mako Mori ",
+  "userName": "Mako",
+  "email": "mako@gmail.com",
+  "userPic": [
+   "userPic-1716246424183.jpg"
+  ],
+  "password": "$2a$10$zfYwGENxsy3t2g.TJ4ONEOXX.n/7wvbAsNv8UZNgRNi3U/GyP146C",
+  "category": "Gold"
+ },
+ {
+  "id": 31,
+  "name": "Chula Bonita",
+  "userName": "Chula",
+  "email": "chula@gmail.com",
+  "userPic": [
+   "userPic-1716259600661.jpg"
+  ],
+  "password": "$2a$10$84dEDDqRgjEKJg5.56CtROIe7kO2DHbGf5pxHVp7OeHsm9nqbxGDm",
+  "category": "Gold"
+ },
+ {
+  "id": 32,
+  "name": "Matti Enojón",
+  "userName": "Enojón",
+  "email": "enojon@gmail.com",
+  "userPic": [
+   "userPic-1716260645655.jpg"
+  ],
+  "password": "$2a$10$idnCsTzwnCWHOq0UREAOmOaSSdejoE48Ghum65.i14vYM2h6o7e5O",
+  "category": "Gold"
+ },
+ {
+  "id": 33,
+  "name": "Paco Paco",
+  "userName": "Paco",
+  "email": "paco@gmail.com",
+  "userPic": [
+   "userPic-1716322561242.jpeg"
+  ],
+  "password": "$2a$10$BM.V0B2TpaypdzFNv877OeF7F2148GYp7S0.0uDjcJOtj0JN1H1VC",
+  "category": "Gold"
+ },
+ {
+  "id": 34,
+  "name": "Cuaderno Cuadernin ",
+  "userName": "Cuaderno",
+  "email": "cuaderno@gmail.com",
+  "userPic": [
+   "userPic-1716323926454.png"
+  ],
+  "password": "$2a$10$8sk/42fAE6mLFoIB9lSkR.2Uxj1QaPLJZw6jV0z8ZaUQcvcPs.2Oi",
+  "category": "Gold"
+ },
+ {
+  "id": 35,
+  "name": "Sacapuntas Sacapuntin ",
+  "userName": "Sacapuntas",
+  "email": "sacapuntas@gmail.com",
+  "userPic": [
+   "userPic-1716324163038.jpg"
+  ],
+  "password": "$2a$10$xYhHYIQBckvXfEST/Bui9ejkmSZ7cYWqPsKR18WFhFNPwTDAt4te.",
+  "category": "Gold"
+ },
+ {
+  "id": 36,
+  "name": "Sonidera Bocina ",
+  "userName": "Bocina",
+  "email": "bocina@gmail.com",
+  "userPic": [
+   "userPic-1716327837620.jpeg"
+  ],
+  "password": "$2a$10$tFkU9aZbCUJI0m.H.TR8zu9w2.aldh4n7wVF6f/TvxDsNGK.vCV.a",
+  "category": "Gold"
+ },
+ {
+  "id": 37,
+  "name": "Mike Mouse",
+  "userName": "Mouse",
+  "email": "mouse@gmail.com",
+  "userPic": [
+   "userPic-1716328018315.jpg"
+  ],
+  "password": "$2a$10$q7Qyil5pXr8VCb38Ar6sqe.8rAfIzXs0CFGxebb71UYPCnejw2xz6",
+  "category": "Gold"
+ },
+ {
+  "id": 38,
+  "name": "El remilgoso ",
+  "userName": "El remi",
+  "email": "remi@gmail.com",
+  "userPic": [
+   "userPic-1716334255079.jpg"
+  ],
+  "password": "$2a$10$i45i5W/tBUpGCbeFx5pxqeO9Can38Ot9WQkKvThV8IY4mYdfq2Y72",
+  "category": "Gold"
+ },
+ {
+  "id": 39,
+  "name": "Maestro Nuñes",
+  "userName": "Master",
+  "email": "master@gmail.com",
+  "userPic": [
+   "userPic-1716338940037.jpg"
+  ],
+  "password": "$2a$10$wwAhQx2JHMaGeQVe/ifPlOein8kJuHXN5kOmKl1VXuE8kGRInzrm2",
+  "category": "Gold"
+ },
+ {
+  "id": 40,
+  "name": "Pollo Milaneso ",
+  "userName": "Milaneso",
+  "email": "milaneso@gmail.com",
+  "userPic": [
+   "userPic-1716355306720.jpg"
+  ],
+  "password": "$2a$10$3Y5kylKs.WmoscXgoR7K3u8tFq/QYbyo48l7O09L9OwCqlnvH2nMG",
+  "category": "Gold"
+ },
+ {
+  "id": 41,
+  "name": "Huggy Wuggy",
+  "userName": "Huggy Wuggy ",
+  "email": "huggy@gmail.com",
+  "userPic": [
+   "userPic-1716356266736.jpg"
+  ],
+  "password": "$2a$10$rFoJl.ZM/HQxFqwo5WFZL.1NDgS71Yk8fFkEqDn9QP5UQzOpjKQdy",
+  "category": "Gold"
+ },
+ {
+  "id": 42,
+  "name": "Tennis",
+  "userName": "Tennis ",
+  "email": "tennis@gmail.com",
+  "userPic": [
+   "userPic-1716357242504.jpeg"
+  ],
+  "password": "$2a$10$io3l1Z87A0QBk3H/dNv2YeYb6LJu4mwuMhWqV3u5oVa25Rrka1Klq",
+  "category": "Gold"
+ },
+ {
+  "id": 43,
+  "name": "Máximo Décimo Meridio",
+  "userName": "Máximo",
+  "email": "maximo@gmail.com",
+  "userPic": [
+   "userPic-1716357428776.jpg"
+  ],
+  "password": "$2a$10$E6ddKsv9Na00tsVwZfxX8uf4T5jjD3vusHp46Zg.hQyD8ZwwYS2t2",
+  "category": "Gold"
+ },
+ {
+  "id": 44,
+  "name": "Dark Vader",
+  "userName": "Dark Vader ",
+  "email": "darkvader@gmail.com",
+  "userPic": [
+   "userPic-1716357958237.jpg"
+  ],
+  "password": "$2a$10$tvupQv6JsWtzne6adUIdOOIbc/n3eX4WqYjHf71uI7E/qlPeRk5u6",
+  "category": "Gold"
+ },
+ {
+  "id": 45,
+  "name": "Dark Vader",
+  "userName": "Dark Vader ",
+  "email": "darkvader@gmail.coms",
+  "userPic": [
+   "userPic-1716358052468.jpg"
+  ],
+  "password": "$2a$10$xxYYV6Uw/wc5aqk80Y/peeVZfPgjtZBsG24XmLxOtVuagWgoEnpYe",
+  "category": "Gold"
+ },
+ {
+  "id": 46,
+  "name": "Clon Trooper",
+  "userName": "Trooper",
+  "email": "clontrooper@gmail.com",
+  "userPic": [
+   "userPic-1716358889310.jpg"
+  ],
+  "category": "Gold"
+ },
+ {
+  "id": 47,
+  "name": "Clon Trooper 2",
+  "userName": "Trooper 2",
+  "email": "clontrooper2@gmail.com",
+  "userPic": [
+   "userPic-1716359754327.jpg"
+  ],
+  "password": "$2a$10$bKgpzhCXd2RFvxM8lvHpdeQFU1tDL6yrnvIF9SHNoJzl7cEl1NwCi",
+  "category": "Gold"
+ },
+ {
+  "id": 48,
+  "name": "Clon Trooper 3",
+  "userName": "Trooper 3",
+  "email": "clontrooper3@gmail.com",
+  "userPic": [
+   "userPic-1716360179074.jpg"
+  ],
+  "password": "$2a$10$4sGc0A4gGdN3uxxAm7DJ7ujP6OLz0QJnjIH.67SSuu4h4cvFOo8Te",
+  "category": "Gold"
+ },
+ {
+  "id": 49,
+  "name": "Clon Trooper 4",
+  "userName": "Trooper 4",
+  "email": "clontrooper4@gmail.com",
+  "userPic": [
+   "userPic-1716361464784.jpg"
+  ],
+  "password": "$2a$10$2H.esE4RHxey0zhHF.UDUOT3GMQXYsxjdOjburJdrrG2yVUFJ2Wbu",
+  "category": "Gold"
+ },
+ {
+  "id": 50,
+  "name": "Clon Trooper 5",
+  "userName": "Trooper 5",
+  "email": "clontrooper5@gmail.com",
+  "userPic": [
+   "userPic-1716361751592.jpg"
+  ],
+  "password": "$2a$10$3MZW4fUTc/AbFaoo5.Iow.UyW9Udpb04IEexp.sPNiy/5/Dsd.JXW",
+  "category": "Gold"
+ },
+ {
+  "id": 51,
+  "name": "Maynez",
+  "userName": "Maynez",
+  "email": "maynez@gmail.com",
+  "userPic": [
+   "userPic-1716361967855.jpg"
+  ],
+  "password": "$2a$10$hmz2JvNCoBwIRrNw7Sg20u1A48dp1ia0JYpD8AbVMYBVb9RZTYb06",
+  "category": "Gold"
+ },
+ {
+  "id": 52,
+  "name": "Maynez1",
+  "userName": "Maynez1",
+  "email": "maynez1@gmail.com",
+  "userPic": [
+   "userPic-1716362360869.jpg"
+  ],
+  "password": "$2a$10$T.fR5ESE4A5j/pza3G6c..eif28JPBCL.ZNqxWcgVdRlsYMR4wWIu",
+  "category": "Gold"
+ },
+ {
+  "id": 53,
+  "name": "Jefe Maestro Master Cheif ",
+  "userName": "Master Cheif ",
+  "email": "mastercheif@gmail.com",
+  "userPic": [
+   "userPic-1717119244403.jpg"
+  ],
+  "password": "$2a$10$atdG912MIGa6jf36skbHwucFDqtKxamE4p6RFkR3dER0egvW2vb5G",
+  "category": "Gold"
+ }
+]
