@@ -167,7 +167,7 @@ let productService = {
                     {association: "images"},
                 ]
             })
-            console.log(oneMovie.genres);
+            console.log(oneMovie.images[1].name_URL);
             return oneMovie
         } catch (error) {
             console.log(error)

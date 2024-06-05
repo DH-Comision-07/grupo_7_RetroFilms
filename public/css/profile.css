@@ -15,8 +15,8 @@
 }
 
 .btn::after, .btn::after{
-    content: ""
-    position absolute;
+    content: "";
+    position: absolute;
     opacity: 0.3;
     background: #996935;
     border: inherit;
