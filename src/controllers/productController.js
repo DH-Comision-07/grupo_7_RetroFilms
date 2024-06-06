@@ -56,10 +56,12 @@ const productController = {
         add: async function(req,res) {
                 try {
                         let newMovie = await productService.newMovieData(req.body);
-                        //let newImages = await productService.newImage(req.files)
+                        //console.log(req.files);
+                        //console.log(req.body);
+                        // let newImages = await productService.newImage(req.files)
                         //console.log(newMovie);
                         res.redirect("/");
-                        return newMovie
+                        return (newMovie)
                 
                 } catch (error) {
                         console.log(error)

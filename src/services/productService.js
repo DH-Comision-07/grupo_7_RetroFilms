@@ -125,33 +125,65 @@ let productService = {
         }
         
     },
-    // newImage: async function (files){
-    //     try {
-    //         let newImage = await db.Images.create (
-    //             name_URL = files.filename,
-    //             image_type = files.fieldname,
-    //         ) 
-    //         return newImage
-    //     } catch (error) {
-    //         console.log(error)
-    //         return "Error. La pelicula no se ha creado"
-    //     }
-    // },
+    newImage: async function (files){
+        console.log(db.Image);
+        console.log(files.imagesMovie[0]);
+        try {
+            let newImage = await db.Image.bulkCreate([
+                {
+                    name_URL : files.poster.filename,
+                    categoria_tipo : files.poster.fieldname
+                },
+                { 
+                    name_URL : files.imagesMovie[0].filename ? files.imagesMovie[0].filename : "",
+                    categoria_tipo : files.imagesMovie[0].fieldname ? files.imagesMovie[0].fieldname : ""
+                },
+                {
+                    name_URL : files.imagesMovie[1].filename ? files.imagesMovie[1].filename : "",
+                    categoria_tipo : files.imagesMovie[1].fieldname ? files.imagesMovie[1].fieldname : ""
+                },
+                {
+                    name_URL : files.imagesMovie[2].filename ? files.imagesMovie[2].filename : "",
+                    categoria_tipo : files.imagesMovie[2].fieldname? files.imagesMovie[2].fieldname: ""
+                },
+                {
+                    name_URL : files.imagesMovie[3].filename? files.imagesMovie[3].filename : "",
+                    categoria_tipo : files.imagesMovie[3].fieldname? files.imagesMovie[3].fieldname : ""
+                }]
+            ) 
+            console.log(newImage);
+            return newImage
+        } catch (error) {
+            console.log(error)
+            return "Error. La pelicula no se ha creado"
+        }
+    },
 
     newMovieData: async function(body) {
         try {
             //console.log(Movie);
             console.log(body);
-            console.log(files);
+            //console.log(files);
 
-            let newMovie = await db.Movie.create(new Movie(body), {
+            let newMovie = await db.Movie.create(
+
+                name = body.name,
+                price = parseFloat(body.price),
+                length = parseInt(body.length),
+                description = body.description,
+                genre = body.genre,
+                release_date = parseInt(body.release_date),
+                top_movie = body.top_movie == 'on',
+                is_carrousell = body.is_carrousell == 'on'
+            
+                , {
             include:[
                 {association : 'images'}
             ]
         }
         )
             console.log(newMovie);
-            //return newMovie // añadir association
+            return newMovie // añadir association
         } catch (error) {
             console.log(error)
             return "Error. La pelicula no se ha creado"
@@ -178,7 +210,7 @@ let productService = {
     updateOne: async function(id, body, files) {
         try {
             let movie = new Movie(body, files);
-            console.log(movie);
+            //console.log(movie);
             await db.Movie.update(movie, {where: {id: id}})
         } catch (error) {
             console.log(error)
@@ -189,18 +221,16 @@ let productService = {
 }
 
 
-function Movie(name, price, length, description, genre, release_date, poster, imagesMovie, top_movie, is_carrousell) {
-    this.name = name;
-    this.price = parseFloat(price);
-    this.length = parseInt(length);
-    this.description = description;
-    this.genre =  genre;
-    this.release_date = parseInt(release_date);
-    this.poster = poster;
-    this.imagesMovie = [imagesMovie];
-    this.top_movie = top_movie;
-    this.is_carrousell = is_carrousell;
-}
+// function Movie(name, price, length, description, genre, release_date, top_movie, is_carrousell) {
+//     this.name = name.join("");
+//     this.price = parseFloat(price);
+//     this.length = parseInt(length);
+//     this.description = description;
+//     this.genre =  genre;
+//     this.release_date = parseInt(release_date);
+//     this.top_movie = top_movie == 'on';
+//     this.is_carrousell = is_carrousell == 'on';
+// }
 
 
 module.exports = productService;
