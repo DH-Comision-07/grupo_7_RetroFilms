@@ -24,41 +24,28 @@ const usersController = {
     processRegister: async function(req, res){
         try {
 
-            let emailInDB = await usersService.findByFieldDb("email", req.body.email);
-    
-            if (emailInDB){
-                return res.render("users/registerForm", {
-                    errors: {
-                        email: {
-                            msg: "Este email ya está registrado"
-                        }
-                    },
-                    oldData: req.body
-                })
-            }
-
-            let userNameInDB = await usersService.findByFieldDb("userName", req.body.userName);
-
-            if (userNameInDB){
-                return res.render("users/registerForm", {
-                    errors: {
-                        userName: {
-                            msg: "Este usuario ya está registrado"
-                        }
-                    },
-                    oldData: req.body
-                })
-            }
-
             let resultValidation = validationResult(req);
-        
+            
             if (resultValidation.errors.length > 0) {
                 return res.render("users/registerForm", {
                     errors: resultValidation.mapped(), //array a obj literal
                     oldData: req.body
                 });
             }
+
+            let emailInDB = await usersService.findByFieldDb("email", req.body.email);
+            let userNameInDB = await usersService.findByFieldDb("userName", req.body.userName);
     
+            if (emailInDB || userNameInDB) {
+                return res.render("users/registerForm", {
+                    errors: {
+                        email: emailInDB ? { msg: "Este email ya está registrado" } : undefined,
+                        userName: userNameInDB ? { msg: "Este usuario ya está registrado" } : undefined
+                    },
+                    oldData: req.body
+                });
+            }
+        
             let newUser = await usersService.createUserDb(req.body, req.imagePaths);
             
             if (newUser) {
