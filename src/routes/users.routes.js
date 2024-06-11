@@ -36,5 +36,7 @@ router.get('/profile',authMid,usersController.profile)
 
 router.get('/logout',usersController.logout)
 
+/* --- Pruebas ----*/
+router.get("/prueba", usersController.prueba)
 
 module.exports = router;

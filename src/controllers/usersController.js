@@ -6,39 +6,70 @@ const db = require("../database/models")
 
 const usersController = { 
     register: (req, res) => {
-        res.cookie('testing','Hola, mundo!',{maxAge:1000*120})
-        res.render("users/registerForm")
+        try {
+            res.cookie('testing','Hola, mundo!',{maxAge:1000*120})
+            return res.render("users/registerForm")
+        } catch (error) {
+            console.log(error)
+            res.send("Ha ocurrido un error al cargar el formulario")
+        }
     },
 
     login: (req, res) => {
         return res.render("users/login")
     },
+
     userEdit: (req, res) =>res.render('users/userEditForm'),
 
-    processRegister: function(req, res){
-        const resultValidation = validationResult(req);
+    processRegister: async function(req, res){
+        try {
+
+            let emailInDB = await usersService.findByFieldDb("email", req.body.email);
+    
+            if (emailInDB){
+                return res.render("users/registerForm", {
+                    errors: {
+                        email: {
+                            msg: "Este email ya está registrado"
+                        }
+                    },
+                    oldData: req.body
+                })
+            }
+
+            let userNameInDB = await usersService.findByFieldDb("userName", req.body.userName);
+
+            if (userNameInDB){
+                return res.render("users/registerForm", {
+                    errors: {
+                        userName: {
+                            msg: "Este usuario ya está registrado"
+                        }
+                    },
+                    oldData: req.body
+                })
+            }
+
+            let resultValidation = validationResult(req);
         
-        if (resultValidation.errors.length > 0) {
-            return res.render("users/registerForm", {
-                errors: resultValidation.mapped(), //array a obj literal
-                oldData: req.body
-            });
+            if (resultValidation.errors.length > 0) {
+                return res.render("users/registerForm", {
+                    errors: resultValidation.mapped(), //array a obj literal
+                    oldData: req.body
+                });
+            }
+    
+            let newUser = await usersService.createUserDb(req.body, req.imagePaths);
+            
+            if (newUser) {
+                return res.render("users/registerView")
+            }
+  
+        } catch (error) {
+            console.log(error)
+            return ("ocurrio un error al generar el registro nuevo")
         }
 
-        let userInDB = usersService.findByField('email', req.body.email);
-        if (userInDB){
-            return res.render("users/registerForm", {
-                errors: {
-                    email: {
-                        msg: "Este email ya está registrado"
-                    }
-                },
-                oldData: req.body
-        })
-    }
-
-        let newUser = usersService.createUser(req.body, req.imagePaths);
-        return res.render("users/registerView")
     },
 
     processLogIn: function(req, res){
@@ -67,7 +98,7 @@ const usersController = {
     profile: (req,res) => {
         //console.log(req.cookies.userEmail);
         return res.render('users/profile',{user: req.session.userLogged})
-        },
+    },
 
     logout: (req,res) => {
         res.clearCookie('userEmail');
@@ -79,6 +110,19 @@ const usersController = {
     delete: function (req, res){
         let newUserDB = usersService.deleteUser(req.params.id);
         return res.send("Usuario eliminado")
+    },
+
+    prueba: async function(req, res) {
+        try {
+            await usersService.findAllUsersDb()
+            .then((users) => {
+                console.log(users)
+                res.send(users)
+            })
+        } catch (error) {
+            console.log(error)
+            res.send("ocurrio un error")
+        }
     }
 
     

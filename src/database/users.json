@@ -474,6 +474,7 @@
   "userPic": [
    "userPic-1716358889310.jpg"
   ],
+  "password": "$2a$10$V561MR0XdOwtRJYvzuqr0e9KjX/5qRXsJYHLZMB5cqGlzbjJROrQu",
   "category": "Gold"
  },
  {
@@ -544,13 +545,24 @@
  },
  {
   "id": 53,
-  "name": "Jefe Maestro Master Cheif ",
-  "userName": "Master Cheif ",
-  "email": "mastercheif@gmail.com",
+  "name": "Maximo Lopardo",
+  "userName": "dadada",
+  "email": "olaMuyBuenas@gmail.com",
   "userPic": [
-   "userPic-1717119244403.jpg"
+   "userPic-1718062242197.jpg"
   ],
-  "password": "$2a$10$atdG912MIGa6jf36skbHwucFDqtKxamE4p6RFkR3dER0egvW2vb5G",
+  "password": "$2a$10$jcRzBDdt39Hh3UFr3jqmfODFnTkTc9F5c6pqXZoAaI9JrQWR6qH5i",
+  "category": "Gold"
+ },
+ {
+  "id": 54,
+  "name": "Maximo Lopardo",
+  "userName": "dadada",
+  "email": "olaMuyBuenas2@gmail.com",
+  "userPic": [
+   "userPic-1718062384278.jpg"
+  ],
+  "password": "$2a$10$zEDehfTEOx2.9udz1hcjLuKNwXmbovrTxGgoFByeEBU66222BK9JO",
   "category": "Gold"
  }
 ]
