@@ -59,31 +59,37 @@ const usersController = {
 
     },
 
-    processLogIn: function(req, res){
-        let userToLogIn = usersService.findByField('email',req.body.email)
-        if (userToLogIn){
-            let passwordVerif = bcryptjs.compareSync(req.body.password, userToLogIn.password)
-            if(passwordVerif){
-                delete userToLogIn.password;
-                req.session.userLogged = userToLogIn;
-                if(req.body.remember){
-                    res.cookie('userEmail',req.body.email,{maxAge:(1000 * 60)})
+    processLogIn: async function(req, res){
+        try {
+            let userToLogIn = await usersService.findByFieldDb('email',req.body.email)
+            console.log(userToLogIn)
+            if (userToLogIn){
+                let passwordVerif = bcryptjs.compareSync(req.body.password, userToLogIn.password)
+                if(passwordVerif){
+                    delete userToLogIn.password;
+                    req.session.userLogged = userToLogIn;
+                    if(req.body.remember){
+                        res.cookie('userEmail',req.body.email,{maxAge:(1000 * 60)})
+                    }
+                    return res.redirect('profile')
                 }
-                return res.redirect('profile')
             }
+    
+            res.render('users/login', {
+                errors:{
+                    email:{
+                        msg: "Las credenciales son inválidas"
+                    }
+                }
+            })
+            
+        } catch (error) {
+            console.log(error)
+            return ("ocurrio un error al iniciar sesión")
         }
-
-        res.render('users/login', {
-            errors:{
-                email:{
-                    msg: "Las credenciales son inválidas"
-                }
-            }
-        })
     },
 
     profile: (req,res) => {
-        //console.log(req.cookies.userEmail);
         return res.render('users/profile',{user: req.session.userLogged})
     },
 
