@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>RetroFilms-Inicio</title>
+        <link rel="stylesheet" href="/css/styleLogin.css">
+        <%-include('../partials/head') %>
+    </head>
+
+    <header class="header">
+        <%-include('../partials/header')%>
+    </header>
+    <body>
+        </header>
+        <div class="container">
+            <img src="" alt="" class="logo">
+            <div class="entryForm">
+                <form action="/users/delete?_method=DELETE" method="POST">
+
+                    <h1>Está seguro que desea borrar su usuario?</h1>
+                    <div class="submit">
+                        <button type="submit">Borrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+
+    <footer>
+        <%-include('../partials/footer') %>
+    </footer>
+
+</html>

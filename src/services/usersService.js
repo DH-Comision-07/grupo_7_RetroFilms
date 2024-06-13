@@ -126,6 +126,12 @@ let usersService = {
         let usersJSON= JSON.stringify(finalUsers, null,' ');
         fs.writeFileSync(this.fileName,usersJSON)
         return true;
+    },
+
+    deleteUserDb: async function(id) {
+        db.User.destroy({
+            where: {id: id}
+        })
     }
 }
 

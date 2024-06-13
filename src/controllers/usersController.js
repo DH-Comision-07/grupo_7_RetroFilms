@@ -62,7 +62,7 @@ const usersController = {
     processLogIn: async function(req, res){
         try {
             let userToLogIn = await usersService.findByFieldDb('email',req.body.email)
-            console.log(userToLogIn)
+
             if (userToLogIn){
                 let passwordVerif = bcryptjs.compareSync(req.body.password, userToLogIn.password)
                 if(passwordVerif){
@@ -99,17 +99,33 @@ const usersController = {
         res.redirect("login")
     },
 
+    delete: function(req,res) {
+        return res.render("users/delete")
+    },
 
-    delete: function (req, res){
-        let newUserDB = usersService.deleteUser(req.params.id);
-        return res.send("Usuario eliminado")
+
+    processDelete: async function (req, res){
+        try {
+            let userId = req.session.userLogged.id;
+
+            if (userId){
+                await usersService.deleteUserDb(userId)
+                res.clearCookie('userEmail');
+                req.session.destroy();
+                return res.send("Usuario eliminado")
+            }
+            
+        } catch (error) {
+            console.log(error);
+            return ("ocurrió un error al eliminar el usuario")
+        }
+
     },
 
     prueba: async function(req, res) {
-        try {
+        try { 
             await usersService.findAllUsersDb()
             .then((users) => {
-                console.log(users)
                 res.send(users)
             })
         } catch (error) {

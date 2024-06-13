@@ -20,7 +20,8 @@ router.post("/register", uploadFile.single("userPic"), validations,  usersContro
 
 
 //--- DELETE USER --//
-//router.delete('/delete',usersController.delete)
+router.get('/delete',usersController.delete)
+router.delete("/delete", usersController.processDelete)
 
 
 /* --------------- LOGIN -------------*/
