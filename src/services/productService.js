@@ -1,6 +1,6 @@
-const fs = require ('fs');
-const path = require ('path');
-const products = require ('../database/json/movies.json');
+const fs = require('fs');
+const path = require('path');
+const products = require('../database/json/movies.json');
 const db = require("../database/models")
 
 // let productService = {
@@ -19,7 +19,7 @@ const db = require("../database/models")
 //             let movieById=this.products.find(product => product.id == id);
 //             return movieById;
 //     },
-    
+
 //     addMovie: function(movie, imagePath, imagePaths){           
 //         let maxId = 0;
 //         for (let i=0; i < this.products.length; i++){
@@ -50,14 +50,14 @@ const db = require("../database/models")
 //     editMovie:(id,editedMovie, imagePath, imagePaths) => {
 //             const moviesFilePath = path.resolve(__dirname, '../database/movies.json'); //Definimos la ruta al json
 //             const moviesINFO = JSON.parse(fs.readFileSync(moviesFilePath, 'utf-8')); //leemos el json
-            
+
 
 //             const movieIndex = moviesINFO.findIndex(movie => movie.id == id); // creamos la variable MovieIndex para encontrar la posicion en el array de peliculas que pertenezca a la pelicula que estamos buscando para editar
 //             if (movieIndex === -1) {
 //             throw new Error('Película no encontrada'); //condicional donde verificamos si la posición y por ende la pelicula, existe en el array (si arrojara -1, significa que la pelicula no existe y devuelve el error)
 //             }
 
-            
+
 //             editedMovie.price = parseFloat(editedMovie.price);
 //             editedMovie.year = parseInt(editedMovie.year);
 //             editedMovie.poster = imagePath;
@@ -72,7 +72,7 @@ const db = require("../database/models")
 //             fs.writeFileSync(moviesFilePath, JSON.stringify(moviesINFO)); //escribimos en el json el objeto modificado
 
 //             return moviesINFO[movieIndex] // nos muestra el objeto modificado
-            
+
 //     }, 
 
 //     deleteMovie: (id)=>{
@@ -94,27 +94,46 @@ const db = require("../database/models")
 
 let productService = {
 
-    findTopMovie : async function(){
+    findMovieGrid: async function () {
         try {
-            let topMovies= await db.Movie.findAll({
+            let movieGrid = db.Movie.findAll({
                 where: {
-                    top_movie:1
+                    top_movie: 0,
+                    is_carrousell: 0
+
+                },
+                include: [
+                    { association: "images" },
+                ]
+            });           
+            return movieGrid
+        } catch (error) {
+            console.error('Error fetching movies grid:', error);
+            throw error;
+        }
+
+    },
+    findTopMovie: async function () {
+        try {
+            let topMovies = await db.Movie.findAll({
+                where: {
+                    top_movie: 1
                 }
             })
             //console.log('Top Movies:', topMovies);
             return topMovies
         } catch (error) {
-            console.error('Error fetching top movies:', error); 
+            console.error('Error fetching top movies:', error);
             throw error;
         }
-            
+
     },
 
-    findIsCarrousell: async function(){
+    findIsCarrousell: async function () {
         try {
-            let carrousell= await db.Movie.findAll({
+            let carrousell = await db.Movie.findAll({
                 where: {
-                    is_carrousell:1 
+                    is_carrousell: 1
                 }
             })
             //console.log('Carrousell Movies:', carrousell);
@@ -123,80 +142,53 @@ let productService = {
             console.error('Error fetching carrousell movies:', error); // Log de error
             throw error;
         }
-        
+
     },
-    newImage: async function (files){
-        console.log(db.Image);
-        console.log(files.imagesMovie[0]);
-        try {
-            let newImage = await db.Image.bulkCreate([
-                {
-                    name_URL : files.poster.filename,
-                    categoria_tipo : files.poster.fieldname
-                },
-                { 
-                    name_URL : files.imagesMovie[0].filename ? files.imagesMovie[0].filename : "",
-                    categoria_tipo : files.imagesMovie[0].fieldname ? files.imagesMovie[0].fieldname : ""
-                },
-                {
-                    name_URL : files.imagesMovie[1].filename ? files.imagesMovie[1].filename : "",
-                    categoria_tipo : files.imagesMovie[1].fieldname ? files.imagesMovie[1].fieldname : ""
-                },
-                {
-                    name_URL : files.imagesMovie[2].filename ? files.imagesMovie[2].filename : "",
-                    categoria_tipo : files.imagesMovie[2].fieldname? files.imagesMovie[2].fieldname: ""
-                },
-                {
-                    name_URL : files.imagesMovie[3].filename? files.imagesMovie[3].filename : "",
-                    categoria_tipo : files.imagesMovie[3].fieldname? files.imagesMovie[3].fieldname : ""
-                }]
-            ) 
-            console.log(newImage);
-            return newImage
-        } catch (error) {
-            console.log(error)
-            return "Error. La pelicula no se ha creado"
-        }
-    },
+    newMovieData: async function (body) {
+        /**
+         *  name: 'Pulgarcita',
+            price: '5',
+            length: '152',
+            description: 'ksjbfjhbgjdbhljds',
+            genre: 'Acción',
+            release_date: '2000',
+            top_movie: 'on'
+         */
+        try {           
+            //console.log('estos son los datos de las pelis', body);  
 
-    newMovieData: async function(body) {
-        try {
-            //console.log(Movie);
-            console.log(body);
-            //console.log(files);
+            let newMovie = await db.Movie.create({
 
-            let newMovie = await db.Movie.create(
+                name: body.name,
+                price: parseFloat(body.price),
+                length: parseInt(body.length),
+                description: body.description,
+                genre: body.genre,
+                release_date: parseInt(body.release_date),
+                top_movie: body.top_movie == 'on' ? 1 : 0,
+                is_carrousell: body.is_carrousell == 'on' ? 1 : 0
 
-                name = body.name,
-                price = parseFloat(body.price),
-                length = parseInt(body.length),
-                description = body.description,
-                genre = body.genre,
-                release_date = parseInt(body.release_date),
-                top_movie = body.top_movie == 'on',
-                is_carrousell = body.is_carrousell == 'on'
-            
-                , {
-            include:[
-                {association : 'images'}
-            ]
-        }
-        )
-            console.log(newMovie);
+            } , {
+                    include: [
+                        { association: 'images' }
+                    ]
+                }
+            )
+            //console.log(newMovie);
             return newMovie // añadir association
         } catch (error) {
             console.log(error)
             return "Error. La pelicula no se ha creado"
         }
-    }, 
+    },
 
-    getOne: async function(id) {
+    getOne: async function (id) {
         try {
             let oneMovie = await db.Movie.findByPk(id, {
                 include: [
-                    {association: "genres"},
-                    {association: "actors"},
-                    {association: "images"},
+                    { association: "genres" },
+                    { association: "actors" },
+                    { association: "images" },
                 ]
             })
             console.log(oneMovie.images[1].name_URL);
@@ -205,13 +197,13 @@ let productService = {
             console.log(error)
             return ("Error. La pelicula no se ha encontrado")
         }
-    }, 
+    },
 
-    updateOne: async function(id, body, files) {
+    updateOne: async function (id, body, files) {
         try {
             let movie = new Movie(body, files);
             //console.log(movie);
-            await db.Movie.update(movie, {where: {id: id}})
+            await db.Movie.update(movie, { where: { id: id } })
         } catch (error) {
             console.log(error)
             return "Error. La pelicula no se ha actualizado"

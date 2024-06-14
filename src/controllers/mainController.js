@@ -1,6 +1,6 @@
 const productService = require('../services/productService.js');
 const carrousellService = require( '../services/carrousellService.js');
-const db = require("../database/models");
+
 
 // const mainController = { 
 //     index: (req, res) => res.render("index", {
@@ -17,12 +17,8 @@ const mainController = {
     index: async function (req, res) {
         try {
             //console.log('Fetching movies, top movies, and carrousell movies...');
-            const [movies, topMovie, carrousell] = await Promise.all([
-                db.Movie.findAll({
-                    include: [
-                        { association: "images" },
-                    ]
-                }),
+            const [movies, topMovie, carrousell] = await Promise.all([                
+                productService.findMovieGrid(),
                 productService.findTopMovie(),
                 productService.findIsCarrousell()
             ]);
