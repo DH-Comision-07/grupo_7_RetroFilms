@@ -1,5 +1,6 @@
 let productService = require('../services/productService');
 let imageService = require('../services/imageService');
+let genreService = require('../services/genreService');
 
 // const productController = {
 //         shoppingCart: (req, res) => res.render("products/shoppingCart"), 
@@ -119,20 +120,20 @@ const productController = {
 
                         let imagesInput = [];
 
-                        req.files.imagesMovie.forEach(element => {
-                                imagesInput.push({
-                                   name_URL: element.path,
-                                   Movies_id: newMovie.id,
-                                   categoria_tipo: "imagen"
-                                });
-                        });
-
                         req.files.poster.forEach(element => {
                                 imagesInput.push({
-                                        name_URL: element.path,
+                                        name_URL: element.filename,
                                         Movies_id: newMovie.id,
                                         categoria_tipo: "portada"
                                 });
+
+                        req.files.imagesMovie.forEach(element => {
+                                imagesInput.push({
+                                        name_URL: element.filename,
+                                        Movies_id: newMovie.id,
+                                        categoria_tipo: "imagen"
+                                });
+                        });
                         });
 
                         await imageService.newImages(imagesInput);
@@ -166,8 +167,40 @@ const productController = {
 
         update: async function(req, res) {
                 try {
-                        await productService.updateOne(req.params.id, req.body, req.files)
-                        res.redirect("/products/productDetail/" + req.params.id)
+                        let updatedMovie = await productService.updateOne(req.params.id, req.body, req.files)
+                
+                                        let imagesInput = [];
+                        
+                                if (req.files && req.files.poster) {
+                                        req.files.poster.forEach(element => {
+                                                imagesInput.splice({
+                                                name_URL: element.filename,
+                                                Movies_id: updatedMovie.id,
+                                                categoria_tipo: "portada"
+                                                });
+                                        });
+                                        }
+                        
+                                        if (req.files && req.files.imagesMovie) {
+                                        req.files.imagesMovie.forEach(element => {
+                                                imagesInput.splice({
+                                                name_URL: element.filename,
+                                                Movies_id: updatedMovie.id,
+                                                categoria_tipo: "imagen"
+                                                });
+                                        });
+                                        }
+                        
+                                        if (imagesInput.length > 0) {
+                                        await imageService.newImages(imagesInput);
+                                        }
+                        
+                                        let movieSaved = await productService.getOne(updatedMovie.id);
+                        
+                                        console.log("edited movie", movieSaved);
+
+                                        res.redirect("/products/productDetail/" + req.params.id)
+                                        return movieSaved;
                 } catch (error) {
                         console.log(error)
                         res.send("Ha ocurrido un error al buscar la pelicula")
@@ -176,9 +209,14 @@ const productController = {
 
         delete: async function(req, res) {
                 try {
-                        
+
+                        const Movies_id = req.params.id;
+
+                        await productService.deleteMovie(Movies_id)
+                        //console.log(movieDetail.genres);
+                        res.redirect("/")
                 } catch (error) {
-                        
+                        console.log(error, 'No se eliminó la pelicula');
                 }
         }
 

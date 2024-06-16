@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const products = require('../database/json/movies.json');
+const imageService = require('../services/imageService');
 const db = require("../database/models")
 
 // let productService = {
@@ -117,7 +118,8 @@ let productService = {
         try {
             let topMovies = await db.Movie.findAll({
                 where: {
-                    top_movie: 1
+                    top_movie: 1,
+                    is_carrousell: 0
                 }
             })
             //console.log('Top Movies:', topMovies);
@@ -133,6 +135,7 @@ let productService = {
         try {
             let carrousell = await db.Movie.findAll({
                 where: {
+                    top_movie: 0,
                     is_carrousell: 1
                 }
             })
@@ -164,13 +167,15 @@ let productService = {
                 length: parseInt(body.length),
                 description: body.description,
                 genre: body.genre,
-                release_date: parseInt(body.release_date),
+                release_date: body.release_date,
                 top_movie: body.top_movie == 'on' ? 1 : 0,
                 is_carrousell: body.is_carrousell == 'on' ? 1 : 0
 
             } , {
                     include: [
-                        { association: 'images' }
+                        { association: "genres" },
+                        { association: "actors" },
+                        { association: "images" },
                     ]
                 }
             )
@@ -191,7 +196,7 @@ let productService = {
                     { association: "images" },
                 ]
             })
-            console.log(oneMovie.images[1].name_URL);
+            //console.log(oneMovie.images[1].name_URL);
             return oneMovie
         } catch (error) {
             console.log(error)
@@ -201,28 +206,48 @@ let productService = {
 
     updateOne: async function (id, body, files) {
         try {
-            let movie = new Movie(body, files);
-            //console.log(movie);
-            await db.Movie.update(movie, { where: { id: id } })
+            const updatedMovieData = {
+                name: body.name,
+                price: parseFloat(body.price),
+                length: parseInt(body.length),
+                description: body.description,
+                genre: body.genre,
+                release_date: body.release_date,
+                poster: files.poster,
+                imagesMovie: files.imagesMovie,
+                top_movie: body.top_movie === 'on' ? 1 : 0,
+                is_carrousell: body.is_carrousell === 'on' ? 1 : 0
+            };
+
+            await db.Movie.update(updatedMovieData, { where: { id: id } });
+
+            let updatedMovie = await this.getOne(id);
+
+            return updatedMovie;
+
         } catch (error) {
             console.log(error)
             return "Error. La pelicula no se ha actualizado"
         }
+    },
+
+    deleteMovie: async function (Movies_id){
+        try {
+            await imageService.deleteImage(Movies_id);
+
+            await db.Movie.destroy({
+                where:{
+                    id: Movies_id
+                }
+            })
+    
+        } catch (error) {
+            console.log('la pelicula no se eliminó', error);
+            
+        }
     }
 
 }
-
-
-// function Movie(name, price, length, description, genre, release_date, top_movie, is_carrousell) {
-//     this.name = name.join("");
-//     this.price = parseFloat(price);
-//     this.length = parseInt(length);
-//     this.description = description;
-//     this.genre =  genre;
-//     this.release_date = parseInt(release_date);
-//     this.top_movie = top_movie == 'on';
-//     this.is_carrousell = is_carrousell == 'on';
-// }
 
 
 module.exports = productService;
