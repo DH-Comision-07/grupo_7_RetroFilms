@@ -4,7 +4,6 @@ const router = express.Router();
 const productRouter = require( './product.routes');
 const userRouter = require("./users.routes.js")
 const actorsRouter = require('./actors.routes.js')
-
 const mainController = require("../controllers/mainController.js")
 
 router.get('/', mainController.index);

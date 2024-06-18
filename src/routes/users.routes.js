@@ -13,7 +13,7 @@ const userMid = require ("../middlewares/loggedUserMid")
 
 /* ---------------------REGISTER -----------------*/
 //--- Creation USERS --///
-router.get("/register", guestMid, usersController.register)
+router.get("/register", usersController.register) //router.get("/register", guestMid, usersController.register)
 router.post("/register", uploadFile.single("userPic"), validations,  usersController.processRegister)
 
 /*------ EDITION USERS -----*/
@@ -21,22 +21,22 @@ router.post("/register", uploadFile.single("userPic"), validations,  usersContro
 
 
 //--- DELETE USER --//
-router.get('/delete',usersController.delete)
+router.get('/delete', usersController.delete)
 router.delete("/delete", usersController.processDelete)
 
 
 /* --------------- LOGIN -------------*/
 
-router.get("/login", userMid.guestMid, usersController.login)
+router.get("/login", usersController.login) // router.get("/login", userMid.guestMid, usersController.login)
 router.post("/login", usersController.processLogIn)
 
 /* -- PROFILE-- */
 
-router.get('/profile',authMid,usersController.profile)
+router.get('/profile', usersController.profile) //router.get('/profile', authMid, usersController.profile)
 
 /* --- LOG OUT ----*/
 
-router.get('/logout',usersController.logout)
+router.get('/logout', usersController.logout)
 
 /* --- Pruebas ----*/
 router.get("/prueba", usersController.prueba)

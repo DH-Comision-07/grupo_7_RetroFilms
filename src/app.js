@@ -7,10 +7,12 @@ const bodyParser = require ('body-parser');
 const indexRouter = require("./routes/index.routes");
 const session = require ('express-session');
 const cookies = require('cookie-parser')
+const loggedUserMid = require ('./middlewares/loggedUserMid');
+
 
 app.use(methodOverride('_method')) // middleware para habilitar
 
-const loggedUserMid = require ('./middlewares/loggedUserMid');
+
 
 // Middleware body-parser para analizar los datos del cuerpo de las solicitudes HTTP
 app.use(bodyParser.urlencoded({ extended: true }));
