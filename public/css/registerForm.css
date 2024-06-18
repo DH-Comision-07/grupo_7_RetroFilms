@@ -9,8 +9,21 @@ body, html {
     margin: 0;
     padding: 0;
     
-    
+   /* agregados para validaciones*/ 
 }
+ borrarEstilo{
+    display: none;
+ }
+
+.visible_item{
+    display: block;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    height: auto;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+   /*-----------------------------*/
 
 body {
     background-color: white;

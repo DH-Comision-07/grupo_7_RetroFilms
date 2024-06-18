@@ -20,11 +20,11 @@
                     type="text"  
                     name="name" 
                     placeholder="Nombres y Apellidos" 
-                    class= "<%= locals.errors && errors.name ? "form-control-is-invalid" : null %>" 
+                    class= " help_message <%= locals.errors && errors.name ? "form-control-is-invalid" : null %>" 
                     value= "<%= locals.oldData ? oldData.name : null %>"
                 >
                 <% if (locals.errors && errors.name) { %>
-                    <div class="textDanger">
+                    <div class="textDanger help_message" id="help_name" >
                         <%= errors.name.msg  %>
                     </div>
                 <% } %>
@@ -35,11 +35,11 @@
                     type="text"  
                     name="userName" 
                     placeholder="User name"
-                    class= "<%= locals.errors && errors.userName ? "form-control-is-invalid" : null %>"
+                    class= " help_message <%= locals.errors && errors.userName ? "form-control-is-invalid" : null %>"
                     value= "<%= locals.oldData ? oldData.userName : null %>" 
                 >
                 <% if (locals.errors && errors.userName) { %>
-                    <div class="textDanger">
+                    <div class="textDanger help_email" id="help_userName">
                         <%= errors.userName.msg  %>
                     </div>
                 <% } %>
@@ -50,11 +50,11 @@
                     type="email" 
                     name ="email" 
                     placeholder ="ejemplo@gmail.com"
-                    class= "<%= locals.errors && errors.email ? "form-control-is-invalid" : null %>" 
+                    class= "help_message <%= locals.errors && errors.email ? "form-control-is-invalid" : null %>" 
                     value= "<%= locals.oldData ? oldData.email : null %>"
                 >
                 <% if (locals.errors && errors.email) { %>
-                    <div class="textDanger">
+                    <div class="textDanger help_message" id="help_email">
                         <%= errors.email.msg  %>
                     </div>
                 <% } %>
@@ -79,24 +79,31 @@
                     type ="password" 
                     name = "password" 
                     placeholder = "xxxx"
-                    class= "<%= locals.errors && errors.password ? "form-control-is-invalid" : null %>" 
+                    class= " help_message <%= locals.errors && errors.password ? "form-control-is-invalid" : null %>" 
                 >
                 <% if (locals.errors && errors.password) { %>
-                    <div class="textDanger">
+                    <div class="textDanger help_message" id="help_password">
                         <%= errors.password.msg  %>
                     </div>
                 <% } %>
+                   <ul class="errors_list_password"> 
+                     <li id="length" class="invalid"> Debe tener almenos 5 caracteres.</li>
+                     <li id="uppercase" class="invalid">Debe incluir una letra mayúscula. </li>
+                     <li id="lowercase" class="invalid">Debe incluir una letra minúscula. </li>
+                     <li id="number" class="invalid">Debe incluir un número.</li>
+                   </ul>
             </label>
             
             <label for = "reEnterPassword">Repite la contraseña
                 <input 
                     type = "password" 
                     name = "reEnterPassword" 
-                    placeholder= "xxxx"
-                    class= "<%= locals.errors && errors.reEnterPassword ? "form-control-is-invalid" : null %>" 
+                    placeholder= "xxxxx"
+                    id="help_confirm_password"
+                    class= " help_message <%= locals.errors && errors.reEnterPassword ? "form-control-is-invalid" : null %>" 
                 >
                 <% if (locals.errors && errors.reEnterPassword) { %>
-                    <div class="textDanger">
+                    <div class="textDanger help_message" id="help_confirm_password" class="borrarEstilo">
                         <%= errors.reEnterPassword.msg  %>
                     </div>
                 <% } %>
@@ -133,7 +140,80 @@
             <p class="login">¿Ya tienes cuenta? <a href="/users/login">Log in </a> </p>
              
         </form>
+                    <% // ---------Selección de elementos --------
+                    const inputs = document.querySelectorAll('input');
+                    const passwordInput = document.getElementById('password');
+                    const confirmPasswordInput = document.getElementById('confirm_password');
 
+                    //-----Regals de Validación para la contraseña----Expresiones Generales
+
+                    const passwordRules = {
+                        length: /(?=.{8,})/,
+                        uppercase: /(?=.*[A-Z])/,
+                        lowercase: /(?=.*[a-z])/,
+                        number: /(?=.*\d)/
+                    };
+
+                    // Mensajes de ayuda para la contraseña
+
+                    const passwordMessages = {
+                        length: document.getElementById('length'),
+                        uppercase: document.getElementById('uppercase'),
+                        lowercase: document.getElementById('lowercase'),
+                        number: document.getElementById('number')
+                    };
+
+                    // Validación en tiempo real de la contraseña
+
+                    passwordInput.addEventListener('input', function(){
+                        const password = passwordInput.value;
+                        for (const [rule, regex] of Object.entries(passwordRules)){
+                           if(regex.test(password)){
+                            passwordMessages[rule].classList.remove('invalid');
+                            passwordMessages[rule].classList.add('valid');
+                           } else {
+                            passwordMessages[rule].classList.add('invalid');
+                            passwordMessages[rule].classList.remove('valid');
+                           }
+                        }
+                    });
+
+                    // Validar confirmación de contraseña, confirmación de pass 
+                    function validateConfirmPass(){
+
+                        conts confirmPassword = document.getElementById('confirm_password');
+                        
+                        const coincide =  passwordInput.value == confirmPasswordInput.value;
+                        confirmPasswordInput.classList.toggle('invalid', !coincide);
+                        confirmPasswordInput.classList.toggle('valid', coincide);
+                        helpMessageConfirm.classList.toggle('borrarEstilo', !coincide);
+                        helpMessageConfirm.classList.toggle('visible_item', coincide);
+                    }
+                    // Limpiar campos del formulario
+                    
+                    confirmPasswordInput.addEventListener('input', validateConfirmPass);
+
+                    conts validationRules = {
+                        name: (value) => /^[A-Za-z\s]+$/.test(value) && value !== "",
+                        userName: (value) => /^[A-Za-z\s]+$/.test(value) && value !== "",
+                        email: (value) =>/[-A-Za-z0-9!#$%&'*+\/=?^_`{|}~]+(?:\.[-A-Za-z0-9!#$%&'*+\/=?^_`{|}~]+)*@(?:[A-Za-z0-9](?:[-A-Za-z0-9]*[A-Za-z0-9])?\.)+[A-Za-z0-9](?:[-A-Za-z0-9]*[A-Za-z0-9])?/i.test(value) && value !== ""
+                    }
+                    function validateInput(input){
+                        conts isValid = validationRules[input.id](input.value.trim());
+                        input.classList.toggle('invalid', !isValid);
+                        input.classList.toggle('valid', isValid);
+                        const helpInput = document.getElementById(`help_${input.id}`);
+                        helpInput.classList.toggle('textDanger', isValid);
+                    }
+
+                    let eventosParaValidar = ["blur", "input", "focus"];
+
+                    inputs.forEach(input =>{
+                        eventosParaValidar.forEach(evento =>{
+                            evento.addEventListener(evento, () => validateInput(input));
+                        })
+                    })
+                    %>
     </body>
 
     <footer>
