@@ -85,13 +85,14 @@
                     <div class="textDanger help_message" id="help_password">
                         <%= errors.password.msg  %>
                     </div>
-                <% } %>
-                   <ul class="errors_list_password"> 
-                     <li id="length" class="invalid"> Debe tener almenos 5 caracteres.</li>
-                     <li id="uppercase" class="invalid">Debe incluir una letra mayúscula. </li>
-                     <li id="lowercase" class="invalid">Debe incluir una letra minúscula. </li>
-                     <li id="number" class="invalid">Debe incluir un número.</li>
+                
+                   <ul class ="errors_list_password"> 
+                     <li id ="length" class="invalid"> Debe tener almenos 5 caracteres.</li>
+                     <li id ="uppercase" class="invalid">Debe incluir una letra mayúscula. </li>
+                     <li id ="lowercase" class="invalid">Debe incluir una letra minúscula. </li>
+                     <li id ="number" class="invalid">Debe incluir un número.</li>
                    </ul>
+                }
             </label>
             
             <label for = "reEnterPassword">Repite la contraseña
@@ -196,7 +197,7 @@
                     conts validationRules = {
                         name: (value) => /^[A-Za-z\s]+$/.test(value) && value !== "",
                         userName: (value) => /^[A-Za-z\s]+$/.test(value) && value !== "",
-                        email: (value) =>/[-A-Za-z0-9!#$%&'*+\/=?^_`{|}~]+(?:\.[-A-Za-z0-9!#$%&'*+\/=?^_`{|}~]+)*@(?:[A-Za-z0-9](?:[-A-Za-z0-9]*[A-Za-z0-9])?\.)+[A-Za-z0-9](?:[-A-Za-z0-9]*[A-Za-z0-9])?/i.test(value) && value !== ""
+                        email: (value) => /[-A-Za-z0-9!#$%&'*+\/=?^_`{|}~]+(?:\.[-A-Za-z0-9!#$%&'*+\/=?^_`{|}~]+)*@(?:[A-Za-z0-9](?:[-A-Za-z0-9]*[A-Za-z0-9])?\.)+[A-Za-z0-9](?:[-A-Za-z0-9]*[A-Za-z0-9])?/i.test(value) && value !== ""
                     }
                     function validateInput(input){
                         conts isValid = validationRules[input.id](input.value.trim());
@@ -212,7 +213,7 @@
                         eventosParaValidar.forEach(evento =>{
                             evento.addEventListener(evento, () => validateInput(input));
                         })
-                    })
+                    });
                     %>
     </body>
 
