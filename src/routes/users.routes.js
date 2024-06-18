@@ -6,13 +6,14 @@ const routes = require('./index.routes');
 
 const validations = require ('../middlewares/userImgValidationMid')
 const uploadFile = require ('../middlewares/multerUserMid')
-const guestMid= require ('../middlewares/guestMid')
+const guestMid = require ('../middlewares/guestMid')
 const authMid = require ('../middlewares/authMid')
+const userMid = require ("../middlewares/loggedUserMid")
 
 
 /* ---------------------REGISTER -----------------*/
 //--- Creation USERS --///
-router.get("/register",guestMid, usersController.register)
+router.get("/register", guestMid, usersController.register)
 router.post("/register", uploadFile.single("userPic"), validations,  usersController.processRegister)
 
 /*------ EDITION USERS -----*/
@@ -26,7 +27,7 @@ router.delete("/delete", usersController.processDelete)
 
 /* --------------- LOGIN -------------*/
 
-router.get("/login",guestMid, usersController.login)
+router.get("/login", userMid.guestMid, usersController.login)
 router.post("/login", usersController.processLogIn)
 
 /* -- PROFILE-- */

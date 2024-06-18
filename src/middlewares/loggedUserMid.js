@@ -1,5 +1,15 @@
 const user = require('../services/usersService')
 
+
+let userMid = {
+    userMid: function(req,res,next){
+        if(req.session.userLogged != undefined){
+            return res.redirect('profile')
+        }
+        next();
+    }
+}
+
 function loggedUserMid(req, res, next){
     res.locals.loggedIn = false;
 
@@ -21,4 +31,7 @@ function loggedUserMid(req, res, next){
     next();
 }
 
-module.exports = loggedUserMid;
+module.exports = {
+    userMid: userMid.userMid,
+    loggedUserMid: loggedUserMid
+};

@@ -1,9 +1,12 @@
 
-function guestMid (req,res,next){
-    if(req.session.userLogged){
-        return res.redirect('profile')
+
+let guestMid = {
+guestMid: function(req,res,next){
+    if(req.session.userLogged != undefined){
+        return res.redirect('login')
     }
     next();
+}
 }
 
 module.exports = guestMid;
