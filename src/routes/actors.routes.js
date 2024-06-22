@@ -27,6 +27,9 @@ router.post("/actorsCreation", actorsController.processCreate);
 
 router.get("/:id", actorsController.detail)
 
+router.get("/edit/:id", actorsController.edit)
+router.put("/:id", actorsController.update )
+
 
 
 // router.get('/actorsEdit/:id',actorsController.edit)

@@ -2,7 +2,8 @@ const fs = require ('fs');
 const path = require ('path');
 const products = require ('../database/json/movies.json');
 const actors = require('../database/json/actors.json')
-const db = require("../database/models")
+const db = require("../database/models");
+const { body } = require('express-validator');
 
 
 let actorsService = {
@@ -70,9 +71,48 @@ let actorsService = {
         }
     },
 
-    editActor: function (id){
-        this.actors.find(actor => actor.id == id)
-    }
+    editOne: async function (id) {
+        try {
+            let actor = await db.Actor.findByPk(id, {
+                include: [
+                    { association: "movies" },
+                ]
+            })
+            return actor
+        } catch (error) {
+            console.log(error)
+            return ("El actor no se ha encontrado")
+        }
+    },
+
+    updateOne: async function (id, body) {
+        try {
+            let body = body
+
+        //     const updatedMovieData = {
+        //         name: body.name,
+        //         price: parseFloat(body.price),
+        //         length: parseInt(body.length),
+        //         description: body.description,
+        //         genre: body.genre,
+        //         release_date: body.release_date,
+        //         poster: files.poster,
+        //         imagesMovie: files.imagesMovie,
+        //         top_movie: body.top_movie === 'on' ? 1 : 0,
+        //         is_carrousell: body.is_carrousell === 'on' ? 1 : 0
+        //     };
+
+        //     await db.Movie.update(updatedMovieData, { where: { id: id } });
+
+        //     let updatedMovie = await this.getOne(id);
+
+        //     return updatedMovie;
+
+        } catch (error) {
+            console.log(error)
+            return "Error. El actor no se ha actualizado"
+        }
+    },
 }
 
 module.exports = actorsService;
