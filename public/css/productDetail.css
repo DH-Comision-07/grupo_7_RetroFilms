@@ -9,10 +9,9 @@ body{
     font-weight: 200;
     font-family: 'Noto Serif';
     color:#ffffff; 
-    background: linear-gradient(to right, #002540 10%, #150e23 80%);
-  
-    
+    background: linear-gradient(to right, #002540 10%, #150e23 80%); 
 }
+
 .titulo{
     font-family:'Bebas Neue';   
     font-size: 28px;

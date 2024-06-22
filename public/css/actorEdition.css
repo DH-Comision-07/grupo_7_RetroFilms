@@ -1,50 +1,85 @@
 * {
     box-sizing: border-box;
     font-family: "Bebas Neue", sans-serif;
+    margin: 0;
+    padding: 0;
 }
-
-
 
 body {
-    font-size:17px;
+    font-size: 17px;
     font-weight: 200;
-    font-family: "Noto Serif";
-    color:#0000; 
+    font-family: "Noto Serif", serif;
+    background: linear-gradient(to right, #002540 10%, #150e23 80%);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+    overflow: hidden;
 }
 
+header {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+h1.title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3em;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: underline;
+    margin: 20px 0;
+    color: #B88442;
+    flex-shrink: 0;
+}
 
 form {
-    width: 45%;
-    margin-top: 10%;
-    margin-bottom: 2%;
+    width: 80vw;
+    max-width: 600px; /* Limitar el ancho máximo para pantallas grandes */
+    margin: 20px 0;
     padding: 30px;
     border: 2px solid #02263F;
     border-radius: 2%;
     background-color: #E0EBF3;
     color: black;
-    margin-top: 0px;
-    font-family: "Noto Serif"; 
+    font-family: "Noto Serif", serif;
+    overflow-y: auto; /* Permitir desplazamiento interno si es necesario */
 }
 
 label {
     display: block;
     margin-bottom: 8px;
-    font-family: "Noto Serif";
+    font-family: "Noto Serif", serif;
 }
 
 input[type="text"],
-input[type="number"],
 textarea {
     width: 100%;
     background-color: #fff;
-    color:black;
+    color: black;
     font-size: 14px;
     min-height: 20px;
-    margin: 0 0 5px;
-    padding: 5px;
-    box-sizing: border-box;
+    margin: 0 0 10px;
+    padding: 10px;
     border-radius: 10px;
-    font-family: "Noto Serif";
+    border: 1px solid #ccc;
+    font-family: "Noto Serif", serif;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.checkbox-item {
+    margin-bottom: 5px;
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin-right: 10px;
 }
 
 button {
@@ -56,9 +91,14 @@ button {
     color: #fff;
     border-radius: 10px;
     cursor: pointer;
-    margin: 8px 0;
+    margin: 10px 0;
 }
 
 button:hover {
     background-color: #02263F;
+}
+
+footer {
+    width: 100%;
+    flex-shrink: 0;
 }

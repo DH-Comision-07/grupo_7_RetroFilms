@@ -95,6 +95,17 @@ const db = require("../database/models")
 
 let productService = {
 
+    findAll: async function () {
+        try {
+            let movies = db.Movie.findAll();           
+            console.log(movies)
+            return movies
+        } catch (error) {
+            console.error("error al buscar las imagenes:", error);
+            throw error;
+        }
+    },
+
     findMovieGrid: async function () {
         try {
             let movieGrid = db.Movie.findAll({

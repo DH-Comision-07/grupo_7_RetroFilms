@@ -22,9 +22,10 @@ const upload = multer({ storage: storage })
 
 router.get('/', actorsController.view);
 
+router.get('/actorsCreation',actorsController.create)
+
 router.get("/:id", actorsController.detail)
 
-router.get('/actorsCreation',actorsController.create)
 router.post("/actorsCreation", actorsController.createFinished)
 
 router.get('/actorsEdit/:id',actorsController.edit)

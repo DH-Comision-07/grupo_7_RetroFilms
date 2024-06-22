@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <%- include("partials/head.ejs") %>
-        <title>Editar Actores</title>
-        <link rel="stylesheet" href="/css/actorEdition.css">
-    </head>
-    <body>
-        <header>
-            <%- include("partials/header.ejs") %>
-        </header>
-        <br>
-        <form action="/actors/actorsCreation" method="POST" enctype="multipart/form-data">
-            <label for="fullName">Nombre:</label>
-                <input type="text" id="fullName" name="fullName">
-            <label for="shortBio">Biografia:</label>
-            <textarea id="shortBio" name="shortBio" rows="6" ></textarea>
-            <label for="moviesPlayedAt">Peliculas en las que participa:</label>
-            <input type="text" id="moviesPlayedAt" name="moviesPlayedAt">
-            <label for="actorPic">Foto:</label>
-            <input type="file" id="actorPic" name="actorPic" >
-        <br>
-        <button type="submit">Crear Actor</button>
+<head>
+    <%- include("../partials/head.ejs") %>
+    <title>Editar Actores</title>
+    <link rel="stylesheet" href="/css/actorEdition.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <%- include("../partials/header.ejs") %>
+    </header>
 
-        </form>
+    <h1 class="title">Creacion Actores</h1>
+
+    <form action="/actors/actorsCreation" method="POST" enctype="multipart/form-data">
+        <label for="fullName">Nombre:</label>
+        <input type="text" id="fullName" name="fullName">
         
+        <label for="shortBio">Biografia:</label>
+        <textarea id="shortBio" name="shortBio" rows="6"></textarea>
+        
+        <label for="moviesPlayedAt">Películas en las que participa:</label>
+        <div class="checkbox-group">
+            <% movies.forEach(function(movie) { %>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="<%= movie._id %>" name="moviesPlayedAt" value="<%= movie.name %>">
+                        <label for="<%= movie._id %>"><%= movie.name %></label>
+                </div>
+            <% }) %>
+        </div>
+        
+        <label for="actorPic">Foto:</label>
+        <input type="file" id="actorPic" name="actorPic">
+        
+        <button type="submit">Crear Actor</button>
+    </form>
+
     <footer>
-        <%- include("partials/footer.ejs") %>
+        <%- include("../partials/footer.ejs") %>
     </footer>
-    
 </body>
 </html>
