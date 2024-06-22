@@ -20,7 +20,9 @@ const storage = multer.diskStorage({
 })
 const upload = multer({ storage: storage })
 
-router.get('/',actorsController.view)
+router.get('/', actorsController.view);
+
+router.get("/:id", actorsController.detail)
 
 router.get('/actorsCreation',actorsController.create)
 router.post("/actorsCreation", actorsController.createFinished)

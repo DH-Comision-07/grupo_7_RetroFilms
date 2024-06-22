@@ -23,6 +23,20 @@ let actorsService = {
         }
     },
 
+    getOne: async function (id) {
+        try {
+            let actor = await db.Actor.findByPk(id, {
+                include: [
+                    { association: "movies" },
+                ]
+            })
+            return actor
+        } catch (error) {
+            console.log(error)
+            return ("El actor no se ha encontrado")
+        }
+    },
+
     editActor: function (id){
         this.actors.find(actor => actor.id == id)
     }

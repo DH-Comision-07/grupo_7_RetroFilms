@@ -7,15 +7,23 @@ const actorsController = {
     view: async function(req,res) {
         try {
                 let actors = await actorsService.getAll()
-                console.log(actors[0].dataValues.full_name)
-                console.log(actors.length)
-                return res.render("actors", {actors:actors})
+                return res.render("actors/actorsList", {actors:actors})
         } catch (error) {
                 console.log(error)
                 res.send("Ha ocurrido un error al mostrar los actores")
         }
+    },
 
-},
+    detail: async function(req,res) {
+        try {
+                let actor = await actorsService.getOne(req.params.id)
+                console.log(actor.movies[0].name)
+                return res.render("actors/actorDetail", {actor:actor})
+        } catch (error) {
+                console.log(error)
+                res.send("Ha ocurrido un error al mostrar el actor")
+        }
+    },
 
     edit: (req, res) => res.render("actorsEdition",{editActor:actorsService.editActor(req.params.id)}),
     
