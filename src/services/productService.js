@@ -98,7 +98,6 @@ let productService = {
     findAll: async function () {
         try {
             let movies = db.Movie.findAll();           
-            console.log(movies)
             return movies
         } catch (error) {
             console.error("error al buscar las imagenes:", error);

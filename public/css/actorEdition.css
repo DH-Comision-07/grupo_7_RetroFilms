@@ -91,7 +91,7 @@ button {
     color: #fff;
     border-radius: 10px;
     cursor: pointer;
-    margin: 10px 0;
+    margin-top: 5%;
 }
 
 button:hover {
@@ -101,4 +101,15 @@ button:hover {
 footer {
     width: 100%;
     flex-shrink: 0;
+}
+
+.select2-container {
+    width: 100% !important;
+}
+
+.select2-selection--multiple {
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid #02263F;
+    background-color: #fff;
 }

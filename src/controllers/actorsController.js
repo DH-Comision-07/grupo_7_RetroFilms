@@ -28,18 +28,26 @@ const actorsController = {
 
         create: async function(req, res) {
                 try {
-                        let movies = await productService.findAll()
-                        return res.render("actors/actorsCreation", {movie:movies}),
+                        let movies = await productService.findAll();
+                        let selectedMovies = req.body.moviesPlayedAt || [];
+                        return res.render("actors/actorsCreation", { movies: movies, selectedMovies: selectedMovies });
                 } catch (error) {
-                        console.log(error)
-                        res.send("Ha ocurrido un error al mostrar los actores")
+                        console.log(error);
+                        res.send("Ha ocurrido un error al mostrar los actores");
                 }
-
         },
 
-        edit: (req, res) => res.render("actorsEdition",{editActor:actorsService.editActor(req.params.id)}),
+        processCreate: async function(req, res) {
+                try {
+                        console.log(req.body)
+                        await actorsService.newActor(req.body);
+                        return res.send("el perfil se creo con exito");
+                } catch (error) {
+                        console.log(error);
+                        res.send("el actor no pudo crearse");
+                }
+        },
 
-        createFinished: (req, res) => res.send("perfil creado con exito!"),
-        }
-
+        // edit: (req, res) => res.render("actorsEdition",{editActor:actorsService.editActor(req.params.id)}),
+}
 module.exports = actorsController;
