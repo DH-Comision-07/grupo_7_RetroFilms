@@ -16,35 +16,21 @@
 
     <main class="mainBody">
 
-        <section class ="actor">
-
-            <article class="boxActorImg">
-                <img class="actorImg" src="\img\productDetail\AliceInWonderland\jerry_colonna.jpg" alt="ola">
-            </article>
-
-            <br>
-
-            <article class = "actorDescription">
-                    
-                <h2 class="actorsName"> Nombre Actor</h3>
-
-                <br>                
-                
-                <h3 class="description">descripcion/bio</h3>
-                
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quos est sit vitae minus tempore dignissimos in unde numquam deserunt veniam fugit, ipsam quasi ipsum molestiae amet, dolorem ea ullam.</p>
-
-                <br> 
-
-                <h3 class="description">peliculas en las que actuo</h3>
-
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolorum corrupti maxime totam! Impedit quis, vero ex quo ducimus, totam quibusdam reprehenderit magnam aliquid dolore nulla cupiditate adipisci placeat? Hic.</p>
+      <% if (actors && actors.length > 0) { %>
+        <%actors.forEach(function (actor){%> 
+          <card class ="actor">
+                <article class="boxActorImg">
+                  <img class="actorImg" src="\img\actors\<%= actor.profile_pic %>" alt="foto actor">
+                </article>
 
                 <br>
-            
-            </article>
 
-        </section>
+                <article class = "actorDescription">    
+                  <h2 class="actorsName"> <%= actor.full_name %></h3>            
+                </article>
+          </card>
+        <% }) %>
+      <% } %>
 
     </main>
 

@@ -4,7 +4,18 @@ const path = require('path');
 
 const actorsController = { 
     
-    view: (req, res) => res.render("actors"),
+    view: async function(req,res) {
+        try {
+                let actors = await actorsService.getAll()
+                console.log(actors[0].dataValues.full_name)
+                console.log(actors.length)
+                return res.render("actors", {actors:actors})
+        } catch (error) {
+                console.log(error)
+                res.send("Ha ocurrido un error al mostrar los actores")
+        }
+
+},
 
     edit: (req, res) => res.render("actorsEdition",{editActor:actorsService.editActor(req.params.id)}),
     
