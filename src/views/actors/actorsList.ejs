@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("../partials/head.ejs") %>  
+  <link rel="stylesheet" href="/css/actorsList.css"> 
+  <title>RetroFilms</title> 
+
+</head>
+
+<body>
+
+  <header>
+        <%-include('../partials/header')%>
+  </header>
+
+    <main class="mainBody">
+
+      <% if (actors && actors.length > 0) { %>
+        <%actors.forEach(function (actor){%>
+          
+            <card class ="actor">
+              <a href="/actors/<%= actor.id %>">
+                  <article class="boxActorImg">
+                    <img class="actorImg" src="\img\actors\<%= actor.profile_pic %>" alt="foto actor">
+                  </article>
+
+                  <br>
+
+                  <article class = "actorDescription">    
+                    <h2 class="actorsName"> <%= actor.full_name %></h3>            
+                  </article>
+              </a>
+            </card>
+        <% }) %>
+      <% } %>
+
+    </main>
+
+  <footer>
+    <%-include('../partials/footer')%>
+  </footer>
+
+</body>
+
+</html>
