@@ -20,7 +20,7 @@
   <main class="mainBody">
       
         <section>
-          <% if (carrousell === 1 && carrousell.length > 0) { %>
+          <% if (carrousell == 1 && carrousell.length > 0) { %>
           <div class = "carrousell">
             <% carrousell.forEach(function (movie) { %>
               <% if (movie.images && movie.images.length > 0) { %>
@@ -51,13 +51,13 @@
                     <img src="img/posters/<%= movie.images[0].name_URL %>" alt="">
               </a>
             </div>        
-          <%}});%>  
+          <%}})%>  
           <%}%> 
         </div>
   
        
         <div class="topMovies">
-          <% if (topMovie === 1 && movies.length > 0) { %>
+          <% if (topMovie == 1 && movies.length > 0) { %>
               <%topMovie.forEach(function (movie,index){%>  
                           <div class="newMovies"> Top número <%=index+1%>
                           <% topMovie.images.forEach(function (image) { %> 

@@ -14,13 +14,13 @@
 
     <h1 class="title">Creación Actores</h1>
 
-    <form action="/actors/actorsCreation" method="POST" enctype="multipart/form-data">
-        <label for="fullName">Nombre:
-            <input type="text" id="fullName" name="fullName">
+    <form action="/actors" method="POST" enctype="multipart/form-data">
+        <label for="full_name">Nombre:
+            <input type="text" id="full_name" name="full_name">
         </label>
         
-        <label for="shortBio">Biografía:
-            <textarea id="shortBio" name="shortBio" rows="6"></textarea>
+        <label for="bio">Biografía:
+            <textarea id="bio" name="bio" rows="6"></textarea>
         </label>
         
         <label for="moviesPlayedAt">Películas en las que participa:
@@ -31,8 +31,8 @@
             </select>
         </label>
         
-        <label for="actorPic">Foto:
-            <input type="file" id="actorPic" name="actorPic">
+        <label for="profile_pic">Foto:
+            <input type="file" id="profile_pic" name="profile_pic">
         </label>
         
         <br>

@@ -40,7 +40,8 @@ const actorsController = {
         processCreate: async function(req, res) {
                 try {
                         console.log(req.body)
-                        await actorsService.newActor(req.body);
+                        console.log(req.files);
+                        await actorsService.newActor(req.body, req.files);
                         return res.send("el perfil se creo con exito");
                 } catch (error) {
                         console.log(error);

@@ -38,10 +38,22 @@ let actorsService = {
         }
     },
 
-    newActor: async function (body) {
+    newActor: async function (body, files) {
 
         try {           
             console.log('estos son los datos del actor:', body);  
+            //console.log(files);
+            let newActor = await db.Actor.create ({
+
+                full_name: body.full_name,
+                bio: body.bio,
+                //profile_pic: files.filename
+            }, {
+                include: [
+                    {association: "movies"}]
+        })
+            return newActor;
+
 
             // let newMovie = await db.Movie.create({
 
@@ -64,7 +76,7 @@ let actorsService = {
             // )
             // //console.log(newMovie);
             // return newMovie // añadir association
-            return "ola"
+            
         } catch (error) {
             console.log(error)
             return "Error. el actor no se ha creado"
