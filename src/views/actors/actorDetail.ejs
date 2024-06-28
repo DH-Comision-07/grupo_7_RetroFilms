@@ -34,7 +34,7 @@
 
             <div class="buttons">
                 <button class ="button"><a href="/actors/edit/<%=actor.id%>"><i class="fa-solid fa-pen-to-square"></i> Editar </a></button> 
-                <button class ="button"><a href="/"><i class="fa-solid fa-ban"></i> Eliminar </a></button>
+                <button class ="button"><a href="/actors/<%=actor.id%>/delete?_method=DELETE" method = "POST"><i class="fa-solid fa-ban"></i> Eliminar </a></button>
             </div>
 
         </div>

@@ -21,6 +21,10 @@ router.get("/:id", actorsController.detail)
 router.get("/edit/:id", actorsController.edit)
 router.put("/:id",uploadFile.single('profile_pic'), actorsController.update )
 
+//--- DELETE ACTOR --//
+router.delete("/:id/delete", actorsController.delete)
+
+
 
 
 // router.get('/actorsEdit/:id',actorsController.edit)

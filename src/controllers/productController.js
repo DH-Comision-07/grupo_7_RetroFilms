@@ -214,7 +214,7 @@ const productController = {
 
                         await productService.deleteMovie(Movies_id)
                         //console.log(movieDetail.genres);
-                        res.redirect("/")
+                        res.redirect("/actors")
                 } catch (error) {
                         console.log(error, 'No se eliminó la pelicula');
                 }

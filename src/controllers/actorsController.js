@@ -107,6 +107,15 @@ const actorsController = {
                         console.log(error)
                         res.send("Ha ocurrido un error al editar el actor")
                 }
+        }, 
+
+        delete: async function (req, res){
+        try{
+                await actorsService.deleteActor(req.params.id)
+                res.redirect("/actors")
+        } catch (error) {
+                console.log(error, 'No se eliminó la pelicula');
+        }
         }
 }
 

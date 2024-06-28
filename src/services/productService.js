@@ -115,6 +115,8 @@ let productService = {
                 },
                 include: [
                     { association: "images" },
+                    { association: "genres" },
+                    { association: "actors" }
                 ]
             });           
             return movieGrid
@@ -130,7 +132,12 @@ let productService = {
                 where: {
                     top_movie: 1,
                     is_carrousell: 0
-                }
+                },
+                include: [ //faltaba la interaccion entre movies y peliculas, por eso no se mostraban las imagenes
+                    { association: "images" },
+                    { association: "genres" },
+                    { association: "actors" }
+                ]
             })
             //console.log('Top Movies:', topMovies);
             return topMovies
@@ -147,7 +154,12 @@ let productService = {
                 where: {
                     top_movie: 0,
                     is_carrousell: 1
-                }
+                },
+                include: [ //faltaba la interaccion entre movies y peliculas, por eso no se mostraban las imagenes
+                    { association: "images" },
+                    { association: "genres" },
+                    { association: "actors" }
+                ]
             })
             //console.log('Carrousell Movies:', carrousell);
             return carrousell

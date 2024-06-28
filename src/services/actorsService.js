@@ -170,6 +170,34 @@ let actorsService = {
             return "Error. la relacion no se ha creado"
         }
     },
-}
+
+    deleteActorMovieRegister: async function (id){
+        try {
+            await db.ActorMovie.destroy({
+                where: { Actors_id: id }
+            });
+        } catch (error) {
+            return 'El Actor no se eliminó'
+        } 
+        }, 
+
+    deleteActor: async function (id){
+        try {
+            await this.deleteActorMovieRegister(id);
+
+            await db.Actor.destroy({
+                where:{
+                    id: id
+                }
+            })
+    
+        } catch (error) {
+            console.log('El actor no se eliminó', error);
+            
+        }
+    }
+
+    }
+
 
 module.exports = actorsService;

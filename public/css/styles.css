@@ -14,7 +14,6 @@ body {
 }
 
 
-  
 header{
     width: 100%;
 } 
@@ -225,7 +224,8 @@ section{
 .carrousell{
     width: 100vw;
     display: flex;
-    padding-left: 15px;
+    margin-left: 0px;
+    padding-left: 0px;
     padding-right: 15px;
     justify-content: center;
 }
@@ -234,6 +234,7 @@ section{
 
 section img{ 
     width: 200px;
+    height: 350px;
     flex-grow: 1;
     object-fit: cover;
     opacity: .8;
