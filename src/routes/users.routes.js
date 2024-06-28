@@ -32,6 +32,10 @@ router.post("/login", usersController.processLogIn)
 
 router.get('/profile',authMid,usersController.profile)
 
+/* -- REGISTER--*/
+
+router.get('/registerView',authMid,usersController.registerView)
+
 /* --- LOG OUT ----*/
 
 router.get('/logout',usersController.logout)

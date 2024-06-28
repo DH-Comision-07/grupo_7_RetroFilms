@@ -6,8 +6,8 @@ const db = require("../database/models")
 
 const usersController = { 
     register: (req, res) => {
-        res.cookie('testing','Hola, mundo!',{maxAge:1000*120})
-        res.render("users/registerForm")
+        //res.cookie('testing','Hola, mundo!',{maxAge:1000*120})
+        return res.render("users/registerForm")
     },
 
     login: (req, res) => {
@@ -41,6 +41,7 @@ const usersController = {
         return res.render("users/registerView")
     },
 
+
     processLogIn: function(req, res){
         let userToLogIn = usersService.findByField('email',req.body.email)
         if (userToLogIn){
@@ -69,6 +70,11 @@ const usersController = {
         return res.render('users/profile',{user: req.session.userLogged})
         },
 
+
+    registerView: (req, res) => {
+        return res.render('user/registerView',{user: req.session.userLogged})
+    },
+
     logout: (req,res) => {
         res.clearCookie('userEmail');
         req.session.destroy();
@@ -83,5 +89,6 @@ const usersController = {
 
     
 }
+
 
 module.exports = usersController;

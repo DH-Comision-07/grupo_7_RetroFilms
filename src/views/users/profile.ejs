@@ -6,29 +6,30 @@
     <title>Perfil</title>
         <%- include("../partials/head.ejs") %>
         <link rel="stylesheet" href="/css/generalStyles.css">
-        <link rel="stylesheet" href="/css/profile.">
+        <link rel="stylesheet" href="/css/profile.css">
 
 </head>
 <body>
     <header>
         <%-include('../partials/header')%>
     </header>
-
-    <h1> HOLA <%=user.userName%>, Bienvenid@</h1>
-    <img src="/img/avatars/<%=user.userPic%>" alt="imagen">
+    <section class="section-perfil-usuario">
+        <h1 class="nombre-usuario"> HOLA <%=user.userName%>, Bienvenid@</h1>
+    <img src="/img/avatars/<%=user.userPic%>" alt="imagen" class="imagenAvatar">
     <p class="userEmail"><%=user.email%></p>
-    
+    </section>
     <p class="texto">
-      Te extrañamos, que bueno que regresas, checa nuestros entrenos en la plataforma.
+      Te extrañamos, checa nuestros nuevos estrenos en la plataforma.
     </p>
   
 
     <div class="carrusel">
         <div class="grande">
-            <img src="/imageProfile" alt="" class="img">
-            <img src="/imageProfile" alt="" class="img">
-            <img src="/imageProfile" alt="" class="img">  
+            <img src="/img/imageProfile/corazon-valiente.jpg" alt="" class="img">
+            <img src="/img/imageProfile/forrest-Gump.jpg" alt="" class="img">
+            <img src="/img/imageProfile/la-vida-es-bella.jpg" alt="" class="img">
         </div>
+
          <ul class="puntos">
             <li class="punto activo"></li>
             <li class="punto"></li>
@@ -38,6 +39,7 @@
     </div>
 
     <script>
+        // Esto es para el carrucel con los puntos-----
         const grande = document.querySelector('.grande');
         const punto = document.querySelectorAll('.punto')
 
@@ -55,14 +57,24 @@
                 punto[i].classList.add('activo')
             })
         })
+    
+    
     </script>
-    <div>
-        <button type="button"><a href="/users/index" class="btn">Ver todo nuestro contenido</a></button>
+        <button id="buttonProfileHome"  type="button" class="buttonProfileHome">Ver todo nuestro contenido</button>
 
-       </div>
+        <script>
+            // ESto es del botón para redireccionar pero no funciona :( ------
+            const buttonProfileHome = document.getElementById('buttonProfileHome');
+              buttonProfileHome.addEventListener('click', function(){
+                window.location.href = '/';
+              });
+        
+        </script>
 
-</body>
+       
 <footer>
     <%-include('../partials/footer') %>
 </footer>
+</body>
+
 </html>
