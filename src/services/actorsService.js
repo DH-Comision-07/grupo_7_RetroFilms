@@ -121,32 +121,53 @@ let actorsService = {
         }
     },
 
-    updateOne: async function (id, body) {
-        try {
-            let body = body
+    updateOne: async function (id, body, file) {
+        try {           
+            console.log('estos son los datos del actor:', body);  
+            console.log(file);
 
-        //     const updatedMovieData = {
-        //         name: body.name,
-        //         price: parseFloat(body.price),
-        //         length: parseInt(body.length),
-        //         description: body.description,
-        //         genre: body.genre,
-        //         release_date: body.release_date,
-        //         poster: files.poster,
-        //         imagesMovie: files.imagesMovie,
-        //         top_movie: body.top_movie === 'on' ? 1 : 0,
-        //         is_carrousell: body.is_carrousell === 'on' ? 1 : 0
-        //     };
+            let updatedActor = await db.Actor.update ({
+                full_name: body.full_name,
+                bio: body.bio,
+                profile_pic: file.filename
+            }, {
+                include: [
+                    {association: "movies"}]
+        });
 
-        //     await db.Movie.update(updatedMovieData, { where: { id: id } });
+            console.log(updatedActor)
 
-        //     let updatedMovie = await this.getOne(id);
+            let registerSaved = await this.updatedActorMovieRegister(newActor.id, body)
 
-        //     return updatedMovie;
-
+            return newActor;
         } catch (error) {
             console.log(error)
             return "Error. El actor no se ha actualizado"
+        }
+    },
+
+    updatedActorMovieRegister: async function (id, body) {
+
+        try {
+            let destroyActorMovieRegister = await db.ActorMovie.destroy({
+                where: { Actors_id: id }
+            });
+
+            console.log("esto se trae el destroy:")
+            console.log(destroyActorMovieRegister);
+            
+            let actorMovieRegisters = body.moviesPlayedAt.map(movieId => ({
+                Actors_id: id,
+                Movies_id: movieId
+            }));
+
+            let ActorMovieRegister = await db.ActorMovie.bulkCreate(actorMovieRegisters);
+            
+            return ActorMovieRegister;
+            
+        } catch (error) {
+            console.log(error)
+            return "Error. la relacion no se ha creado"
         }
     },
 }

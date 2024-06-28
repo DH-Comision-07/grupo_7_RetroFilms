@@ -65,8 +65,10 @@ const actorsController = {
                 try {
                         let body = await req.body
                         console.log(body)
-                        let updatedActor = await actorsService.updateOne(req.params.id, req.body)
+                        let updatedActor = await actorsService.updateOne(req.params.id, req.body, req.file)
                 //         let updatedMovie = await productService.updateOne(req.params.id, req.body, req.files)
+
+                
                 
                 //                         let imagesInput = [];
                         
@@ -100,6 +102,7 @@ const actorsController = {
 
                 //                         res.redirect("/products/productDetail/" + req.params.id)
                 //                         return movieSaved;
+                        return updatedActor
                 } catch (error) {
                         console.log(error)
                         res.send("Ha ocurrido un error al editar el actor")
