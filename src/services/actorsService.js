@@ -38,20 +38,25 @@ let actorsService = {
         }
     },
 
-    newActor: async function (body, files) {
+    newActor: async function (body, file) {
 
         try {           
             console.log('estos son los datos del actor:', body);  
-            //console.log(files);
+            console.log(file);
             let newActor = await db.Actor.create ({
-
                 full_name: body.full_name,
                 bio: body.bio,
-                //profile_pic: files.filename
+                profile_pic: file.filename
             }, {
                 include: [
                     {association: "movies"}]
-        })
+        });
+
+            console.log(newActor)
+
+            let registerSaved = await this.newActorMovieRegister(newActor.id, body)
+
+
             return newActor;
 
 
@@ -80,6 +85,25 @@ let actorsService = {
         } catch (error) {
             console.log(error)
             return "Error. el actor no se ha creado"
+        }
+    },
+
+    newActorMovieRegister: async function (id, body) {
+
+        try {           
+            
+            let actorMovieRegisters = body.moviesPlayedAt.map(movieId => ({
+                Actors_id: id,
+                Movies_id: movieId
+            }));
+
+            let ActorMovieRegister = await db.ActorMovie.bulkCreate(actorMovieRegisters);
+            
+            return ActorMovieRegister;
+            
+        } catch (error) {
+            console.log(error)
+            return "Error. la relacion no se ha creado"
         }
     },
 

@@ -8,7 +8,7 @@ let usersService = {
     
     users:users,
 
-    fileName: path.resolve(__dirname, "../database/users.json"),
+    // fileName: path.resolve(__dirname, "../database/users.json"),
 
     findAllUsers: function (){
         return this.users
@@ -24,10 +24,10 @@ let usersService = {
         }
     },
 
-    findUserPK: function(id){
-        let user = this.users.find(user => user.id === id);
-        return user;
-    },
+    // findUserPK: function(id){
+    //     let user = this.users.find(user => user.id === id);
+    //     return user;
+    // },
 
     findByField: function (field, text){
         let allUsers = this.findAllUsers();
@@ -35,31 +35,31 @@ let usersService = {
         return userFound;
     },
 
-    findByEmailDb: async function (text) {
-        try {
-            let field = await db.User.findOne({
-                where: {
-                    email: text
-                }
-            })
-            return field
-        } catch (error) {
-            console.log(error)
-        }
-    },
+    // findByEmailDb: async function (text) {
+    //     try {
+    //         let field = await db.User.findOne({
+    //             where: {
+    //                 email: text
+    //             }
+    //         })
+    //         return field
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    // },
 
-    findByUserNameDb: async function (text) {
-        try {
-            let field = await db.User.findOne({
-                where: {
-                    userName: text
-                }
-            })
-            return field
-        } catch (error) {
-            console.log(error)
-        }
-    },
+    // findByUserNameDb: async function (text) {
+    //     try {
+    //         let field = await db.User.findOne({
+    //             where: {
+    //                 userName: text
+    //             }
+    //         })
+    //         return field
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    // },
 
     findByFieldDb: async function (field, text) {
         try {
@@ -74,32 +74,30 @@ let usersService = {
         }
     },
     
-
-    
-    createUser: function(user, imagePaths){          
-        let maxId = 0;
-        for (let i=0; i < this.users.length; i++){
-            if(this.users[i].id > maxId){
-                maxId = this.users[i].id;
-            };
-        }
+    // createUser: function(user, imagePaths){          
+    //     let maxId = 0;
+    //     for (let i=0; i < this.users.length; i++){
+    //         if(this.users[i].id > maxId){
+    //             maxId = this.users[i].id;
+    //         };
+    //     }
         
 
-        let newUser = {
-            id:(maxId +1),
-            name:user.name,
-            userName:user.userName,
-            email:user.email,
-            userPic: imagePaths,
-            password:bcrypt.hashSync(user.password,10),
-            category:user.category           
-        }
+    //     let newUser = {
+    //         id:(maxId +1),
+    //         name:user.name,
+    //         userName:user.userName,
+    //         email:user.email,
+    //         userPic: imagePaths,
+    //         password:bcrypt.hashSync(user.password,10),
+    //         category:user.category           
+    //     }
 
-        this.users.push(newUser);
-        let usersJSON= JSON.stringify(this.users, null,' ');
-        fs.writeFileSync(this.fileName,usersJSON);
-        return true;
-    },
+    //     this.users.push(newUser);
+    //     let usersJSON= JSON.stringify(this.users, null,' ');
+    //     fs.writeFileSync(this.fileName,usersJSON);
+    //     return true;
+    // },
 
     createUserDb: async function(user, imagePaths){          
         try {
@@ -120,13 +118,13 @@ let usersService = {
 
     },
 
-    deleteUser: function(id){
-        let allUsers = this.findAllUsers();
-        let finalUsers = allUsers.filter(user => user.id !== id);
-        let usersJSON= JSON.stringify(finalUsers, null,' ');
-        fs.writeFileSync(this.fileName,usersJSON)
-        return true;
-    },
+    // deleteUser: function(id){
+    //     let allUsers = this.findAllUsers();
+    //     let finalUsers = allUsers.filter(user => user.id !== id);
+    //     let usersJSON= JSON.stringify(finalUsers, null,' ');
+    //     fs.writeFileSync(this.fileName,usersJSON)
+    //     return true;
+    // },
 
     deleteUserDb: async function(id) {
         db.User.destroy({
