@@ -180,7 +180,7 @@ header{
     width: 300px;
     background-color: #ddd;
     height: 425px;
-    overflow-y: hidden;
+    overflow: hidden;
     object-fit: contain;
 }
 

@@ -130,6 +130,32 @@ let usersService = {
         db.User.destroy({
             where: {id: id}
         })
+    },
+
+    userUpdate: async function(id, body, file) {
+        try {
+
+            // console.log(file)
+
+            let modifiedUser = db.User.update({
+                name: body.name,
+                username: body.username,
+                email: body.email,
+                profile_pic: file.filename,
+                password: bcrypt.hashSync(user.password,10),
+                Categories_id: body.Categories_id
+                },
+                { 
+                where: {id: id}
+                }
+            )
+    
+            return modifiedUser
+        } catch (error) {
+            console.log(error)
+            return "El perfil no se pudo modificar"
+        }
+
     }
 }
 

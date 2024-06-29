@@ -25,8 +25,6 @@ app.use(cookies());
 
 app.use(loggedUserMid); //middleware para el usuario logueado en el inde
 
-
-
 app.listen(port, () => 
 console.log('http://localhost:'+ port));
 

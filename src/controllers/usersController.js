@@ -19,7 +19,20 @@ const usersController = {
         return res.render("users/login")
     },
 
-    userEdit: (req, res) =>res.render('users/userEditForm'),
+    userEdit: async function(req, res) {
+        return res.render('users/userEditForm', {user: req.session.userLogged}) 
+    },
+
+    processEdit: async function(req,res) {
+        try {
+            console.log(req.session.userLogged)
+            let userData = await usersService.userUpdate(req.params.id, req.body, req.file)
+            res.redirect("/users/profile", {user: user})
+            return userData
+        } catch (error) {
+            console.log(error)            
+        }
+    },
 
     processRegister: async function(req, res){
         try {
@@ -112,7 +125,7 @@ const usersController = {
                 await usersService.deleteUserDb(userId)
                 res.clearCookie('userEmail');
                 req.session.destroy();
-                return res.send("Usuario eliminado")
+                return res.redirect("/users/register")
             }
             
         } catch (error) {
@@ -120,21 +133,7 @@ const usersController = {
             return ("ocurrió un error al eliminar el usuario")
         }
 
-    },
-
-    prueba: async function(req, res) {
-        try { 
-            await usersService.findAllUsersDb()
-            .then((users) => {
-                res.send(users)
-            })
-        } catch (error) {
-            console.log(error)
-            res.send("ocurrio un error")
-        }
-    }
-
-    
+    }  
 }
 
 module.exports = usersController;
