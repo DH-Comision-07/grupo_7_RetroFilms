@@ -30,13 +30,13 @@
                 <% } %>
             </label>
 
-            <label for="userName">Nombre de Usuario
+            <label for="username">Nombre de Usuario
                 <input 
                     type="text"  
-                    name="userName" 
+                    name="username" 
                     placeholder="User name"
-                    class= "<%= locals.errors && errors.userName ? "form-control-is-invalid" : null %>"
-                    value= "<%= locals.oldData ? oldData.userName : null %>" 
+                    class= "<%= locals.errors && errors.username ? "form-control-is-invalid" : null %>"
+                    value= "<%= locals.oldData ? oldData.username : null %>" 
                 >
                 <% if (locals.errors && errors.userName) { %>
                     <div class="textDanger">
@@ -60,16 +60,16 @@
                 <% } %>
             </label>
 
-            <label for="userPic">Foto de perfil
+            <label for="profile_pic">Foto de perfil
                 <input 
                     type="file" 
-                    name ="userPic" 
+                    name ="profile_pic" 
                     accept="image/jpeg, image/png, image/jpg, image/webp"
                     class="<%= locals.errors && errors.email ? "form-control-is-invalid" : "input" %>">
 
-                    <% if (locals.errors && errors.profilePic) { %>
+                    <% if (locals.errors && errors.profile_pic) { %>
                         <div class="textDanger">
-                            <%= errors.profilePic.msg  %>
+                            <%= errors.profile_pic.msg  %>
                         </div>
                     <% } %>
             </label>
@@ -101,8 +101,8 @@
                     </div>
                 <% } %>
             </label>
-            <label for="category">Categoria:</label>
-            <select name="category" id="category">
+            <label for="Categories_id">Categoria:</label>
+            <select name="Categories_id" id="Categories_id">
                 <option value="1">Gold</option>
                 <option value="2">Platinum</option>
                 <option value="3">Invitado</option>

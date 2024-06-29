@@ -23,14 +23,35 @@ const usersController = {
         return res.render('users/userEditForm', {user: req.session.userLogged}) 
     },
 
+    // getUser: async function (req, res){
+    //     const userId = parseInt(req.params.id);
+    //     if (isNaN(userId)) {
+    //         return res.send('ID de usuario no válido');
+    //     }
+        
+    // try {
+    //     const user = await usersService.getUserById(userId);
+
+    //     if (!user) {
+    //     return res.send('Usuario no encontrado');
+    //     }
+
+    //     res.render('users/userEditForm', { user });
+        
+    // } catch (err) {
+    //     res.status(500).send('Error al obtener el usuario');
+    // }
+    // },
+
     processEdit: async function(req,res) {
         try {
+
             console.log(req.session.userLogged)
             let userData = await usersService.userUpdate(req.params.id, req.body, req.file)
             res.redirect("/users/profile", {user: user})
             return userData
         } catch (error) {
-            console.log(error)            
+            console.log(error, 'Error al actualizar el usuario')            
         }
     },
 
@@ -59,7 +80,7 @@ const usersController = {
                 });
             }
         
-            let newUser = await usersService.createUserDb(req.body, req.imagePaths);
+            let newUser = await usersService.createUserDb(req.body, req.file);
             
             if (newUser) {
                 return res.render("users/registerView")

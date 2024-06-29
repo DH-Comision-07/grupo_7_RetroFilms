@@ -99,15 +99,15 @@ let usersService = {
     //     return true;
     // },
 
-    createUserDb: async function(user, imagePaths){          
+    createUserDb: async function(user, file){          
         try {
             db.User.create({
                 name:user.name,
-                username:user.userName,
+                username:user.username,
                 email:user.email,
-                profile_pic: String(imagePaths),
+                profile_pic:file.filename,
                 password:bcrypt.hashSync(user.password,10),
-                Categories_id: user.category    
+                Categories_id: user.Categories_id   
             })
     
             return true;
@@ -132,10 +132,24 @@ let usersService = {
         })
     },
 
-    userUpdate: async function(id, body, file) {
+    // getUserById: async function (id){
+
+    //     if (isNaN(id)) {
+    //         throw new Error('ID de usuario no válido');
+    //     }
+    //     try {
+    //         return await db.User.findByPk(id);
+    //     } catch (error) {
+    //         console.error('Error al obtener el usuario por ID:', err);
+    //     throw err;
+    //     }
+    // },
+
+    userUpdate: async function(body, file) {
+        
         try {
 
-            // console.log(file)
+                console.log(file)
 
             let modifiedUser = db.User.update({
                 name: body.name,
@@ -149,8 +163,8 @@ let usersService = {
                 where: {id: id}
                 }
             )
-    
-            return modifiedUser
+                return modifiedUser
+            
         } catch (error) {
             console.log(error)
             return "El perfil no se pudo modificar"
