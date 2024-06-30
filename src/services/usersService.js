@@ -145,26 +145,38 @@ let usersService = {
     //     }
     // },
 
-    userUpdate: async function(body, file) {
+    userUpdate: async function(id, body, file, session) {
         
         try {
+            console.log("---- Este es el body ----")
+            console.log(body)
+            console.log("---- Fin Body ----")
 
-                console.log(file)
-
-            let modifiedUser = db.User.update({
+            await db.User.update({
                 name: body.name,
                 username: body.username,
                 email: body.email,
                 profile_pic: file.filename,
-                password: bcrypt.hashSync(user.password,10),
+                password: bcrypt.hashSync(body.password,10),
                 Categories_id: body.Categories_id
-                },
+            },
                 { 
                 where: {id: id}
                 }
             )
-                return modifiedUser
-            
+
+            let modifiedUserData = {
+                name: body.name,
+                username: body.username,
+                email: body.email,
+                profile_pic: file.filename,
+                password: bcrypt.hashSync(body.password,10),
+                Categories_id: body.Categories_id
+            }
+
+            console.log("estos son los datos del usuario actualizados:",modifiedUserData)
+            return modifiedUserData
+
         } catch (error) {
             console.log(error)
             return "El perfil no se pudo modificar"

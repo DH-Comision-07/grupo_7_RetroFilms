@@ -45,10 +45,15 @@ const usersController = {
 
     processEdit: async function(req,res) {
         try {
+            // console.log(req.session.userLogged)
+            let userData = await usersService.userUpdate(req.params.id, req.body, req.file, req.session.userLogged)
 
-            console.log(req.session.userLogged)
-            let userData = await usersService.userUpdate(req.params.id, req.body, req.file)
-            res.redirect("/users/profile", {user: user})
+            let userEditSession = await usersService.findByFieldDb('email',req.body.email)
+            console.log("esto es user edit session:",userEditSession);
+
+            req.session.userLogged = userEditSession;
+            
+            res.redirect("/")
             return userData
         } catch (error) {
             console.log(error, 'Error al actualizar el usuario')            
