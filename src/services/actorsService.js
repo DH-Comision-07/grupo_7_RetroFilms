@@ -123,23 +123,27 @@ let actorsService = {
 
     updateOne: async function (id, body, file) {
         try {           
-            console.log('estos son los datos del actor:', body);  
-            console.log(file);
 
             let updatedActor = await db.Actor.update ({
                 full_name: body.full_name,
                 bio: body.bio,
                 profile_pic: file.filename
             }, {
+                where: { id: id },
                 include: [
-                    {association: "movies"}]
-        });
+                    { association: "movies" }
+                ]
+            });
 
-            console.log(updatedActor)
+            let actorToEdit = await db.Actor.findByPk(id, {
+                include: [
+                    { association: "movies" },
+                ]
+            })
 
-            let registerSaved = await this.updatedActorMovieRegister(newActor.id, body)
+            await this.updatedActorMovieRegister(actorToEdit.id, body)
 
-            return newActor;
+            return updatedActor;
         } catch (error) {
             console.log(error)
             return "Error. El actor no se ha actualizado"
@@ -149,12 +153,10 @@ let actorsService = {
     updatedActorMovieRegister: async function (id, body) {
 
         try {
+
             let destroyActorMovieRegister = await db.ActorMovie.destroy({
                 where: { Actors_id: id }
             });
-
-            console.log("esto se trae el destroy:")
-            console.log(destroyActorMovieRegister);
             
             let actorMovieRegisters = body.moviesPlayedAt.map(movieId => ({
                 Actors_id: id,

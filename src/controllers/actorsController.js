@@ -66,42 +66,8 @@ const actorsController = {
                         let body = await req.body
                         console.log(body)
                         let updatedActor = await actorsService.updateOne(req.params.id, req.body, req.file)
-                //         let updatedMovie = await productService.updateOne(req.params.id, req.body, req.files)
-
-                
-                
-                //                         let imagesInput = [];
                         
-                //                 if (req.files && req.files.poster) {
-                //                         req.files.poster.forEach(element => {
-                //                                 imagesInput.splice({
-                //                                 name_URL: element.filename,
-                //                                 Movies_id: updatedMovie.id,
-                //                                 categoria_tipo: "portada"
-                //                                 });
-                //                         });
-                //                         }
-                        
-                //                         if (req.files && req.files.imagesMovie) {
-                //                         req.files.imagesMovie.forEach(element => {
-                //                                 imagesInput.splice({
-                //                                 name_URL: element.filename,
-                //                                 Movies_id: updatedMovie.id,
-                //                                 categoria_tipo: "imagen"
-                //                                 });
-                //                         });
-                //                         }
-                        
-                //                         if (imagesInput.length > 0) {
-                //                         await imageService.newImages(imagesInput);
-                //                         }
-                        
-                //                         let movieSaved = await productService.getOne(updatedMovie.id);
-                        
-                //                         console.log("edited movie", movieSaved);
-
-                //                         res.redirect("/products/productDetail/" + req.params.id)
-                //                         return movieSaved;
+                        res.redirect("/actors/" + req.params.id)
                         return updatedActor
                 } catch (error) {
                         console.log(error)
