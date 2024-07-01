@@ -2,7 +2,7 @@ const users = require ('../database/json/users.json');
 const fs = require ('fs');
 const path = require ('path');
 const bcrypt = require ('bcryptjs')
-
+const db = require("../database/models")
 
 let usersService = {
     
@@ -12,6 +12,16 @@ let usersService = {
 
     findAllUsers: function (){
         return this.users
+    },
+
+    findAllUsersDb: async function(){
+        try {
+            let users = await db.User.findAll()
+            return users
+        } catch (error) {
+            console.log(error)
+            return ("ocurrio un error al buscar a los usuarios")
+        }
     },
 
     findUserPK: function(id){
@@ -24,6 +34,46 @@ let usersService = {
         let userFound = allUsers.find(user => user[field] === text);
         return userFound;
     },
+
+    findByEmailDb: async function (text) {
+        try {
+            let field = await db.User.findOne({
+                where: {
+                    email: text
+                }
+            })
+            return field
+        } catch (error) {
+            console.log(error)
+        }
+    },
+
+    findByUserNameDb: async function (text) {
+        try {
+            let field = await db.User.findOne({
+                where: {
+                    userName: text
+                }
+            })
+            return field
+        } catch (error) {
+            console.log(error)
+        }
+    },
+
+    findByFieldDb: async function (field, text) {
+        try {
+            let user = await db.User.findOne({
+                where: {
+                    [field]: text
+                }
+            })
+            return user
+        } catch (error) {
+            console.log(error)
+        }
+    },
+    
 
     
     createUser: function(user, imagePaths){          
@@ -51,13 +101,39 @@ let usersService = {
         return true;
     },
 
+    createUserDb: async function(user, imagePaths){          
+        try {
+            db.User.create({
+                name:user.name,
+                username:user.userName,
+                email:user.email,
+                profile_pic: String(imagePaths),
+                password:bcrypt.hashSync(user.password,10),
+                Categories_id: user.category    
+            })
+    
+            return true;
+        } catch (error) {
+            console.log(error)
+            return ("ocurrio un error al generar el registro nuevo")
+        }
+
+    },
+
     deleteUser: function(id){
         let allUsers = this.findAllUsers();
         let finalUsers = allUsers.filter(user => user.id !== id);
         let usersJSON= JSON.stringify(finalUsers, null,' ');
         fs.writeFileSync(this.fileName,usersJSON)
         return true;
+    },
+
+    deleteUserDb: async function(id) {
+        db.User.destroy({
+            where: {id: id}
+        })
     }
 }
 
-module.exports=usersService;
+
+module.exports= usersService;

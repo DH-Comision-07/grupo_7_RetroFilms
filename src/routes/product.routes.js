@@ -19,8 +19,8 @@ router.post('/', upload.fields([{name:'poster', maxCount:1},{name:'imagesMovie'}
 router.get('/productDetail/:id/edit', productController.edit);
 router.put('/:id' , upload.fields([{name:'poster', maxCount:1},{name:'imagesMovie'}]), productController.update)
 
-// //-- DELETE PRODUCT ---// 
-// router.delete('/productDetail/:id/delete', productController.delete);
+//-- DELETE PRODUCT ---// 
+router.delete('/productDetail/:id/delete', productController.delete);
 
 
 module.exports = router;

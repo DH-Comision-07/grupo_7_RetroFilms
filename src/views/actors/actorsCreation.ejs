@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head.ejs") %>
+    <title>Editar Actores</title>
+    <link rel="stylesheet" href="/css/actorEdition.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <%- include("../partials/header.ejs") %>
+    </header>
+    <br>
+
+    <h1 class="title">Creación Actores</h1>
+
+    <form action="/actors" method="POST" enctype="multipart/form-data">
+        <label for="full_name">Nombre:
+            <input type="text" id="full_name" name="full_name">
+        </label>
+        
+        <label for="bio">Biografía:
+            <textarea id="bio" name="bio" rows="6"></textarea>
+        </label>
+        
+        <label for="moviesPlayedAt">Películas en las que participa:
+            <select id="moviesPlayedAt" name="moviesPlayedAt[]" multiple="multiple">
+                <% movies.forEach(function(movie) { %>
+                    <option value="<%= movie.id %>" <%= selectedMovies.includes(movie.id) ? 'selected' : '' %>><%= movie.name %></option>
+                <% }); %>
+            </select>
+        </label>
+        
+        <label for="profile_pic">Foto:
+            <input type="file" id="profile_pic" name="profile_pic">
+        </label>
+        
+        <br>
+        <button type="submit">Crear Actor</button>
+    </form>
+    
+    <footer>
+        <%- include("../partials/footer.ejs") %>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#moviesPlayedAt').select2({
+                placeholder: 'Selecciona películas',
+                allowClear: true
+            });
+        });
+    </script>
+</body>
+</html>
+

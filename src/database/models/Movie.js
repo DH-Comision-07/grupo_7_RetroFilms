@@ -11,19 +11,19 @@ module.exports = function(sequelize, dataTypes){
     },
     name: {
         type: dataTypes.STRING(45),
-        allowNull: false
+        allowNull: true
     },
     length: {
         type: dataTypes.TINYINT,
-        allowNull: false
+        allowNull: true
     },
     release_date: {
         type: dataTypes.DATE,
-        allowNull: false
+        allowNull: true
     },
     price: {
         type: dataTypes.INTEGER,
-        allowNull: false
+        allowNull: true
     },
     description: {
         type: dataTypes.STRING(800),
@@ -40,7 +40,7 @@ module.exports = function(sequelize, dataTypes){
     };
 
     let config = {
-        tableName : 'Movies',
+        tableName : 'movies',
         timestamps : false
     };
 

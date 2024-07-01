@@ -35,7 +35,7 @@ module.exports = function(sequelize, dataTypes){
     };
 
     let config = {
-        tableName : 'Users',
+        tableName : 'users',
         timestamps : false
     };
 

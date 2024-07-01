@@ -5,11 +5,11 @@ const path = require("path")
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         if (file.fieldname == "poster"){
-            const fileDir = path.resolve(__dirname, "../../public/img/productDetail/posters/")
+            const fileDir = path.resolve(__dirname, "../../public/img/posters/")
             return cb(null, fileDir)
         }
         else if (file.fieldname == "imagesMovie"){
-            const fileDirectory = path.resolve(__dirname, "../../public/img/productDetail/")
+            const fileDirectory = path.resolve(__dirname, "../../public/img/imagesMovies/")
             return cb(null, fileDirectory)
         }
     },

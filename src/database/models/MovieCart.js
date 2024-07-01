@@ -19,7 +19,7 @@ module.exports = function(sequelize, dataTypes){
     };
 
     let config = {
-        tableName : 'Movies_Cart',
+        tableName : 'movies_cart',
         timestamps : false
     };
 
