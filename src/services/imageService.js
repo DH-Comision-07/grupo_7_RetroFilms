@@ -29,6 +29,7 @@ let imageService = {
     }
 }, 
 
+
 deleteImage: async function (Movies_id){
     try {
             await db.Image.destroy({

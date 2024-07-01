@@ -127,6 +127,8 @@ const productController = {
                                         categoria_tipo: "portada"
                                 });
 
+                        });
+
                         req.files.imagesMovie.forEach(element => {
                                 imagesInput.push({
                                         name_URL: element.filename,
@@ -134,8 +136,8 @@ const productController = {
                                         categoria_tipo: "imagen"
                                 });
                         });
-                        });
 
+                        console.log(imagesInput);
                         await imageService.newImages(imagesInput);
 
                         let movieSaved = await productService.getOne(newMovie.id);
@@ -169,38 +171,36 @@ const productController = {
                 try {
                         let updatedMovie = await productService.updateOne(req.params.id, req.body, req.files)
                 
-                                        let imagesInput = [];
-                        
-                                if (req.files && req.files.poster) {
-                                        req.files.poster.forEach(element => {
-                                                imagesInput.splice({
-                                                name_URL: element.filename,
-                                                Movies_id: updatedMovie.id,
-                                                categoria_tipo: "portada"
-                                                });
-                                        });
-                                        }
-                        
-                                        if (req.files && req.files.imagesMovie) {
-                                        req.files.imagesMovie.forEach(element => {
-                                                imagesInput.splice({
-                                                name_URL: element.filename,
-                                                Movies_id: updatedMovie.id,
-                                                categoria_tipo: "imagen"
-                                                });
-                                        });
-                                        }
-                        
-                                        if (imagesInput.length > 0) {
-                                        await imageService.newImages(imagesInput);
-                                        }
-                        
-                                        let movieSaved = await productService.getOne(updatedMovie.id);
-                        
-                                        console.log("edited movie", movieSaved);
+                        let imagesInput = [];
 
-                                        res.redirect("/products/productDetail/" + req.params.id)
-                                        return movieSaved;
+                        req.files.poster.forEach(element => {
+                                imagesInput.push({
+                                        name_URL: element.filename,
+                                        Movies_id: updatedMovie.id,
+                                        categoria_tipo: "portada"
+                                });
+
+                        });
+
+                        req.files.imagesMovie.forEach(element => {
+                                imagesInput.push({
+                                        name_URL: element.filename,
+                                        Movies_id: updatedMovie.id,
+                                        categoria_tipo: "imagen"
+                                });
+                        });
+
+                        if (imagesInput.length > 0) {
+                                await imageService.deleteImage(updatedMovie.id)
+                                await imageService.newImages(imagesInput);
+                        }
+        
+                        let movieSaved = await productService.getOne(updatedMovie.id);
+        
+                        console.log("edited movie", movieSaved);
+
+                        res.redirect("/products/productDetail/" + req.params.id)
+                        return movieSaved;
                 } catch (error) {
                         console.log(error)
                         res.send("Ha ocurrido un error al buscar la pelicula")
@@ -214,7 +214,7 @@ const productController = {
 
                         await productService.deleteMovie(Movies_id)
                         //console.log(movieDetail.genres);
-                        res.redirect("/actors")
+                        res.redirect("/")
                 } catch (error) {
                         console.log(error, 'No se eliminó la pelicula');
                 }
