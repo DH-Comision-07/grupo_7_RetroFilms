@@ -132,6 +132,16 @@ const usersController = {
         return res.render('users/profile',{user: req.session.userLogged})
     },
 
+    profiles: async function(req, res) {
+        try {
+            let users = await usersService.findAllUsersDb()
+            return res.render("users/profileList", {users:users})
+        } catch (error) {
+            console.log(error)
+            res.send("Ha ocurrido un error al mostrar los perfiles de usuario")
+        }
+    },
+
     logout: (req,res) => {
         res.clearCookie('userEmail');
         req.session.destroy();
