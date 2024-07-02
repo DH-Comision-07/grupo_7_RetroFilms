@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <% include("../partials/head.ejs") %>  
+  <%-include("../partials/head.ejs") %>  
   <link rel="stylesheet" href="/css/profilesList.css"> 
   <title>RetroFilms</title> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
@@ -10,8 +10,8 @@
 
 <body>
   <header>
-    <% include('../partials/header') %>
-  </header>
+    <%-include('../partials/header')%>
+</header>
 
   <main class="mainBody">
     <% if (users && users.length > 0) { %>
@@ -38,7 +38,7 @@
   </main>
 
   <footer>
-    <% include('../partials/footer') %>
+    <%-include('../partials/footer') %>
   </footer>
 
 </body>
