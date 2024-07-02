@@ -4,52 +4,64 @@
     <title>Registro</title>
     <link rel="stylesheet" href="/css/registerForm.css">
     <%- include('../partials/head') %>
-    <script src="/js/Validations-register-front-end.js"></script>
 </head>
 <body>
     <header class="header">
         <%- include('../partials/header') %>
-      
     </header>
 
-    <div class="form-container">
+    <div id="formulario">
         <form action="/users/register" method="POST" enctype="multipart/form-data">
-            <label for="name">Tu nombre
-                <input 
-                    type="text"  
-                    name="name" 
-                    placeholder="Nombres y Apellidos" 
-                    class="help_message <%= locals.errors && locals.errors.name ? 'form-control-is-invalid' : '' %>" 
-                    value="<%= locals.oldData ? locals.oldData.name : '' %>"
-                >
-                <% if (locals.errors && locals.errors.name) { %>
-                    <div class="textDanger help_message" id="help_name">
-                        <%= locals.errors.name.msg %>
+            <div id="grupo__name">
+                <label for="name">Tu nombre
+                    <input 
+                        type="text"  
+                        name="nameNombre" 
+                        id="name"
+                        placeholder="Nombres y Apellidos" 
+                        class="<%= locals.errors && locals.errors.name ? 'form-control-is-invalid' : '' %>"
+                        value="<%= locals.oldData ? locals.oldData.name : '' %>">
+                    <% if (locals.errors && locals.errors.name) { %>
+                        <div class="textDanger help_message" id="help_name">
+                            <%= locals.errors.name.msg %>
+                        </div>
+                    <% } %>
+                    <div class="formulario__input">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        <p class="texto__error" class="texto__error-activo">El nombre puede tener un máximo de 40 letras, sin caracteres especiales.</p><br>
                     </div>
-                <% } %>
-            </label>
-
-            <label for="userName">Nombre de Usuario
-                <input 
-                    type="text"  
-                    name="userName" 
-                    placeholder="User name"
-                    class="help_message <%= locals.errors && locals.errors.userName ? 'form-control-is-invalid' : '' %>"
-                    value="<%= locals.oldData ? locals.oldData.userName : '' %>"
-                >
-                <% if (locals.errors && locals.errors.userName) { %>
-                    <div class="textDanger help_message" id="help_userName">
-                        <%= locals.errors.userName.msg %>
+                </label>
+            </div>
+            
+            <div id="grupo__userName">
+                <label for="userName">Nombre de Usuario
+                    <input 
+                        type="text"  
+                        name="userName" 
+                        id="userName"
+                        placeholder="User name"
+                        class="<%= locals.errors && locals.errors.userName ? 'form-control-is-invalid' : '' %>"
+                        value="<%= locals.oldData ? locals.oldData.userName : '' %>"
+                    >
+                    <% if (locals.errors && locals.errors.userName) { %>
+                        <div class="textDanger help_message" id="help_userName">
+                            <%= locals.errors.userName.msg %>
+                        </div>
+                    <% } %>
+                    <div>
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        <p class="texto__error" class="texto__error-activo">El nombre de usuario tiene que ser de 4 a 16 digitos y sólo puede contener números, letras y guion bajo. </p><br>
                     </div>
-                <% } %>
-            </label>
-
+                </label>
+            </div>
+        <div id="grupo__email">
             <label for="email">Correo Electrónico
                 <input 
                     type="email" 
                     name="email" 
+                    id="email"
                     placeholder="ejemplo@gmail.com"
-                    class="help_message <%= locals.errors && locals.errors.email ? 'form-control-is-invalid' : '' %>" 
+                    class="<%= locals.errors && locals.errors.email ? 'form-control-is-invalid' : '' %>" 
                     value="<%= locals.oldData ? locals.oldData.email : '' %>"
                 >
                 <% if (locals.errors && locals.errors.email) { %>
@@ -57,55 +69,70 @@
                         <%= locals.errors.email.msg %>
                     </div>
                 <% } %>
+                <div>
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    <p class="texto__error" class="texto__error-activo">El correo electrónico sólo puede contener letras, números, puntos, guiones y guion bajo.</p><br>
+                </div>
             </label>
+        </div>
 
-            <label for="userPic">Foto de perfil
-                <input 
-                    type="file" 
-                    name="userPic" 
-                    accept="image/jpeg, image/png, image/jpg, image/webp"
-                    class="<%= locals.errors && locals.errors.profilePic ? 'form-control-is-invalid' : 'input' %>"
-                >
-                <% if (locals.errors && locals.errors.profilePic) { %>
-                    <div class="textDanger">
-                        <%= locals.errors.profilePic.msg %>
-                    </div>
-                <% } %>
-            </label>
+            <div id="grupo__userPic">
+                <label for="userPic">Foto de perfil
+                    <input 
+                        type="file" 
+                        name="userPic" 
+                        accept="image/jpeg, image/png, image/jpg, image/webp"
+                        class="<%= locals.errors && locals.errors.profilePic ? 'form-control-is-invalid' : 'input' %>"
+                    >
+                    <% if (locals.errors && locals.errors.profilePic) { %>
+                        <div class="textDanger">
+                            <%= locals.errors.profilePic.msg %>
+                        </div>
+                    <% } %>
+                </label>
+            </div>
 
-            <label for="password">Contraseña
-                <input 
-                    type="password" 
-                    name="password" 
-                    placeholder="xxxx"
-                    class="help_message <%= locals.errors && locals.errors.password ? 'form-control-is-invalid' : '' %>" 
-                >
-                <% if (locals.errors && locals.errors.password) { %>
-                    <div class="textDanger help_message" id="help_password">
-                        <%= locals.errors.password.msg %>
+            <div id="grupo__password">
+                <label for="password">Contraseña
+                    <input 
+                        type="password" 
+                        name="password" 
+                        id="password"
+                        placeholder="xxxxx"
+                        class="<%= locals.errors && locals.errors.password ? 'form-control-is-invalid' : '' %>" 
+                    >
+                    <% if (locals.errors && locals.errors.password) { %>
+                        <div class="textDanger help_message" id="help_password">
+                            <%= locals.errors.password.msg %>
+                        </div>
+                    <% } %>
+                    <div>
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        <p class="texto__error" class="texto__error-activo">La contraseña tiene que ser de 4 a 12 dígitos.</p><br>
                     </div>
-                    <ul class="errors_list_password">
-                        <li id="length" class="invalid">Debe tener al menos 5 caracteres.</li>
-                        <li id="uppercase" class="invalid">Debe incluir una letra mayúscula.</li>
-                        <li id="lowercase" class="invalid">Debe incluir una letra minúscula.</li>
-                        <li id="number" class="invalid">Debe incluir un número.</li>
-                    </ul>
-                <% } %>
-            </label>
+                </label>
+            </div>
 
-            <label for="reEnterPassword">Repite la contraseña
-                <input 
-                    type="password" 
-                    name="reEnterPassword" 
-                    placeholder="xxxxx"
-                    class="help_message <%= locals.errors && locals.errors.reEnterPassword ? 'form-control-is-invalid' : '' %>" 
-                >
-                <% if (locals.errors && locals.errors.reEnterPassword) { %>
-                    <div class="textDanger help_message" id="help_confirm_password">
-                        <%= locals.errors.reEnterPassword.msg %>
+            <div id="grupo__reEnterPassword">
+                <label for="reEnterPassword">Repite la contraseña
+                    <input 
+                        type="password" 
+                        name="reEnterPassword"
+                        id="reEnterPassword" 
+                        placeholder="xxxxx"
+                        class="<%= locals.errors && locals.errors.reEnterPassword ? 'form-control-is-invalid' : '' %>" 
+                    >
+                    <% if (locals.errors && locals.errors.reEnterPassword) { %>
+                        <div class="textDanger help_message" id="help_reEnterPassword">
+                            <%= locals.errors.reEnterPassword.msg %>
+                        </div>
+                    <% } %>
+                    <div>
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        <p class="texto__error" class="texto__error-activo">Las contraseñas deben de coincidir</p><br>
                     </div>
-                <% } %>
-            </label>
+                </label>
+            </div>
 
             <label for="category">Categoría:
                 <select name="category" id="category">
@@ -113,28 +140,39 @@
                     <option value="Platinum">Platinum</option>
                     <option value="Invitado">Invitado</option>
                 </select>
+
             </label>
 
             <label for="checkbox">
+            <div id="terminos">
                 <input 
                     type="checkbox" 
-                    name="checkbox"
+                    name="terminos"
+                    id="terminos"
                     class="<%= locals.errors && locals.errors.checkbox ? 'form-control-is-invalid' : '' %>"
                     <% if (locals.oldData && locals.oldData.checkbox) { %> checked <% } %>
                 >
-                <b>Acepta condiciones y restricciones</b>
+                <b>Acepta terminos y condiciones</b>
                 <% if (locals.errors && locals.errors.checkbox) { %>
                     <div class="textDangerFinal">
                         <%= locals.errors.checkbox.msg %>
                     </div>
                 <% } %>
             </label>
+            </div>
 
             <br>
-
-            <button   type="submit" name="submitButton">Continuar</button>
+            <div class= "formulario__grupo formulario__grupo-btn-enviar">
+            <button  type="submit" name="submitButton" class="formulario__btn">Continuar</button>
+            <p id="formulario__mensaje-exito" id="formulario__mensaje-exito-activo">Tu información se guardo con exito con exito</p>
+            </div>
 
             <p class="login">¿Ya tienes cuenta? <a href="/users/login">Log in</a></p>
+
+            <div class="formulario__mensaje" id="formulario__mensaje">
+                 <p><i class="fas fa-exclamation-triangle"></i><b>Error </b> Por favor rellena el formulario de manera correcta</p>
+            </div>
+
         </form>
     </div>
 
@@ -142,6 +180,6 @@
         <%- include('../partials/footer') %>
     </footer>
 
-  
-  </body>
+    <script src="/Validations/validations-registerFormTwo.js"></script>
+</body>
 </html>
