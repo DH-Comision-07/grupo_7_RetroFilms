@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%-include("../partials/head.ejs") %>  
+  <link rel="stylesheet" href="/css/profilesList.css"> 
+  <title>RetroFilms</title> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+  <header>
+    <%-include('../partials/header')%>
+</header>
+
+  <main class="mainBody">
+    <% if (users && users.length > 0) { %>
+
+      <% users.forEach(function (user) { %>
+        <div class="user">
+          <div class="boxUserImg">
+            <img class="userImage" src="/img/avatars/<%= user.profile_pic %>" alt="foto usuario">
+          </div>
+          <div class="userDescription">
+            <h2 class="userName"><%= user.username %></h2>
+                <div class="userDescriptionDetail">
+                    <p class="name">nombre: <%= user.name %></p>
+                    <p class="id">id: <%= user.id %></p>
+                    <p class="email">email: <%= user.email %></p>
+                    <p class="category">categoria: <%= user.Categories_id %></p>
+                </div>
+
+          </div>
+          <button class="delete-btn"><a href="/users/delete">Eliminar</a></button>
+        </div>
+      <% }) %>
+    <% } %>
+  </main>
+
+  <footer>
+    <%-include('../partials/footer') %>
+  </footer>
+
+</body>
+
+</html>

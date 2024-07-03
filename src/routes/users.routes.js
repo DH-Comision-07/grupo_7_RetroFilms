@@ -5,7 +5,7 @@ const usersController = require('../controllers/usersController');
 const routes = require('./index.routes');
 
 const validations = require ('../middlewares/userImgValidationMid')
-const uploadFile = require ('../middlewares/multerUserMid')
+const uploadUserFile = require ('../middlewares/multerUserMid')
 const guestMid= require ('../middlewares/guestMid')
 const authMid = require ('../middlewares/authMid')
 
@@ -13,14 +13,17 @@ const authMid = require ('../middlewares/authMid')
 /* ---------------------REGISTER -----------------*/
 //--- Creation USERS --///
 router.get("/register",guestMid, usersController.register)
-router.post("/register", uploadFile.single("profile_pic"), validations,  usersController.processRegister)
+router.post("/register", uploadUserFile.single("profile_pic"), validations,  usersController.processRegister)
+
 
 /*------ EDITION USERS -----*/
-//router.get('/edit/:id', usersController.userEdit)
+router.get('/edit/:id', usersController.userEdit)
+router.put('/:id', uploadUserFile.single("profile_pic"), usersController.processEdit)
 
 
 //--- DELETE USER --//
-//router.delete('/delete',usersController.delete)
+router.get('/delete',usersController.delete)
+router.delete("/delete", usersController.processDelete)
 
 
 /* --------------- LOGIN -------------*/
@@ -32,13 +35,10 @@ router.post("/login", usersController.processLogIn)
 
 router.get('/profile',authMid,usersController.profile)
 
-/* -- REGISTER--*/
-
-router.get('/registerView',authMid,usersController.registerView)
+router.get("/profiles", usersController.profiles)
 
 /* --- LOG OUT ----*/
 
 router.get('/logout',usersController.logout)
-
 
 module.exports = router;

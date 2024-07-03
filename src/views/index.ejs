@@ -20,16 +20,16 @@
   <main class="mainBody">
       
         <section>
-          <div class = "carrousell">
           <% if (carrousell && carrousell.length > 0) { %>
+          <div class = "carrousell">
             <% carrousell.forEach(function (movie) { %>
               <% if (movie.images && movie.images.length > 0) { %>
-                <div class="movie">
-            <img src="img/posters/<%= movie.images[0].name_URL %>" alt="<%= movie.name %>">
-                </div>
+                <a class="movie" href="/products/productDetail/<%= movie.id %>">
+                    <img src="img/posters/<%= movie.images[0].name_URL %>" alt="<%= movie.name %>">
+                  </a>
+                <%}%> 
+                <%})%>
           </div>
-          <%}%> 
-          <%})%>
           <%}%> 
         </section>  
     
@@ -51,22 +51,24 @@
                     <img src="img/posters/<%= movie.images[0].name_URL %>" alt="">
               </a>
             </div>        
-          <%}});%>  
+          <%}})%>  
           <%}%> 
         </div>
   
+       
         <div class="topMovies">
-          <% if (movies.topMovie === 1 && movies.length > 0) { %>
-              <%movies.topMovie.forEach(function (movie,index){%>  
+          <% if (topMovie && movies.length > 0) { %>
+              <%topMovie.forEach(function (movie,index){%>  
                           <div class="newMovies"> Top número <%=index+1%>
-                          <% movie.images.forEach(function (image) { %> 
+                            <% if (movie.images && movie.images.length > 0) { %>
                             <a href="/products/productDetail/<%= movie.id %>">
-                              <img src="img/posters/<%=image[0].name_URL %>" alt="" >
+                              <img src="img/posters/<%= movie.images[0].name_URL %>" alt="<%= movie.name %>">
                             </a>
-                        <%})})}%>
-                        
-                </div>
-        </div>
+                            <%}%>
+                          </div>
+                        <%})%>
+                        <%}%>  
+                 </div>
 
   </main>
 

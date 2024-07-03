@@ -1,0 +1,91 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size:19px;
+    font-weight: 200;
+    font-family: 'Noto Serif';
+    color:#ffffff; 
+    background: linear-gradient(to right, #002540 10%, #150e23 80%);    
+}
+
+.mainBody {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    gap: 2%;
+    margin-top: 2%; 
+}
+
+.actor {
+    background-color: #004a6b; 
+    border: 1px solid #02B0FF; 
+    border-radius: 4%; 
+    padding: 2%; 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    width: 20%; 
+    text-align: center; 
+    transition: background-color 0.3s, color 0.5s; 
+    margin-bottom: 2%;
+}
+
+.actor a {
+    text-decoration: none; 
+    color: inherit;
+}
+
+.boxActorImg {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 2%;
+}
+
+.actorImg {
+    width: 100%;
+    height: 400px; 
+    object-fit: cover;
+    border-radius: 1%; 
+}
+
+.actorsName {
+    font-size: 2em;
+    font-family:'Bebas Neue';   
+    font-weight: 1000;
+    text-align: center;
+    color: #B88442;
+    } 
+
+.actor:hover {
+    background-color: #00131b; 
+}
+
+.actor:hover .actorsName {
+    color: #b47624;
+}
+
+.actor:hover .actorImg {
+    opacity: 0.8;
+}
+
+.createButton{
+    margin: 10px;
+    padding: 15px;
+    font-family: 'Bebas Neue';
+    text-decoration: none;
+    font-size: 24px;
+    width: 150px;
+    border:none;
+    border-radius: 10px;
+    background-color: #02b0ff;
+    color:#ffffff;
+    margin-left:7.6vw;
+    margin-top: 15px;
+}
+
+.createButton a{
+    text-decoration: none;
+    color:#ffffff;
+}

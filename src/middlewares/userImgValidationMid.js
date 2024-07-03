@@ -4,7 +4,7 @@ const path = require ('path')
 const validations = [
     body("nameNombre").notEmpty().withMessage("Tiene que escribir su nombre"),
     
-    body("userName").notEmpty().withMessage("Tiene que escribir su nombre de usuario"),
+    body("username").notEmpty().withMessage("Tiene que escribir su nombre de usuario"),
     
     body("email")
         .notEmpty().withMessage("Tiene que escribir su mail").bail()
@@ -16,7 +16,7 @@ const validations = [
     
     body('terminos').isIn(['on']).withMessage('Debes aceptar los términos y condiciones'),
     
-    body("profilePic").custom((value, { req }) => {
+    body("profile_pic").custom((value, { req }) => {
         let file = req.file;
         let acceptedExtensions = [".jpg",".jpeg", ".png",".webp"]; 
         
