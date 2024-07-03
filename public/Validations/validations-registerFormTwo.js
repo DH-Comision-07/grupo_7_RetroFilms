@@ -20,8 +20,8 @@ const validarFormulario = (e) => {
         case "nameNombre":
             validarCampo(expresiones.nombre, e.target, 'name');
             break;
-        case "userName":
-            validarCampo(expresiones.usuario, e.target, 'userName');
+        case "username":
+            validarCampo(expresiones.usuario, e.target, 'username');
             break;
         case "email":
             validarCampo(expresiones.correo, e.target, 'email');
@@ -80,8 +80,10 @@ inputs.forEach((input) => {
 });
 
 formulario.addEventListener('submit', (e) => {
-   e.preventDefault
+   e.preventDefault()
     console.log('Formulario enviado');
+    console.log(campos)
+    console.log(e);
     const terminos = document.getElementById('terminos');
     if (campos.nombre && campos.usuario && campos.password && campos.correo && terminos.checked) {
         document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');

@@ -33,19 +33,19 @@
                 </label>
             </div>
             
-            <div id="grupo__userName">
-                <label for="userName">Nombre de Usuario
+            <div id="grupo__username">
+                <label for="username">Nombre de Usuario
                     <input 
                         type="text"  
-                        name="userName" 
-                        id="userName"
+                        name="username" 
+                        id="username"
                         placeholder="User name"
-                        class="<%= locals.errors && locals.errors.userName ? 'form-control-is-invalid' : '' %>"
-                        value="<%= locals.oldData ? locals.oldData.userName : '' %>"
+                        class="<%= locals.errors && locals.errors.username ? 'form-control-is-invalid' : '' %>"
+                        value="<%= locals.oldData ? locals.oldData.username : '' %>"
                     >
-                    <% if (locals.errors && locals.errors.userName) { %>
+                    <% if (locals.errors && locals.errors.username) { %>
                         <div class="textDanger help_message" id="help_userName">
-                            <%= locals.errors.userName.msg %>
+                            <%= locals.errors.username.msg %>
                         </div>
                     <% } %>
                     <div>
@@ -77,16 +77,16 @@
         </div>
 
             <div id="grupo__userPic">
-                <label for="userPic">Foto de perfil
+                <label for="profile_pic">Foto de perfil
                     <input 
                         type="file" 
-                        name="userPic" 
+                        name="profile_pic" 
                         accept="image/jpeg, image/png, image/jpg, image/webp"
-                        class="<%= locals.errors && locals.errors.profilePic ? 'form-control-is-invalid' : 'input' %>"
+                        class="<%= locals.errors && locals.errors.profile_pic ? 'form-control-is-invalid' : 'input' %>"
                     >
-                    <% if (locals.errors && locals.errors.profilePic) { %>
+                    <% if (locals.errors && locals.errors.profile_pic) { %>
                         <div class="textDanger">
-                            <%= locals.errors.profilePic.msg %>
+                            <%= locals.errors.profile_pic.msg %>
                         </div>
                     <% } %>
                 </label>
@@ -134,11 +134,11 @@
                 </label>
             </div>
 
-            <label for="category">Categoría:
-                <select name="category" id="category">
-                    <option value="Gold">Gold</option>
-                    <option value="Platinum">Platinum</option>
-                    <option value="Invitado">Invitado</option>
+            <label for="Categories_id">Categoría:
+                <select name="Categories_id" id="Categories_id">
+                    <option value="1">Gold</option>
+                    <option value="2">Platinum</option>
+                    <option value="3">Invitado</option>
                 </select>
 
             </label>
