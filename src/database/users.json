@@ -474,6 +474,7 @@
   "userPic": [
    "userPic-1716358889310.jpg"
   ],
+  "password": "$2a$10$V561MR0XdOwtRJYvzuqr0e9KjX/5qRXsJYHLZMB5cqGlzbjJROrQu",
   "category": "Gold"
  },
  {
@@ -540,17 +541,6 @@
    "userPic-1716362360869.jpg"
   ],
   "password": "$2a$10$T.fR5ESE4A5j/pza3G6c..eif28JPBCL.ZNqxWcgVdRlsYMR4wWIu",
-  "category": "Gold"
- },
- {
-  "id": 53,
-  "name": "Dragon Ball",
-  "userName": "Dragon Ball",
-  "email": "dragonball@gmail.com",
-  "userPic": [
-   "userPic-1719554165296.jpeg"
-  ],
-  "password": "$2a$10$r1qLBe3sxwG1bIwmk501K.XiYpBC4t8ILytuDx6gRMWnE54EEZTle",
   "category": "Gold"
  }
 ]

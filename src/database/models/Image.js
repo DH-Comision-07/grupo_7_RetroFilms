@@ -16,7 +16,7 @@ module.exports = function(sequelize, dataTypes){
             type: dataTypes.INTEGER,
             allowNull: false
         },
-        categoria_tipo: { // Cambio de nombre de la columna
+        categoria_tipo: { 
             type: dataTypes.STRING,
             allowNull: false
         }

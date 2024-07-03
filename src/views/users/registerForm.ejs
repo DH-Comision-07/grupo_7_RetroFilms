@@ -30,6 +30,7 @@
                         <i class="formulario__validacion-estado fas fa-times-circle"></i>
                         <p class="texto__error" class="texto__error-activo">El nombre puede tener un máximo de 40 letras, sin caracteres especiales.</p><br>
                     </div>
+
                 </label>
             </div>
             
@@ -51,6 +52,7 @@
                     <div>
                         <i class="formulario__validacion-estado fas fa-times-circle"></i>
                         <p class="texto__error" class="texto__error-activo">El nombre de usuario tiene que ser de 4 a 16 digitos y sólo puede contener números, letras y guion bajo. </p><br>
+                        
                     </div>
                 </label>
             </div>
@@ -87,6 +89,7 @@
                     <% if (locals.errors && locals.errors.profile_pic) { %>
                         <div class="textDanger">
                             <%= locals.errors.profile_pic.msg %>
+
                         </div>
                     <% } %>
                 </label>
@@ -142,6 +145,14 @@
                 </select>
 
             </label>
+            
+            <label for="Categories_id">Categoria:</label>
+            <select name="Categories_id" id="Categories_id">
+                <option value="1">Gold</option>
+                <option value="2">Platinum</option>
+                <option value="3">Invitado</option>
+            </select>
+
 
             <label for="checkbox">
             <div id="terminos">

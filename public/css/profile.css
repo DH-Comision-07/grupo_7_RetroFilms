@@ -14,6 +14,7 @@
     #00DDFF)
 }
 
+
 .buttonProfileHome {
     border: 0;
     background-image: linear-gradient(150deg,
@@ -28,6 +29,20 @@
     margin: 100px;
     cursor: pointer;
     transition: .3s;
+
+.btn::after, .btn::after{
+    content: "";
+    position: absolute;
+    opacity: 0.3;
+    background: #996935;
+    border: inherit;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.3s ease;
+
 }
 .carrusel{
     width: 90%;
@@ -35,7 +50,7 @@
     background-color: #02263F;
     padding: 2em;
     overflow: hidden;
-    @include neo(1, 1em, 1em);
+    
 }
 
 .carrusel .grande{
@@ -44,7 +59,7 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    @include neo(1, 1em, 1em);
+  
     padding: 2em;
 
     transition: all .5s ease;
@@ -53,8 +68,12 @@
 .carrusel .img{
     width: calc (100% / 3 -2em);
     background-color: #996935;
+
     height: 600px;
     @include neo(1, 1em, 1em);
+
+    min-height: 10vh;
+   
 }
 
 .carrusel .puntos{
@@ -72,8 +91,7 @@
     height: 2em;
     background-color: aliceblue;
     margin: 1em 1em 0;
-    @include neo(1, 1em, .7em);
-
+   
 }
 
 .carrusel .punto.activo{

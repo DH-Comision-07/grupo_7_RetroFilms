@@ -69,12 +69,14 @@
             <article class = "imagesGrid">
         <br>
         <% for (let i = 0; i < movieDetail.images.length; i++) { %>
-            <% if (movieDetail.images[i].image_type_id == 2) { %>
+            <% if (movieDetail.images[i].categoria_tipo === 'imagen') { %>
                 <ul>
-                    <li><img src="/img/posters/<%= movieDetail.images[i].name_URL %>" alt=""></li>
+                    
+                    <li><img src="/img/imagesMovies/<%= movieDetail.images[i].name_URL %>" alt=""></li>
+                    
                 </ul>
                 <% } %>
-        <% } %>
+                <% } %>
             </article>
         <br>
         <h3 class="titulo">Reparto Principal</h3>

@@ -13,6 +13,7 @@
     <header>
         <%-include('../partials/header')%>
     </header>
+
     <section class="section-perfil-usuario">
         <h1 class="nombre-usuario"> HOLA <%=user.userName%>, Bienvenid@</h1>
     <img src="/img/avatars/<%=user.userPic%>" alt="imagen" class="imagenAvatar">
@@ -28,6 +29,7 @@
             <img src="/img/imageProfile/corazon-valiente.jpg" alt="" class="img">
             <img src="/img/imageProfile/forrest-Gump.jpg" alt="" class="img">
             <img src="/img/imageProfile/la-vida-es-bella.jpg" alt="" class="img">
+
         </div>
 
          <ul class="puntos">
@@ -70,6 +72,12 @@
               });
         
         </script>
+
+    <div>
+        <button type="button"><a href="/users/index" class="btn">Ver todo nuestro contenido</a></button>
+        <button type="button"><a href="/users/delete" class="btn">Eliminar Usuario</a></button>
+        <button type="button"><a href="/users/edit/<%= user.id %>" class="btn">Editar Usuario</a></button>
+       </div>
 
        
 <footer>
