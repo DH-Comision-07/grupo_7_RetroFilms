@@ -139,8 +139,21 @@ button:hover{
 
 .formulario__mensaje{
     display: none;
+    color: #bb2929;
+    font-size: 12px;
 }
 
-.formulario__mensaje-exito{
-    display: none;
+.formulario__mensaje-activo {
+    display: block;
 }
+
+.formulario__mensaje-exito {
+    display: none;
+    color: green;
+    font-size: 12px;
+}
+
+.formulario__mensaje-exito-activo {
+    display: block;
+}
+

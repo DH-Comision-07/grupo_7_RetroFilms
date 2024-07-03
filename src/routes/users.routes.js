@@ -13,7 +13,7 @@ const authMid = require ('../middlewares/authMid')
 /* ---------------------REGISTER -----------------*/
 //--- Creation USERS --///
 router.get("/register",guestMid, usersController.register)
-router.post("/register", uploadFile.single("userPic"), validations,  usersController.processRegister)
+router.post("/register", uploadFile.single("profile_pic"), validations,  usersController.processRegister)
 
 /*------ EDITION USERS -----*/
 //router.get('/edit/:id', usersController.userEdit)
