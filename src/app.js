@@ -7,7 +7,7 @@ const bodyParser = require ('body-parser');
 const indexRouter = require("./routes/index.routes");
 const session = require ('express-session');
 const cookies = require('cookie-parser')
-const loggedUserMid = require ('./middlewares/loggedUserMid');
+const { loggedUserMid } = require('./middlewares/loggedUserMid');
 
 
 app.use(methodOverride('_method')) // middleware para habilitar
