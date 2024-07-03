@@ -1,4 +1,4 @@
-const formulario = document.getElementById('formulario');
+const formulario = document.querySelector('.reg_form');
 const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
@@ -9,16 +9,16 @@ const expresiones = {
 }
 
 const campos = {
-    nombre: false,
-    usuario: false,
+    nameNombre: false,
+    username: false,
     password: false,
-    correo: false,
+    email: false,
 };
 
 const validarFormulario = (e) => {
     switch (e.target.name) {
         case "nameNombre":
-            validarCampo(expresiones.nombre, e.target, 'name');
+            validarCampo(expresiones.nombre, e.target, 'nameNombre');
             break;
         case "username":
             validarCampo(expresiones.usuario, e.target, 'username');
@@ -80,15 +80,15 @@ inputs.forEach((input) => {
 });
 
 formulario.addEventListener('submit', (e) => {
-   e.preventDefault()
+    e.preventDefault();
     console.log('Formulario enviado');
-    console.log(campos)
-    console.log(e);
-    const terminos = document.getElementById('terminos');
-    if (campos.nombre && campos.usuario && campos.password && campos.correo && terminos.checked) {
-        document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
+    console.log(campos);
+    const terminos = document.getElementById('checkbox');
+    console.log(terminos.checked);
+    if (campos.nameNombre && campos.username && campos.password && campos.email && terminos.checked) {
         formulario.submit();
     } else {
-        document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-activo');
+        console.log('Error en las validaciones o términos no aceptados');
+        document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
     }
 });

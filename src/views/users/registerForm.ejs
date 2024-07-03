@@ -10,14 +10,14 @@
         <%- include('../partials/header') %>
     </header>
 
-    <div id="formulario">
-        <form action="/users/register" method="POST" enctype="multipart/form-data">
-            <div id="grupo__name">
+    <div id="formulario" >
+        <form class="reg_form" action="/users/register" method="POST" enctype="multipart/form-data">
+            <div id="grupo__nameNombre">
                 <label for="name">Tu nombre
                     <input 
                         type="text"  
                         name="nameNombre" 
-                        id="name"
+                        id="nameNombre"
                         placeholder="Nombres y Apellidos" 
                         class="<%= locals.errors && locals.errors.name ? 'form-control-is-invalid' : '' %>"
                         value="<%= locals.oldData ? locals.oldData.name : '' %>">
@@ -159,7 +159,7 @@
                 <input 
                     type="checkbox" 
                     name="terminos"
-                    id="terminos"
+                    id="checkbox"
                     class="<%= locals.errors && locals.errors.checkbox ? 'form-control-is-invalid' : '' %>"
                     <% if (locals.oldData && locals.oldData.checkbox) { %> checked <% } %>
                 >

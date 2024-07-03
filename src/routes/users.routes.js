@@ -15,6 +15,7 @@ const authMid = require ('../middlewares/authMid')
 router.get("/register",guestMid, usersController.register)
 router.post("/register", uploadUserFile.single("profile_pic"), validations,  usersController.processRegister)
 
+
 /*------ EDITION USERS -----*/
 router.get('/edit/:id', usersController.userEdit)
 router.put('/:id', uploadUserFile.single("profile_pic"), usersController.processEdit)
