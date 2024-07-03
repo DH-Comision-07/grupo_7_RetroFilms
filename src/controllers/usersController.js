@@ -6,6 +6,7 @@ const db = require("../database/models")
 
 const usersController = { 
     register: (req, res) => {
+
         try {
             res.cookie('testing','Hola, mundo!',{maxAge:1000*120})
             return res.render("users/registerForm")
@@ -13,6 +14,7 @@ const usersController = {
             console.log(error)
             res.send("Ha ocurrido un error al cargar el formulario")
         }
+
     },
 
     login: (req, res) => {
@@ -73,13 +75,13 @@ const usersController = {
             }
 
             let emailInDB = await usersService.findByFieldDb("email", req.body.email);
-            let userNameInDB = await usersService.findByFieldDb("userName", req.body.userName);
+            let userNameInDB = await usersService.findByFieldDb("username", req.body.username);
     
             if (emailInDB || userNameInDB) {
                 return res.render("users/registerForm", {
                     errors: {
                         email: emailInDB ? { msg: "Este email ya está registrado" } : undefined,
-                        userName: userNameInDB ? { msg: "Este usuario ya está registrado" } : undefined
+                        username: userNameInDB ? { msg: "Este usuario ya está registrado" } : undefined
                     },
                     oldData: req.body
                 });
@@ -142,6 +144,11 @@ const usersController = {
         }
     },
 
+
+    registerView: (req, res) => {
+        return res.render('user/registerView',{user: req.session.userLogged})
+    },
+
     logout: (req,res) => {
         res.clearCookie('userEmail');
         req.session.destroy();
@@ -171,5 +178,6 @@ const usersController = {
 
     }  
 }
+
 
 module.exports = usersController;

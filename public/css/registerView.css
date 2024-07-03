@@ -7,6 +7,21 @@
     font-size: 80px;
     color: black;
 }
+#buttonRegisterHome {
+    border: 0;
+    background-image: linear-gradient(150deg,
+    #9500ff,
+    #09f,
+    #00DDFF);
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    font-size: 35px;
+    padding: 45px;
+    margin: 100px;
+    cursor: pointer;
+    transition: .3s;
+}
 
 .text{
     font-size: 40px;
@@ -20,21 +35,7 @@
     align-items: center;
 }
 
-.button{
-    display: flex;
-    flex-direction: column;
-}
-.btn{
-    text-decoration: none;
-    padding: 20px 50px;
-    font-size: 1.5rem;
-    position: relative;
-    margin: 32px;
-    background: #02263F;
-    color: aliceblue;
-    border-radius: 50px;
-    transition: 0.3s ease;
-}
+
 
 .btn::after, .btn::after{
     content: ""
@@ -80,3 +81,4 @@ img{
 .slider{
     overflow: hidden;
 }
+

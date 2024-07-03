@@ -1,18 +1,34 @@
-.button{
+.section-perfil-usuario{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
 }
-.btn{
-    text-decoration: none;
-    padding: 20px 50px;
-    font-size: 1.5rem;
+.nombre-usuario {
+    display: block;
     position: relative;
-    margin: 32px;
-    background: #02263F;
-    color: aliceblue;
-    border-radius: 50px;
-    transition: 0.3s ease;
+    width: 80%;
+    height: 17rem;
+    background-image: linear-gradient(180deg,
+    #9500ff,
+    #09f
+    #00DDFF)
 }
+
+
+.buttonProfileHome {
+    border: 0;
+    background-image: linear-gradient(150deg,
+    #9500ff,
+    #09f,
+    #00DDFF);
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    font-size: 35px;
+    padding: 45px;
+    margin: 100px;
+    cursor: pointer;
+    transition: .3s;
 
 .btn::after, .btn::after{
     content: "";
@@ -26,8 +42,8 @@
     bottom: 0;
     z-index: -1;
     transition: 0.3s ease;
-}
 
+}
 .carrusel{
     width: 90%;
     max-width: 120em;
@@ -38,7 +54,7 @@
 }
 
 .carrusel .grande{
-    width: 300%;
+    width: 200%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -47,11 +63,15 @@
     padding: 2em;
 
     transition: all .5s ease;
-    transform: translate(-33%);
+    transform: translateX(0%);
 }
 .carrusel .img{
-    width: calc(100%/3 -2em);
+    width: calc (100% / 3 -2em);
     background-color: #996935;
+
+    height: 600px;
+    @include neo(1, 1em, 1em);
+
     min-height: 10vh;
    
 }
@@ -59,7 +79,7 @@
 .carrusel .puntos{
     width: 100%;
     margin: 1em 0 0;
-    padding: 4em;
+    padding: .4em;
     display: flex;
     flex-direction: row nowrap;
     justify-content: center;
@@ -76,4 +96,7 @@
 
 .carrusel .punto.activo{
     background-color: #996935;
+}
+.texto {
+    font-size: 40px;
 }
