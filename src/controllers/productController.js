@@ -153,17 +153,16 @@ const productController = {
 
         create: (req,res) => res.render('creation'),
 
-        edit: async function (req,res) { 
+        edit: async function (req, res) { 
                 try {
-                        await productService.getOne(req.params.id)
-                        .then(function(movie){
-                                res.render("edition", {movie:movie})
-                        }) 
+                    let movie = await productService.getOne(req.params.id); // Espera a que se resuelva la promesa
+                    res.render("edition", { movie: movie }); // Renderiza la vista con los datos de la película
                 } catch (error) {
-                        console.log(error)
-                        res.send("Ha ocurrido un error al buscar la pelicula")
+                    console.log(error);
+                    res.send("Ha ocurrido un error al buscar la película");
                 }
-        },
+            },
+            
 
         update: async function(req, res) {
                 try {

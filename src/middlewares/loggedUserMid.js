@@ -1,7 +1,6 @@
 const user = require('../services/usersService')
 
 
-
 function userMid (req,res,next){
         if(req.session.userLogged != undefined){
             return res.redirect('profile')
