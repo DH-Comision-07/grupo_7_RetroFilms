@@ -19,7 +19,46 @@ const usersController = {
         return res.render("users/login")
     },
 
-    userEdit: (req, res) =>res.render('users/userEditForm'),
+    userEdit: async function(req, res) {
+        return res.render('users/userEditForm', {user: req.session.userLogged}) 
+    },
+
+    // getUser: async function (req, res){
+    //     const userId = parseInt(req.params.id);
+    //     if (isNaN(userId)) {
+    //         return res.send('ID de usuario no válido');
+    //     }
+        
+    // try {
+    //     const user = await usersService.getUserById(userId);
+
+    //     if (!user) {
+    //     return res.send('Usuario no encontrado');
+    //     }
+
+    //     res.render('users/userEditForm', { user });
+        
+    // } catch (err) {
+    //     res.status(500).send('Error al obtener el usuario');
+    // }
+    // },
+
+    processEdit: async function(req,res) {
+        try {
+            // console.log(req.session.userLogged)
+            let userData = await usersService.userUpdate(req.params.id, req.body, req.file, req.session.userLogged)
+
+            let userEditSession = await usersService.findByFieldDb('email',req.body.email)
+            console.log("esto es user edit session:",userEditSession);
+
+            req.session.userLogged = userEditSession;
+            
+            res.redirect("/")
+            return userData
+        } catch (error) {
+            console.log(error, 'Error al actualizar el usuario')            
+        }
+    },
 
     processRegister: async function(req, res){
         try {
@@ -46,7 +85,7 @@ const usersController = {
                 });
             }
         
-            let newUser = await usersService.createUserDb(req.body, req.imagePaths);
+            let newUser = await usersService.createUserDb(req.body, req.file);
             
             if (newUser) {
                 return res.render("users/registerView")
@@ -93,6 +132,16 @@ const usersController = {
         return res.render('users/profile',{user: req.session.userLogged})
     },
 
+    profiles: async function(req, res) {
+        try {
+            let users = await usersService.findAllUsersDb()
+            return res.render("users/profileList", {users:users})
+        } catch (error) {
+            console.log(error)
+            res.send("Ha ocurrido un error al mostrar los perfiles de usuario")
+        }
+    },
+
     logout: (req,res) => {
         res.clearCookie('userEmail');
         req.session.destroy();
@@ -112,7 +161,7 @@ const usersController = {
                 await usersService.deleteUserDb(userId)
                 res.clearCookie('userEmail');
                 req.session.destroy();
-                return res.send("Usuario eliminado")
+                return res.redirect("/users/register")
             }
             
         } catch (error) {
@@ -120,21 +169,7 @@ const usersController = {
             return ("ocurrió un error al eliminar el usuario")
         }
 
-    },
-
-    prueba: async function(req, res) {
-        try { 
-            await usersService.findAllUsersDb()
-            .then((users) => {
-                res.send(users)
-            })
-        } catch (error) {
-            console.log(error)
-            res.send("ocurrio un error")
-        }
-    }
-
-    
+    }  
 }
 
 module.exports = usersController;

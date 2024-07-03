@@ -99,6 +99,15 @@ body {
     transition: 0.5s;
 }
 
+.formButton {
+    background-color: #02b0ff;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+
 @media screen and (max-width: 768px) {
     .actorDetails {
         flex-direction: column;

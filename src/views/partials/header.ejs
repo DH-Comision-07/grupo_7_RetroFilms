@@ -6,6 +6,8 @@
               <img src="/img/Logo/RetroFilms-Recorte.png" alt="Logoderetrofilms" class="logo" />
            </a>
            <a class="menuItem" href="/">Inicio</a>
+           <a class="menuItem" href="/actors">Actores</a>
+           <a class="menuItem" href="/users/Profiles">Usuarios</a>
            <a class="menuItem" href="#">Géneros</a>
            <a class="menuItem" href="#">Películas</a>
 
@@ -19,7 +21,7 @@
            <div class = "fatherMenu">
                 <ul class = "navBarYesLog">
                     <%if(locals.loggedIn){%>
-                        <img class = "userImg" src="/img/avatars/<%=locals.userLogged.userPic%>" alt="">Hola,<%=locals.userLogged.userName%>
+                        <img class = "userImg" src="/img/avatars/<%=locals.userLogged.profile_pic%>" alt="">Hola,<%=locals.userLogged.username%>
                         <li><a href="/users/profile">Mi Perfil</a></li>
                         <li><a href="/users/logout">Cerrar sesión</a></li>
                   </ul>

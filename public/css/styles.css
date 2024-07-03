@@ -14,7 +14,6 @@ body {
 }
 
 
-  
 header{
     width: 100%;
 } 
@@ -181,7 +180,7 @@ header{
     width: 300px;
     background-color: #ddd;
     height: 425px;
-    overflow-y: hidden;
+    overflow: hidden;
     object-fit: contain;
 }
 
@@ -225,19 +224,22 @@ section{
 .carrousell{
     width: 100vw;
     display: flex;
-    padding-left: 15px;
+    margin-left: 0px;
+    padding-left: 0px;
     padding-right: 15px;
     justify-content: center;
+    overflow: hidden;
 }
 
 
 
 section img{ 
     width: 200px;
+    height: 350px;
     flex-grow: 1;
     object-fit: cover;
     opacity: .8;
-    transition: .5s ease;
+    transition: .5s;
 }
 
 .mainBody{
@@ -251,7 +253,6 @@ section img{
 
 section img:hover{
     cursor:pointer;
-    width: 100px;
     opacity: 1;
     filter: contrast(120%);
 } 

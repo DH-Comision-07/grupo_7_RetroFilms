@@ -115,6 +115,8 @@ let productService = {
                 },
                 include: [
                     { association: "images" },
+                    { association: "genres" },
+                    { association: "actors" }
                 ]
             });           
             return movieGrid
@@ -130,7 +132,12 @@ let productService = {
                 where: {
                     top_movie: 1,
                     is_carrousell: 0
-                }
+                },
+                include: [ //faltaba la interaccion entre movies y peliculas, por eso no se mostraban las imagenes
+                    { association: "images" },
+                    { association: "genres" },
+                    { association: "actors" }
+                ]
             })
             //console.log('Top Movies:', topMovies);
             return topMovies
@@ -147,7 +154,12 @@ let productService = {
                 where: {
                     top_movie: 0,
                     is_carrousell: 1
-                }
+                },
+                include: [ //faltaba la interaccion entre movies y peliculas, por eso no se mostraban las imagenes
+                    { association: "images" },
+                    { association: "genres" },
+                    { association: "actors" }
+                ]
             })
             //console.log('Carrousell Movies:', carrousell);
             return carrousell
@@ -176,19 +188,24 @@ let productService = {
                 price: parseFloat(body.price),
                 length: parseInt(body.length),
                 description: body.description,
-                genre: body.genre,
+               // genre: body.genre,
                 release_date: body.release_date,
                 top_movie: body.top_movie == 'on' ? 1 : 0,
                 is_carrousell: body.is_carrousell == 'on' ? 1 : 0
 
             } , {
                     include: [
-                        { association: "genres" },
+                        //{ association: "genres" },
                         { association: "actors" },
                         { association: "images" },
                     ]
                 }
             )
+            console.log('Cual es el genero:',body.genre);
+
+            //let findGenre = await db.Genre.findByField() //Buscar el objeto genero que coincida con el body.genre
+            //Hacer un registro en la tabla MovieGenre con el id de la pelicula creada (newMovie.id) y el findGenre.id
+            //. body.genre viene un array, así que hay que iterar..
             //console.log(newMovie);
             return newMovie // añadir association
         } catch (error) {

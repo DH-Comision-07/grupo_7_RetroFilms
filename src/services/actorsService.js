@@ -38,20 +38,25 @@ let actorsService = {
         }
     },
 
-    newActor: async function (body, files) {
+    newActor: async function (body, file) {
 
         try {           
             console.log('estos son los datos del actor:', body);  
-            //console.log(files);
+            console.log(file);
             let newActor = await db.Actor.create ({
-
                 full_name: body.full_name,
                 bio: body.bio,
-                //profile_pic: files.filename
+                profile_pic: file.filename
             }, {
                 include: [
                     {association: "movies"}]
-        })
+        });
+
+            console.log(newActor)
+
+            let registerSaved = await this.newActorMovieRegister(newActor.id, body)
+
+
             return newActor;
 
 
@@ -83,6 +88,25 @@ let actorsService = {
         }
     },
 
+    newActorMovieRegister: async function (id, body) {
+
+        try {           
+            
+            let actorMovieRegisters = body.moviesPlayedAt.map(movieId => ({
+                Actors_id: id,
+                Movies_id: movieId
+            }));
+
+            let ActorMovieRegister = await db.ActorMovie.bulkCreate(actorMovieRegisters);
+            
+            return ActorMovieRegister;
+            
+        } catch (error) {
+            console.log(error)
+            return "Error. la relacion no se ha creado"
+        }
+    },
+
     editOne: async function (id) {
         try {
             let actor = await db.Actor.findByPk(id, {
@@ -97,34 +121,85 @@ let actorsService = {
         }
     },
 
-    updateOne: async function (id, body) {
-        try {
-            let body = body
+    updateOne: async function (id, body, file) {
+        try {           
 
-        //     const updatedMovieData = {
-        //         name: body.name,
-        //         price: parseFloat(body.price),
-        //         length: parseInt(body.length),
-        //         description: body.description,
-        //         genre: body.genre,
-        //         release_date: body.release_date,
-        //         poster: files.poster,
-        //         imagesMovie: files.imagesMovie,
-        //         top_movie: body.top_movie === 'on' ? 1 : 0,
-        //         is_carrousell: body.is_carrousell === 'on' ? 1 : 0
-        //     };
+            let updatedActor = await db.Actor.update ({
+                full_name: body.full_name,
+                bio: body.bio,
+                profile_pic: file.filename
+            }, {
+                where: { id: id },
+                include: [
+                    { association: "movies" }
+                ]
+            });
 
-        //     await db.Movie.update(updatedMovieData, { where: { id: id } });
+            let actorToEdit = await db.Actor.findByPk(id, {
+                include: [
+                    { association: "movies" },
+                ]
+            })
 
-        //     let updatedMovie = await this.getOne(id);
+            await this.updatedActorMovieRegister(actorToEdit.id, body)
 
-        //     return updatedMovie;
-
+            return updatedActor;
         } catch (error) {
             console.log(error)
             return "Error. El actor no se ha actualizado"
         }
     },
-}
+
+    updatedActorMovieRegister: async function (id, body) {
+
+        try {
+
+            let destroyActorMovieRegister = await db.ActorMovie.destroy({
+                where: { Actors_id: id }
+            });
+            
+            let actorMovieRegisters = body.moviesPlayedAt.map(movieId => ({
+                Actors_id: id,
+                Movies_id: movieId
+            }));
+
+            let ActorMovieRegister = await db.ActorMovie.bulkCreate(actorMovieRegisters);
+            
+            return ActorMovieRegister;
+            
+        } catch (error) {
+            console.log(error)
+            return "Error. la relacion no se ha creado"
+        }
+    },
+
+    deleteActorMovieRegister: async function (id){
+        try {
+            await db.ActorMovie.destroy({
+                where: { Actors_id: id }
+            });
+        } catch (error) {
+            return 'El Actor no se eliminó'
+        } 
+        }, 
+
+    deleteActor: async function (id){
+        try {
+            await this.deleteActorMovieRegister(id);
+
+            await db.Actor.destroy({
+                where:{
+                    id: id
+                }
+            })
+    
+        } catch (error) {
+            console.log('El actor no se eliminó', error);
+            
+        }
+    }
+
+    }
+
 
 module.exports = actorsService;

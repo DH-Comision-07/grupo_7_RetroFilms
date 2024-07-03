@@ -8,7 +8,7 @@ let usersService = {
     
     users:users,
 
-    fileName: path.resolve(__dirname, "../database/users.json"),
+    // fileName: path.resolve(__dirname, "../database/users.json"),
 
     findAllUsers: function (){
         return this.users
@@ -24,10 +24,10 @@ let usersService = {
         }
     },
 
-    findUserPK: function(id){
-        let user = this.users.find(user => user.id === id);
-        return user;
-    },
+    // findUserPK: function(id){
+    //     let user = this.users.find(user => user.id === id);
+    //     return user;
+    // },
 
     findByField: function (field, text){
         let allUsers = this.findAllUsers();
@@ -35,31 +35,31 @@ let usersService = {
         return userFound;
     },
 
-    findByEmailDb: async function (text) {
-        try {
-            let field = await db.User.findOne({
-                where: {
-                    email: text
-                }
-            })
-            return field
-        } catch (error) {
-            console.log(error)
-        }
-    },
+    // findByEmailDb: async function (text) {
+    //     try {
+    //         let field = await db.User.findOne({
+    //             where: {
+    //                 email: text
+    //             }
+    //         })
+    //         return field
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    // },
 
-    findByUserNameDb: async function (text) {
-        try {
-            let field = await db.User.findOne({
-                where: {
-                    userName: text
-                }
-            })
-            return field
-        } catch (error) {
-            console.log(error)
-        }
-    },
+    // findByUserNameDb: async function (text) {
+    //     try {
+    //         let field = await db.User.findOne({
+    //             where: {
+    //                 userName: text
+    //             }
+    //         })
+    //         return field
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    // },
 
     findByFieldDb: async function (field, text) {
         try {
@@ -74,42 +74,40 @@ let usersService = {
         }
     },
     
-
-    
-    createUser: function(user, imagePaths){          
-        let maxId = 0;
-        for (let i=0; i < this.users.length; i++){
-            if(this.users[i].id > maxId){
-                maxId = this.users[i].id;
-            };
-        }
+    // createUser: function(user, imagePaths){          
+    //     let maxId = 0;
+    //     for (let i=0; i < this.users.length; i++){
+    //         if(this.users[i].id > maxId){
+    //             maxId = this.users[i].id;
+    //         };
+    //     }
         
 
-        let newUser = {
-            id:(maxId +1),
-            name:user.name,
-            userName:user.userName,
-            email:user.email,
-            userPic: imagePaths,
-            password:bcrypt.hashSync(user.password,10),
-            category:user.category           
-        }
+    //     let newUser = {
+    //         id:(maxId +1),
+    //         name:user.name,
+    //         userName:user.userName,
+    //         email:user.email,
+    //         userPic: imagePaths,
+    //         password:bcrypt.hashSync(user.password,10),
+    //         category:user.category           
+    //     }
 
-        this.users.push(newUser);
-        let usersJSON= JSON.stringify(this.users, null,' ');
-        fs.writeFileSync(this.fileName,usersJSON);
-        return true;
-    },
+    //     this.users.push(newUser);
+    //     let usersJSON= JSON.stringify(this.users, null,' ');
+    //     fs.writeFileSync(this.fileName,usersJSON);
+    //     return true;
+    // },
 
-    createUserDb: async function(user, imagePaths){          
+    createUserDb: async function(user, file){          
         try {
             db.User.create({
                 name:user.name,
-                username:user.userName,
+                username:user.username,
                 email:user.email,
-                profile_pic: String(imagePaths),
+                profile_pic:file.filename,
                 password:bcrypt.hashSync(user.password,10),
-                Categories_id: user.category    
+                Categories_id: user.Categories_id   
             })
     
             return true;
@@ -120,18 +118,70 @@ let usersService = {
 
     },
 
-    deleteUser: function(id){
-        let allUsers = this.findAllUsers();
-        let finalUsers = allUsers.filter(user => user.id !== id);
-        let usersJSON= JSON.stringify(finalUsers, null,' ');
-        fs.writeFileSync(this.fileName,usersJSON)
-        return true;
-    },
+    // deleteUser: function(id){
+    //     let allUsers = this.findAllUsers();
+    //     let finalUsers = allUsers.filter(user => user.id !== id);
+    //     let usersJSON= JSON.stringify(finalUsers, null,' ');
+    //     fs.writeFileSync(this.fileName,usersJSON)
+    //     return true;
+    // },
 
     deleteUserDb: async function(id) {
         db.User.destroy({
             where: {id: id}
         })
+    },
+
+    // getUserById: async function (id){
+
+    //     if (isNaN(id)) {
+    //         throw new Error('ID de usuario no válido');
+    //     }
+    //     try {
+    //         return await db.User.findByPk(id);
+    //     } catch (error) {
+    //         console.error('Error al obtener el usuario por ID:', err);
+    //     throw err;
+    //     }
+    // },
+
+    userUpdate: async function(id, body, file, session) {
+        
+        try {
+            console.log("---- Este es el body ----")
+            console.log(body)
+            console.log("---- Fin Body ----")
+
+            await db.User.update({
+                name: body.name,
+                username: body.username,
+                email: body.email,
+                profile_pic: file.filename,
+                password: bcrypt.hashSync(body.password,10),
+                Categories_id: body.Categories_id
+            },
+                { 
+                where: {id: id}
+                }
+            )
+
+            let modifiedUserData = {
+                name: body.name,
+                username: body.username,
+                email: body.email,
+                profile_pic: file.filename,
+                password: bcrypt.hashSync(body.password,10),
+                Categories_id: body.Categories_id
+            }
+
+            console.log("estos son los datos del usuario actualizados:",modifiedUserData)
+            return modifiedUserData
+
+        } catch (error) {
+            console.log(error)
+            return "El perfil no se pudo modificar"
+        }
+
     }
 }
 
