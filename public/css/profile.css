@@ -1,17 +1,30 @@
+
 .section-perfil-usuario{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    margin: 0px;
 }
 .nombre-usuario {
     display: block;
     position: relative;
+    text-align: center;
     width: 80%;
     height: 17rem;
     background-image: linear-gradient(180deg,
     #9500ff,
     #09f
-    #00DDFF)
+    #00DDFF);
+    background-color: #fff;
+}
+
+.imagenAvatar{
+    margin: 0;
+    border-radius:0%;
+    border:#00DDFF
 }
 
 
@@ -29,12 +42,12 @@
     margin: 100px;
     cursor: pointer;
     transition: .3s;
+}
 
 .btn::after, .btn::after{
     content: "";
     position: absolute;
     opacity: 0.3;
-    background: #996935;
     border: inherit;
     width: 100%;
     height: 100%;
@@ -45,6 +58,7 @@
 
 }
 .carrusel{
+    display: flex;
     width: 90%;
     max-width: 120em;
     background-color: #02263F;
@@ -54,12 +68,11 @@
 }
 
 .carrusel .grande{
-    width: 200%;
+    width: 50%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-  
     padding: 2em;
 
     transition: all .5s ease;
@@ -68,12 +81,8 @@
 .carrusel .img{
     width: calc (100% / 3 -2em);
     background-color: #996935;
-
-    height: 600px;
-    @include neo(1, 1em, 1em);
-
+    height: 300px;
     min-height: 10vh;
-   
 }
 
 .carrusel .puntos{
@@ -91,7 +100,6 @@
     height: 2em;
     background-color: aliceblue;
     margin: 1em 1em 0;
-   
 }
 
 .carrusel .punto.activo{

@@ -15,13 +15,14 @@
     </header>
 
     <section class="section-perfil-usuario">
-        <h1 class="nombre-usuario"> HOLA <%=user.userName%>, Bienvenid@</h1>
-    <img src="/img/avatars/<%=user.userPic%>" alt="imagen" class="imagenAvatar">
-    <p class="userEmail"><%=user.email%></p>
+        <h1 class="nombre-usuario"> HOLA <%=user.username%>, Bienvenid@</h1>
+        <img src="/img/avatars/<%=user.profile_pic%>" alt="imagen" class="imagenAvatar">
+        <p class="userEmail"><%=user.email%></p>
     </section>
-    <p class="texto">
-      Te extrañamos, checa nuestros nuevos estrenos en la plataforma.
-    </p>
+        <p class="texto">
+        Te extrañamos, ve nuestros nuevos estrenos en la plataforma.
+        </p>
+    
   
 
     <div class="carrusel">
@@ -31,6 +32,7 @@
             <img src="/img/imageProfile/la-vida-es-bella.jpg" alt="" class="img">
 
         </div>
+   
 
          <ul class="puntos">
             <li class="punto activo"></li>
@@ -74,9 +76,10 @@
         </script>
 
     <div>
-        <button type="button"><a href="/users/index" class="btn">Ver todo nuestro contenido</a></button>
-        <button type="button"><a href="/users/delete" class="btn">Eliminar Usuario</a></button>
+        
         <button type="button"><a href="/users/edit/<%= user.id %>" class="btn">Editar Usuario</a></button>
+        <button type="button"><a href="/users/delete" class="btn">Eliminar Usuario</a></button>
+        
        </div>
 
        

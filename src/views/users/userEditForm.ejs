@@ -1,75 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Edicion de Usuario</title>
-        <link rel="stylesheet" href="/css/userEdition.css">
-        <%-include('../partials/head') %>
-
-    </head>
-
+<head>
+    <title>Edicion de Usuario</title>
+    <link rel="stylesheet" href="/css/userEdition.css">
+    <%- include('../partials/head') %>
+</head>
+<body>
     <header class="header">
-        <%-include('../partials/header')%>
+        <%- include('../partials/header') %>
     </header>
 
     <form action="/users/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-            <label for="name">Nombre completo:</label>
-                <input type="text" id="name" name="name" value="<%= user.name %>">
-            <label for="username">Nombre de Usuario:</label>
-                <input type="text" id="username" name="username" value="<%= user.username %>">
-            <label for="email">Correo electronico:</label>
-                <input type="email" id="email" name="email">
-                
-             <label for="profile_pic">Foto:</label>
-            <% if (user.profile_pic) { %>
-                <input type="file" id="profile_pic" name="profile_pic" >
-                <% } %>
-                
-            <label for="password">Contraseña:
-                <input type="password" id="password" name="password">
-                <ul class = "erros_list_password">
-                  <li id = "length " class="invalid">Debe tener almenos 5 caracteres.</li>
-                  <li id = "uppercase" class="invalid">Debe incluir una letra mayúscula.</li>
-                  <li id = "lowercase" class="invalid">Debe incluir una letra minúscula</li>
-                  <li id = "number" class="invalid">Debe incluir un número</li>
-                </ul>
-            </label>
-            <label for="Categories_id">Categoria:</label>
-                <select name="Categories_id" id="Categories_id">
-                     <option value="1">Gold</option>
-                    <option value="2">Platinum</option>
-                    <option value="3">Invitado</option>
-                </select>
+        <label for="name">Nombre completo:</label>
+        <input type="text" id="name" name="name" value="<%= user.name %>">
+        
+        <label for="username">Nombre de Usuario:</label>
+        <input type="text" id="username" name="username" value="<%= user.username %>">
+        
+        <label for="email">Correo electronico:</label>
+        <input type="email" id="email" name="email">
+        
+        <label for="profile_pic">Foto:</label>
+        <% if (user.profile_pic) { %>
+            <input type="file" id="profile_pic" name="profile_pic">
+        <% } %>
+        
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password">
+        <ul class="erros_list_password">
+            <li id="length" class="invalid">Debe tener al menos 5 caracteres.</li>
+            <li id="uppercase" class="invalid">Debe incluir una letra mayúscula.</li>
+            <li id="lowercase" class="invalid">Debe incluir una letra minúscula.</li>
+            <li id="number" class="invalid">Debe incluir un número.</li>
+        </ul>
+        
+        <label for="Categories_id">Categoria:</label>
+        <select name="Categories_id" id="Categories_id">
+            <option value="1">Gold</option>
+            <option value="2">Platinum</option>
+            <option value="3">Invitado</option>
+        </select>
         <br>
 
         <button type="submit">Editar Usuario</button>
-        <% //--------Validación---------//
+    </form>
+    
+    <script>
+        //--------Validación---------//
         //-------Selección de elementos---------//
         const inputUserEditForm = document.querySelectorAll('input');
-        const passwordUserEditForm = document.getElementById('password');
+        const passwordInput = document.getElementById('password');
 
         // ------Reglas de Validación para la contraseña---------//
-        
         const passwordRules = {
             length: /(?=.{8,})/,
             uppercase: /(?=.*[A-Z])/,
             lowercase: /(?=.*[a-z])/,
             number: /(?=.*\d)/
         };
-         // Mensaje de ayuda para la contraseña
-
-         const passwordMessages ={
+        
+        // Mensaje de ayuda para la contraseña
+        const passwordMessages = {
             length: document.getElementById('length'),
             uppercase: document.getElementById('uppercase'),
-              lowercase: document.getElementById('lowercase'),
-              number: document.getElementById('number')   
-         };
+            lowercase: document.getElementById('lowercase'),
+            number: document.getElementById('number')
+        };
 
-         // Validación en tiempo real de la contraseña
-
-         passwordInput.addEventListener('input', function(){
+        // Validación en tiempo real de la contraseña
+        passwordInput.addEventListener('input', function() {
             const password = passwordInput.value;
-            for (const[rule, regex] of Object.entries(passwordRules)){
-                if(regex.test(password)){
+            for (const [rule, regex] of Object.entries(passwordRules)) {
+                if (regex.test(password)) {
                     passwordMessages[rule].classList.remove('invalid');
                     passwordMessages[rule].classList.add('valid');
                 } else {
@@ -77,34 +79,33 @@
                     passwordMessages[rule].classList.remove('valid');
                 }
             }
-         });
+        });
 
-         // Limpiar campos del formulario 
-         confirmPasswordInput.addEventListener('input', validateConfirmPass);
-
-         conts validationRules = {
+        // Limpiar campos del formulario
+        const validationRules = {
             name: (value) => /^[A-Za-z\s]+$/.test(value) && value !== "",
-            userName: (value) => /^[A-Za-z\s]+$/.test(value) && value !== "",
+            username: (value) => /^[A-Za-z\s]+$/.test(value) && value !== "",
             email: (value) => /[-A-Za-z0-9!#$%&'*+\/=?^_`{|}~]+(?:\.[-A-Za-z0-9!#$%&'*+\/=?^_`{|}~]+)*@(?:[A-Za-z0-9](?:[-A-Za-z0-9]*[A-Za-z0-9])?\.)+[A-Za-z0-9](?:[-A-Za-z0-9]*[A-Za-z0-9])?/i.test(value) && value !== ""
-         }
+        };
 
-         function validateInput(input){
+        function validateInput(input) {
             const isValid = validationRules[input.id](input.value.trim());
             input.classList.toggle('invalid', !isValid);
             input.classList.toggle('valid', isValid);
             const helpInput = document.getElementById(`help_${input.id}`);
-            helpInput.classList.toggle('text', isValid);
-         }
-         let eventosParaValidar = ["blur", "input", "focus"];
+            if (helpInput) {
+                helpInput.classList.toggle('text', isValid);
+            }
+        }
 
-         inputs.forEach(input =>{
-            eventosParaValidar.forEach(evento =>{
-                evento.addEventListener(evento, () => validateInput(input));
-            })
-         });
-        
-        %>
-    </form>
+        const eventosParaValidar = ["blur", "input", "focus"];
+        inputUserEditForm.forEach(input => {
+            eventosParaValidar.forEach(evento => {
+                input.addEventListener(evento, () => validateInput(input));
+            });
+        });
+    </script>
+    
     <footer>
         <%- include("../partials/footer.ejs") %>
     </footer>
