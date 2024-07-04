@@ -27,9 +27,12 @@
                 <p class="actorBio"> <%= actor.bio %></p>
                 
                 <h3 class="titleActorCast"> Películas en las que participó: </h3>
+                <%console.log(actor.movies);%>
+                <%if (actor.movies && actor.movies.length >0){%>
                 <% actor.movies.forEach(function (movie) { %> 
                     <p class="actorCast"> <%= movie.name %> </p>
                 <% }) %>  
+                <% } %>  
             </div>
 
             <div class="buttons">

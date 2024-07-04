@@ -25,29 +25,10 @@ const usersController = {
         return res.render('users/userEditForm', {user: req.session.userLogged}) 
     },
 
-    // getUser: async function (req, res){
-    //     const userId = parseInt(req.params.id);
-    //     if (isNaN(userId)) {
-    //         return res.send('ID de usuario no válido');
-    //     }
-        
-    // try {
-    //     const user = await usersService.getUserById(userId);
-
-    //     if (!user) {
-    //     return res.send('Usuario no encontrado');
-    //     }
-
-    //     res.render('users/userEditForm', { user });
-        
-    // } catch (err) {
-    //     res.status(500).send('Error al obtener el usuario');
-    // }
-    // },
-
+    
     processEdit: async function(req,res) {
         try {
-            // console.log(req.session.userLogged)
+            
             let userData = await usersService.userUpdate(req.params.id, req.body, req.file, req.session.userLogged)
 
             let userEditSession = await usersService.findByFieldDb('email',req.body.email)
@@ -69,7 +50,7 @@ const usersController = {
             
             if (resultValidation.errors.length > 0) {
                 return res.render("users/registerForm", {
-                    errors: resultValidation.mapped(), //array a obj literal
+                    errors: resultValidation.mapped(), 
                     oldData: req.body
                 });
             }
