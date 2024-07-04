@@ -58,29 +58,6 @@ let actorsService = {
 
 
             return newActor;
-
-
-            // let newMovie = await db.Movie.create({
-
-            //     name: body.name,
-            //     price: parseFloat(body.price),
-            //     length: parseInt(body.length),
-            //     description: body.description,
-            //     genre: body.genre,
-            //     release_date: body.release_date,
-            //     top_movie: body.top_movie == 'on' ? 1 : 0,
-            //     is_carrousell: body.is_carrousell == 'on' ? 1 : 0
-
-            // } , {
-            //         include: [
-            //             { association: "genres" },
-            //             { association: "actors" },
-            //             { association: "images" },
-            //         ]
-            //     }
-            // )
-            // //console.log(newMovie);
-            // return newMovie // añadir association
             
         } catch (error) {
             console.log(error)
@@ -197,9 +174,19 @@ let actorsService = {
             console.log('El actor no se eliminó', error);
             
         }
-    }
+    },
+
+    deleteRegisterByDeleteMovie: async function (id){
+        try {
+            await db.ActorMovie.destroy({
+                where: { Movies_id: id }
+            });
+        } catch (error) {
+            return 'El registro de actorMovie no se eliminó'
+        }
 
     }
+}
 
 
 module.exports = actorsService;

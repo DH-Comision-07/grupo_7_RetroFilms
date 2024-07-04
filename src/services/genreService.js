@@ -21,11 +21,7 @@ let genreService = {
     newMovieGenreRegister: async function (movieId, body) {
 
         try {    
-            
-            //console.log('este id llega por el service', id);
-            console.log('este body llega por el service', body);
-            console.log(' Movie_id llegando por el service', movieId);
-            
+                        
             let MovieGenreRegisters = body.genre.map(genreId => ({
                 Genre_id: genreId,
                 Movie_id: movieId
@@ -41,6 +37,18 @@ let genreService = {
         } catch (error) {
             console.log(error)
             return "Error. la relacion no se ha creado"
+        }
+    }, 
+
+    deleteRegister: async function (movieId){
+        try {
+            await db.MovieGenre.destroy({
+                where: {
+                    Movie_id:movieId
+                }
+            })
+        } catch (error) {
+            
         }
     }
 
