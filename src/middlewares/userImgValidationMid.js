@@ -4,7 +4,7 @@ const path = require ('path')
 const validations = [
     body("name").notEmpty().withMessage("Tiene que escribir su nombre"),
     
-    body("userName").notEmpty().withMessage("Tiene que escribir su nombre de usuario"),
+    body("username").notEmpty().withMessage("Tiene que escribir su nombre de usuario"),
     
     body("email")
         .notEmpty().withMessage("Tiene que escribir su mail").bail()
@@ -14,9 +14,9 @@ const validations = [
     
     body("reEnterPassword").notEmpty().withMessage("Tiene que repetir su contraseña"),
     
-    body("checkbox").notEmpty().withMessage("Tiene que aceptar los términos y condiciones"),
+    body('terminos').isIn(['on']).withMessage('Debes aceptar los términos y condiciones'),
     
-    body("profilePic").custom((value, { req }) => {
+    body("profile_pic").custom((value, { req }) => {
         let file = req.file;
         let acceptedExtensions = [".jpg",".jpeg", ".png",".webp"]; 
         

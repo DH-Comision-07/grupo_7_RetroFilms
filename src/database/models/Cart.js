@@ -15,7 +15,7 @@ module.exports = function(sequelize, dataTypes){
     };
 
     let config = {
-        tableName : 'Cart',
+        tableName : 'cart',
         timestamps : false
     };
 

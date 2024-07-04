@@ -1,7 +1,6 @@
 let productService = require('../services/productService');
-const path = require('path');
-const db = require("../database/models");
-
+let imageService = require('../services/imageService');
+let genreService = require('../services/genreService');
 
 // const productController = {
 //         shoppingCart: (req, res) => res.render("products/shoppingCart"), 
@@ -44,6 +43,7 @@ const productController = {
         detail: async function(req,res) {
                 try {
                         let movieDetail = await productService.getOne(req.params.id)
+                        console.log(movieDetail.genres);
                         return res.render("products/productDetail", {movieDetail:movieDetail})
                 } catch (error) {
                         console.log(error)
@@ -54,11 +54,99 @@ const productController = {
 
         add: async function(req,res) {
                 try {
+
+                        //console.log("req.files",req.files)
+                        /**
+                         * req.files [Object: null prototype] {
+                                poster: [
+                                        {
+                                        fieldname: 'poster',
+                                        originalname: 'Bert _Lahr.jpg',
+                                        encoding: '7bit',
+                                        mimetype: 'image/jpeg',
+                                        destination: 'C:\\Users\\laura\\OneDrive\\Desktop\\Archivos Retrofilms\\RETROFILMS\\public\\img\\posters',
+                                        filename: 'poster-1718405707860-Bert _Lahr.jpg',
+                                        path: 'C:\\Users\\laura\\OneDrive\\Desktop\\Archivos Retrofilms\\RETROFILMS\\public\\img\\posters\\poster-1718405707860-Bert _Lahr.jpg',
+                                        size: 4970
+                                        }
+                                ],
+                                imagesMovie: [
+                                        {
+                                        fieldname: 'imagesMovie',
+                                        originalname: 'Lee_Van_Cleef.jpg',
+                                        encoding: '7bit',
+                                        mimetype: 'image/jpeg',
+                                        destination: 'C:\\Users\\laura\\OneDrive\\Desktop\\Archivos Retrofilms\\RETROFILMS\\public\\img\\imagesMovies',
+                                        filename: 'movieImage-1718405707861-Lee_Van_Cleef.jpg',
+                                        path: 'C:\\Users\\laura\\OneDrive\\Desktop\\Archivos Retrofilms\\RETROFILMS\\public\\img\\imagesMovies\\movieImage-1718405707861-Lee_Van_Cleef.jpg',
+                                        size: 6435
+                                        },
+                                        {
+                                        fieldname: 'imagesMovie',
+                                        originalname: 'Mae_Clarke.jpg',
+                                        encoding: '7bit',
+                                        mimetype: 'image/jpeg',
+                                        destination: 'C:\\Users\\laura\\OneDrive\\Desktop\\Archivos Retrofilms\\RETROFILMS\\public\\img\\imagesMovies',
+                                        filename: 'movieImage-1718405707861-Mae_Clarke.jpg',
+                                        path: 'C:\\Users\\laura\\OneDrive\\Desktop\\Archivos Retrofilms\\RETROFILMS\\public\\img\\imagesMovies\\movieImage-1718405707861-Mae_Clarke.jpg',
+                                        size: 5590
+                                        },
+                                        {
+                                        fieldname: 'imagesMovie',
+                                        originalname: 'Margaret_Livingston.jpg',
+                                        encoding: '7bit',
+                                        mimetype: 'image/jpeg',
+                                        destination: 'C:\\Users\\laura\\OneDrive\\Desktop\\Archivos Retrofilms\\RETROFILMS\\public\\img\\imagesMovies',
+                                        filename: 'movieImage-1718405707861-Margaret_Livingston.jpg',
+                                        path: 'C:\\Users\\laura\\OneDrive\\Desktop\\Archivos Retrofilms\\RETROFILMS\\public\\img\\imagesMovies\\movieImage-1718405707861-Margaret_Livingston.jpg',
+                                        size: 5536
+                                        },
+                                        {
+                                        fieldname: 'imagesMovie',
+                                        originalname: 'Mary_Steenburgen.jpg',
+                                        encoding: '7bit',
+                                        mimetype: 'image/jpeg',
+                                        destination: 'C:\\Users\\laura\\OneDrive\\Desktop\\Archivos Retrofilms\\RETROFILMS\\public\\img\\imagesMovies',
+                                        filename: 'movieImage-1718405707861-Mary_Steenburgen.jpg',
+                                        path: 'C:\\Users\\laura\\OneDrive\\Desktop\\Archivos Retrofilms\\RETROFILMS\\public\\img\\imagesMovies\\movieImage-1718405707861-Mary_Steenburgen.jpg',
+                                        size: 5510
+                                        }
+                                ]
+                        }
+                         */
+                        
+
                         let newMovie = await productService.newMovieData(req.body);
-                        //let newImages = await productService.newImage(req.files)
-                        //console.log(newMovie);
+
+                        let imagesInput = [];
+
+                        req.files.poster.forEach(element => {
+                                imagesInput.push({
+                                        name_URL: element.filename,
+                                        Movies_id: newMovie.id,
+                                        categoria_tipo: "portada"
+                                });
+
+                        });
+
+                        req.files.imagesMovie.forEach(element => {
+                                imagesInput.push({
+                                        name_URL: element.filename,
+                                        Movies_id: newMovie.id,
+                                        categoria_tipo: "imagen"
+                                });
+                        });
+
+                        console.log(imagesInput);
+                        await imageService.newImages(imagesInput);
+
+
+                        let movieSaved = await productService.getOne(newMovie.id);
+
+                        console.log("full movie",movieSaved)
+
                         res.redirect("/");
-                        return newMovie
+                        return (movieSaved)
                 
                 } catch (error) {
                         console.log(error)
@@ -82,8 +170,38 @@ const productController = {
 
         update: async function(req, res) {
                 try {
-                        await productService.updateOne(req.params.id, req.body, req.files)
+                        let updatedMovie = await productService.updateOne(req.params.id, req.body, req.files)
+                
+                        let imagesInput = [];
+
+                        req.files.poster.forEach(element => {
+                                imagesInput.push({
+                                        name_URL: element.filename,
+                                        Movies_id: updatedMovie.id,
+                                        categoria_tipo: "portada"
+                                });
+
+                        });
+
+                        req.files.imagesMovie.forEach(element => {
+                                imagesInput.push({
+                                        name_URL: element.filename,
+                                        Movies_id: updatedMovie.id,
+                                        categoria_tipo: "imagen"
+                                });
+                        });
+
+                        if (imagesInput.length > 0) {
+                                await imageService.deleteImage(updatedMovie.id)
+                                await imageService.newImages(imagesInput);
+                        }
+        
+                        let movieSaved = await productService.getOne(updatedMovie.id);
+        
+                        console.log("edited movie", movieSaved);
+
                         res.redirect("/products/productDetail/" + req.params.id)
+                        return movieSaved;
                 } catch (error) {
                         console.log(error)
                         res.send("Ha ocurrido un error al buscar la pelicula")
@@ -92,9 +210,14 @@ const productController = {
 
         delete: async function(req, res) {
                 try {
-                        
+
+                        const Movies_id = req.params.id;
+
+                        await productService.deleteMovie(Movies_id)
+                        //console.log(movieDetail.genres);
+                        res.redirect("/")
                 } catch (error) {
-                        
+                        console.log(error, 'No se eliminó la pelicula');
                 }
         }
 

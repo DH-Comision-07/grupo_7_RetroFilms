@@ -4,21 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
-        <%- include("../partials/head.ejs") %>
-        <link rel="stylesheet" href="/css/generalStyles.css">
-
+    <%- include("../partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/generalStyles.css">
+    <link rel="stylesheet" href="/css/profile.css">
 </head>
 <body>
     <header>
         <%-include('../partials/header')%>
     </header>
 
-    <h1> HOLA <%=user.userName%>, Bienvenid@</h1>
-    <img src="/img/avatars/<%=user.userPic%>" alt="imagen">
-    <p class="userEmail"><%=user.email%></p>
-    
+    <section class="section-perfil-usuario">
+        <img src="/img/avatars/<%=user.profile_pic%>" alt="imagen" class="imagenAvatar">
+        <div>
+            <h1 class="nombre-usuario"> HOLA <%=user.username%>, Bienvenid@</h1>
+            <p class="userEmail"><%=user.email%></p>
+        </div>
+    </section>
+
+    <p class="texto">
+        Te extrañamos, ve nuestros nuevos estrenos en la plataforma.
+    </p>
+
+    <div class="carrusel">
+        <div class="grande">
+            <img src="/img/imageProfile/corazon-valiente.jpg" alt="" class="img">
+            <img src="/img/imageProfile/forrest-Gump.jpg" alt="" class="img">
+            <img src="/img/imageProfile/la-vida-es-bella.jpg" alt="" class="img">
+            <img src="\img\imagesMovies\Grease4.webp" alt="" class="img">
+            <img src="\img\imagesMovies\magoDeOz(reparto)4.jfif" alt="" class="img">
+        </div>
+
+        <ul class="puntos">
+            <li class="punto activo"></li>
+            <li class="punto"></li>
+            <li class="punto"></li>
+        </ul>
+    </div>
+
+    <div class="buttonbox">
+        <button id="buttonProfileHome" type="button" class="buttonProfileHome">Ver todo nuestro contenido</button>
+        <button type="button" class="buttonProfileHome">
+            <a href="/users/edit/<%= user.id %>" class="btn">Editar Usuario</a>
+        </button>
+        <button type="button" class="buttonProfileHome">
+            <a href="/users/delete" class="btn">Eliminar Usuario</a>
+        </button>
+    </div>
+
+    <footer>
+        <%-include('../partials/footer') %>
+    </footer>
+
+    <script>
+        // Carrusel con los puntos
+        const grande = document.querySelector('.grande');
+        const puntos = document.querySelectorAll('.punto');
+
+        puntos.forEach((cadaPunto, i) => {
+            cadaPunto.addEventListener('click', () => {
+                const operacion = i * -33;
+                grande.style.transform = `translateX(${operacion}%)`;
+
+                puntos.forEach(punto => punto.classList.remove('activo'));
+                cadaPunto.classList.add('activo');
+            });
+        });
+
+        // Botón de redireccionar
+        const buttonProfileHome = document.getElementById('buttonProfileHome');
+        buttonProfileHome.addEventListener('click', () => {
+            window.location.href = '/';
+        });
+    </script>
 </body>
-<footer>
-    <%-include('../partials/footer') %>
-</footer>
 </html>

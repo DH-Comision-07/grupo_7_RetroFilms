@@ -1,6 +1,8 @@
-const fs = require ('fs');
-const path = require ('path');
-const products = require ('../database/json/movies.json');
+const fs = require('fs');
+const path = require('path');
+const products = require('../database/json/movies.json');
+const imageService = require('../services/imageService');
+const genreService = require ('../services/genreService');
 const db = require("../database/models")
 
 // let productService = {
@@ -19,7 +21,7 @@ const db = require("../database/models")
 //             let movieById=this.products.find(product => product.id == id);
 //             return movieById;
 //     },
-    
+
 //     addMovie: function(movie, imagePath, imagePaths){           
 //         let maxId = 0;
 //         for (let i=0; i < this.products.length; i++){
@@ -50,14 +52,14 @@ const db = require("../database/models")
 //     editMovie:(id,editedMovie, imagePath, imagePaths) => {
 //             const moviesFilePath = path.resolve(__dirname, '../database/movies.json'); //Definimos la ruta al json
 //             const moviesINFO = JSON.parse(fs.readFileSync(moviesFilePath, 'utf-8')); //leemos el json
-            
+
 
 //             const movieIndex = moviesINFO.findIndex(movie => movie.id == id); // creamos la variable MovieIndex para encontrar la posicion en el array de peliculas que pertenezca a la pelicula que estamos buscando para editar
 //             if (movieIndex === -1) {
 //             throw new Error('Película no encontrada'); //condicional donde verificamos si la posición y por ende la pelicula, existe en el array (si arrojara -1, significa que la pelicula no existe y devuelve el error)
 //             }
 
-            
+
 //             editedMovie.price = parseFloat(editedMovie.price);
 //             editedMovie.year = parseInt(editedMovie.year);
 //             editedMovie.poster = imagePath;
@@ -72,7 +74,7 @@ const db = require("../database/models")
 //             fs.writeFileSync(moviesFilePath, JSON.stringify(moviesINFO)); //escribimos en el json el objeto modificado
 
 //             return moviesINFO[movieIndex] // nos muestra el objeto modificado
-            
+
 //     }, 
 
 //     deleteMovie: (id)=>{
@@ -94,28 +96,71 @@ const db = require("../database/models")
 
 let productService = {
 
-    findTopMovie : async function(){
+    findAll: async function () {
         try {
-            let topMovies= await db.Movie.findAll({
+            let movies = db.Movie.findAll();           
+            return movies
+        } catch (error) {
+            console.error("error al buscar las imagenes:", error);
+            throw error;
+        }
+    },
+
+    findMovieGrid: async function () {
+        try {
+            let movieGrid = db.Movie.findAll({
                 where: {
-                    top_movie:1
-                }
+                    top_movie: 0,
+                    is_carrousell: 0
+
+                },
+                include: [
+                    { association: "images" },
+                    { association: "genres" },
+                    { association: "actors" }
+                ]
+            });           
+            return movieGrid
+        } catch (error) {
+            console.error('Error fetching movies grid:', error);
+            throw error;
+        }
+
+    },
+    findTopMovie: async function () {
+        try {
+            let topMovies = await db.Movie.findAll({
+                where: {
+                    top_movie: 1,
+                    is_carrousell: 0
+                },
+                include: [ //faltaba la interaccion entre movies y peliculas, por eso no se mostraban las imagenes
+                    { association: "images" },
+                    { association: "genres" },
+                    { association: "actors" }
+                ]
             })
             //console.log('Top Movies:', topMovies);
             return topMovies
         } catch (error) {
-            console.error('Error fetching top movies:', error); 
+            console.error('Error fetching top movies:', error);
             throw error;
         }
-            
+
     },
 
-    findIsCarrousell: async function(){
+    findIsCarrousell: async function () {
         try {
-            let carrousell= await db.Movie.findAll({
+            let carrousell = await db.Movie.findAll({
                 where: {
-                    is_carrousell:1 
-                }
+                    top_movie: 0,
+                    is_carrousell: 1
+                },
+                include: [ //faltaba la interaccion entre movies y peliculas, por eso no se mostraban las imagenes
+                    { association: "images" },
+                    { association: "genres" },
+                    { association: "actors" }
+                ]
             })
             //console.log('Carrousell Movies:', carrousell);
             return carrousell
@@ -123,83 +168,115 @@ let productService = {
             console.error('Error fetching carrousell movies:', error); // Log de error
             throw error;
         }
-        
+
     },
-    // newImage: async function (files){
-    //     try {
-    //         let newImage = await db.Images.create (
-    //             name_URL = files.filename,
-    //             image_type = files.fieldname,
-    //         ) 
-    //         return newImage
-    //     } catch (error) {
-    //         console.log(error)
-    //         return "Error. La pelicula no se ha creado"
-    //     }
-    // },
+    newMovieData: async function (body) {
+        /**
+         *  name: 'Pulgarcita',
+            price: '5',
+            length: '152',
+            description: 'ksjbfjhbgjdbhljds',
+            genre: 'Acción',
+            release_date: '2000',
+            top_movie: 'on'
+         */
+        try {           
+            //console.log('estos son los datos de las pelis', body);  
 
-    newMovieData: async function(body) {
-        try {
-            //console.log(Movie);
-            console.log(body);
-            console.log(files);
+            let newMovie = await db.Movie.create({
 
-            let newMovie = await db.Movie.create(new Movie(body), {
-            include:[
-                {association : 'images'}
-            ]
-        }
-        )
-            console.log(newMovie);
-            //return newMovie // añadir association
+                name: body.name,
+                price: parseFloat(body.price),
+                length: parseInt(body.length),
+                description: body.description,
+                genre: body.genre,
+                release_date: body.release_date,
+                top_movie: body.top_movie == 'on' ? 1 : 0,
+                is_carrousell: body.is_carrousell == 'on' ? 1 : 0
+
+            } , {
+                    include: [
+                        { association: "genres" },
+                        { association: "actors" },
+                        { association: "images" },
+                    ]
+                }
+            )
+            console.log('Cual es el genero:',body.genre);
+
+            //let findGenre = await db.Genre.findByField() //Buscar el objeto genero que coincida con el body.genre
+            //Hacer un registro en la tabla MovieGenre con el id de la pelicula creada (newMovie.id) y el findGenre.id
+            //. body.genre viene un array, así que hay que iterar..
+            console.log(newMovie.id);
+            let registerSaved = await genreService.newMovieGenreRegister(newMovie.id, body)
+
+            return newMovie // añadir association
         } catch (error) {
             console.log(error)
             return "Error. La pelicula no se ha creado"
         }
-    }, 
+    },
 
-    getOne: async function(id) {
+    getOne: async function (id) {
         try {
             let oneMovie = await db.Movie.findByPk(id, {
                 include: [
-                    {association: "genres"},
-                    {association: "actors"},
-                    {association: "images"},
+                    { association: "genres" },
+                    { association: "actors" },
+                    { association: "images" },
                 ]
             })
-            console.log(oneMovie.actors[1].full_name);
+            //console.log(oneMovie.images[1].name_URL);
             return oneMovie
         } catch (error) {
             console.log(error)
             return ("Error. La pelicula no se ha encontrado")
         }
-    }, 
+    },
 
-    updateOne: async function(id, body, files) {
+    updateOne: async function (id, body, files) {
         try {
-            let movie = new Movie(body, files);
-            console.log(movie);
-            await db.Movie.update(movie, {where: {id: id}})
+            const updatedMovieData = {
+                name: body.name,
+                price: parseFloat(body.price),
+                length: parseInt(body.length),
+                description: body.description,
+                genre: body.genre,
+                release_date: body.release_date,
+                poster: files.poster,
+                imagesMovie: files.imagesMovie,
+                top_movie: body.top_movie === 'on' ? 1 : 0,
+                is_carrousell: body.is_carrousell === 'on' ? 1 : 0
+            };
+
+            await db.Movie.update(updatedMovieData, { where: { id: id } });
+
+            let updatedMovie = await this.getOne(id);
+
+            return updatedMovie;
+
         } catch (error) {
             console.log(error)
             return "Error. La pelicula no se ha actualizado"
         }
+    },
+
+    deleteMovie: async function (Movies_id){
+        try {
+            await imageService.deleteImage(Movies_id);
+
+            await db.Movie.destroy({
+                where:{
+                    id: Movies_id
+                }
+            })
+    
+        } catch (error) {
+            console.log('la pelicula no se eliminó', error);
+            
+        }
     }
 
-}
-
-
-function Movie(name, price, length, description, genre, release_date, poster, imagesMovie, top_movie, is_carrousell) {
-    this.name = name;
-    this.price = parseFloat(price);
-    this.length = parseInt(length);
-    this.description = description;
-    this.genre =  genre;
-    this.release_date = parseInt(release_date);
-    this.poster = poster;
-    this.imagesMovie = [imagesMovie];
-    this.top_movie = top_movie;
-    this.is_carrousell = is_carrousell;
 }
 
 

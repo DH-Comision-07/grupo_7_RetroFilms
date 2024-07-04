@@ -9,8 +9,21 @@ body, html {
     margin: 0;
     padding: 0;
     
-    
+   /* agregados para validaciones*/ 
 }
+ borrarEstilo{
+    display: none;
+ }
+
+.visible_item{
+    display: block;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    height: auto;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+   /*-----------------------------*/
 
 body {
     background-color: white;
@@ -94,3 +107,53 @@ button:hover{
 .login {
     font-size: 100%;
 }
+
+.formulario__grupo-correcto {
+    color: #1ed12d;
+    font-size: 20px;
+
+
+}
+
+.formulario__grupo-incorrecto {
+    color: #bb2929;
+    font-size: 20px;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado{
+    color: #bb2929;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input{
+    border: 3px solid #bb2929;
+}
+
+.texto__error{
+    display: none;
+    font-size: 12px;
+}
+.texto__error-activo{
+    display: block;
+}
+
+.formulario__mensaje{
+    display: none;
+    color: #bb2929;
+    font-size: 12px;
+}
+
+.formulario__mensaje-activo {
+    display: block;
+}
+
+.formulario__mensaje-exito {
+    display: none;
+    color: green;
+    font-size: 12px;
+}
+
+.formulario__mensaje-exito-activo {
+    display: block;
+}
+
