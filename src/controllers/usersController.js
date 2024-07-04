@@ -155,10 +155,17 @@ const usersController = {
         res.redirect("login")
     },
 
+    deleteAdmin: async function(req,res) {
+        
+        let user = await usersService.findByFieldDb('id', req.params.id)
+        console.log(user)
+
+        return res.render("users/deleteAdmin", {user: user})
+    },
+
     delete: function(req,res) {
         return res.render("users/delete")
     },
-
 
     processDelete: async function (req, res){
         try {
@@ -180,14 +187,9 @@ const usersController = {
     
     processDeleteAdmin: async function (req, res){
         try {
-            let userId = req.session.userLogged.id;
+            await usersService.deleteUserDb(req.params.id)
 
-            if (userId){
-                await usersService.deleteUserDb(userId)
-                res.clearCookie('userEmail');
-                req.session.destroy();
-                return res.redirect("/users/register")
-            }
+            return res.redirect("/users/Profiles")
             
         } catch (error) {
             console.log(error);

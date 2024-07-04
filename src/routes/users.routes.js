@@ -21,13 +21,14 @@ router.get('/edit/:id', usersController.userEdit)
 router.put('/:id', uploadUserFile.single("profile_pic"), usersController.processEdit)
 
 
+//--- DELETE USER BY ADMIN--//
+router.get('/delete/:id',usersController.deleteAdmin)
+router.delete("/delete/:id", usersController.processDeleteAdmin)
+
+
 //--- DELETE USER --//
 router.get('/delete',usersController.delete)
 router.delete("/delete", usersController.processDelete)
-
-//--- DELETE USER BY ADMIN--//
-router.get('/delete/:id',usersController.delete)
-router.delete("/delete/:id", usersController.processDeleteAdmin)
 
 
 /* --------------- LOGIN -------------*/
