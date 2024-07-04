@@ -9,7 +9,7 @@ const expresiones = {
 }
 
 const campos = {
-    nameNombre: false,
+    name: false,
     username: false,
     password: false,
     email: false,
@@ -17,8 +17,8 @@ const campos = {
 
 const validarFormulario = (e) => {
     switch (e.target.name) {
-        case "nameNombre":
-            validarCampo(expresiones.nombre, e.target, 'nameNombre');
+        case "name":
+            validarCampo(expresiones.nombre, e.target, 'name');
             break;
         case "username":
             validarCampo(expresiones.usuario, e.target, 'username');
@@ -85,7 +85,7 @@ formulario.addEventListener('submit', (e) => {
     console.log(campos);
     const terminos = document.getElementById('checkbox');
     console.log(terminos.checked);
-    if (campos.nameNombre && campos.username && campos.password && campos.email && terminos.checked) {
+    if (campos.name && campos.username && campos.password && campos.email && terminos.checked) {
         formulario.submit();
     } else {
         console.log('Error en las validaciones o términos no aceptados');

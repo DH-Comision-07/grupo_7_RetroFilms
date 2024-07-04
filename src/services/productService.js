@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const products = require('../database/json/movies.json');
 const imageService = require('../services/imageService');
+const genreService = require ('../services/genreService');
 const db = require("../database/models")
 
 // let productService = {
@@ -188,14 +189,14 @@ let productService = {
                 price: parseFloat(body.price),
                 length: parseInt(body.length),
                 description: body.description,
-               // genre: body.genre,
+                genre: body.genre,
                 release_date: body.release_date,
                 top_movie: body.top_movie == 'on' ? 1 : 0,
                 is_carrousell: body.is_carrousell == 'on' ? 1 : 0
 
             } , {
                     include: [
-                        //{ association: "genres" },
+                        { association: "genres" },
                         { association: "actors" },
                         { association: "images" },
                     ]
@@ -206,7 +207,9 @@ let productService = {
             //let findGenre = await db.Genre.findByField() //Buscar el objeto genero que coincida con el body.genre
             //Hacer un registro en la tabla MovieGenre con el id de la pelicula creada (newMovie.id) y el findGenre.id
             //. body.genre viene un array, así que hay que iterar..
-            //console.log(newMovie);
+            console.log(newMovie.id);
+            let registerSaved = await genreService.newMovieGenreRegister(newMovie.id, body)
+
             return newMovie // añadir association
         } catch (error) {
             console.log(error)

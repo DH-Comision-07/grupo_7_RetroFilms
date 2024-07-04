@@ -3,87 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vista de registo</title>
+    <title>Vista de registro</title>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/generalStyles.css">
     <link rel="stylesheet" href="/css/registerView.css">
-   
 </head>
 <body>
 
-  
-
-  <header>
+<header>
     <%- include('../partials/header') %>
-  </header>
-    <h1 class="titulo"> Felicidades tu perfil se creó de manera correcta</h1>
-       <div class = "imagenWelcome"> 
-       <img src="/img/avatars/<%/*=user.userPic*/%>" alt="imagen" class="imagenAvatar">
-     </div>
-      
+</header>
 
-
+<main>
+    <h1 class="title">Felicidades, tu perfil se creó de manera correcta</h1>
     <p class="text">Ahora puedes disfrutar de todo nuestro contenido</p>
+
     <div class="slider">
-        <div class="slider--inner"> 
-        <img src="" alt="">
-        <img src="/img/Home/slider-2/scale.png" alt="">
-        <img src="/img/Home/slider-2/scale.webp" alt="">
-        <img src="/img/Home/slider-2/beetlejuice.jpg" alt="">
-        <img src="/img/Home/slider-2/Above.jpg" alt="">
-        <img src="/img/Home/slider-2/terminator_1.jpg" alt="">
-        <img src="/img/Home/slider-2/balto.jpg" alt="">
-        <img src="/img/Home/slider-2/bloodsport.jpg" alt="">
-        <img src="/img/Home/slider-2/cleopatra.webp" alt="">
-        <img src="/img/Home/slider-2/evil-Dead.webp" alt="">
-        <img src="/img/Home/slider-2/film__4271-an-american-tail--hi_res-7cfcd1a4.jpg" alt="">
-        <img src="/img/Home/slider-2/Gorillas.jpg" alt="">
-        <img src="/img/Home/slider-2/it-eso.webp" alt="">
-        <img src="/img/Home/slider-2/Star_Wars_Logo.svg.png" alt="">
-        <img src="/img/Home/slider-2/piepequenotodos.jpg" alt="">
-        <img src="/img/Home/slider-2/Cristina.F.jpg" alt="">
-        <img src="/img/Home/slider-2/madmax.jpg" alt="">
-        <img src="/img/Home/slider-2/resplador_smile.jpg" alt="">
-        <img src="/img/Home/slider-2/rambo-III.jpeg" alt="">
-        <img src="/img/Home/slider-2/twins.jpg" alt="">
-       </div>
-    </div>
-    <div class="container">
-        <div>
-         <button id="buttonRegisterHome" type="button">Ver todo nuestro contenido</button>
-
-         <script>
-            //------Para que el botton redireccione al home------
-            const buttonRegisterHome = document.getElementById("buttonRegisterHome");
-              buttonRegisterHome.addEventListener('click', function(){
-                window.location.href ="/";
-              });
-         </script>
-
+        <div class="slider-inner"> 
+            <img src="" alt="">
+            <img src="/img/Home/slider-2/scale.png" alt="">
+            <img src="/img/Home/slider-2/scale.webp" alt="">
+            <img src="/img/Home/slider-2/beetlejuice.jpg" alt="">
+            <img src="/img/Home/slider-2/Above.jpg" alt="">
+            <img src="/img/Home/slider-2/terminator_1.jpg" alt="">
+            <img src="/img/Home/slider-2/balto.jpg" alt="">
+            <img src="/img/Home/slider-2/bloodsport.jpg" alt="">
+            <img src="/img/Home/slider-2/cleopatra.webp" alt="">
+            <img src="/img/Home/slider-2/evil-Dead.webp" alt="">
+            <img src="/img/Home/slider-2/film__4271-an-american-tail--hi_res-7cfcd1a4.jpg" alt="">
+            <img src="/img/Home/slider-2/Gorillas.jpg" alt="">
+            <img src="/img/Home/slider-2/it-eso.webp" alt="">
+            <img src="/img/Home/slider-2/Star_Wars_Logo.svg.png" alt="">
+            <img src="/img/Home/slider-2/piepequenotodos.jpg" alt="">
+            <img src="/img/Home/slider-2/Cristina.F.jpg" alt="">
+            <img src="/img/Home/slider-2/madmax.jpg" alt="">
+            <img src="/img/Home/slider-2/resplador_smile.jpg" alt="">
+            <img src="/img/Home/slider-2/rambo-III.jpeg" alt="">
+            <img src="/img/Home/slider-2/twins.jpg" alt="">
         </div>
-
-        
     </div>
-    <footer>
-        <%- include('../partials/footer') %>
-    </footer>
 
-    
-    <script>
+    <div class="container">
+        <button id="buttonRegisterHome" type="button">Ver todo nuestro contenido</button>
+    </div>
+</main>
 
-        // Para el carrusel funsione ---------
-        document.addEventListener('DOMContentLoaded', function() {
-            const sliderInner = document.querySelector('.slider--inner');
-            let index = 1;
-            const imagen = sliderInner.querySelectorAll('img');
+<footer>
+    <%- include('../partials/footer') %>
+</footer>
 
-            setInterval(function(){
-                const percentage = index * -100;
-                sliderInner.style.transform = "translateX("+ percentage +"%)";
-                index++;
-                if(index > imagen.length - 1){
-                    index = 0;
-                }
-            }, 3000);
-        });
-    </script>
+<script>
+    // Para que el carrusel funcione
+    document.addEventListener('DOMContentLoaded', function() {
+        const sliderInner = document.querySelector('.slider-inner');
+        let index = 1;
+        const images = sliderInner.querySelectorAll('img');
+
+        setInterval(function(){
+            const percentage = index * -100;
+            sliderInner.style.transform = "translateX("+ percentage +"%)";
+            index++;
+            if(index > images.length - 1){
+                index = 0;
+            }
+        }, 3000);
+    });
+
+    // Para que el botón redireccione al home
+    const buttonRegisterHome = document.getElementById("buttonRegisterHome");
+    buttonRegisterHome.addEventListener('click', function(){
+        window.location.href ="/";
+    });
+</script>
+
 </body>
 </html>

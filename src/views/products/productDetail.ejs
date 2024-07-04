@@ -45,8 +45,6 @@
             <ul class = "movieDetail">
                 <li class = "anio"><a  href="#"></a><%=movieDetail.release_date%> </li>
                 <li> - </li>
-                <li class = "calif"><a  href="#"></a>Calificacion </li>
-                <li> - </li>
                 <%for (let i=0; i< movieDetail.genres.length; i++){%> 
                     <%if (i ===  movieDetail.genres.length -1 ) {%>
                         <li class ="genero"><a  href="#"></a> <%=movieDetail.genres[i].name%></li>  <!--Incluir letrero que al hacer hover, muestre las respuestas de cada item de la lista (uno por uno)-->
@@ -103,26 +101,7 @@
                 <div class ="forward"><i class="fa-solid fa-angle-right"></i></div>
             </article>
         <br>
-        <h3 class="titulo">Reviews</h3>
-            <article class = "resenias">
-        <br>
-                <div class = "cajaComentario">
-                <div class="usuario">
-                    <img src="/img/avatars/Usuarios/avatar1.png" alt="fotoUsuario"> Nombre del Usuario
-                </div>
-                    <p class ="comentario">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex accusamus magni ab assumenda enim, possimus voluptatum saepe similique voluptas! Sapiente ducimus quas at consectetur provident. Obcaecati minus animi porro inventore?
-                    </p>
-                </div>
-        <br>
-                <div class = "cajaComentario">
-                    <div class="usuario">
-                        <img src="/img/avatars/Usuarios/avatar2.png" alt="fotoUsuario"> Nombre del Usuario
-                </div>
-                    <p class ="comentario">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex accusamus magni ab assumenda enim, possimus voluptatum saepe similique voluptas! Sapiente ducimus quas at consectetur provident. Obcaecati minus animi porro inventore?
-                    </p>
-                </div>
-            </article>
-    
+        
     </section>
         <br>
     <footer>

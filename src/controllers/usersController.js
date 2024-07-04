@@ -176,7 +176,25 @@ const usersController = {
             return ("ocurrió un error al eliminar el usuario")
         }
 
-    }  
+    }, 
+    
+    processDeleteAdmin: async function (req, res){
+        try {
+            let userId = req.session.userLogged.id;
+
+            if (userId){
+                await usersService.deleteUserDb(userId)
+                res.clearCookie('userEmail');
+                req.session.destroy();
+                return res.redirect("/users/register")
+            }
+            
+        } catch (error) {
+            console.log(error);
+            return ("ocurrió un error al eliminar el usuario")
+        }
+
+    }
 }
 
 

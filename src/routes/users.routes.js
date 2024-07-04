@@ -25,6 +25,10 @@ router.put('/:id', uploadUserFile.single("profile_pic"), usersController.process
 router.get('/delete',usersController.delete)
 router.delete("/delete", usersController.processDelete)
 
+//--- DELETE USER BY ADMIN--//
+router.get('/delete/:id',usersController.delete)
+router.delete("/delete/:id", usersController.processDeleteAdmin)
+
 
 /* --------------- LOGIN -------------*/
 

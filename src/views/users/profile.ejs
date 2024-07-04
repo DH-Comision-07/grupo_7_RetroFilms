@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
-        <%- include("../partials/head.ejs") %>
-        <link rel="stylesheet" href="/css/generalStyles.css">
-        <link rel="stylesheet" href="/css/profile.css">
-
+    <%- include("../partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/generalStyles.css">
+    <link rel="stylesheet" href="/css/profile.css">
 </head>
 <body>
     <header>
@@ -15,77 +14,67 @@
     </header>
 
     <section class="section-perfil-usuario">
-        <h1 class="nombre-usuario"> HOLA <%=user.username%>, Bienvenid@</h1>
         <img src="/img/avatars/<%=user.profile_pic%>" alt="imagen" class="imagenAvatar">
-        <p class="userEmail"><%=user.email%></p>
+        <div>
+            <h1 class="nombre-usuario"> HOLA <%=user.username%>, Bienvenid@</h1>
+            <p class="userEmail"><%=user.email%></p>
+        </div>
     </section>
-        <p class="texto">
+
+    <p class="texto">
         Te extrañamos, ve nuestros nuevos estrenos en la plataforma.
-        </p>
-    
-  
+    </p>
 
     <div class="carrusel">
         <div class="grande">
             <img src="/img/imageProfile/corazon-valiente.jpg" alt="" class="img">
             <img src="/img/imageProfile/forrest-Gump.jpg" alt="" class="img">
             <img src="/img/imageProfile/la-vida-es-bella.jpg" alt="" class="img">
-
+            <img src="\img\imagesMovies\Grease4.webp" alt="" class="img">
+            <img src="\img\imagesMovies\magoDeOz(reparto)4.jfif" alt="" class="img">
         </div>
-   
 
-         <ul class="puntos">
+        <ul class="puntos">
             <li class="punto activo"></li>
             <li class="punto"></li>
             <li class="punto"></li>
-         </ul>
-
+        </ul>
     </div>
 
+    <div class="buttonbox">
+        <button id="buttonProfileHome" type="button" class="buttonProfileHome">Ver todo nuestro contenido</button>
+        <button type="button" class="buttonProfileHome">
+            <a href="/users/edit/<%= user.id %>" class="btn">Editar Usuario</a>
+        </button>
+        <button type="button" class="buttonProfileHome">
+            <a href="/users/delete" class="btn">Eliminar Usuario</a>
+        </button>
+    </div>
+
+    <footer>
+        <%-include('../partials/footer') %>
+    </footer>
+
     <script>
-        // Esto es para el carrucel con los puntos-----
+        // Carrusel con los puntos
         const grande = document.querySelector('.grande');
-        const punto = document.querySelectorAll('.punto')
+        const puntos = document.querySelectorAll('.punto');
 
-        punto.forEach((cadaPunto, i)=>{
-            punto[i].addEventListener('click', ()=>{
+        puntos.forEach((cadaPunto, i) => {
+            cadaPunto.addEventListener('click', () => {
+                const operacion = i * -33;
+                grande.style.transform = `translateX(${operacion}%)`;
 
-                let position = i
-                let operacion = position *-33
+                puntos.forEach(punto => punto.classList.remove('activo'));
+                cadaPunto.classList.add('activo');
+            });
+        });
 
-                grande.style.transform = `translateX(${operacion}%)`
-
-                punto.forEach((cadaPunto, i)=> {
-                    punto[i].classList.remove('activo')
-                })
-                punto[i].classList.add('activo')
-            })
-        })
-    
-    
+        // Botón de redireccionar
+        const buttonProfileHome = document.getElementById('buttonProfileHome');
+        buttonProfileHome.addEventListener('click', () => {
+            window.location.href = '/';
+        });
     </script>
-        <button id="buttonProfileHome"  type="button" class="buttonProfileHome">Ver todo nuestro contenido</button>
-
-        <script>
-            // ESto es del botón para redireccionar pero no funciona :( ------
-            const buttonProfileHome = document.getElementById('buttonProfileHome');
-              buttonProfileHome.addEventListener('click', function(){
-                window.location.href = '/';
-              });
-        
-        </script>
-
-    <div>
-        
-        <button type="button"><a href="/users/edit/<%= user.id %>" class="btn">Editar Usuario</a></button>
-        <button type="button"><a href="/users/delete" class="btn">Eliminar Usuario</a></button>
-        
-       </div>
-
-       
-<footer>
-    <%-include('../partials/footer') %>
-</footer>
 </body>
-
 </html>

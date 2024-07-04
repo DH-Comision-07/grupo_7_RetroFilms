@@ -140,6 +140,7 @@ const productController = {
                         console.log(imagesInput);
                         await imageService.newImages(imagesInput);
 
+
                         let movieSaved = await productService.getOne(newMovie.id);
 
                         console.log("full movie",movieSaved)
